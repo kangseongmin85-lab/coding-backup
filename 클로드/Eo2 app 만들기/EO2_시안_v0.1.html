@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EO2 — 디자인 시안 v0.1</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Pretendard', 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .doc-header {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .doc-header h1 { font-size: 28px; margin-bottom: 8px; color: #fff; }
+  .doc-header p { color: #a0a0a0; font-size: 14px; }
+  .meta-info {
+    display: flex; gap: 20px; margin-top: 12px; font-size: 13px;
+  }
+  .meta-info span { color: #8b9cb5; }
+  .meta-info b { color: #4fc3f7; }
+
+  .tabs {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    display: flex;
+    gap: 8px;
+    background: rgba(0,0,0,0.3);
+    padding: 8px;
+    border-radius: 12px;
+  }
+  .tab-btn {
+    flex: 1; padding: 12px 20px;
+    background: transparent; color: #a0a0a0;
+    border: none; cursor: pointer;
+    border-radius: 8px;
+    font-size: 15px; font-weight: 500;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { background: rgba(255,255,255,0.05); color: #fff; }
+  .tab-btn.active {
+    background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(79,195,247,0.4);
+  }
+
+  .tab-content {
+    display: none;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .tab-content.active { display: block; }
+
+  /* === Display Tab === */
+  .controls-panel {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .control-group { display: flex; flex-direction: column; gap: 6px; min-width: 140px; }
+  .control-group label { font-size: 12px; color: #8b9cb5; text-transform: uppercase; letter-spacing: 0.5px; }
+  .control-group select {
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .control-group select:hover { border-color: #4fc3f7; }
+
+  .eo2-mockup-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background: radial-gradient(ellipse at center, rgba(79,195,247,0.05), transparent 70%);
+    border-radius: 16px;
+  }
+
+  /* EO2 베젤 (실제 EO2의 두꺼운 검은 베젤 시뮬레이션) */
+  .eo2-frame {
+    background: #0a0a0a;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(255,255,255,0.05);
+    position: relative;
+    transition: all 0.4s ease;
+  }
+  .eo2-frame.portrait { width: 380px; height: 620px; }
+  .eo2-frame.landscape { width: 620px; height: 380px; }
+  .eo2-frame::after {
+    content: 'EO2';
+    position: absolute;
+    bottom: 8px; right: 12px;
+    font-size: 9px; color: #444;
+    font-family: monospace;
+    letter-spacing: 1px;
+  }
+
+  .eo2-screen {
+    width: 100%; height: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+  }
+  .photo-bg {
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease;
+    filter: brightness(0.85);
+  }
+  .photo-bg.solo-mode { display: none; }
+
+  /* 시계 위젯들 */
+  .clock-container {
+    position: absolute;
+    transition: all 0.3s ease;
+    z-index: 5;
+  }
+  .clock-container.overlay-mode {
+    bottom: 20px; left: 20px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .clock-container.solo-mode {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    padding: 0;
+  }
+
+  /* 시계 테마 1: 미니멀 디지털 */
+  .clock-minimal {
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
+  .overlay-mode .clock-minimal { font-size: 28px; }
+  .solo-mode .clock-minimal { font-size: 110px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+
+  /* 시계 테마 2: 플립시계 */
+  .clock-flip {
+    display: flex;
+    gap: 4px;
+    color: #fff;
+    font-family: 'SF Mono', Consolas, monospace;
+    font-weight: 700;
+  }
+  .clock-flip .flip-digit {
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 50%, #1a1a1a 50%, #0a0a0a 100%);
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    position: relative;
+  }
+  .clock-flip .flip-digit::after {
+    content: ''; position: absolute; left: 0; right: 0; top: 50%;
+    height: 1px; background: rgba(0,0,0,0.5);
+  }
+  .overlay-mode .clock-flip { font-size: 24px; }
+  .overlay-mode .clock-flip .flip-digit { padding: 3px 6px; }
+  .solo-mode .clock-flip { font-size: 90px; }
+  .solo-mode .clock-flip .flip-digit { padding: 8px 16px; border-radius: 8px; }
+
+  /* 시계 테마 3: 아날로그 */
+  .clock-analog {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3), inset 0 0 0 4px #1a1a1a;
+  }
+  .solo-mode .clock-analog { width: 240px; height: 240px; box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 0 0 8px #1a1a1a; }
+  .clock-analog .hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom center;
+    background: #1a1a1a;
+    border-radius: 2px;
+  }
+  .clock-analog .hour-hand { width: 3px; height: 22%; margin-left: -1.5px; }
+  .clock-analog .minute-hand { width: 2px; height: 32%; margin-left: -1px; }
+  .clock-analog .second-hand { width: 1px; height: 36%; margin-left: -0.5px; background: #e53935; }
+  .solo-mode .clock-analog .hour-hand { width: 7px; margin-left: -3.5px; }
+  .solo-mode .clock-analog .minute-hand { width: 5px; margin-left: -2.5px; }
+  .solo-mode .clock-analog .second-hand { width: 2px; margin-left: -1px; }
+  .clock-analog .center {
+    position: absolute; top: 50%; left: 50%;
+    width: 6px; height: 6px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  .solo-mode .clock-analog .center { width: 14px; height: 14px; }
+
+  /* 시계 테마 4: 네온 */
+  .clock-neon {
+    color: #00f0ff;
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-weight: 700;
+    text-shadow: 0 0 6px #00f0ff, 0 0 14px #00f0ff, 0 0 24px #0078ff;
+    letter-spacing: 4px;
+  }
+  .overlay-mode .clock-neon { font-size: 26px; letter-spacing: 3px; }
+  .solo-mode .clock-neon { font-size: 100px; }
+
+  /* 시계 테마 5: 클래식 */
+  .clock-classic {
+    color: #f5e8c8;
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .overlay-mode .clock-classic { font-size: 30px; }
+  .solo-mode .clock-classic { font-size: 130px; }
+
+  /* 날씨 위젯 */
+  .weather-widget {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    font-size: 13px;
+    z-index: 4;
+    line-height: 1.5;
+  }
+  .weather-widget .location { font-size: 10px; color: #b0c4de; margin-bottom: 2px; }
+  .weather-widget .temp-row { display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 500; }
+  .weather-widget .icon { font-size: 18px; }
+  .weather-widget .pm-info { font-size: 11px; color: #90caf9; margin-top: 2px; }
+
+  /* 정보 텍스트 */
+  .info-box {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: rgba(79,195,247,0.08);
+    border-left: 3px solid #4fc3f7;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #c0d0e0;
+  }
+  .info-box code {
+    background: rgba(0,0,0,0.4);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'SF Mono', Consolas, monospace;
+    font-size: 13px;
+    color: #fff176;
+  }
+
+  /* === Upload Tab === */
+  .phone-mockup-wrapper {
+    display: flex; justify-content: center;
+    padding: 40px 20px;
+  }
+  .phone-frame {
+    width: 320px; height: 640px;
+    background: #1a1a1a;
+    border-radius: 36px;
+    padding: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.05);
+    position: relative;
+  }
+  .phone-frame::before {
+    content: ''; position: absolute;
+    top: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 80px; height: 4px;
+    background: #0a0a0a;
+    border-radius: 2px;
+  }
+  .phone-screen {
+    width: 100%; height: 100%;
+    background: #fff;
+    border-radius: 26px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .phone-status-bar {
+    height: 28px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px;
+    font-size: 11px;
+    color: #000;
+    font-weight: 600;
+  }
+  .phone-content {
+    flex: 1;
+    overflow-y: auto;
+    color: #1a1a1a;
+    padding: 20px;
+  }
+  .phone-content h2 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .phone-content .subtitle { font-size: 12px; color: #666; margin-bottom: 24px; }
+  .form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+  }
+  .form-input:focus { outline: none; border-color: #4fc3f7; }
+  .btn-primary {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79,195,247,0.4);
+  }
+  .btn-secondary {
+    width: 100%;
+    padding: 13px;
+    background: #f5f5f5;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  .upload-zone {
+    border: 2px dashed #4fc3f7;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    margin: 16px 0;
+    background: rgba(79,195,247,0.06);
+  }
+  .upload-zone .icon { font-size: 32px; margin-bottom: 6px; }
+  .upload-zone p { font-size: 13px; color: #555; }
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin: 12px 0;
+  }
+  .preview-item {
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    position: relative;
+  }
+  .preview-item .progress {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: rgba(0,0,0,0.3);
+    border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;
+  }
+  .preview-item .progress-fill {
+    height: 100%; background: #4fc3f7;
+    border-bottom-left-radius: 6px;
+  }
+  .upload-screens {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* === Admin Tab === */
+  .admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  .admin-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .admin-card h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #4fc3f7;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .admin-card h3 .icon-emoji { font-size: 20px; }
+  .admin-card .row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .admin-card .row:last-child { border-bottom: none; }
+  .admin-card .row label { color: #c0d0e0; font-size: 14px; }
+  .admin-card .row .value { color: #fff; font-weight: 500; }
+  .admin-card input[type="range"] { width: 120px; }
+  .admin-card .row select {
+    background: rgba(0,0,0,0.3); color: #fff;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 6px 10px; border-radius: 6px; font-size: 13px;
+  }
+  .toggle {
+    width: 40px; height: 22px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .toggle.on { background: #4fc3f7; }
+  .toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px; left: 2px;
+    width: 18px; height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    transition: left 0.2s;
+  }
+  .toggle.on::after { left: 20px; }
+  .photo-grid-admin {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .photo-grid-admin .item {
+    aspect-ratio: 1;
+    background-size: cover;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+  }
+  .photo-grid-admin .item:hover::after {
+    content: '×';
+    position: absolute;
+    top: 2px; right: 4px;
+    color: #fff;
+    background: rgba(229,57,53,0.9);
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: bold;
+  }
+  .stat-row {
+    display: flex; justify-content: space-around;
+    padding: 12px 0;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin-top: 12px;
+  }
+  .stat-item { text-align: center; }
+  .stat-item .num { font-size: 22px; font-weight: 700; color: #4fc3f7; }
+  .stat-item .lbl { font-size: 11px; color: #8b9cb5; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* QR 코드 영역 */
+  .qr-section {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin-top: 12px;
+  }
+  .qr-mock {
+    width: 120px; height: 120px;
+    background: #fff;
+    margin: 0 auto 8px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    gap: 1px;
+    padding: 6px;
+  }
+  .qr-mock .px { background: #000; }
+  .qr-mock .px.empty { background: #fff; }
+</style>
+</head>
+<body>
+
+<div class="doc-header">
+  <h1>EO2 — 디자인 시안 v0.1</h1>
+  <p>인터랙티브 시안. 좌측의 컨트롤로 화면 방향, 시계 모드, 시계 테마를 바꿔보세요. 모든 시계는 실제로 작동합니다.</p>
+  <div class="meta-info">
+    <span>📍 위치: <b>경기도 용인시 상현2동 거실</b></span>
+    <span>👥 사용자: <b>가족 2~3명</b></span>
+    <span>🎯 V1 범위: <b>사진 + GIF + 시계 + 날씨</b></span>
+    <span>💰 비용: <b>0원</b></span>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="display">📺 EO2 화면</button>
+  <button class="tab-btn" data-tab="upload">📱 모바일 업로드</button>
+  <button class="tab-btn" data-tab="admin">⚙️ 관리자 페이지</button>
+</div>
+
+<!-- ============ DISPLAY TAB ============ -->
+<section id="display" class="tab-content active">
+  <div class="controls-panel">
+    <div class="control-group">
+      <label>화면 방향</label>
+      <select id="orientation">
+        <option value="portrait">세로 (Portrait)</option>
+        <option value="landscape">가로 (Landscape)</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label>시계 모드</label>
+      <select id="clockMode">
+        <option value="overlay">오버레이 (사진 위)</option>
+        <option value="solo">시계 전용 (사진 없음)</option>
+        <option value="hidden">시계 숨김</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label>시계 테마</label>
+      <select id="clockTheme">
+        <option value="minimal">미니멀 디지털</option>
+        <option value="flip">플립시계</option>
+        <option value="analog">아날로그</option>
+        <option value="neon">네온</option>
+        <option value="classic">클래식</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label>다음 사진</label>
+      <button class="btn-primary" id="nextPhoto" style="padding:8px 14px; width:auto;">→ 사진 변경</button>
+    </div>
+  </div>
+
+  <div class="eo2-mockup-wrapper">
+    <div class="eo2-frame portrait" id="eo2Frame">
+      <div class="eo2-screen">
+        <div class="photo-bg" id="photoBg"></div>
+        <div class="weather-widget" id="weatherWidget">
+          <div class="location">📍 용인시 상현2동</div>
+          <div class="temp-row"><span class="icon">☀️</span><span>22°</span></div>
+          <div class="pm-info">PM2.5 35 · 보통</div>
+        </div>
+        <div class="clock-container overlay-mode" id="clockContainer">
+          <div class="clock clock-minimal" id="clockMinimal"></div>
+          <div class="clock clock-flip" id="clockFlip" style="display:none;">
+            <span class="flip-digit" id="flipH1">0</span>
+            <span class="flip-digit" id="flipH2">0</span>
+            <span style="align-self:center; padding: 0 4px;">:</span>
+            <span class="flip-digit" id="flipM1">0</span>
+            <span class="flip-digit" id="flipM2">0</span>
+          </div>
+          <div class="clock clock-analog" id="clockAnalog" style="display:none;">
+            <div class="hand hour-hand" id="hourHand"></div>
+            <div class="hand minute-hand" id="minuteHand"></div>
+            <div class="hand second-hand" id="secondHand"></div>
+            <div class="center"></div>
+          </div>
+          <div class="clock clock-neon" id="clockNeon" style="display:none;"></div>
+          <div class="clock clock-classic" id="clockClassic" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>💡 시안 사용법:</strong> 위의 컨트롤로 다양한 조합을 시도해보세요.
+    실제 EO2 디스플레이는 <code>1920×1080</code> (가로) 또는 <code>1080×1920</code> (세로) 해상도로 표시됩니다.
+    이 시안은 비율을 유지한 축소 모형입니다. 사진은 <code>picsum.photos</code>에서 무료로 가져옵니다.
+  </div>
+</section>
+
+<!-- ============ UPLOAD TAB ============ -->
+<section id="upload" class="tab-content">
+  <div class="phone-mockup-wrapper">
+    <div class="upload-screens">
+
+      <!-- Screen 1: Login -->
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-status-bar">
+            <span>9:41</span>
+            <span>📶 🔋</span>
+          </div>
+          <div class="phone-content">
+            <div style="text-align:center; padding:20px 0;">
+              <div style="font-size:48px; margin-bottom:8px;">🖼️</div>
+              <h2>EO2 사진 업로드</h2>
+              <p class="subtitle">우리집 거실 디스플레이로 사진 보내기</p>
+            </div>
+            <input class="form-input" type="password" placeholder="가족 비밀번호" value="••••••">
+            <button class="btn-primary">로그인</button>
+            <button class="btn-secondary">QR 코드로 빠른 로그인</button>
+            <p style="text-align:center; font-size:11px; color:#999; margin-top:24px;">
+              북마크 추천: <code style="background:#f5f5f5; padding:2px 6px; border-radius:3px; color:#555;">eo2-vamos.pages.dev</code>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 2: Upload -->
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-status-bar">
+            <span>9:42</span>
+            <span>📶 🔋</span>
+          </div>
+          <div class="phone-content">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:20px;">
+              <span style="font-size:13px; color:#4fc3f7;">← 뒤로</span>
+              <h2 style="margin-left:auto; font-size:18px;">사진 보내기</h2>
+            </div>
+            <div class="upload-zone">
+              <div class="icon">📷</div>
+              <p><strong>탭해서 사진 선택</strong></p>
+              <p style="font-size:11px; color:#888;">JPG, PNG, GIF, MP4 (10MB 이하)</p>
+            </div>
+            <p style="font-size:13px; color:#555; margin:8px 0 6px;">선택된 사진 (3장)</p>
+            <div class="preview-grid">
+              <div class="preview-item" style="background-image:url('https://picsum.photos/200?random=10');">
+                <div class="progress"><div class="progress-fill" style="width:100%;"></div></div>
+              </div>
+              <div class="preview-item" style="background-image:url('https://picsum.photos/200?random=11');">
+                <div class="progress"><div class="progress-fill" style="width:67%;"></div></div>
+              </div>
+              <div class="preview-item" style="background-image:url('https://picsum.photos/200?random=12');">
+                <div class="progress"><div class="progress-fill" style="width:24%;"></div></div>
+              </div>
+            </div>
+            <button class="btn-primary" style="margin-top:8px;">EO2로 보내기 (3장)</button>
+            <p style="text-align:center; font-size:11px; color:#777; margin-top:16px;">
+              📺 거실 EO2에 약 30초 후 표시됩니다
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 3: Success -->
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-status-bar">
+            <span>9:43</span>
+            <span>📶 🔋</span>
+          </div>
+          <div class="phone-content" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+            <div style="font-size:64px; margin-bottom:16px;">✅</div>
+            <h2>업로드 완료!</h2>
+            <p style="font-size:14px; color:#666; margin-top:8px; line-height:1.5;">
+              사진 3장이 성공적으로<br>거실 EO2로 전송됐어요
+            </p>
+            <div style="margin-top:30px; padding:16px; background:#f5f9ff; border-radius:10px; width:100%;">
+              <p style="font-size:12px; color:#888;">최근 업로드</p>
+              <p style="font-size:14px; color:#1a1a1a; margin-top:4px; font-weight:500;">오늘 9:42 (3장)</p>
+            </div>
+            <button class="btn-primary" style="margin-top:auto;">사진 더 보내기</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>📱 모바일 업로드 플로우:</strong> 비밀번호 로그인 → 갤러리에서 사진 선택 (다중 선택 가능) → 업로드 → 확인.
+    QR 코드로 빠른 로그인 옵션도 제공합니다 (V2). 폰에서 PWA로 홈화면 추가도 가능하게 만들 예정.
+  </div>
+</section>
+
+<!-- ============ ADMIN TAB ============ -->
+<section id="admin" class="tab-content">
+  <div class="admin-grid">
+
+    <!-- Card: 슬라이드쇼 -->
+    <div class="admin-card">
+      <h3><span class="icon-emoji">🖼️</span>슬라이드쇼 설정</h3>
+      <div class="row">
+        <label>전환 간격</label>
+        <span class="value">1분</span>
+      </div>
+      <div class="row">
+        <label>셔플 모드</label>
+        <div class="toggle on"></div>
+      </div>
+      <div class="row">
+        <label>전환 효과</label>
+        <select>
+          <option>페이드 (부드럽게)</option>
+          <option>슬라이드</option>
+          <option>없음</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>야간 자동 OFF</label>
+        <div class="toggle"></div>
+      </div>
+    </div>
+
+    <!-- Card: 시계 -->
+    <div class="admin-card">
+      <h3><span class="icon-emoji">🕐</span>시계 위젯</h3>
+      <div class="row">
+        <label>시계 표시</label>
+        <div class="toggle on"></div>
+      </div>
+      <div class="row">
+        <label>모드</label>
+        <select>
+          <option>오버레이</option>
+          <option>전용 모드</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>테마</label>
+        <select>
+          <option>미니멀 디지털</option>
+          <option>플립시계</option>
+          <option>아날로그</option>
+          <option>네온</option>
+          <option>클래식</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>시간 포맷</label>
+        <select>
+          <option>24시간</option>
+          <option>12시간 (AM/PM)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Card: 날씨 -->
+    <div class="admin-card">
+      <h3><span class="icon-emoji">🌤️</span>날씨 위젯</h3>
+      <div class="row">
+        <label>위치</label>
+        <span class="value">용인시 상현2동</span>
+      </div>
+      <div class="row">
+        <label>날씨 표시</label>
+        <div class="toggle on"></div>
+      </div>
+      <div class="row">
+        <label>미세먼지 표시</label>
+        <div class="toggle on"></div>
+      </div>
+      <div class="row">
+        <label>업데이트 주기</label>
+        <select>
+          <option>1시간</option>
+          <option>30분</option>
+          <option>10분</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Card: 사진 관리 -->
+    <div class="admin-card" style="grid-column: span 2;">
+      <h3><span class="icon-emoji">📸</span>사진 라이브러리 (총 47장)</h3>
+      <div class="stat-row">
+        <div class="stat-item"><div class="num">47</div><div class="lbl">전체</div></div>
+        <div class="stat-item"><div class="num">2.3GB</div><div class="lbl">사용 중</div></div>
+        <div class="stat-item"><div class="num">7.7GB</div><div class="lbl">남은 용량</div></div>
+        <div class="stat-item"><div class="num">12</div><div class="lbl">이번주 추가</div></div>
+      </div>
+      <div class="photo-grid-admin">
+        <div class="item" style="background-image:url('https://picsum.photos/120?random=20');"></div>
+        <div class="item" style="background-image:url('https://picsum.photos/120?random=21');"></div>
+        <div class="item" style="background-image:url('https://picsum.photos/120?random=22');"></div>
+        <div class="item" style="background-image:url('https://picsum.photos/120?random=23');"></div>
+        <div class="item" style="background-image:url('https://picsum.photos/120?random=24');"></div>
+        <div class="item" style="background-image:url('https://picsum.photos/120?random=25');"></div>
+        <div class="item" style="background-image:url('https://picsum.photos/120?random=26');"></div>
+        <div class="item" style="background-image:url('https://picsum.photos/120?random=27');"></div>
+      </div>
+      <p style="font-size:12px; color:#8b9cb5; margin-top:12px;">사진 위에 마우스 올리면 삭제 버튼이 표시됩니다.</p>
+    </div>
+
+    <!-- Card: 가족 비밀번호 -->
+    <div class="admin-card">
+      <h3><span class="icon-emoji">🔒</span>가족 인증</h3>
+      <div class="row">
+        <label>현재 비밀번호</label>
+        <span class="value">●●●●●●</span>
+      </div>
+      <input class="form-input" style="margin-top:12px; background:rgba(0,0,0,0.3); color:#fff; border:1px solid rgba(255,255,255,0.15);" type="password" placeholder="새 비밀번호">
+      <input class="form-input" style="background:rgba(0,0,0,0.3); color:#fff; border:1px solid rgba(255,255,255,0.15);" type="password" placeholder="새 비밀번호 확인">
+      <button class="btn-primary" style="margin-top:8px;">비밀번호 변경</button>
+    </div>
+
+    <!-- Card: QR 코드 -->
+    <div class="admin-card">
+      <h3><span class="icon-emoji">📲</span>가족용 QR 코드</h3>
+      <p style="font-size:12px; color:#8b9cb5; margin-bottom:8px;">가족이 폰으로 스캔하면 업로드 페이지로 바로 이동합니다.</p>
+      <div class="qr-section">
+        <div class="qr-mock" id="qrMock"></div>
+        <p style="font-size:11px; color:#8b9cb5; font-family:monospace;">eo2-vamos.pages.dev</p>
+        <button class="btn-secondary" style="margin-top:10px; background:rgba(255,255,255,0.1); color:#fff;">QR 코드 다운로드</button>
+      </div>
+    </div>
+
+    <!-- Card: V2 기능 (미리보기) -->
+    <div class="admin-card" style="grid-column: span 2;">
+      <h3><span class="icon-emoji">🚀</span>V2 예정 기능 (활성화 가능 시점에 표시)</h3>
+      <div class="row">
+        <label>📲 QR 코드 화면 표시 (5분마다)</label>
+        <div class="toggle"></div>
+      </div>
+      <div class="row">
+        <label>🎨 명화 자동 큐레이션 (Met Museum)</label>
+        <div class="toggle"></div>
+      </div>
+      <div class="row">
+        <label>📁 사진 앨범별 분류 (여행/가족/일상)</label>
+        <div class="toggle"></div>
+      </div>
+      <div class="row">
+        <label>💬 카카오톡 봇 업로드</label>
+        <div class="toggle"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="info-box">
+    <strong>⚙️ 관리자 페이지:</strong> 사장님만 접속하는 페이지로, 별도 관리자 비밀번호로 보호됩니다.
+    여기서 슬라이드쇼 간격, 시계 테마, 날씨 설정, 사진 정리, QR 코드 발급, 가족 비밀번호 변경을 할 수 있습니다.
+  </div>
+</section>
+
+<script>
+  // ===== 탭 전환 =====
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // ===== 사진 슬라이드쇼 (시안용) =====
+  const photoBg = document.getElementById('photoBg');
+  let photoSeed = Math.floor(Math.random() * 1000);
+  function loadPhoto() {
+    photoSeed++;
+    photoBg.style.opacity = '0';
+    setTimeout(() => {
+      photoBg.style.backgroundImage = `url('https://picsum.photos/1280/720?random=${photoSeed}')`;
+      photoBg.style.opacity = '1';
+    }, 400);
+  }
+  loadPhoto();
+  document.getElementById('nextPhoto').addEventListener('click', loadPhoto);
+
+  // ===== 화면 방향 토글 =====
+  const eo2Frame = document.getElementById('eo2Frame');
+  document.getElementById('orientation').addEventListener('change', e => {
+    eo2Frame.classList.remove('portrait', 'landscape');
+    eo2Frame.classList.add(e.target.value);
+  });
+
+  // ===== 시계 모드 토글 =====
+  const clockContainer = document.getElementById('clockContainer');
+  document.getElementById('clockMode').addEventListener('change', e => {
+    const mode = e.target.value;
+    clockContainer.classList.remove('overlay-mode', 'solo-mode');
+    if (mode === 'overlay') {
+      clockContainer.classList.add('overlay-mode');
+      clockContainer.style.display = '';
+      photoBg.classList.remove('solo-mode');
+    } else if (mode === 'solo') {
+      clockContainer.classList.add('solo-mode');
+      clockContainer.style.display = '';
+      photoBg.classList.add('solo-mode');
+    } else {
+      clockContainer.style.display = 'none';
+      photoBg.classList.remove('solo-mode');
+    }
+  });
+
+  // ===== 시계 테마 토글 =====
+  const themes = ['minimal', 'flip', 'analog', 'neon', 'classic'];
+  document.getElementById('clockTheme').addEventListener('change', e => {
+    const t = e.target.value;
+    themes.forEach(th => {
+      const el = document.getElementById('clock' + th.charAt(0).toUpperCase() + th.slice(1));
+      if (el) el.style.display = (th === t) ? '' : 'none';
+    });
+  });
+
+  // ===== 시계 업데이트 (실시간) =====
+  function updateClocks() {
+    const now = new Date();
+    const h = now.getHours();
+    const m = now.getMinutes();
+    const s = now.getSeconds();
+    const hh = h.toString().padStart(2, '0');
+    const mm = m.toString().padStart(2, '0');
+
+    // 미니멀
+    document.getElementById('clockMinimal').textContent = `${hh}:${mm}`;
+    // 네온
+    document.getElementById('clockNeon').textContent = `${hh}:${mm}`;
+    // 클래식
+    document.getElementById('clockClassic').textContent = `${hh}:${mm}`;
+    // 플립
+    document.getElementById('flipH1').textContent = hh[0];
+    document.getElementById('flipH2').textContent = hh[1];
+    document.getElementById('flipM1').textContent = mm[0];
+    document.getElementById('flipM2').textContent = mm[1];
+
+    // 아날로그
+    const hourDeg = (h % 12) * 30 + m * 0.5;
+    const minDeg = m * 6 + s * 0.1;
+    const secDeg = s * 6;
+    document.getElementById('hourHand').style.transform = `rotate(${hourDeg}deg)`;
+    document.getElementById('minuteHand').style.transform = `rotate(${minDeg}deg)`;
+    document.getElementById('secondHand').style.transform = `rotate(${secDeg}deg)`;
+  }
+  updateClocks();
+  setInterval(updateClocks, 1000);
+
+  // ===== 슬라이드쇼 자동 전환 (시안에서는 30초마다) =====
+  setInterval(loadPhoto, 30000);
+
+  // ===== QR 코드 모형 (그리드로 가짜 QR 그리기) =====
+  const qrMock = document.getElementById('qrMock');
+  if (qrMock) {
+    const pattern = [
+      [1,1,1,1,1,1,1,0],
+      [1,0,0,0,0,0,1,1],
+      [1,0,1,1,1,0,1,0],
+      [1,0,1,1,1,0,1,1],
+      [1,0,0,0,0,0,1,0],
+      [1,1,1,1,1,1,1,1],
+      [0,1,0,1,1,0,1,0],
+      [1,0,1,0,1,1,0,1]
+    ];
+    pattern.forEach(row => row.forEach(v => {
+      const px = document.createElement('div');
+      px.className = 'px ' + (v ? '' : 'empty');
+      qrMock.appendChild(px);
+    }));
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "친구들과 세로셈",
+  "short_name": "세로셈",
+  "description": "친구들과 함께 덧셈·뺄셈·곱셈·나눗셈을 세로셈으로 한 칸씩!",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef4ff",
+  "theme_color": "#ff7759",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영어공부 — 비즈니스 영어 듣기 훈련</title>
+<style>
+  :root {
+    --bg: #f6f7fb; --card: #ffffff; --ink: #1f2430; --sub: #6b7280;
+    --accent: #3b5bdb; --accent-soft: #e7ecff; --ok: #16a34a; --bad: #dc2626;
+    --warn: #d97706; --line: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Segoe UI', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--ink); font-size: 18px; display: flex; flex-direction: column; min-height: 100vh; }
+  header { background: var(--card); border-bottom: 1px solid var(--line); padding: 14px 20px; display: flex; align-items: center; justify-content: center; gap: 20px; position: sticky; top: 0; z-index: 5; flex-wrap: wrap; }
+  header h1 { font-size: 22px; margin: 0; }
+  nav { display: flex; gap: 8px; flex-wrap: wrap; }
+  nav button { border: 1px solid var(--line); background: var(--card); padding: 10px 20px; border-radius: 22px; cursor: pointer; font-size: 17px; }
+  nav button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  /* 콘텐츠를 화면 정중앙(가로+세로)에 배치. 내용이 길면 자연스럽게 스크롤 */
+  main { flex: 1; display: flex; width: 100%; padding: 24px 16px 40px; }
+  main > section { margin: auto; width: 100%; max-width: 880px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+  .card h2 { font-size: 26px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+  .stat { background: var(--accent-soft); border-radius: 14px; padding: 18px; text-align: center; }
+  .stat .num { font-size: 34px; font-weight: 700; color: var(--accent); }
+  .stat .label { font-size: 16px; color: var(--sub); margin-top: 4px; }
+  .big-btn { display: block; width: 100%; padding: 20px; font-size: 21px; font-weight: 600; border: none; border-radius: 14px; background: var(--accent); color: #fff; cursor: pointer; margin-top: 12px; }
+  .big-btn.secondary { background: var(--card); color: var(--accent); border: 2px solid var(--accent); }
+  .big-btn.collected { background: #fff7ed; color: #b45309; border: 2px solid #fbbf24; }
+  .big-btn:disabled { background: #c4c9d4; cursor: default; }
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; justify-content: center; }
+  .chip { padding: 9px 18px; border-radius: 20px; border: 1px solid var(--line); background: var(--card); cursor: pointer; font-size: 17px; }
+  .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .play-row { display: flex; gap: 12px; margin: 16px 0; }
+  .play-row button { flex: 1; padding: 18px; font-size: 19px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); cursor: pointer; }
+  .play-row button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  textarea { width: 100%; min-height: 110px; font-size: 21px; padding: 16px; border-radius: 12px; border: 1px solid var(--line); resize: vertical; font-family: inherit; }
+  .muted { color: var(--sub); font-size: 16px; }
+  .diff { font-size: 26px; line-height: 1.9; margin: 14px 0; text-align: center; }
+  .diff .hit { color: var(--ink); }
+  .diff .miss { color: var(--bad); font-weight: 700; border-bottom: 3px solid var(--bad); }
+  .score { font-size: 19px; font-weight: 600; text-align: center; }
+  .score.good { color: var(--ok); } .score.mid { color: var(--warn); } .score.poor { color: var(--bad); }
+  .notes { background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; padding: 16px 18px; font-size: 18px; line-height: 1.8; margin: 14px 0; }
+  .ko { font-size: 19px; color: var(--sub); margin: 10px 0; text-align: center; }
+  .result-btns { display: flex; gap: 12px; margin-top: 16px; }
+  .result-btns button { flex: 1; padding: 16px; font-size: 18px; font-weight: 600; border-radius: 12px; border: none; cursor: pointer; }
+  .btn-pass { background: #dcfce7; color: var(--ok); } .btn-fail { background: #fee2e2; color: var(--bad); }
+  .btn-next { background: var(--accent); color: #fff; }
+  table { width: 100%; border-collapse: collapse; font-size: 17px; }
+  th, td { text-align: left; padding: 11px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--sub); font-weight: 600; font-size: 15px; }
+  .tag { display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 11px; padding: 3px 11px; font-size: 14px; }
+  .mini-play { border: 1px solid var(--line); background: var(--card); border-radius: 9px; padding: 6px 13px; cursor: pointer; font-size: 15px; margin-right: 5px; margin-top: 4px; }
+  input[type=text] { padding: 13px; border-radius: 10px; border: 1px solid var(--line); font-size: 18px; width: 100%; }
+  .form-row { display: flex; gap: 8px; margin-top: 8px; }
+  .form-row input { flex: 1; }
+  .form-row button { padding: 12px 22px; border-radius: 10px; border: none; background: var(--accent); color: #fff; cursor: pointer; font-size: 17px; }
+  .hidden { display: none; }
+  .progress { font-size: 17px; color: var(--sub); margin-bottom: 4px; text-align: center; }
+  .toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 14px; opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎧 영어공부</h1>
+  <nav>
+    <button data-view="home" class="active">홈</button>
+    <button data-view="drill">받아쓰기</button>
+    <button data-view="roleplay">상황극</button>
+    <button data-view="add">문장 추가</button>
+    <button data-view="vocab">단어장</button>
+    <button data-view="history">공부 이력</button>
+  </nav>
+</header>
+<main>
+
+<!-- ───────── 홈 ───────── -->
+<section id="view-home">
+  <div class="card">
+    <h2 style="margin-top:0">오늘의 현황</h2>
+    <div class="stat-grid">
+      <div class="stat"><div class="num" id="st-due">-</div><div class="label">오늘 복습할 문장</div></div>
+      <div class="stat"><div class="num" id="st-total">-</div><div class="label">전체 문장</div></div>
+      <div class="stat"><div class="num" id="st-vocab">-</div><div class="label">단어장</div></div>
+      <div class="stat"><div class="num" id="st-sessions">-</div><div class="label">공부한 날</div></div>
+    </div>
+    <button class="big-btn" onclick="startDrill()">🎧 받아쓰기 시작</button>
+    <p class="muted" style="margin-bottom:0"><b>상황극</b> 탭에서 배운 문장으로 실전 대화를 연습할 수 있어요. 새 문장 추가·약점 분석은 Claude 채팅에서 "문장 추가하고 싶어", "나 뭐가 약해?"라고 말하면 됩니다.</p>
+  </div>
+</section>
+
+<!-- ───────── 받아쓰기 ───────── -->
+<section id="view-drill" class="hidden">
+  <div class="card" id="drill-card">
+    <div class="progress" id="drill-progress"></div>
+    <h2 style="margin-top:4px;text-align:center">잘 듣고, 들리는 만큼 적어보세요</h2>
+    <div class="chips" id="voice-chips"></div>
+    <div class="play-row">
+      <button class="primary" onclick="playCurrent(false)">▶ 듣기</button>
+      <button onclick="playCurrent(true)">🐢 느리게</button>
+    </div>
+    <div id="answer-area">
+      <textarea id="dictation-input" placeholder="들린 대로 입력... (몇 단어라도 괜찮아요)"></textarea>
+      <button class="big-btn" onclick="grade()">채점하기</button>
+      <button class="big-btn secondary" onclick="giveUp()">모르겠어요 (정답 보기)</button>
+    </div>
+    <div id="grade-area" class="hidden">
+      <div class="score" id="grade-score"></div>
+      <div class="diff" id="grade-diff"></div>
+      <div class="ko" id="grade-ko"></div>
+      <div class="notes" id="grade-notes"></div>
+      <div class="notes" id="grade-study" style="background:#eef2ff;border-color:#c7d2fe"></div>
+      <div class="play-row">
+        <button onclick="playCurrent(true)">🐢 느리게 다시</button>
+        <button onclick="playCurrent(false)">▶ 보통 속도</button>
+        <button onclick="playOtherAccent()">🌍 다른 악센트</button>
+      </div>
+      <p class="muted">💡 이제 오디오를 따라 <b>3번 소리 내어</b> 말해보세요 (쉐도잉 — 말하기 연습).</p>
+      <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px">
+        <div style="text-align:center;font-weight:600;margin-bottom:8px">🔊 원어민 실제 예문 <span class="muted" style="font-weight:400">(YouGlish에서 모은 것 · 다시 볼 땐 무료)</span></div>
+        <div id="yg-saved-drill" style="margin-top:6px"></div>
+        <p class="muted" style="text-align:center;margin:12px 0 4px">YouGlish에서 더 찾기 <span class="muted">— 하루 횟수 제한, 찾은 예문은 자동 저장돼요:</span></p>
+        <div class="chips">
+          <span class="chip" onclick="ygSearchDrill('pattern')">📺 패턴 말하는 영상 (YouGlish)</span>
+          <span class="chip" onclick="ygSearchDrill('sentence')">📺 문장 통째로 검색</span>
+          <a class="chip" id="yg-open-drill" target="_blank" href="https://youglish.com">YouGlish 새 탭 ↗</a>
+        </div>
+        <div id="yg-drill-wrap" style="display:none;justify-content:center;margin-top:10px">
+          <a id="yg-widget-drill" class="youglish-widget" data-zones="all,us,uk" data-components="9415" data-auto-start="0" rel="nofollow">YouGlish 위젯 로딩 중...</a>
+        </div>
+      </div>
+      <div style="margin-top:10px">
+        <span class="muted">뜻을 몰랐던 단어가 있나요?</span>
+        <div class="form-row">
+          <input type="text" id="vocab-quick-term" placeholder="단어/표현">
+          <input type="text" id="vocab-quick-ko" placeholder="뜻">
+          <button onclick="quickAddVocab()">단어장에 추가</button>
+        </div>
+      </div>
+      <button class="big-btn secondary" id="collect-btn" onclick="toggleCollect()" style="margin-top:14px">📌 이 문장 모아두기 (나중에 한번에 복습)</button>
+      <div class="result-btns">
+        <button class="btn-next" onclick="nextSentence()">다음 문장 →</button>
+      </div>
+      <button class="big-btn secondary" onclick="stopDrill()">그만하기 (여기까지 자동 저장됨)</button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── 상황극 ───────── -->
+<section id="view-roleplay" class="hidden">
+  <div class="card" id="rp-list">
+    <h2 style="margin-top:0">🎭 상황극</h2>
+    <p class="muted">실제 업무 상황에서 <b>상대 말을 듣고</b> → <b>배운 문장으로 대응</b>하는 연습입니다. 상대역 대사는 오디오로 먼저 나오고(받아쓰기처럼 듣기 훈련), 내 차례엔 배운 문장을 떠올려 <b>소리 내어</b> 말해보세요.</p>
+    <div id="rp-cards"></div>
+  </div>
+  <div class="card hidden" id="rp-play">
+    <div class="progress" id="rp-progress"></div>
+    <div id="rp-goal" class="muted" style="text-align:center;margin-bottom:6px"></div>
+    <div id="rp-stage"></div>
+    <div id="rp-controls" class="result-btns"></div>
+    <div id="rp-yg" class="hidden" style="margin-top:18px;border-top:1px solid var(--line);padding-top:14px">
+      <p class="muted" style="text-align:center;margin-top:0">🔊 원어민 실제 예문 (YouGlish에서 모은 것 · 다시 볼 땐 무료)</p>
+      <div id="yg-saved-rp" style="margin-top:6px"></div>
+      <p class="muted" style="text-align:center;margin:12px 0 4px">YouGlish에서 더 찾기 — 하루 횟수 제한, 찾은 예문은 자동 저장:</p>
+      <div class="chips">
+        <span class="chip" onclick="ygSearchRp('pattern')">📺 패턴 영상 (YouGlish)</span>
+        <span class="chip" onclick="ygSearchRp('sentence')">📺 문장 통째로 검색</span>
+        <a class="chip" id="yg-open-rp" target="_blank" href="https://youglish.com">YouGlish 새 탭 ↗</a>
+      </div>
+      <div style="display:flex;justify-content:center;margin-top:10px">
+        <a id="yg-widget-rp" class="youglish-widget" data-zones="all,us,uk" data-components="9415" data-auto-start="0" rel="nofollow">YouGlish 위젯 로딩 중...</a>
+      </div>
+    </div>
+  </div>
+  <div class="card hidden" id="rp-done">
+    <h2 style="margin-top:0">🎉 상황극 완료</h2>
+    <div id="rp-done-body"></div>
+    <div class="result-btns"><button class="btn-next" onclick="rpExit()">← 목록으로</button></div>
+  </div>
+</section>
+
+<!-- ───────── 문장 추가 ───────── -->
+<section id="view-add" class="hidden">
+  <div class="card">
+    <h2 style="margin-top:0">원하는 문장 추가</h2>
+    <p class="muted">외우고 싶은 영어 문장을 적으면 <b>발음(미국/영국 4음성 + 느린 버전)</b>과 <b>듣기 해설</b>을 자동으로 만들어 등록합니다.</p>
+    <textarea id="add-input" placeholder="예: We'd like to revisit the dosing schedule before we lock the protocol."></textarea>
+    <button class="big-btn" id="add-btn" onclick="addSentence()">🪄 발음·해설 만들고 등록하기</button>
+    <p class="muted" id="add-status" style="text-align:center"></p>
+  </div>
+</section>
+
+<!-- ───────── 단어장 ───────── -->
+<section id="view-vocab" class="hidden">
+  <div class="card">
+    <h2 style="margin-top:0">단어장</h2>
+    <div class="form-row">
+      <input type="text" id="vocab-term" placeholder="단어/표현">
+      <input type="text" id="vocab-ko" placeholder="뜻">
+      <button onclick="addVocab()">추가</button>
+    </div>
+    <div id="vocab-list" style="margin-top:14px"></div>
+  </div>
+</section>
+
+<!-- ───────── 공부 이력 ───────── -->
+<section id="view-history" class="hidden">
+  <div class="card">
+    <h2 style="margin-top:0">공부 이력</h2>
+    <p style="text-align:right;margin:0"><button class="mini-play" onclick="exportData()">💾 데이터 백업 내려받기</button></p>
+    <div class="stat-grid" style="margin-bottom:14px">
+      <div class="stat"><div class="num" id="h-sessions">-</div><div class="label">학습 기록</div></div>
+      <div class="stat"><div class="num" id="h-days">-</div><div class="label">공부한 날</div></div>
+      <div class="stat"><div class="num" id="h-rate">-</div><div class="label">받아쓰기 통과율</div></div>
+    </div>
+    <div id="history-list"></div>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">📌 모아둔 문장 <span id="collected-count" class="muted" style="font-size:18px;font-weight:400"></span></h2>
+    <p class="muted">받아쓰기 채점 화면이나 아래 '공부한 문장' 목록에서 <b>📌 모아두기</b>한 문장이에요. 한번에 모아서 복습하세요.</p>
+    <div id="collected-actions"></div>
+    <div id="collected-list"></div>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">📚 공부한 문장 <span id="studied-count" class="muted" style="font-size:18px;font-weight:400"></span></h2>
+    <p class="muted">받아쓰기·상황극으로 실제 연습한 문장들이에요. 행을 누르면 그 문장으로 바로 받아쓰기를 시작합니다.</p>
+    <div id="studied-list"></div>
+  </div>
+</section>
+
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+const VOICES = { 'us-m': '🇺🇸 미국 남', 'us-f': '🇺🇸 미국 여', 'gb-m': '🇬🇧 영국 남', 'gb-f': '🇬🇧 영국 여' };
+const BOX_DAYS = { 1: 1, 2: 2, 3: 4, 4: 7, 5: 14 };
+// 로컬(PC 서버) vs 온라인(Netlify 등 정적 호스팅) 모드 자동 감지
+const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+const LS_KEYS = { 'data/sentences.json': 'engstudy.sentences', 'data/vocab.json': 'engstudy.vocab', 'data/study_log.json': 'engstudy.log' };
+let DB = { sentences: null, vocab: null, log: null };
+let drill = null; // {queue:[], idx, voice, results:[], newWords:[], replays}
+let audioEl = null;
+
+const lsGet = k => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } };
+
+// 온라인 모드: 배포에 포함된 JSON(시드)과 이 브라우저의 학습 기록(localStorage)을 병합
+function mergeWithLocal(s, v, l) {
+  const ls = lsGet(LS_KEYS['data/sentences.json']);
+  if (ls && ls.sentences) {
+    const byId = {}; s.sentences.forEach(x => byId[x.id] = x);
+    ls.sentences.forEach(x => {
+      if (byId[x.id]) {
+        // 받아쓰기 시도 횟수가 많은 쪽이 더 최신 기록
+        if ((x.listening?.attempts || 0) >= (byId[x.id].listening?.attempts || 0)) {
+          byId[x.id].srs = x.srs; byId[x.id].listening = x.listening;
+        }
+        if (x.collected !== undefined) byId[x.id].collected = x.collected; // 모아두기 표시 유지
+        if (Array.isArray(x.yg_clips)) byId[x.id].yg_clips = x.yg_clips; // 저장한 예문(지점) 유지
+      } else { s.sentences.push(x); } // 온라인에서 직접 추가한 문장
+    });
+  }
+  const lv = lsGet(LS_KEYS['data/vocab.json']);
+  if (lv && lv.words) {
+    const have = new Set(v.words.map(w => w.term.toLowerCase()));
+    lv.words.forEach(w => { if (!have.has(w.term.toLowerCase())) v.words.push(w); });
+  }
+  const ll = lsGet(LS_KEYS['data/study_log.json']);
+  if (ll && ll.entries) {
+    const have = new Set(l.entries.map(e => JSON.stringify(e)));
+    ll.entries.forEach(e => { if (!have.has(JSON.stringify(e))) l.entries.push(e); });
+    l.entries.sort((a, b) => a.date < b.date ? -1 : 1);
+  }
+  return { sentences: s, vocab: v, log: l };
+}
+
+/* 브라우저 내장 음성(TTS) — mp3가 없을 때 폴백 (온라인에서 추가한 문장 등) */
+const VOICE_NAMES = {
+  'us-m': ['Andrew', 'Guy', 'Christopher', 'Eric', 'David', 'Mark'],
+  'us-f': ['Ava', 'Aria', 'Jenny', 'Michelle', 'Emma', 'Zira'],
+  'gb-m': ['Ryan', 'Thomas', 'George'],
+  'gb-f': ['Sonia', 'Libby', 'Maisie', 'Hazel', 'Susan'],
+};
+function pickBrowserVoice(vkey) {
+  const all = speechSynthesis.getVoices();
+  const lang = vkey && vkey.startsWith('gb') ? 'en-GB' : 'en-US';
+  const cands = all.filter(v => v.lang.replace('_', '-') === lang);
+  for (const n of (VOICE_NAMES[vkey] || [])) {
+    const hit = cands.find(v => v.name.includes(n));
+    if (hit) return hit;
+  }
+  return cands[0] || all.find(v => v.lang.startsWith('en')) || null;
+}
+function speakTTS(text, vkey, slow) {
+  if (!('speechSynthesis' in window)) { toast('이 브라우저는 음성 합성을 지원하지 않아요'); return; }
+  const u = new SpeechSynthesisUtterance(text);
+  const v = pickBrowserVoice(vkey);
+  if (v) u.voice = v;
+  u.lang = vkey && vkey.startsWith('gb') ? 'en-GB' : 'en-US';
+  u.rate = slow ? 0.72 : 0.95;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+if ('speechSynthesis' in window) speechSynthesis.getVoices(); // 미리 로드
+
+const $ = id => document.getElementById(id);
+const today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); };
+const addDays = (dateStr, n) => { const d = new Date(dateStr + 'T00:00:00'); d.setDate(d.getDate() + n); return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); };
+const toast = msg => { const t = $('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2200); };
+
+async function load() {
+  const [s, v, l, sc] = await Promise.all([
+    fetch('/data/sentences.json').then(r => r.json()),
+    fetch('/data/vocab.json').then(r => r.json()),
+    fetch('/data/study_log.json').then(r => r.json()),
+    fetch('/data/scenarios.json').then(r => r.json()).catch(() => ({ scenarios: [] })),
+  ]);
+  DB = LOCAL ? { sentences: s, vocab: v, log: l } : mergeWithLocal(s, v, l);
+  DB.scenarios = sc;
+  // 지점(start) 없는 옛 자동수집 예문 정리 — 이제 시간 적은 것만 보관
+  DB.sentences.sentences.forEach(s => {
+    if (Array.isArray(s.yg_clips)) {
+      const kept = s.yg_clips.filter(c => c.start != null);
+      if (kept.length !== s.yg_clips.length) s.yg_clips = kept;
+    }
+  });
+  if (!LOCAL) $('add-status').textContent = '🌐 온라인 모드: 발음은 mp3 또는 브라우저 음성으로 재생되고, 기록은 이 브라우저에 저장돼요. 해설 자동 생성은 PC 앱에서만 가능합니다.';
+  renderHome(); renderVocab(); renderHistory(); renderRoleplay();
+}
+
+async function save(file, content) {
+  if (!LOCAL) { localStorage.setItem(LS_KEYS[file], JSON.stringify(content)); return; }
+  const r = await fetch('/api/save', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ file, content }) });
+  if (!r.ok) { toast('저장 실패! 서버 확인 필요'); throw new Error('save failed'); }
+}
+// sentences 저장은 항상 이 함수로 — 지점(start) 적은 예문만 디스크에 기록(메모리는 그대로 둬 화면엔 보임)
+function sentencesForSave() {
+  return { ...DB.sentences, sentences: DB.sentences.sentences.map(s => {
+    if (!Array.isArray(s.yg_clips) || !s.yg_clips.length) return s;
+    const kept = s.yg_clips.filter(c => c.start != null);
+    return kept.length === s.yg_clips.length ? s : { ...s, yg_clips: kept };
+  }) };
+}
+async function saveSentences() { return save('data/sentences.json', sentencesForSave()); }
+
+function dueSentences() {
+  return DB.sentences.sentences.filter(s => s.srs.next_review <= today());
+}
+
+/* ───── 화면 전환 ───── */
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => showView(b.dataset.view));
+function showView(name) {
+  document.querySelectorAll('main > section').forEach(s => s.classList.add('hidden'));
+  $('view-' + name).classList.remove('hidden');
+  document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.view === name));
+  if (name === 'home') renderHome();
+  if (name === 'roleplay') { rp = null; $('rp-play').classList.add('hidden'); $('rp-done').classList.add('hidden'); $('rp-list').classList.remove('hidden'); renderRoleplay(); }
+}
+
+/* ───── 홈 ───── */
+function renderHome() {
+  $('st-due').textContent = dueSentences().length;
+  $('st-total').textContent = DB.sentences.sentences.length;
+  $('st-vocab').textContent = DB.vocab.words.length;
+  $('st-sessions').textContent = new Set(DB.log.entries.map(e => e.date)).size;
+}
+
+/* ───── 받아쓰기 ───── */
+function startDrill(targetId) {
+  let queue;
+  if (targetId) {
+    queue = DB.sentences.sentences.filter(s => s.id === targetId);
+  } else {
+    queue = dueSentences();
+    if (queue.length === 0) {
+      queue = [...DB.sentences.sentences];
+      toast('오늘 복습 큐가 비어서 전체 문장으로 진행해요');
+    }
+    queue = queue.slice().sort(() => Math.random() - 0.5).slice(0, 8);
+  }
+  drill = { queue, idx: 0, results: [], newWords: [], voice: null, replays: 0 };
+  showView('drill');
+  $('drill-card').classList.remove('hidden');
+  setupSentence();
+}
+
+function setupSentence() {
+  const s = drill.queue[drill.idx];
+  // 약한 악센트 우선, 없으면 랜덤
+  const weak = (s.listening.weak_accents || []).filter(v => VOICES[v]);
+  drill.voice = weak.length ? weak[Math.floor(Math.random()*weak.length)] : Object.keys(VOICES)[Math.floor(Math.random()*4)];
+  drill.replays = 0;
+  $('drill-progress').textContent = `문장 ${drill.idx+1} / ${drill.queue.length}  ·  악센트: ${VOICES[drill.voice]}`;
+  $('voice-chips').innerHTML = Object.entries(VOICES).map(([k, label]) =>
+    `<span class="chip ${k===drill.voice?'active':''}" onclick="setVoice('${k}')">${label}</span>`).join('');
+  $('dictation-input').value = '';
+  $('answer-area').classList.remove('hidden');
+  $('grade-area').classList.add('hidden');
+  $('vocab-quick-term').value = ''; $('vocab-quick-ko').value = '';
+  $('yg-drill-wrap').style.display = 'none';
+  if (ygWidgetDrill) try { ygWidgetDrill.pause(); } catch (e) {}
+  playCurrent(false);
+}
+
+function setVoice(v) { drill.voice = v; setupSentence0(); }
+function setupSentence0() { // 악센트만 바꾸고 입력 유지
+  $('drill-progress').textContent = `문장 ${drill.idx+1} / ${drill.queue.length}  ·  악센트: ${VOICES[drill.voice]}`;
+  $('voice-chips').innerHTML = Object.entries(VOICES).map(([k, label]) =>
+    `<span class="chip ${k===drill.voice?'active':''}" onclick="setVoice('${k}')">${label}</span>`).join('');
+  playCurrent(false);
+}
+
+function playFile(path, ttsText, slow) {
+  if (audioEl) audioEl.pause();
+  const vkey = (path.match(/_(us|gb)-(m|f)/) || [])[0]?.slice(1);
+  const fallback = () => ttsText ? speakTTS(ttsText, vkey, slow) : toast('오디오 파일이 없어요: ' + path);
+  audioEl = new Audio(path);
+  audioEl.onerror = fallback;
+  audioEl.play().catch(fallback);
+}
+function playCurrent(slow) {
+  const s = drill.queue[drill.idx];
+  drill.replays++;
+  playFile(`/audio/${s.id}_${drill.voice}${slow ? '_slow' : ''}.mp3`, s.en, slow);
+}
+function playOtherAccent() {
+  const others = Object.keys(VOICES).filter(v => v !== drill.voice);
+  const v = others[Math.floor(Math.random()*others.length)];
+  drill.voice = v;
+  $('drill-progress').textContent = `문장 ${drill.idx+1} / ${drill.queue.length}  ·  악센트: ${VOICES[v]}`;
+  playCurrent(false);
+}
+
+const tokenize = t => t.toLowerCase().replace(/[—–\-]/g, ' ').replace(/[^a-z0-9'\s]/g, '').split(/\s+/).filter(Boolean);
+
+// LCS로 정답 토큰별 맞음/틀림 판정
+function diffWords(target, input) {
+  const a = tokenize(target), b = tokenize(input);
+  const m = a.length, n = b.length;
+  const dp = Array.from({length: m+1}, () => new Array(n+1).fill(0));
+  for (let i = m-1; i >= 0; i--) for (let j = n-1; j >= 0; j--)
+    dp[i][j] = a[i] === b[j] ? dp[i+1][j+1] + 1 : Math.max(dp[i+1][j], dp[i][j+1]);
+  const hit = new Array(m).fill(false);
+  let i = 0, j = 0;
+  while (i < m && j < n) {
+    if (a[i] === b[j]) { hit[i] = true; i++; j++; }
+    else if (dp[i+1][j] >= dp[i][j+1]) i++; else j++;
+  }
+  return { tokens: a, hit };
+}
+
+function grade() {
+  const s = drill.queue[drill.idx];
+  const input = $('dictation-input').value.trim();
+  if (!input) { toast('들린 만큼이라도 입력해 보세요. 정 안 들리면 [모르겠어요]'); return; }
+  const { tokens, hit } = diffWords(s.en, input);
+  const correct = hit.filter(Boolean).length;
+  const pct = Math.round(100 * correct / tokens.length);
+  const missed = tokens.filter((_, k) => !hit[k]);
+  showResult(s, pct, missed, tokens, hit, false);
+}
+
+function giveUp() {
+  const s = drill.queue[drill.idx];
+  const tokens = tokenize(s.en);
+  showResult(s, 0, tokens, tokens, tokens.map(() => false), true);
+}
+
+/* 채점 화면 학습 블록 — 패턴 + 응용 예문 + 쓰임 팁 (s.study에서). 데이터 없으면 패턴만. */
+function studyBlock(s) {
+  const st = s.study || {};
+  let html = '';
+  if (s.pattern) {
+    html += `🔑 <b>패턴:</b> <span class="tag">${s.pattern}</span> <span class="muted">— 단어만 바꿔 다른 상황에도 써보세요.</span>`;
+  }
+  if (st.vocab && st.vocab.length) {
+    html += `<div style="margin-top:12px">📖 <b>핵심 단어·표현</b>` +
+      st.vocab.map(w => `<div style="margin:6px 0"><b>${w.term}</b> <span class="muted">— ${w.ko || ''}</span></div>`).join('') + `</div>`;
+  }
+  if (st.examples && st.examples.length) {
+    html += `<div style="margin-top:12px">🗣️ <b>이렇게도 써요</b>` +
+      st.examples.map(e => `<div style="margin:8px 0;padding-left:10px;border-left:3px solid #c7d2fe">
+        <b>${e.en}</b><br><span class="muted">${e.ko || ''}</span></div>`).join('') + `</div>`;
+  }
+  if (st.tip) html += `<div style="margin-top:12px">💡 <b>쓰임:</b> ${st.tip}</div>`;
+  return html;
+}
+function showResult(s, pct, missed, tokens, hit, gaveUp) {
+  $('answer-area').classList.add('hidden');
+  $('grade-area').classList.remove('hidden');
+  const orig = s.en.split(/\s+/);
+  // 원문 단어와 토큰을 순서대로 매칭해 표시
+  let ti = 0;
+  $('grade-diff').innerHTML = orig.map(w => {
+    const clean = tokenize(w);
+    if (clean.length === 0) return `<span class="hit">${w}</span>`;
+    const ok = hit[ti] !== false && hit[ti] !== undefined ? hit[ti] : false;
+    ti += clean.length;
+    return `<span class="${ok ? 'hit' : 'miss'}">${w}</span>`;
+  }).join(' ');
+  const cls = pct >= 80 ? 'good' : pct >= 50 ? 'mid' : 'poor';
+  $('grade-score').className = 'score ' + cls;
+  $('grade-score').textContent = gaveUp ? '정답 공개 (이번엔 실패로 기록돼요 — 괜찮아요, 그래서 연습하는 거예요)' : `정답률 ${pct}%  (${tokens.length}단어 중 ${tokens.length - missed.length}개)`;
+  $('grade-ko').textContent = '🇰🇷 ' + s.ko;
+  const sound = (s.study && s.study.sound) || s.notes || '';
+  $('grade-notes').innerHTML = sound ? '👂 <b>왜 안 들렸을까 (연음·발음):</b><br>' + sound : '';
+  $('grade-notes').classList.toggle('hidden', !sound);
+  $('grade-study').innerHTML = studyBlock(s);
+  $('grade-study').classList.toggle('hidden', !$('grade-study').innerHTML);
+  $('yg-open-drill').href = 'https://youglish.com/pronounce/' + encodeURIComponent(ygQuery('pattern', s)) + '/english';
+  ygCapture = null;
+  $('yg-drill-wrap').style.display = 'none';
+  renderYgClips(s, 'yg-saved-drill');
+  updateCollectBtn(s);
+
+  const pass = pct >= 80;
+  drill.results.push({ id: s.id, accent: drill.voice, pct, missed, pass });
+  applySrs(s, pass, missed);
+  recordStudy(s, pass);
+}
+
+function applySrs(s, pass, missed) {
+  s.listening.attempts += 1;
+  if (pass) s.listening.correct += 1;
+  missed.forEach(w => { if (!s.listening.missed_words.includes(w)) s.listening.missed_words.push(w); });
+  if (!pass && !s.listening.weak_accents.includes(drill.voice)) s.listening.weak_accents.push(drill.voice);
+  if (pass) {
+    s.srs.box = Math.min(s.srs.box + 1, 5);
+    s.srs.next_review = addDays(today(), BOX_DAYS[s.srs.box]);
+    s.srs.last_result = 'pass';
+  } else {
+    s.srs.box = 1;
+    s.srs.next_review = addDays(today(), 1);
+    s.srs.last_result = 'fail';
+  }
+}
+
+/* ───── 모아두기 (한번에 복습할 문장 직접 선택) ───── */
+async function setCollected(s, val) {
+  s.collected = val;
+  await saveSentences();
+}
+function updateCollectBtn(s) {
+  const b = $('collect-btn');
+  if (!b) return;
+  b.textContent = s.collected ? '✅ 모아둠 — 빼려면 다시 누르기' : '📌 이 문장 모아두기 (나중에 한번에 복습)';
+  b.classList.toggle('collected', !!s.collected);
+}
+async function toggleCollect() {
+  const s = drill.queue[drill.idx];
+  await setCollected(s, !s.collected);
+  updateCollectBtn(s);
+  toast(s.collected ? '📌 모아뒀어요 — 공부 이력 > 모아둔 문장에서 한번에 복습' : '모아두기에서 뺐어요');
+}
+async function toggleCollectId(id) {
+  const s = DB.sentences.sentences.find(x => x.id === id);
+  if (!s) return;
+  await setCollected(s, !s.collected);
+  toast(s.collected ? '📌 모아뒀어요' : '모아두기에서 뺐어요');
+  renderHistory();
+}
+
+function nextSentence() {
+  drill.idx++;
+  if (drill.idx >= drill.queue.length) refillQueue(); // 세션 없이 계속 이어감
+  setupSentence();
+}
+// 큐를 다 풀면 다음 문장들로 자동 보충 — 복습 예정 우선, 없으면 전체에서
+function refillQueue() {
+  let more = dueSentences();
+  if (!more.length) more = [...DB.sentences.sentences];
+  drill.queue.push(...more.slice().sort(() => Math.random() - 0.5).slice(0, 8));
+}
+
+// 세션 없이 — 공부한 문장을 그날(today) 받아쓰기 기록에 자동 누적 (언제 공부했는지 날짜로 남김)
+function todayDictationEntry() {
+  let e = DB.log.entries.find(x => x.date === today() && x.mode === 'dictation');
+  if (!e) { e = { date: today(), mode: 'dictation', sentences: [], results: { attempted: 0, passed: 0 }, new_words: [] }; DB.log.entries.push(e); }
+  return e;
+}
+async function recordStudy(s, pass) {
+  const e = todayDictationEntry();
+  if (!e.sentences.includes(s.id)) e.sentences.push(s.id);
+  e.results.attempted += 1;
+  if (pass) e.results.passed += 1;
+  await saveSentences();
+  await save('data/study_log.json', DB.log);
+  renderHome();
+}
+// 계속 이어지는 받아쓰기를 멈추고 홈으로 (진행상황은 문장마다 이미 저장됨)
+function stopDrill() {
+  drill = null;
+  renderHome(); renderHistory(); renderVocab();
+  showView('home');
+}
+
+/* ───── 단어장 ───── */
+function nextVocabId() {
+  const max = DB.vocab.words.reduce((m, w) => Math.max(m, parseInt(w.id.slice(1)) || 0), 0);
+  return 'w' + String(max + 1).padStart(3, '0');
+}
+function pushVocab(term, ko, source, ref) {
+  const exist = DB.vocab.words.find(w => w.term.toLowerCase() === term.toLowerCase());
+  if (exist) { exist.encounters += 1; exist.last_seen = today(); toast(`이미 있는 단어예요 (만난 횟수 ${exist.encounters}회)`); return null; }
+  const w = { id: nextVocabId(), term, ko, example: '', sentence_ref: ref || null, source, added: today(), encounters: 1, last_seen: today() };
+  DB.vocab.words.push(w);
+  return w;
+}
+async function quickAddVocab() {
+  const term = $('vocab-quick-term').value.trim(), ko = $('vocab-quick-ko').value.trim();
+  if (!term) return;
+  const w = pushVocab(term, ko, 'dictation', drill.queue[drill.idx].id);
+  if (w) {
+    drill.newWords.push(w.id);
+    const e = todayDictationEntry();
+    if (!e.new_words.includes(w.id)) e.new_words.push(w.id);
+    await save('data/vocab.json', DB.vocab);
+    await save('data/study_log.json', DB.log);
+    toast(`단어장에 추가: ${term}`);
+  }
+  $('vocab-quick-term').value = ''; $('vocab-quick-ko').value = '';
+  renderVocab();
+}
+async function addVocab() {
+  const term = $('vocab-term').value.trim(), ko = $('vocab-ko').value.trim();
+  if (!term) return;
+  pushVocab(term, ko, 'user', null);
+  await save('data/vocab.json', DB.vocab);
+  $('vocab-term').value = ''; $('vocab-ko').value = '';
+  renderVocab(); renderHome();
+  toast('단어장 저장 완료');
+}
+function renderVocab() {
+  const ws = [...DB.vocab.words].reverse();
+  $('vocab-list').innerHTML = ws.length === 0 ? '<p class="muted">아직 단어가 없어요. 받아쓰기 중 모르는 단어를 만나면 여기에 쌓입니다.</p>' :
+    '<table><tr><th>단어/표현</th><th>뜻</th><th>출처</th><th>만남</th><th>등록일</th></tr>' +
+    ws.map(w => `<tr><td><b>${w.term}</b></td><td>${w.ko || ''}</td><td><span class="tag">${w.source}</span></td><td>${w.encounters}회</td><td>${w.added}</td></tr>`).join('') + '</table>';
+}
+
+/* ───── YouGlish — 찾아준 실제 예문을 문장에 저장해 다음엔 무료로 다시 본다 ───── */
+let ygWidgetDrill = null, ygWidgetRp = null;
+let ygCapture = null; // { sentence, mountId, accent, video, captured }
+const ACCENT_LABEL = { us: '🇺🇸 미국', uk: '🇬🇧 영국', aus: '🇦🇺 호주', all: '🌍' };
+
+function onYouglishAPIReady() {
+  const ev = { onFetchDone: ygOnFetchDone, onVideoChange: ygOnVideoChange, onCaptionChange: ygOnCaptionChange };
+  ygWidgetDrill = new YG.Widget('yg-widget-drill', { width: 640, components: 9415, events: ev });
+  ygWidgetRp = new YG.Widget('yg-widget-rp', { width: 640, components: 9415, events: ev });
+}
+function ygOnFetchDone(e) { if (ygCapture) ygCapture.accent = e.accent || 'all'; }
+function ygOnVideoChange(e) { if (ygCapture) { ygCapture.video = e.video; ygCapture.captured = false; } }
+function ygOnCaptionChange(e) {
+  if (!ygCapture || ygCapture.captured || !ygCapture.video) return;
+  const cap = (e.caption || '').replace(/\s+/g, ' ').trim();
+  if (!cap) return;
+  ygCapture.captured = true; // 영상당 첫(=일치) 자막 1개만 저장
+  saveYgClip(ygCapture.sentence, { video: ygCapture.video, caption: cap, accent: ygCapture.accent || 'all', saved: today() });
+  renderYgClips(ygCapture.sentence, ygCapture.mountId);
+}
+function saveYgClip(s, clip) {
+  if (!s || !s.id) return;
+  if (!Array.isArray(s.yg_clips)) s.yg_clips = [];
+  if (s.yg_clips.some(c => c.video === clip.video && c.caption === clip.caption)) return;
+  s.yg_clips.push(clip); // 메모리에만 — 시간(start)을 적어야 디스크에 저장됨
+  if (s.yg_clips.length > 20) s.yg_clips = s.yg_clips.slice(-20);
+  toast('🔎 예문 찾음 — 시간(예: 1:23)을 적어야 저장돼요');
+}
+function ygParseTime(str) {
+  str = String(str).trim();
+  if (!str) return null;
+  if (/^\d+$/.test(str)) return parseInt(str, 10); // 초만 입력
+  const m = str.match(/^(\d+):(\d{1,2})(?::(\d{1,2}))?$/); // 분:초 또는 시:분:초
+  if (!m) return null;
+  return m[3] != null ? (+m[1]) * 3600 + (+m[2]) * 60 + (+m[3]) : (+m[1]) * 60 + (+m[2]);
+}
+function ygFmtTime(sec) {
+  sec = Math.max(0, Math.floor(sec));
+  const p = n => String(n).padStart(2, '0');
+  const h = Math.floor(sec / 3600), mm = Math.floor((sec % 3600) / 60), ss = sec % 60;
+  return h > 0 ? `${h}:${p(mm)}:${p(ss)}` : `${mm}:${p(ss)}`;
+}
+function renderYgClips(s, mountId) {
+  const m = $(mountId); if (!m) return;
+  const clips = (s && s.yg_clips) || [];
+  if (!clips.length) {
+    m.innerHTML = '<p class="muted" style="text-align:center;margin:4px 0">아직 저장된 예문이 없어요. 아래 YouGlish로 찾은 뒤 시간(예: 1:23)을 적어 저장하면, 다음부터 그 지점부터 무료로 다시 볼 수 있어요.</p>';
+    return;
+  }
+  const hint = '<p class="muted" style="margin:2px 0 6px;font-size:13px">💡 시간(예: 1:23)을 적은 영상만 저장돼요. 적어두면 다음엔 그 지점부터 자동 재생되고, 안 적은 영상은 새로고침하면 사라져요.</p>';
+  m.innerHTML = hint + clips.map((c, i) => ({ c, i })).reverse().map(({ c, i }) => {
+    const label = c.start != null ? `▶ ${ygFmtTime(c.start)}부터 보기` : '▶ 영상 보기';
+    return `
+    <div class="yg-row" style="padding:8px 10px;margin:6px 0;background:#f8fafc;border:1px solid var(--line);border-radius:10px">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span class="tag">${ACCENT_LABEL[c.accent] || ('🌍 ' + (c.accent || ''))}</span>
+        <span class="chip yg-toggle" data-label="${label}" onclick="ygPlayInline('${s.id}',${i},this)">${label}</span>
+        <input class="yg-time-in" placeholder="예: 1:23" value="${c.start != null ? ygFmtTime(c.start) : ''}" style="width:78px;padding:5px 8px;border:1px solid var(--line);border-radius:8px;font-size:14px">
+        <span class="chip" onclick="ygSetTime('${s.id}',${i},this)">⏱ 지점 저장</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+async function ygSetTime(sid, ci, btn) {
+  const row = btn.closest('.yg-row');
+  const sec = ygParseTime(row.querySelector('.yg-time-in').value);
+  if (sec == null) { toast('시간 형식이 이상해요 — 예: 1:23 또는 83'); return; }
+  const s = DB.sentences.sentences.find(x => x.id === sid);
+  if (!s || !s.yg_clips || !s.yg_clips[ci]) return;
+  s.yg_clips[ci].start = sec;
+  try { await saveSentences(); } catch (e) {}
+  toast(`⏱ ${ygFmtTime(sec)} 지점 저장됨`);
+  renderYgClips(s, row.parentElement.id);
+}
+function ygPlayInline(sid, ci, btn) {
+  const row = btn.closest('.yg-row'), cont = row.parentElement;
+  const wasOpen = !!row.querySelector('.yg-embed');
+  // 모두 닫고 라벨 복원 — 한 번에 하나만 재생
+  cont.querySelectorAll('.yg-embed').forEach(e => e.remove());
+  cont.querySelectorAll('.yg-toggle').forEach(b => { b.textContent = b.dataset.label || '▶ 영상 보기'; });
+  if (wasOpen) return; // 열려 있던 걸 다시 누르면 닫기만
+  const clip = (DB.sentences.sentences.find(x => x.id === sid) || {}).yg_clips?.[ci];
+  if (!clip) return;
+  const start = clip.start != null ? Math.max(0, Math.floor(clip.start)) : 0;
+  const d = document.createElement('div');
+  d.className = 'yg-embed';
+  d.style.marginTop = '8px';
+  d.innerHTML = `<iframe width="100%" height="300" style="border:0;border-radius:10px" src="https://www.youtube.com/embed/${encodeURIComponent(clip.video)}?rel=0&autoplay=1${start > 0 ? '&start=' + start : ''}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+  row.appendChild(d);
+  btn.textContent = '✕ 닫기';
+}
+function ygQuery(kind, s) {
+  if (!s) return '';
+  if (kind === 'sentence') return s.en.replace(/[—–]/g, ' ');
+  const p = (s.pattern || '').replace(/[~?—–]/g, ' ').replace(/\s+/g, ' ').trim();
+  return p || s.en;
+}
+function ygSearchDrill(kind) {
+  const s = drill.queue[drill.idx];
+  const q = ygQuery(kind, s);
+  ygCapture = { sentence: s, mountId: 'yg-saved-drill', accent: 'all', captured: false };
+  $('yg-open-drill').href = 'https://youglish.com/pronounce/' + encodeURIComponent(q) + '/english';
+  $('yg-drill-wrap').style.display = 'flex';
+  if (ygWidgetDrill) ygWidgetDrill.fetch(q, 'english');
+  else toast('YouGlish 위젯 로딩 중이에요 — 인터넷 연결을 확인하거나 [새 탭]을 이용하세요');
+}
+
+/* ───── 문장 추가 ───── */
+async function addSentence() {
+  const en = $('add-input').value.trim().replace(/\s+/g, ' ');
+  if (!en) { toast('문장을 입력해 주세요'); return; }
+  const btn = $('add-btn'), st = $('add-status');
+  if (!LOCAL) { // 온라인 모드: 브라우저에 직접 등록 (발음은 내장 TTS, 해설은 PC에서)
+    if (DB.sentences.sentences.some(s => s.en.toLowerCase() === en.toLowerCase())) { toast('이미 등록된 문장이에요'); return; }
+    const maxN = DB.sentences.sentences.reduce((m, s) => Math.max(m, parseInt(s.id.slice(1)) || 0), 0);
+    const sentence = {
+      id: 's' + String(maxN + 1).padStart(3, '0'), en,
+      ko: '', pattern: '', notes: '', scenario: 'general', tags: [],
+      added: today(),
+      srs: { box: 1, next_review: today(), last_result: null },
+      listening: { attempts: 0, correct: 0, missed_words: [], weak_accents: [] },
+    };
+    DB.sentences.sentences.push(sentence);
+    await saveSentences();
+    $('add-input').value = '';
+    toast('등록 완료! 발음은 브라우저 음성으로 재생돼요');
+    st.textContent = '✅ 등록됐어요 — 받아쓰기 탭에서 연습할 수 있어요.';
+    renderHome();
+    playFile('/audio/' + sentence.id + '_us-m.mp3', sentence.en, false);
+    return;
+  }
+  btn.disabled = true;
+  st.innerHTML = '⏳ 번역·듣기 해설 생성 중... (10~30초 걸려요)';
+  try {
+    const r = await fetch('/api/add_sentence', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ en }) });
+    const res = await r.json();
+    if (!res.ok) { st.textContent = '⚠️ ' + (res.error || '등록 실패'); return; }
+    DB.sentences.sentences.push(res.sentence);
+    $('add-input').value = '';
+    st.textContent = '';
+    if (!res.claude) toast('해설 생성에 실패해서 문장만 등록했어요 — Claude 채팅에서 "해설 채워줘"라고 해주세요');
+    else toast(`등록 완료! 오디오 ${res.audio}개 생성`);
+    st.textContent = '✅ 등록됐어요 — 받아쓰기 탭에서 연습할 수 있어요.';
+    renderHome();
+    playFile('/audio/' + res.sentence.id + '_us-m.mp3', res.sentence.en, false);
+  } catch (e) {
+    st.textContent = '⚠️ 서버 오류: ' + e.message;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+/* ───── 백업 내보내기 ───── */
+function exportData() {
+  const blob = new Blob([JSON.stringify(DB, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'engstudy_backup_' + today() + '.json';
+  a.click();
+  toast('백업 파일을 내려받았어요');
+}
+
+/* ───── 이력 ───── */
+function renderHistory() {
+  const es = DB.log.entries;
+  $('h-sessions').textContent = es.length;
+  $('h-days').textContent = new Set(es.map(e => e.date)).size;
+  const dict = es.filter(e => e.results && e.results.attempted);
+  const att = dict.reduce((a, e) => a + e.results.attempted, 0);
+  const pas = dict.reduce((a, e) => a + (e.results.passed || 0), 0);
+  $('h-rate').textContent = att ? Math.round(100 * pas / att) + '%' : '-';
+  $('history-list').innerHTML = es.length === 0 ? '<p class="muted">아직 기록이 없어요. 첫 받아쓰기를 시작해 보세요!</p>' :
+    '<table><tr><th>날짜</th><th>모드</th><th>내용</th><th>메모</th></tr>' +
+    [...es].reverse().map(e => `<tr><td>${e.date}</td><td><span class="tag">${e.mode}</span></td>
+      <td>${e.results && e.results.attempted !== undefined ? `${e.results.attempted}문장 / ${e.results.passed}통과` : ''}${e.new_words && e.new_words.length ? ` · 새 단어 ${e.new_words.length}` : ''}</td>
+      <td class="muted">${e.note || ''}</td></tr>`).join('') + '</table>';
+  renderCollected();
+  renderStudied();
+}
+function collectedSentences() {
+  return DB.sentences.sentences.filter(s => s.collected);
+}
+function renderCollected() {
+  const cs = collectedSentences();
+  $('collected-count').textContent = cs.length ? `(${cs.length}개)` : '';
+  if (cs.length === 0) {
+    $('collected-actions').innerHTML = '';
+    $('collected-list').innerHTML = '<p class="muted">아직 모아둔 문장이 없어요. 받아쓰기 채점 화면이나 아래 \'공부한 문장\' 목록에서 📌 모아두기를 눌러보세요.</p>';
+    return;
+  }
+  $('collected-actions').innerHTML = `<button class="big-btn" onclick="startCollectedDrill()">▶ 모아둔 ${cs.length}문장 한번에 받아쓰기</button>`;
+  $('collected-list').innerHTML = '<table><tr><th>문장</th><th></th></tr>' +
+    cs.map(s => `<tr>
+      <td><b>${s.en}</b><div class="muted">${s.ko || ''}</div></td>
+      <td style="text-align:right;white-space:nowrap"><button class="mini-play" onclick="toggleCollectId('${s.id}')">빼기 ✕</button></td>
+    </tr>`).join('') + '</table>';
+}
+function startCollectedDrill() {
+  const cs = collectedSentences();
+  if (!cs.length) { toast('모아둔 문장이 없어요'); return; }
+  drill = { queue: cs.slice().sort(() => Math.random() - 0.5), idx: 0, results: [], newWords: [], voice: null, replays: 0 };
+  showView('drill');
+  $('drill-card').classList.remove('hidden');
+  setupSentence();
+}
+function studiedSentences() {
+  const ids = new Set();
+  DB.sentences.sentences.forEach(s => { if (((s.listening && s.listening.attempts) || 0) > 0) ids.add(s.id); });
+  DB.log.entries.forEach(e => (e.sentences || []).forEach(id => ids.add(id)));
+  const byId = {}; DB.sentences.sentences.forEach(s => byId[s.id] = s);
+  return [...ids].map(id => byId[id]).filter(Boolean);
+}
+function renderStudied() {
+  const studied = studiedSentences();
+  const last = {};
+  DB.log.entries.forEach(e => (e.sentences || []).forEach(id => { if (!last[id] || e.date > last[id]) last[id] = e.date; }));
+  $('studied-count').textContent = studied.length ? `(${studied.length}개)` : '';
+  if (studied.length === 0) {
+    $('studied-list').innerHTML = '<p class="muted">아직 연습한 문장이 없어요. 받아쓰기나 상황극을 한 번 해보면 여기에 쌓입니다.</p>';
+    return;
+  }
+  studied.sort((a, b) => {
+    const la = last[a.id] || '', lb = last[b.id] || '';
+    if (la !== lb) return la < lb ? 1 : -1;
+    return (b.listening.attempts || 0) - (a.listening.attempts || 0);
+  });
+  $('studied-list').innerHTML = '<table><tr><th>문장</th><th>받아쓰기</th><th>상태</th><th>마지막</th><th>모아두기</th></tr>' +
+    studied.map(s => {
+      const at = s.listening.attempts || 0, co = s.listening.correct || 0;
+      const drill = at ? `${at}회 · ${co}통과` : '—';
+      const res = s.srs.last_result === 'pass' ? '✅' : s.srs.last_result === 'fail' ? '🔁' : '';
+      const coll = `<button class="mini-play" onclick="event.stopPropagation();toggleCollectId('${s.id}')">${s.collected ? '✅ 모아둠' : '📌 모아두기'}</button>`;
+      return `<tr style="cursor:pointer" onclick="startDrill('${s.id}')">
+        <td><b>${s.en}</b><div class="muted">${s.ko || ''}</div></td>
+        <td>${drill}</td>
+        <td>${res} <span class="tag">box ${s.srs.box}</span></td>
+        <td class="muted">${last[s.id] || s.added || ''}</td>
+        <td>${coll}</td></tr>`;
+    }).join('') + '</table>';
+}
+
+/* ───── 상황극 (롤플레이) ───── */
+let rp = null; // { sc, idx, revealed }
+function renderRoleplay() {
+  const scs = (DB.scenarios && DB.scenarios.scenarios) || [];
+  $('rp-cards').innerHTML = scs.length === 0
+    ? '<p class="muted">시나리오가 아직 없어요. Claude 채팅에서 "상황극 시나리오 추가해줘"라고 해보세요.</p>'
+    : scs.map(sc => {
+        const n = sc.turns.filter(t => t.role === 'user').length;
+        return `<div onclick="rpStart('${sc.id}')" style="border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:12px;cursor:pointer">
+          <div><span class="tag">${sc.scenario}</span> <b style="font-size:21px">${sc.title}</b></div>
+          <div class="muted" style="margin-top:8px;line-height:1.6">${sc.brief}</div>
+          <div class="muted" style="margin-top:8px">🎙️ 상대역: <b>${sc.partner.name}</b> (${sc.partner.role}) · 배운 문장 ${n}개 연습</div>
+        </div>`;
+      }).join('');
+}
+function rpStart(id) {
+  const sc = ((DB.scenarios && DB.scenarios.scenarios) || []).find(s => s.id === id);
+  if (!sc) return;
+  rp = { sc, idx: 0, revealed: false };
+  $('rp-list').classList.add('hidden');
+  $('rp-done').classList.add('hidden');
+  $('rp-play').classList.remove('hidden');
+  rpRenderTurn();
+}
+function rpRenderTurn() {
+  const sc = rp.sc, t = sc.turns[rp.idx];
+  rp.revealed = false;
+  $('rp-yg').classList.add('hidden');
+  $('rp-progress').textContent = `${sc.title} · ${rp.idx + 1} / ${sc.turns.length}`;
+  $('rp-goal').textContent = '🎯 ' + sc.goal;
+  if (t.role === 'partner') {
+    $('rp-stage').innerHTML = `
+      <div style="text-align:center;font-size:20px;margin:14px 0 6px">🔊 <b>${sc.partner.name}</b> <span class="muted">(${sc.partner.role})</span> 가 말합니다</div>
+      <div class="play-row">
+        <button class="primary" onclick="rpPlayPartner(false)">▶ 다시 듣기</button>
+        <button onclick="rpPlayPartner(true)">🐢 느리게</button>
+      </div>
+      <div class="chips"><span class="chip" onclick="document.getElementById('rp-script').classList.toggle('hidden')">📄 스크립트 보기/숨기기</span></div>
+      <div id="rp-script" class="hidden">
+        <div style="font-size:22px;text-align:center;line-height:1.5;margin:8px 0">${t.en}</div>
+        <div class="ko">🇰🇷 ${t.ko}</div>
+      </div>
+      <p class="muted" style="text-align:center">못 알아들으면 다음 내 차례에 <b>"Sorry, could you say that again?"</b> 라고 되물어도 좋아요.</p>`;
+    $('rp-controls').innerHTML = `<button class="btn-next" onclick="rpNext()">다음 →</button>`;
+    rpPlayPartner(false);
+  } else {
+    $('rp-stage').innerHTML = `
+      <div style="text-align:center;font-size:19px;margin:14px 0 4px">🗣️ <b>내 차례</b></div>
+      <div class="ko" style="font-size:20px">${t.hint}</div>
+      <p class="muted" style="text-align:center">배운 문장을 떠올려 <b>소리 내어</b> 말해본 뒤, 답을 확인하세요.</p>
+      <textarea id="rp-input" placeholder="영어로 말해보고, 적어봐도 좋아요 (선택)"></textarea>
+      <div id="rp-answer" class="hidden">
+        <div style="font-size:26px;font-weight:700;text-align:center;line-height:1.5;margin:14px 0">${t.en}</div>
+        <div class="ko">🇰🇷 ${t.ko}</div>
+        <div class="chips"><span class="tag">내가 배운 문장 ${t.ref}</span></div>
+        <div class="play-row"><button class="primary" onclick="rpPlaySelf()">🔊 모범 발음 듣기</button></div>
+      </div>`;
+    $('rp-controls').innerHTML = `<button class="btn-next" onclick="rpReveal()">정답 표현 보기</button>`;
+  }
+}
+function rpPlayPartner(slow) {
+  const sc = rp.sc, t = sc.turns[rp.idx], v = sc.partner.voice;
+  playFile(`/audio/scenario/${sc.id}_${t.aid}_${v}${slow ? '_slow' : ''}.mp3`, t.en, slow);
+}
+function rpPlaySelf() {
+  const t = rp.sc.turns[rp.idx];
+  playFile(`/audio/${t.ref}_us-m.mp3`, t.en, false);
+}
+function rpReveal() {
+  rp.revealed = true;
+  $('rp-answer').classList.remove('hidden');
+  rpPlaySelf();
+  const s = rpCurrentSentence();
+  $('yg-open-rp').href = 'https://youglish.com/pronounce/' + encodeURIComponent(ygQuery('pattern', s)) + '/english';
+  $('rp-yg').classList.remove('hidden');
+  ygCapture = null;
+  renderYgClips(s, 'yg-saved-rp');
+  $('rp-controls').innerHTML = `<button class="btn-next" onclick="rpNext()">다음 →</button>`;
+}
+function rpCurrentSentence() {
+  const t = rp.sc.turns[rp.idx];
+  return (DB.sentences.sentences.find(s => s.id === t.ref)) || { en: t.en, pattern: '' };
+}
+function ygSearchRp(kind) {
+  const s = rpCurrentSentence();
+  const q = ygQuery(kind, s);
+  ygCapture = { sentence: s, mountId: 'yg-saved-rp', accent: 'all', captured: false };
+  $('yg-open-rp').href = 'https://youglish.com/pronounce/' + encodeURIComponent(q) + '/english';
+  if (ygWidgetRp) ygWidgetRp.fetch(q, 'english');
+  else toast('YouGlish 위젯 로딩 중이에요 — [새 탭]을 이용하세요');
+}
+function rpNext() {
+  rp.idx++;
+  if (rp.idx >= rp.sc.turns.length) return rpFinish();
+  rpRenderTurn();
+}
+async function rpFinish() {
+  const used = rp.sc.turns.filter(t => t.role === 'user');
+  $('rp-play').classList.add('hidden');
+  $('rp-done').classList.remove('hidden');
+  $('rp-done-body').innerHTML = `<p>이 상황극에서 연습한 <b>배운 문장 ${used.length}개</b>예요. 한 번 더 소리 내어 복습해 보세요:</p>
+    <table><tr><th>표현</th><th>뜻</th></tr>` +
+    used.map(t => `<tr><td><b>${t.en}</b></td><td class="muted">${t.ko}</td></tr>`).join('') + '</table>';
+  DB.log.entries.push({ date: today(), mode: 'roleplay', scenario: rp.sc.id, sentences: used.map(t => t.ref), note: '상황극: ' + rp.sc.title });
+  try { await save('data/study_log.json', DB.log); } catch (e) {}
+  renderHome(); renderHistory();
+}
+function rpExit() { rp = null; $('rp-done').classList.add('hidden'); $('rp-play').classList.add('hidden'); $('rp-list').classList.remove('hidden'); renderRoleplay(); }
+
+load();
+</script>
+<script async src="https://youglish.com/public/emb/widget.js" charset="utf-8"></script>
+</body>
+</html>

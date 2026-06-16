@@ -1,0 +1,72 @@
+{
+  "entries": [
+    {
+      "date": "2026-06-13",
+      "mode": "dictation",
+      "sentences": [
+        "s001",
+        "s002",
+        "s003",
+        "s004",
+        "s007",
+        "s005",
+        "s006"
+      ],
+      "results": {
+        "attempted": 7,
+        "passed": 1
+      },
+      "new_words": [
+        "w001",
+        "w002",
+        "w003",
+        "w004"
+      ],
+      "note": "연음이 잘 안들림."
+    },
+    {
+      "date": "2026-06-14",
+      "mode": "dictation",
+      "sentences": [
+        "s091"
+      ],
+      "results": {
+        "attempted": 1,
+        "passed": 0
+      },
+      "new_words": [],
+      "note": "약한 악센트: us-m"
+    },
+    {
+      "date": "2026-06-14",
+      "mode": "dictation",
+      "sentences": [
+        "s091"
+      ],
+      "results": {
+        "attempted": 1,
+        "passed": 0
+      },
+      "new_words": [],
+      "note": "익숙해지고 있음."
+    },
+    {
+      "date": "2026-06-15",
+      "mode": "dictation",
+      "sentences": [
+        "s096",
+        "s039",
+        "s007",
+        "s113",
+        "s025"
+      ],
+      "results": {
+        "attempted": 5,
+        "passed": 0
+      },
+      "new_words": [
+        "w005"
+      ]
+    }
+  ]
+}

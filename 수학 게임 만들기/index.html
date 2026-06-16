@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <title>친구들과 세로셈</title>
+
+  <!-- iPad/iPhone 홈 화면 앱(PWA) 설정 -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ff7759" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="세로셈" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- 제목용 둥근 손글씨 글꼴(Jua) — 오프라인이면 Pretendard로 자동 대체 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ===== 시작 화면 ===== -->
+    <section id="home" class="screen active">
+      <div class="home-hero">
+        <div class="home-crew" data-crew>
+          <!-- 캐릭터 4종 (script.js가 채움) -->
+        </div>
+        <h1 class="logo">친구들과 <span class="accent">세로셈</span></h1>
+        <p class="subtitle" id="subtitle">받아올림·받아내림을 한 칸씩, 천천히 같이 풀어요</p>
+        <div class="who-pick" id="whoPick">
+          <span class="who-label">누구야?</span>
+          <button class="who-btn" data-who="범진">🦊 범진</button>
+          <button class="who-btn" data-who="다현">🐰 다현</button>
+          <button class="who-btn" data-who="제이">🐥 제이</button>
+        </div>
+      </div>
+
+      <div class="op-section">
+        <h3 class="section-title add-sec">➕ ➖ 덧셈 · 뺄셈</h3>
+        <div class="op-grid op-grid-2">
+          <button class="op-card play" data-op="add" data-mode="quiz">
+            <span class="op-emoji">➕</span>
+            <span class="op-name">덧셈 도전!</span>
+            <span class="op-desc">받아올림을 펜으로 직접 풀어요</span>
+          </button>
+          <button class="op-card play" data-op="sub" data-mode="quiz">
+            <span class="op-emoji">➖</span>
+            <span class="op-name">뺄셈 도전!</span>
+            <span class="op-desc">받아내림을 펜으로 직접 풀어요</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="op-section">
+        <h3 class="section-title muldiv-sec">✖️ ➗ 곱셈 · 나눗셈</h3>
+        <div class="op-grid op-grid-2">
+          <button class="op-card play mul" data-op="mul" data-mode="quiz">
+            <span class="op-emoji">✖️</span>
+            <span class="op-name">곱셈 도전!</span>
+            <span class="op-desc">자리별 곱·올림을 펜으로 풀어요</span>
+          </button>
+          <button class="op-card play div" data-op="div" data-mode="quiz">
+            <span class="op-emoji">➗</span>
+            <span class="op-name">나눗셈 도전!</span>
+            <span class="op-desc">긴 나눗셈을 펜으로 풀어요</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="op-grid op-extra">
+        <button class="op-card adventure" data-mode="adventure">
+          <span class="op-emoji">🗺️</span>
+          <span class="op-text">
+            <span class="op-name">친구 모험</span>
+            <span class="op-desc">문제 풀어 코인 모으고 🛍️상점에서 새 친구를 만나고 꾸며요!</span>
+          </span>
+        </button>
+      </div>
+
+      <div class="op-grid op-extra">
+        <button class="op-card racing" data-mode="racing">
+          <span class="op-emoji">🏎️</span>
+          <span class="op-text">
+            <span class="op-name">사칙연산 레이싱</span>
+            <span class="op-desc">문제를 풀어 가속! 1등으로 들어와 코인으로 자동차를 업그레이드해요</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== 학습/게임 화면 ===== -->
+    <section id="stage" class="screen">
+      <header class="topbar">
+        <button id="homeBtn" class="ghost-btn js-home">🏠 처음으로</button>
+        <button id="advShopBtn" class="ghost-btn">🛍️ 상점</button>
+        <h2 id="stageTitle">덧셈 배우기</h2>
+        <div class="score-box">
+          <button id="muteBtn" class="ghost-btn js-mute" title="소리 켜기/끄기">🔊</button>
+          <span id="scoreStars">⭐ 0</span>
+          <span class="level-ctrl">
+            <button id="lvDown" class="lv-btn" title="레벨 내리기">−</button>
+            <span id="levelTag">레벨 1</span>
+            <button id="lvUp" class="lv-btn" title="레벨 올리기">+</button>
+          </span>
+        </div>
+      </header>
+
+      <div class="stage-main">
+        <!-- 모험 보드 (모험 모드에서만 보임 · 풀이판 옆에 나란히) -->
+        <div id="advBoardCol" class="adv-board-col" style="display:none">
+          <div id="advBoard" class="adv-board"></div>
+          <div id="advSpeech" class="adv-speech"></div>
+          <div id="advActions" class="adv-actions"></div>
+        </div>
+
+        <!-- 풀이판: 세로셈 + 펜 + 안내 + 키패드 -->
+        <div class="stage-solve-col">
+          <!-- 세로셈 작업판 (+ 손글씨 캔버스 + 가르기 보조판) -->
+          <div id="vwrap" class="vwrap">
+            <div id="vform" class="vform"></div>
+            <canvas id="scratch" class="scratch"></canvas>
+            <!-- 받아내림을 세로로 이어서 보여주는 미니 계산식 -->
+            <div id="helper" class="helper"></div>
+          </div>
+          <div id="penTools" class="pen-tools">
+            <button class="tool-btn active" data-tool="pen">✏️ 펜</button>
+            <button class="tool-btn" data-tool="erase">🧽 지우개</button>
+            <button class="tool-btn" data-tool="clear">🗑️ 지우기</button>
+          </div>
+
+          <!-- 안내 친구 말풍선 -->
+          <div class="speech-row">
+            <div id="mascot" class="mascot" data-guide="robot"></div>
+            <div id="speech" class="speech"></div>
+          </div>
+
+          <!-- 컨트롤 영역 -->
+          <div id="controls" class="controls"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 캐릭터 꾸미기 화면 ===== -->
+    <section id="village" class="screen">
+      <header class="topbar">
+        <button class="ghost-btn js-home">🏠 처음으로</button>
+        <h2>🛍️ 상점 · 꾸미기</h2>
+        <div class="score-box">
+          <button class="ghost-btn js-mute" title="소리 켜기/끄기">🔊</button>
+          <span id="coinTag">🪙 0</span>
+          <span id="villageCount">🐾 1/6</span>
+        </div>
+      </header>
+
+      <!-- 꾸미는 캐릭터 -->
+      <div class="dress-stage">
+        <div id="charView" class="char-view"></div>
+      </div>
+
+      <!-- 캐릭터 고르기 -->
+      <div id="charPick" class="char-pick"></div>
+
+      <!-- 안내 친구 -->
+      <div class="speech-row">
+        <div class="mascot" data-guide="cool"></div>
+        <div id="villageSpeech" class="speech"></div>
+      </div>
+
+      <!-- 꾸미기 상점 (배경·옷·액세서리) -->
+      <div class="village-shop">
+        <div class="shop-title">🎨 배경 색 — 코인으로 바꿔요</div>
+        <div id="shopTabs" class="shop-tabs"></div>
+        <div id="shopRow" class="shop-row"></div>
+      </div>
+
+      <!-- 모험으로 돌아가 코인 모으기 -->
+      <div class="village-actions">
+        <button id="earnBtn" class="big-btn green">🗺️ 모험으로 돌아가기</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 사칙연산 레이싱(React 앱)을 격리해 띄우는 전체화면 오버레이 -->
+  <div id="racingOverlay" class="racing-overlay">
+    <button id="racingClose" class="racing-close">🏠 처음으로</button>
+    <iframe id="racingFrame" class="racing-frame" title="사칙연산 레이싱"></iframe>
+  </div>
+
+  <!-- 떠다니는 효과(별, 축하 등)를 그리는 레이어 -->
+  <div id="fxLayer"></div>
+
+  <script src="characters.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

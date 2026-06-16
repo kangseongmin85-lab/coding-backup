@@ -1,0 +1,44 @@
+# === 의존성 / 가상환경 (용량 주범, 백업 불필요) ===
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# === 빌드 산출물 ===
+dist/
+build/
+.next/
+out/
+target/
+*.egg-info/
+
+# === 비밀키 / 자격증명 (절대 커밋 금지) ===
+.env
+*.env
+.env.*
+*.key
+*.pem
+*.p12
+credentials*.json
+secrets*.json
+.claude/settings.local.json
+kis_token.json
+
+# === OS / 에디터 ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# === 로그 / 임시 / 캐시 ===
+*.log
+*.tmp
+_cache/
+.cache/
+
+# === 자동백업 스크립트 로그 ===
+_backup_cache/
