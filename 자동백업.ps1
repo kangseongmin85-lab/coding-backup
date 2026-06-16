@@ -42,9 +42,9 @@ try {
         'gh[posru]_[A-Za-z0-9]{30,}',
         'xox[baprs]-[A-Za-z0-9-]{10,}',
         '[0-9]{8,10}:[A-Za-z0-9_-]{35}',
-        'BEGIN [A-Z ]*PRIVATE KEY',
-        '1[A-Za-z0-9+/=]{200,}'
+        'BEGIN [A-Z ]*PRIVATE KEY'
     )
+    # 주의: 텔레톤 세션 패턴('1[base64]{200,}')은 base64 이미지(data:image) 오탐이 많아 이 폴더에선 제외
     foreach ($p in $patterns) {
         $hit = git grep -nI -E $p $tree
         if ($hit) {
