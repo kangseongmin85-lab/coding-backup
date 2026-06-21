@@ -67,6 +67,39 @@
       "new_words": [
         "w005"
       ]
+    },
+    {
+      "date": "2026-06-16",
+      "mode": "dictation",
+      "sentences": [
+        "s043",
+        "s059",
+        "s003",
+        "s062",
+        "s073",
+        "s080",
+        "s067"
+      ],
+      "results": {
+        "attempted": 8,
+        "passed": 2
+      },
+      "new_words": []
+    },
+    {
+      "date": "2026-06-17",
+      "mode": "dictation",
+      "sentences": [
+        "s023",
+        "s072",
+        "s069",
+        "s025"
+      ],
+      "results": {
+        "attempted": 4,
+        "passed": 0
+      },
+      "new_words": []
     }
   ]
 }

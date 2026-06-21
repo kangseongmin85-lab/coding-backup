@@ -133,13 +133,13 @@
       ],
       "added": "2026-06-10",
       "srs": {
-        "box": 1,
-        "next_review": "2026-06-14",
-        "last_result": "fail"
+        "box": 2,
+        "next_review": "2026-06-18",
+        "last_result": "pass"
       },
       "listening": {
-        "attempts": 1,
-        "correct": 0,
+        "attempts": 3,
+        "correct": 1,
         "missed_words": [
           "to",
           "assumes",
@@ -148,7 +148,8 @@
           "samples"
         ],
         "weak_accents": [
-          "us-f"
+          "us-f",
+          "us-m"
         ]
       },
       "study": {
@@ -182,7 +183,73 @@
           }
         ],
         "tip": "합의·전제를 재확인하며 책임 소재를 분명히 할 때. 정중하면서도 '내가 이렇게 이해했다'를 못 박는 효과가 있어 일정·계약 협상에서 특히 유용하다."
-      }
+      },
+      "collected": true,
+      "yg_clips": [
+        {
+          "video": "HlJQXfL_GeM",
+          "caption": "which%20are%20the%20words.%20So%20-%20%5B%5B%5Bjust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 617
+        },
+        {
+          "video": "Zsr-HU4q5t8",
+          "caption": "night%20--%20%5B%5B%5Bjust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D%20--",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 1145
+        },
+        {
+          "video": "uAqbDxqv7ks",
+          "caption": "the%20signs%20and%20symptoms%20of%20pernicious%20anemia%2C%20and%20so%20forth%2C%20%5B%5B%5Bjust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D%20that%20that%27s",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 690
+        },
+        {
+          "video": "BDHejqkxgBk",
+          "caption": "%22So%2C%20%5B%5B%5Bjust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D%2C%20you%20are%20like%u2026%206PM%20rolls%20around%2C",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 685
+        },
+        {
+          "video": "drS7fmr9BkU",
+          "caption": "Excellent.%20So%20%5B%5B%5Bjust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D%2C%20your%20appointment%20is%20today%20at",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 437
+        },
+        {
+          "video": "3PJRZkjvTPY",
+          "caption": "but%20%5B%5B%5Bjust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D%20I%20can%20look%20down%20here",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 215
+        },
+        {
+          "video": "yQvNFg9Y1EA",
+          "caption": "see%20what%20we%20got%20here%20so%20%5B%5B%5Bjust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D%20Lance%20authorization%20is%20not%20required%20for",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 1475
+        },
+        {
+          "video": "LtPM7zkXlW8",
+          "caption": "%22i.e.%20%27%5B%5B%5BJust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D%2C%20are%20you%20requesting%20that%20I%20am%20%5B%5B%5Bto%5D%5D%5D",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 700
+        },
+        {
+          "video": "dNY5YGRkNqs",
+          "caption": "Following%20that%20statement%20%5B%5B%5Bjust%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bconfirm%5D%5D%5D",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 85
+        }
+      ]
     },
     {
       "id": "s004",
@@ -1295,14 +1362,23 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-18",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "here's",
+          "a",
+          "quick",
+          "update",
+          "on",
+          "where"
+        ],
+        "weak_accents": [
+          "us-f"
+        ]
       },
       "study": {
         "sound": "<b>Here's a</b>는 's와 a가 이어져 <b>히얼저</b>처럼 한 덩어리가 됩니다. 'quick update'는 k와 u가 연음되어 <b>퀵껍데잇</b>으로 붙고, update는 여기서 명사라 앞 음절 강세 <b>업</b>데잇입니다. 'on where we are'는 모두 약하고 빠르게 흘러 <b>온웨어위얼</b>처럼 뭉쳐 들립니다. 특히 'we are'는 거의 <b>위얼</b> 한 음으로 줄어 끝이 흐려집니다. 문장이 짧고 빨라서 'quick update'라는 핵심만 잡으면 뒤는 '현재 상황'이라 예측해 들을 수 있습니다.",
@@ -1331,7 +1407,24 @@
           }
         ],
         "tip": "보고·이메일 도입부에 두루 쓰는 중립적 표현. 사내 업데이트나 미팅 시작에 적합하고 격식 부담이 적다."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "rHI9w2R86F0",
+          "caption": "Before%20getting%20to%20Stefan%20Molyneux%2C%20%5B%5B%5Bhere%27s%5D%5D%5D%20%5B%5B%5Ba%5D%5D%5D%20%5B%5B%5Bquick%5D%5D%5D%20%5B%5B%5Bupdate%5D%5D%5D%20%5B%5B%5Bon%5D%5D%5D%20the%20Debunked%20Kickstarter%3A",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 3
+        },
+        {
+          "video": "Y7YnAROVT1Y",
+          "caption": "of%20reason%20XYZ.%20Well%2C%20%5B%5B%5Bhere%27s%5D%5D%5D%20%5B%5B%5Ba%5D%5D%5D%20%5B%5B%5Bquick%5D%5D%5D%20%5B%5B%5Bupdate%5D%5D%5D%20%5B%5B%5Bon%5D%5D%5D%20our%20company%20and%20our%20product.%20We%27ve%20improved",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 722
+        }
+      ],
+      "collected": true
     },
     {
       "id": "s024",
@@ -1403,11 +1496,11 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-16",
+        "next_review": "2026-06-18",
         "last_result": "fail"
       },
       "listening": {
-        "attempts": 1,
+        "attempts": 2,
         "correct": 0,
         "missed_words": [
           "we've",
@@ -1417,10 +1510,12 @@
           "of",
           "on",
           "the",
-          "supplier"
+          "supplier",
+          "side"
         ],
         "weak_accents": [
-          "gb-m"
+          "gb-m",
+          "us-m"
         ]
       },
       "study": {
@@ -2592,14 +2687,21 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-17",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "inclined",
+          "to",
+          "with",
+          "caveat"
+        ],
+        "weak_accents": [
+          "gb-m"
+        ]
       },
       "study": {
         "sound": "<b>I'm inclined to agree</b> / <b>with one caveat</b> 두 청크다. <b>I'm inclined to</b>는 inclined의 끝 d가 to 앞에서 탈락해 <b>인클라인 투</b>~<b>인클라인투</b>로 들린다. <b>to agree</b>는 to가 약형 <b>트</b>로 줄어 <b>트어그리</b>가 된다. <b>with one</b>은 th+w가 이어져 <b>위원</b>으로 뭉친다. caveat은 한국인이 자주 틀리는 단어로, 강세가 앞 <b>캐</b>에 있어(KAV-ee-at) <b>캐비엣</b>~<b>캐비앳</b>으로 발음된다. 강세는 -clined·-gree·CA-에 떨어지며, caveat을 모르면 끝부분이 통째로 안 들리니 단어 자체를 익혀둔다.",
@@ -3593,14 +3695,21 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-17",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "a",
+          "that",
+          "for",
+          "sides"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "<b>Let's find a middle ground</b> / <b>that works</b> / <b>for both sides</b>로 끊깁니다. 'Let's find a'는 find의 d와 a가 이어져 <b>파인더</b>로 붙습니다. 'middle ground'에서 middle의 dd는 flap되고 어두운 l이 와서 <b>미를</b>그라운드처럼 들리는 게 함정입니다. 'that works'는 <b>댓웍스</b>, 'for both sides'에서 for는 약형이라 <b>퍼</b>가 되고 both의 th가 약해져 <b>퍼 보쓰 사이즈</b>로 흘러갑니다(sides 끝은 z 소리). 강세는 <b>mid</b>dle, <b>ground</b>, <b>works</b>, <b>both</b>에 떨어지고, 'find a middle ground'를 한 호흡 관용구로 인식하는 게 핵심입니다.",
@@ -3629,7 +3738,17 @@
           }
         ],
         "tip": "협상에서 윈윈 타협을 제안할 때. 부드럽고 협력적인 인상을 줘 대립 분위기를 누그러뜨리는 데 효과적."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "lr8v-UrMUV0",
+          "caption": "%5B%5B%5BLet%27s%5D%5D%5D%20try%20to%20%5B%5B%5Bfind%5D%5D%5D%20%5B%5B%5Ba%5D%5D%5D%20%5B%5B%5Bmiddle%5D%5D%5D%20%5B%5B%5Bground%5D%5D%5D.",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 2510
+        }
+      ],
+      "collected": true
     },
     {
       "id": "s060",
@@ -3761,14 +3880,20 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-17",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "table",
+          "the",
+          "pricing"
+        ],
+        "weak_accents": [
+          "gb-f"
+        ]
       },
       "study": {
         "sound": "<b>Let's table</b>은 <b>레츠 테이블</b>로 또렷한 편이지만, the pricing discussion이 <b>더 프라이싱 디스커션</b>으로 빠르게 흐른다. until next week에서 until의 첫 음절이 약화돼 <b>은틸</b>에 가깝고, until next는 t가 겹쳐 하나만 발음돼 <b>은틸넥스</b>처럼 들린다. next week도 t가 탈락해 <b>넥스윅</b>으로 뭉친다. 강세는 <b>ta</b>ble, <b>pri</b>cing, <b>next</b>에 떨어진다. table이 '테이블'이 아니라 동사 '보류하다'로 쓰인 걸 모르면 문장 의미 자체가 안 잡힌다.",
@@ -4034,14 +4159,21 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-17",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "in",
+          "a",
+          "for",
+          "tuesday"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "<b>pencil in a</b>가 통째로 연음돼 <b>펜슬리너</b>처럼 들린다 — pencil의 끝 l과 in이 붙고 in a는 <b>이너</b>가 된다. follow-up은 <b>팔로웁</b>으로 뒤 up에 2차 강세가 실린다. for next Tuesday에서 for는 약형, next Tuesday는 t가 겹쳐 <b>넥스 튜즈데이</b>. 강세는 <b>pen</b>cil, <b>fol</b>low, <b>Tues</b>day. pencil in을 숙어로 모르면 통째로 안 들리니 표현 자체를 외우는 게 빠르다.",
@@ -4074,7 +4206,23 @@
           }
         ],
         "tip": "'연필로 적어두듯' 변경 가능성을 열어둔 잠정 일정. 확정(book/lock in)과 구분해 쓰면 프로페셔널. 비격식~준격식."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "DOLszWqy4kI",
+          "caption": "the%20verb%20and%20the%20particle%20or%20afterwards%2C%20it%20doesn%27t%20matter.%20So%20%27%5B%5B%5Blet%27s%5D%5D%5D%20%5B%5B%5Bpencil%5D%5D%5D%20%5B%5B%5Bin%5D%5D%5D%20a%20meeting",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 349
+        },
+        {
+          "video": "k70aAlhCa_I",
+          "caption": "Universe%3F%20Now%2C%20%5B%5B%5Blet%27s%5D%5D%5D%20%5B%5B%5Bpencil%5D%5D%5D%20%5B%5B%5Bin%5D%5D%5D%20the%20electric%20force%20to%20Freund%27s%20paper%20and%20figure%20out%20what%20happens.%20The%20main%20part",
+          "accent": "all",
+          "saved": "2026-06-16",
+          "start": 440
+        }
+      ]
     },
     {
       "id": "s068",
@@ -4145,14 +4293,21 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-18",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "we",
+          "to",
+          "later",
+          "in"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "<b>Can we push</b>에서 Can we는 약형 <b>큰위</b>. push our call이 연음돼 push our가 <b>푸샤</b>, 이어 <b>푸샤콜</b>처럼 붙는다. to later는 <b>투 레이러</b>로 later의 t가 flap돼 <b>레이러</b>. in the week는 <b>인더 윅</b>. 강세는 <b>push</b>, <b>call</b>, <b>la</b>ter, <b>week</b>에 떨어진다. push가 '미루다'라는 뜻인 걸 모르면 의미가 안 잡힌다.",
@@ -4185,7 +4340,9 @@
           }
         ],
         "tip": "일정을 뒤로 미루자고 정중히 요청하는 구어 표현. push back과 함께 자주 쓰이며 비격식~준격식. 사유를 덧붙이면 더 매끄럽다."
-      }
+      },
+      "yg_clips": [],
+      "collected": true
     },
     {
       "id": "s070",
@@ -4311,14 +4468,24 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-18",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "all",
+          "for",
+          "coming",
+          "i'll",
+          "be",
+          "talking",
+          "reproducibility"
+        ],
+        "weak_accents": [
+          "us-f"
+        ]
       },
       "study": {
         "sound": "<b>Thank you all for coming</b>에서 Thank you all은 <b>땡큐올</b>로 이어지고, for는 약형 <b>퍼</b>가 되어 <b>퍼커밍</b>, 전체 <b>땡큐올퍼커밍</b>으로 뭉친다. 강세는 <b>thank</b>과 <b>com</b>-에 떨어진다. today I'll be talking about에서 I'll be는 빠르게 <b>알비</b>, talking about은 about의 t가 약해지며 연음돼 <b>토키너바웃</b>~<b>토키너바우</b>처럼 들린다. 마지막 <b>reproducibility</b>는 길어서 겁나지만 강세는 -<b>bil</b>- 한 곳(리프러듀서<b>빌</b>러티)에만 있고 앞 repro-는 빠르게 흘려 <b>리프러듀서빌러티</b>로 굴러간다. 강세 음절만 잡고 나머지는 흘러간다고 생각하면 된다.",
@@ -4351,7 +4518,73 @@
           }
         ],
         "tip": "청중 앞 발표 오프닝용. 'Thank you all for coming'은 격식 있는 자리에, 캐주얼하면 'Thanks everyone for joining'으로 바꿔 쓴다."
-      }
+      },
+      "collected": true,
+      "yg_clips": [
+        {
+          "video": "W6Fin4THZVY",
+          "caption": "With%20that%20in%20mind%2C%20%5B%5B%5Btoday%5D%5D%5D%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20my%20key%20interests%2C",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 555
+        },
+        {
+          "video": "auAWmKQxLxw",
+          "caption": "%5B%5B%5Btoday%5D%5D%5D%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20my%20journey",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 20
+        },
+        {
+          "video": "WWloIAQpMcQ",
+          "caption": "%5B%5B%5BToday%5D%5D%5D%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20three%20coping%20resources%2C",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 438
+        },
+        {
+          "video": "hCH_W5o_Rog",
+          "caption": "%5B%5B%5BToday%5D%5D%5D%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20this",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 18
+        },
+        {
+          "video": "hYbHQHxgd5s",
+          "caption": "And%20%5B%5B%5Btoday%5D%5D%5D%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20my%20experience%20with%20DJing.",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 3
+        },
+        {
+          "video": "Ys9N_pCFRDg",
+          "caption": "%5B%5B%5BToday%5D%5D%5D%2C%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20Google%20Identity%20Services%2C",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 9
+        },
+        {
+          "video": "AMvtQ7ctKlo",
+          "caption": "And%20%5B%5B%5Btoday%5D%5D%5D%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20how%20temperature%20impacts",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 15
+        },
+        {
+          "video": "PrAZ3Y_zgzU",
+          "caption": "%5B%5B%5BToday%5D%5D%5D%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%203%20different%20earbuds%20from%20JLab",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 6
+        },
+        {
+          "video": "Dj55I8qbo5k",
+          "caption": "%5B%5B%5BToday%5D%5D%5D%2C%20%5B%5B%5BI%27ll%5D%5D%5D%20%5B%5B%5Bbe%5D%5D%5D%20%5B%5B%5Btalking%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20the%20Arlo%20Essential%20Indoor%20Camera.",
+          "accent": "all",
+          "saved": "2026-06-17",
+          "start": 6
+        }
+      ]
     },
     {
       "id": "s073",
@@ -4367,14 +4600,20 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-17",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "i'll",
+          "main",
+          "questions"
+        ],
+        "weak_accents": [
+          "gb-m"
+        ]
       },
       "study": {
         "sound": "<b>I'll structure my talk around</b>에서 I'll은 <b>알</b>로 약화되고 강세는 <b>structure</b>의 첫 음절 <b>스트럭</b>에 떨어진다. structure my talk around가 한 덩어리로 굴러가며 talk around가 연음돼 <b>토커라운(드)</b>, around의 끝 d는 거의 탈락한다. 전체가 <b>알스트럭처마이토커라운</b>처럼 들린다. three main questions에서는 <b>three</b>의 th, <b>main</b>에 강세가 있고 questions는 <b>퀘스천즈</b>로 끝이 약하다. 핵심은 structure ~ around 묶음과 끝의 around가 d 없이 <b>어라운</b>으로 흐른다는 점이다.",
@@ -4407,7 +4646,8 @@
           }
         ],
         "tip": "발표 도입에서 구조를 예고할 때. around 뒤에 2~3개 축을 제시하면 청중이 흐름을 따라오기 쉽다."
-      }
+      },
+      "collected": true
     },
     {
       "id": "s074",
@@ -4754,14 +4994,17 @@
       ],
       "added": "2026-06-13",
       "srs": {
-        "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "box": 2,
+        "next_review": "2026-06-18",
+        "last_result": "pass"
       },
       "listening": {
-        "attempts": 0,
-        "correct": 0,
-        "missed_words": [],
+        "attempts": 1,
+        "correct": 1,
+        "missed_words": [
+          "key",
+          "takeaways"
+        ],
         "weak_accents": []
       },
       "study": {
@@ -4795,7 +5038,8 @@
           }
         ],
         "tip": "한 섹션을 마치고 넘어가기 전 요점을 정리할 때. 회의·발표에서 매우 흔한 마무리 신호구다."
-      }
+      },
+      "collected": true
     },
     {
       "id": "s081",
