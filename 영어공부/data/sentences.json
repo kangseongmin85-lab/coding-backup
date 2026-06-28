@@ -4939,14 +4939,20 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-28",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "we've",
+          "of",
+          "the"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "<b>So far</b>는 <b>소우파</b>로 far의 r를 굴리며 끝난다. we've covered에서 we've는 <b>위브</b>, covered는 첫 음절 <b>커</b>에 강세가 있어 <b>커버드</b>, 끝 -ed는 약하다. two of the three가 함정인데, two of는 연음돼 <b>투어(브)</b>, of the는 <b>어더</b>로 줄어 two of the three가 <b>투어더쓰리</b>로 빠르게 굴러간다. topics는 <b>타픽스</b>. 전체가 <b>소우파위브커버드투어더쓰리타픽스</b>처럼 흘러간다. 강세는 <b>far / cov- / two / three / top-</b>에 떨어지고 of·the는 거의 안 들린다.",
@@ -4979,7 +4985,59 @@
           }
         ],
         "tip": "발표 중간에 진행 상황을 정리·점검할 때. 청중에게 '어디까지 왔는지' 위치를 알려주는 표현이다."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "l2yKpQ1vo7A",
+          "caption": "%5B%5B%5BSo%5D%5D%5D%20%5B%5B%5Bfar%5D%5D%5D%2C%20%5B%5B%5Bwe%27ve%5D%5D%5D%20%5B%5B%5Bcovered%5D%5D%5D%20individual%20techniques",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 1262
+        },
+        {
+          "video": "KW5G72a4e9U",
+          "caption": "%5B%5B%5BSo%5D%5D%5D%20%5B%5B%5Bfar%5D%5D%5D%2C%20%5B%5B%5Bwe%27ve%5D%5D%5D%20%5B%5B%5Bcovered%5D%5D%5D%20topics%20such%20as%2C%20%22Why%20are%20leaves%20green%3F%22%2C",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 15
+        },
+        {
+          "video": "FWlFDyU-BZA",
+          "caption": "%5B%5B%5BSo%5D%5D%5D%20%5B%5B%5Bfar%5D%5D%5D%20%5B%5B%5Bwe%27ve%5D%5D%5D%20%5B%5B%5Bcovered%5D%5D%5D%20four%20different%20ways",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 657
+        },
+        {
+          "video": "MkHEtzAIoGU",
+          "caption": "days%20or%20weeks.%20%5B%5B%5BSo%5D%5D%5D%20%5B%5B%5Bfar%5D%5D%5D%20%5B%5B%5Bwe%27ve%5D%5D%5D%20%5B%5B%5Bcovered%5D%5D%5D%20your%20ideas%20strategy%20for%20TikTok%2C",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 389
+        },
+        {
+          "video": "mSEyghlZchQ",
+          "caption": "%5B%5B%5BSo%5D%5D%5D%20%5B%5B%5Bfar%5D%5D%5D%2C%20%5B%5B%5Bwe%27ve%5D%5D%5D%20%5B%5B%5Bcovered%5D%5D%5D%20all%20US-based%20ETFs.",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 847
+        },
+        {
+          "video": "Ajpy9_eiH10",
+          "caption": "of%208%20P%27s%2C%20and%20%5B%5B%5Bso%5D%5D%5D%20%5B%5B%5Bfar%5D%5D%5D%20%5B%5B%5Bwe%27ve%5D%5D%5D%20%5B%5B%5Bcovered%5D%5D%5D%205.%20Do%20you%20remember%20where%20they%20were%3F%20Perception%2C%20Pronunciation%2C",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 750
+        },
+        {
+          "video": "k98VNRLEisE",
+          "caption": "Okay%2C%20%5B%5B%5Bso%5D%5D%5D%2C%20%5B%5B%5Bso%5D%5D%5D%20%5B%5B%5Bfar%5D%5D%5D%20%5B%5B%5Bwe%27ve%5D%5D%5D%20%5B%5B%5Bcovered%5D%5D%5D%20%22e%22%2C%20which%20is%20like%20our%20smile%20sound%20and%20%22i%22%2C%20which%20is",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 904
+        }
+      ],
+      "collected": true
     },
     {
       "id": "s080",
@@ -5055,14 +5113,20 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-28",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "the",
+          "raised",
+          "earlier"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "\"Let's\"는 거의 <b>렛츠</b>로 짧게 흘려 잘 안 들린다. 핵심은 \"circle back to\"인데 첫음절 <b>써-</b>클에 강세가 실리고 \"back to\"의 t가 약해지면서 <b>써클백투</b>가 한 덩어리로 뭉친다. 이어 \"the question I\"는 the가 약형 <b>더</b>로 줄고 question 끝과 I가 붙어 <b>퀘스쳐나이</b>처럼 들린다. 마지막 \"raised earlier\"는 raised의 -d와 earlier가 연결돼 <b>레이즈더-얼리어</b>로 흘러, -ed가 거의 안 들린다. 결국 <b>써클백</b>·<b>퀘스쳔</b>·<b>얼리어</b> 세 내용어에만 강세가 떨어지고 나머지는 빠르게 지나가기 때문에 중간이 뭉개진 듯 들린다.",
@@ -5095,7 +5159,65 @@
           }
         ],
         "tip": "회의를 진행하며 지금은 넘어가고 나중에 다루겠다는 부드러운 표현. 격식 중립이고, 상대 질문을 무시하지 않고 미룬다는 배려가 담겨 있다."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "cAb31qFRgfU",
+          "caption": "Thinking%20outside%20the%20box%2C%20%5B%5B%5Blet%27s%5D%5D%5D%20%5B%5B%5Bcircle%5D%5D%5D%20%5B%5B%5Bback%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20this%20later.",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 200
+        },
+        {
+          "video": "ErVh-_DDs1U",
+          "caption": "So%20%5B%5B%5Blet%27s%5D%5D%5D%20%5B%5B%5Bcircle%5D%5D%5D%20%5B%5B%5Bback%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20the%20issue%20of%20sexual%20harassment.",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 1128
+        },
+        {
+          "video": "aNT1dYgRJAQ",
+          "caption": "Pearson%3A%20%5B%5B%5BLet%27s%5D%5D%5D%20%5B%5B%5Bcircle%5D%5D%5D%20%5B%5B%5Bback%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20the%20corn%20market.",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 1185
+        },
+        {
+          "video": "tfD2mTPGlV0",
+          "caption": "EARLIER.%20%5B%5B%5BLET%27S%5D%5D%5D%20%5B%5B%5BCIRCLE%5D%5D%5D%20%5B%5B%5BBACK%5D%5D%5D%20%5B%5B%5BTO%5D%5D%5D%20IT.%20ESPECIALLY%20ON%20THE",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 3198
+        },
+        {
+          "video": "FGNmHW0hWyI",
+          "caption": "Well%20%5B%5B%5Blet%27s%5D%5D%5D%20%5B%5B%5Bcircle%5D%5D%5D%20%5B%5B%5Bback%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20the%20food%20now%20since%20we%20started%20this%20with%20the%20dinner",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 1528
+        },
+        {
+          "video": "IsE_8j5RL3k",
+          "caption": "Before%20moving%20on%20%5B%5B%5Blet%27s%5D%5D%5D%20%5B%5B%5Bcircle%5D%5D%5D%20%5B%5B%5Bback%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20Florida.",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 79
+        },
+        {
+          "video": "sm6AVswhJ_g",
+          "caption": "So%20%5B%5B%5Blet%27s%5D%5D%5D%20%5B%5B%5Bcircle%5D%5D%5D%20%5B%5B%5Bback%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20more%20boundaries.%20I%20am%20not%20here%20%5B%5B%5Bto%5D%5D%5D%20answer%20your%20questions-",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 633
+        },
+        {
+          "video": "s678r9wiREI",
+          "caption": "Henderson%3A%20%5B%5B%5BLet%27s%5D%5D%5D%20%5B%5B%5Bcircle%5D%5D%5D%20%5B%5B%5Bback%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20the%20beginning%20of",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 1252
+        }
+      ]
     },
     {
       "id": "s082",
@@ -5223,14 +5345,23 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-24",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "key",
+          "thing",
+          "remember",
+          "here",
+          "is",
+          "consistency"
+        ],
+        "weak_accents": [
+          "us-f"
+        ]
       },
       "study": {
         "sound": "\"The key thing\"에서 key에 강세가 강하게 실리고 thing은 약하게 따라붙어 <b>더 키-띵</b>으로 들린다. \"to remember\"의 to는 약형 <b>투/르</b>로 줄어 <b>투리멤버</b>가 되고, \"remember here\"는 r이 자연스레 이어져 <b>리멤버히어</b>로 붙는다. \"here is\"는 연음돼 <b>히어리즈</b>가 된다. 마지막 \"consistency\"는 가운데 -sis-에 강세가 있어 <b>컨시스턴시</b>, 앞 con-과 끝 -cy는 약하게 묻힌다. 강세 흐름이 <b>키</b>→<b>멤</b>→<b>시스</b>로 이어지므로, 사이의 to·here·is 같은 구조어를 놓치면 통째로 흐릿하게 들린다.",
@@ -5263,7 +5394,65 @@
           }
         ],
         "tip": "발표·교육에서 핵심 하나를 못박을 때. here는 \"바로 이 대목에서\"라는 뉘앙스를 더한다."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "9j8G_4FocrA",
+          "caption": "But%20%5B%5B%5Bthe%5D%5D%5D%20%5B%5B%5Bkey%5D%5D%5D%20%5B%5B%5Bthing%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bremember%5D%5D%5D%20%5B%5B%5Bis%5D%5D%5D%20that%205G",
+          "accent": "all",
+          "saved": "2026-06-23",
+          "start": 740
+        },
+        {
+          "video": "lbJv4AiDatg",
+          "caption": "%5B%5B%5BThe%5D%5D%5D%20%5B%5B%5Bkey%5D%5D%5D%20%5B%5B%5Bthing%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bremember%5D%5D%5D%20%5B%5B%5Bis%5D%5D%5D%20that%20it%20can%27t%20and%20it%20won%27t.%20And%20at%20%5B%5B%5Bthe%5D%5D%5D%20same%20time%2C%20that",
+          "accent": "all",
+          "saved": "2026-06-23",
+          "start": 25
+        },
+        {
+          "video": "mR35mfhygMo",
+          "caption": "But%20%5B%5B%5Bthe%5D%5D%5D%20%5B%5B%5Bkey%5D%5D%5D%20%5B%5B%5Bthing%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bremember%5D%5D%5D%20%5B%5B%5Bis%5D%5D%5D%20that%20it%27s%20only%20one%20time.",
+          "accent": "all",
+          "saved": "2026-06-23",
+          "start": 732
+        },
+        {
+          "video": "n6MBCKYA7os",
+          "caption": "-don%27t%2C%20%5B%5B%5Bthe%5D%5D%5D%20%5B%5B%5Bkey%5D%5D%5D%20%5B%5B%5Bthing%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bremember%5D%5D%5D%20%5B%5B%5Bis%5D%5D%5D%20that%20your%20business%20idea%20needs%20%5B%5B%5Bto%5D%5D%5D%20fit%20with",
+          "accent": "all",
+          "saved": "2026-06-23",
+          "start": 100
+        },
+        {
+          "video": "fLK0kiSLQ0w",
+          "caption": "%5B%5B%5BThe%5D%5D%5D%20%5B%5B%5Bkey%5D%5D%5D%20%5B%5B%5Bthing%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bremember%5D%5D%5D%20%5B%5B%5Bis%5D%5D%5D%20show%20%5B%5B%5Bthe%5D%5D%5D%20world%2C",
+          "accent": "all",
+          "saved": "2026-06-23",
+          "start": 35
+        },
+        {
+          "video": "fvpq4jqtuZ8",
+          "caption": "%5B%5B%5BThe%5D%5D%5D%20%5B%5B%5Bkey%5D%5D%5D%20%5B%5B%5Bthing%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bremember%5D%5D%5D%20%5B%5B%5Bis%5D%5D%5D%20that%20IP%20addresses",
+          "accent": "all",
+          "saved": "2026-06-23",
+          "start": 288
+        },
+        {
+          "video": "h0JYdR2nwKk",
+          "caption": "And%20if%20you%20have%20an%20audience%2C%20that%20works%20%5B%5B%5Bto%5D%5D%5D%2C%20but%20I%20think%20%5B%5B%5Bthe%5D%5D%5D%20%5B%5B%5Bkey%5D%5D%5D%20%5B%5B%5Bthing%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bremember%5D%5D%5D%20%5B%5B%5Bis%5D%5D%5D%20that%20you%20can%27t",
+          "accent": "all",
+          "saved": "2026-06-23",
+          "start": 655
+        },
+        {
+          "video": "anzG6tVdjkQ",
+          "caption": "I%20think%20%5B%5B%5Bthe%5D%5D%5D%20%5B%5B%5Bkey%5D%5D%5D%20%5B%5B%5Bthing%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bremember%5D%5D%5D%20%5B%5B%5Bis%5D%5D%5D%20there%27s%20variability%20around%20that.",
+          "accent": "all",
+          "saved": "2026-06-23",
+          "start": 907
+        }
+      ]
     },
     {
       "id": "s085",
@@ -6560,14 +6749,23 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-06-28",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "wanted",
+          "a",
+          "heads",
+          "up",
+          "the",
+          "change"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "flap t와 연음이 몰려 안 들리는 대표 문장. <b>I wanted to</b>는 wanted의 t가 flap이 되고 to와 합쳐져 <b>아워네두/아워너</b>처럼 줄어든다. <b>give you a</b>는 give의 v와 you가 붙어 <b>기뷰어</b>. 핵심은 <b>heads-up</b>으로, heads의 끝 s와 up이 붙어 <b>헤접/헷접</b>처럼 한 덩어리로 들린다. 이어 <b>heads-up about the</b>는 <b>헤저바웃더</b>로 흐르고 about the change는 <b>어바웃더체인지</b>. 강세는 <b>WANTED</b>·<b>HEADS-up</b>·<b>CHANGE</b>에.",
@@ -6596,7 +6794,17 @@
           }
         ],
         "tip": "공식 공지 전에 변경·이슈를 비공식으로 미리 알릴 때. 친근하고 배려 있는 뉘앙스라 동료·협력사에 두루 좋다."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "P0Vu37mEyXE",
+          "caption": "%5B%5B%5BI%5D%5D%5D%20just%20%5B%5B%5Bwanted%5D%5D%5D%20%5B%5B%5Bto%5D%5D%5D%20%5B%5B%5Bgive%5D%5D%5D%20%5B%5B%5Byou%5D%5D%5D%20guys%20%5B%5B%5Ba%5D%5D%5D%20%5B%5B%5Bheads%5D%5D%5D%20%5B%5B%5Bup%5D%5D%5D%20%5B%5B%5Babout%5D%5D%5D%20that.",
+          "accent": "all",
+          "saved": "2026-06-27",
+          "start": 310
+        }
+      ],
+      "collected": true
     },
     {
       "id": "s109",

@@ -100,6 +100,32 @@
         "passed": 0
       },
       "new_words": []
+    },
+    {
+      "date": "2026-06-23",
+      "mode": "dictation",
+      "sentences": [
+        "s084"
+      ],
+      "results": {
+        "attempted": 1,
+        "passed": 0
+      },
+      "new_words": []
+    },
+    {
+      "date": "2026-06-27",
+      "mode": "dictation",
+      "sentences": [
+        "s079",
+        "s108",
+        "s081"
+      ],
+      "results": {
+        "attempted": 3,
+        "passed": 0
+      },
+      "new_words": []
     }
   ]
 }
