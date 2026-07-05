@@ -61,6 +61,14 @@
   .progress { font-size: 17px; color: var(--sub); margin-bottom: 4px; text-align: center; }
   .toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 14px; opacity: 0; transition: opacity .3s; pointer-events: none; }
   .toast.show { opacity: 1; }
+  .note-item { border: 1px solid var(--line); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+  .note-item > summary { padding: 16px 18px; cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 10px; }
+  .note-item > summary::-webkit-details-marker { display: none; }
+  .note-item > summary::before { content: '▸'; color: var(--accent); font-size: 16px; flex: none; transition: transform .15s; }
+  .note-item[open] > summary::before { transform: rotate(90deg); }
+  .note-item[open] > summary { border-bottom: 1px solid var(--line); background: #fafbff; }
+  .note-item .note-en { font-size: 20px; font-weight: 700; line-height: 1.45; }
+  .note-item .note-body { padding: 16px 18px; }
 </style>
 </head>
 <body>
@@ -186,7 +194,8 @@
 <section id="view-notes" class="hidden">
   <div class="card">
     <h2 style="margin-top:0">📚 공부한 문장 <span id="notes-count" class="muted" style="font-size:18px;font-weight:400"></span></h2>
-    <p class="muted">받아쓰기·상황극으로 연습한 문장이 전부 여기 모여요. 한 페이지에서 <b>듣기 → 설명 → 영상</b>까지 한 번에 복습하세요.</p>
+    <p class="muted">받아쓰기·상황극으로 연습한 문장이 전부 여기 모여요. 문장을 누르면 <b>듣기 · 설명 · 영상</b>이 펼쳐집니다.</p>
+    <p id="notes-toggle-all" style="text-align:right;margin:0 0 10px"></p>
     <div id="notes-list"></div>
   </div>
 </section>
@@ -783,25 +792,42 @@ function renderNotes() {
     if (la !== lb) return la < lb ? 1 : -1;
     return (b.listening.attempts || 0) - (a.listening.attempts || 0);
   });
+  $('notes-toggle-all').innerHTML = `<button class="mini-play" onclick="notesToggleAll(true)">전체 펼치기</button>
+    <button class="mini-play" onclick="notesToggleAll(false)">전체 접기</button>`;
   $('notes-list').innerHTML = studied.map(s => {
     const sound = (s.study && s.study.sound) || s.notes || '';
     const sb = studyBlock(s);
     const hasClips = (s.yg_clips || []).length > 0;
-    return `<div style="border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px">
-      <div style="font-size:21px;font-weight:700;line-height:1.5">${s.en}</div>
-      <div class="ko" style="text-align:left;margin:6px 0">🇰🇷 ${s.ko || ''}</div>
-      <div style="margin:10px 0 4px">
-        <button class="mini-play" onclick="notePlay('${s.id}',false)">▶ 듣기</button>
-        <button class="mini-play" onclick="notePlay('${s.id}',true)">🐢 느리게</button>
-        <button class="mini-play" onclick="noteOtherAccent('${s.id}')">🌍 다른 악센트</button>
-        <span class="muted" id="note-voice-${s.id}" style="font-size:14px"></span>
+    return `<details class="note-item" ontoggle="noteToggled('${s.id}',this)">
+      <summary>
+        <div>
+          <div class="note-en">${s.en}</div>
+          <div class="ko" style="text-align:left;margin:4px 0 0">🇰🇷 ${s.ko || ''}</div>
+        </div>
+      </summary>
+      <div class="note-body">
+        <div style="margin-bottom:4px">
+          <button class="mini-play" onclick="notePlay('${s.id}',false)">▶ 듣기</button>
+          <button class="mini-play" onclick="notePlay('${s.id}',true)">🐢 느리게</button>
+          <button class="mini-play" onclick="noteOtherAccent('${s.id}')">🌍 다른 악센트</button>
+          <span class="muted" id="note-voice-${s.id}" style="font-size:14px"></span>
+        </div>
+        ${sound ? `<div class="notes">👂 <b>왜 안 들렸을까 (연음·발음):</b><br>${sound}</div>` : ''}
+        ${sb ? `<div class="notes" style="background:#eef2ff;border-color:#c7d2fe">${sb}</div>` : ''}
+        <div id="note-yg-${s.id}">${hasClips ? '' : '<p class="muted" style="font-size:14px;margin:4px 0">🔊 저장된 영상이 없어요 — 받아쓰기 채점 화면에서 YouGlish로 찾고 시간을 적으면 여기에 모여요.</p>'}</div>
       </div>
-      ${sound ? `<div class="notes">👂 <b>왜 안 들렸을까 (연음·발음):</b><br>${sound}</div>` : ''}
-      ${sb ? `<div class="notes" style="background:#eef2ff;border-color:#c7d2fe">${sb}</div>` : ''}
-      <div id="note-yg-${s.id}">${hasClips ? '' : '<p class="muted" style="font-size:14px;margin:4px 0">🔊 저장된 영상이 없어요 — 받아쓰기 채점 화면에서 YouGlish로 찾고 시간을 적으면 여기에 모여요.</p>'}</div>
-    </div>`;
+    </details>`;
   }).join('');
-  studied.forEach(s => { if ((s.yg_clips || []).length) renderYgClips(s, 'note-yg-' + s.id); });
+}
+// 영상은 펼칠 때 한 번만 렌더 (접힌 카드가 많아도 iframe을 미리 안 만듦)
+function noteToggled(id, el) {
+  if (!el.open || el.dataset.ygDone) return;
+  const s = DB.sentences.sentences.find(x => x.id === id);
+  if (s && (s.yg_clips || []).length) renderYgClips(s, 'note-yg-' + id);
+  el.dataset.ygDone = '1';
+}
+function notesToggleAll(open) {
+  document.querySelectorAll('#notes-list .note-item').forEach(el => { el.open = open; });
 }
 function notePlay(id, slow) {
   const s = DB.sentences.sentences.find(x => x.id === id);
