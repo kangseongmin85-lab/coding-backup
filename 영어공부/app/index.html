@@ -28,7 +28,6 @@
   .stat .label { font-size: 16px; color: var(--sub); margin-top: 4px; }
   .big-btn { display: block; width: 100%; padding: 20px; font-size: 21px; font-weight: 600; border: none; border-radius: 14px; background: var(--accent); color: #fff; cursor: pointer; margin-top: 12px; }
   .big-btn.secondary { background: var(--card); color: var(--accent); border: 2px solid var(--accent); }
-  .big-btn.collected { background: #fff7ed; color: #b45309; border: 2px solid #fbbf24; }
   .big-btn:disabled { background: #c4c9d4; cursor: default; }
   .chips { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; justify-content: center; }
   .chip { padding: 9px 18px; border-radius: 20px; border: 1px solid var(--line); background: var(--card); cursor: pointer; font-size: 17px; }
@@ -62,6 +61,14 @@
   .progress { font-size: 17px; color: var(--sub); margin-bottom: 4px; text-align: center; }
   .toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 14px; opacity: 0; transition: opacity .3s; pointer-events: none; }
   .toast.show { opacity: 1; }
+  .note-item { border: 1px solid var(--line); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+  .note-item > summary { padding: 16px 18px; cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 10px; }
+  .note-item > summary::-webkit-details-marker { display: none; }
+  .note-item > summary::before { content: '▸'; color: var(--accent); font-size: 16px; flex: none; transition: transform .15s; }
+  .note-item[open] > summary::before { transform: rotate(90deg); }
+  .note-item[open] > summary { border-bottom: 1px solid var(--line); background: #fafbff; }
+  .note-item .note-en { font-size: 20px; font-weight: 700; line-height: 1.45; }
+  .note-item .note-body { padding: 16px 18px; }
 </style>
 </head>
 <body>
@@ -71,9 +78,9 @@
     <button data-view="home" class="active">홈</button>
     <button data-view="drill">받아쓰기</button>
     <button data-view="roleplay">상황극</button>
+    <button data-view="notes">공부한 문장</button>
     <button data-view="add">문장 추가</button>
     <button data-view="vocab">단어장</button>
-    <button data-view="history">공부 이력</button>
   </nav>
 </header>
 <main>
@@ -89,7 +96,8 @@
       <div class="stat"><div class="num" id="st-sessions">-</div><div class="label">공부한 날</div></div>
     </div>
     <button class="big-btn" onclick="startDrill()">🎧 받아쓰기 시작</button>
-    <p class="muted" style="margin-bottom:0"><b>상황극</b> 탭에서 배운 문장으로 실전 대화를 연습할 수 있어요. 새 문장 추가·약점 분석은 Claude 채팅에서 "문장 추가하고 싶어", "나 뭐가 약해?"라고 말하면 됩니다.</p>
+    <p class="muted"><b>상황극</b> 탭에서 배운 문장으로 실전 대화를 연습할 수 있어요. 새 문장 추가·약점 분석은 Claude 채팅에서 "문장 추가하고 싶어", "나 뭐가 약해?"라고 말하면 됩니다.</p>
+    <p style="text-align:right;margin:0"><button class="mini-play" onclick="exportData()">💾 데이터 백업 내려받기</button></p>
   </div>
 </section>
 
@@ -141,7 +149,6 @@
           <button onclick="quickAddVocab()">단어장에 추가</button>
         </div>
       </div>
-      <button class="big-btn secondary" id="collect-btn" onclick="toggleCollect()" style="margin-top:14px">📌 이 문장 모아두기 (나중에 한번에 복습)</button>
       <div class="result-btns">
         <button class="btn-next" onclick="nextSentence()">다음 문장 →</button>
       </div>
@@ -183,6 +190,16 @@
   </div>
 </section>
 
+<!-- ───────── 공부한 문장 (한 페이지 복습) ───────── -->
+<section id="view-notes" class="hidden">
+  <div class="card">
+    <h2 style="margin-top:0">📚 공부한 문장 <span id="notes-count" class="muted" style="font-size:18px;font-weight:400"></span></h2>
+    <p class="muted">받아쓰기·상황극으로 연습한 문장이 전부 여기 모여요. 문장을 누르면 <b>듣기 · 설명 · 영상</b>이 펼쳐집니다.</p>
+    <p id="notes-toggle-all" style="text-align:right;margin:0 0 10px"></p>
+    <div id="notes-list"></div>
+  </div>
+</section>
+
 <!-- ───────── 문장 추가 ───────── -->
 <section id="view-add" class="hidden">
   <div class="card">
@@ -204,31 +221,6 @@
       <button onclick="addVocab()">추가</button>
     </div>
     <div id="vocab-list" style="margin-top:14px"></div>
-  </div>
-</section>
-
-<!-- ───────── 공부 이력 ───────── -->
-<section id="view-history" class="hidden">
-  <div class="card">
-    <h2 style="margin-top:0">공부 이력</h2>
-    <p style="text-align:right;margin:0"><button class="mini-play" onclick="exportData()">💾 데이터 백업 내려받기</button></p>
-    <div class="stat-grid" style="margin-bottom:14px">
-      <div class="stat"><div class="num" id="h-sessions">-</div><div class="label">학습 기록</div></div>
-      <div class="stat"><div class="num" id="h-days">-</div><div class="label">공부한 날</div></div>
-      <div class="stat"><div class="num" id="h-rate">-</div><div class="label">받아쓰기 통과율</div></div>
-    </div>
-    <div id="history-list"></div>
-  </div>
-  <div class="card">
-    <h2 style="margin-top:0">📌 모아둔 문장 <span id="collected-count" class="muted" style="font-size:18px;font-weight:400"></span></h2>
-    <p class="muted">받아쓰기 채점 화면이나 아래 '공부한 문장' 목록에서 <b>📌 모아두기</b>한 문장이에요. 한번에 모아서 복습하세요.</p>
-    <div id="collected-actions"></div>
-    <div id="collected-list"></div>
-  </div>
-  <div class="card">
-    <h2 style="margin-top:0">📚 공부한 문장 <span id="studied-count" class="muted" style="font-size:18px;font-weight:400"></span></h2>
-    <p class="muted">받아쓰기·상황극으로 실제 연습한 문장들이에요. 행을 누르면 그 문장으로 바로 받아쓰기를 시작합니다.</p>
-    <div id="studied-list"></div>
   </div>
 </section>
 
@@ -258,7 +250,6 @@ function mergeWithLocal(s, v, l) {
         if ((x.listening?.attempts || 0) >= (byId[x.id].listening?.attempts || 0)) {
           byId[x.id].srs = x.srs; byId[x.id].listening = x.listening;
         }
-        if (x.collected !== undefined) byId[x.id].collected = x.collected; // 모아두기 표시 유지
         if (Array.isArray(x.yg_clips)) byId[x.id].yg_clips = x.yg_clips; // 저장한 예문(지점) 유지
       } else { s.sentences.push(x); } // 온라인에서 직접 추가한 문장
     });
@@ -328,7 +319,7 @@ async function load() {
     }
   });
   if (!LOCAL) $('add-status').textContent = '🌐 온라인 모드: 발음은 mp3 또는 브라우저 음성으로 재생되고, 기록은 이 브라우저에 저장돼요. 해설 자동 생성은 PC 앱에서만 가능합니다.';
-  renderHome(); renderVocab(); renderHistory(); renderRoleplay();
+  renderHome(); renderVocab(); renderRoleplay();
 }
 
 async function save(file, content) {
@@ -357,6 +348,7 @@ function showView(name) {
   $('view-' + name).classList.remove('hidden');
   document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.view === name));
   if (name === 'home') renderHome();
+  if (name === 'notes') renderNotes();
   if (name === 'roleplay') { rp = null; $('rp-play').classList.add('hidden'); $('rp-done').classList.add('hidden'); $('rp-list').classList.remove('hidden'); renderRoleplay(); }
 }
 
@@ -369,18 +361,13 @@ function renderHome() {
 }
 
 /* ───── 받아쓰기 ───── */
-function startDrill(targetId) {
-  let queue;
-  if (targetId) {
-    queue = DB.sentences.sentences.filter(s => s.id === targetId);
-  } else {
-    queue = dueSentences();
-    if (queue.length === 0) {
-      queue = [...DB.sentences.sentences];
-      toast('오늘 복습 큐가 비어서 전체 문장으로 진행해요');
-    }
-    queue = queue.slice().sort(() => Math.random() - 0.5).slice(0, 8);
+function startDrill() {
+  let queue = dueSentences();
+  if (queue.length === 0) {
+    queue = [...DB.sentences.sentences];
+    toast('오늘 복습 큐가 비어서 전체 문장으로 진행해요');
   }
+  queue = queue.slice().sort(() => Math.random() - 0.5).slice(0, 8);
   drill = { queue, idx: 0, results: [], newWords: [], voice: null, replays: 0 };
   showView('drill');
   $('drill-card').classList.remove('hidden');
@@ -514,12 +501,16 @@ function showResult(s, pct, missed, tokens, hit, gaveUp) {
   ygCapture = null;
   $('yg-drill-wrap').style.display = 'none';
   renderYgClips(s, 'yg-saved-drill');
-  updateCollectBtn(s);
 
   const pass = pct >= 80;
   drill.results.push({ id: s.id, accent: drill.voice, pct, missed, pass });
   applySrs(s, pass, missed);
   recordStudy(s, pass);
+  if (!pass) {
+    // 틀린 문장은 같은 세션에서 몇 문장 뒤 다시 나오게 — 맞힐 때까지 반복 훈련
+    drill.queue.splice(Math.min(drill.idx + 3, drill.queue.length), 0, s);
+    toast('🔁 틀린 문장은 잠시 후 한 번 더 나와요');
+  }
 }
 
 function applySrs(s, pass, missed) {
@@ -536,31 +527,6 @@ function applySrs(s, pass, missed) {
     s.srs.next_review = addDays(today(), 1);
     s.srs.last_result = 'fail';
   }
-}
-
-/* ───── 모아두기 (한번에 복습할 문장 직접 선택) ───── */
-async function setCollected(s, val) {
-  s.collected = val;
-  await saveSentences();
-}
-function updateCollectBtn(s) {
-  const b = $('collect-btn');
-  if (!b) return;
-  b.textContent = s.collected ? '✅ 모아둠 — 빼려면 다시 누르기' : '📌 이 문장 모아두기 (나중에 한번에 복습)';
-  b.classList.toggle('collected', !!s.collected);
-}
-async function toggleCollect() {
-  const s = drill.queue[drill.idx];
-  await setCollected(s, !s.collected);
-  updateCollectBtn(s);
-  toast(s.collected ? '📌 모아뒀어요 — 공부 이력 > 모아둔 문장에서 한번에 복습' : '모아두기에서 뺐어요');
-}
-async function toggleCollectId(id) {
-  const s = DB.sentences.sentences.find(x => x.id === id);
-  if (!s) return;
-  await setCollected(s, !s.collected);
-  toast(s.collected ? '📌 모아뒀어요' : '모아두기에서 뺐어요');
-  renderHistory();
 }
 
 function nextSentence() {
@@ -593,7 +559,7 @@ async function recordStudy(s, pass) {
 // 계속 이어지는 받아쓰기를 멈추고 홈으로 (진행상황은 문장마다 이미 저장됨)
 function stopDrill() {
   drill = null;
-  renderHome(); renderHistory(); renderVocab();
+  renderHome(); renderVocab();
   showView('home');
 }
 
@@ -689,7 +655,8 @@ function renderYgClips(s, mountId) {
     m.innerHTML = '<p class="muted" style="text-align:center;margin:4px 0">아직 저장된 예문이 없어요. 아래 YouGlish로 찾은 뒤 시간(예: 1:23)을 적어 저장하면, 다음부터 그 지점부터 무료로 다시 볼 수 있어요.</p>';
     return;
   }
-  const hint = '<p class="muted" style="margin:2px 0 6px;font-size:13px">💡 시간(예: 1:23)을 적은 영상만 저장돼요. 적어두면 다음엔 그 지점부터 자동 재생되고, 안 적은 영상은 새로고침하면 사라져요.</p>';
+  const hint = clips.some(c => c.start == null)
+    ? '<p class="muted" style="margin:2px 0 6px;font-size:13px">💡 시간(예: 1:23)을 적은 영상만 저장돼요. 적어두면 다음엔 그 지점부터 자동 재생되고, 안 적은 영상은 새로고침하면 사라져요.</p>' : '';
   m.innerHTML = hint + clips.map((c, i) => ({ c, i })).reverse().map(({ c, i }) => {
     const label = c.start != null ? `▶ ${ygFmtTime(c.start)}부터 보기` : '▶ 영상 보기';
     return `
@@ -802,49 +769,8 @@ function exportData() {
   toast('백업 파일을 내려받았어요');
 }
 
-/* ───── 이력 ───── */
-function renderHistory() {
-  const es = DB.log.entries;
-  $('h-sessions').textContent = es.length;
-  $('h-days').textContent = new Set(es.map(e => e.date)).size;
-  const dict = es.filter(e => e.results && e.results.attempted);
-  const att = dict.reduce((a, e) => a + e.results.attempted, 0);
-  const pas = dict.reduce((a, e) => a + (e.results.passed || 0), 0);
-  $('h-rate').textContent = att ? Math.round(100 * pas / att) + '%' : '-';
-  $('history-list').innerHTML = es.length === 0 ? '<p class="muted">아직 기록이 없어요. 첫 받아쓰기를 시작해 보세요!</p>' :
-    '<table><tr><th>날짜</th><th>모드</th><th>내용</th><th>메모</th></tr>' +
-    [...es].reverse().map(e => `<tr><td>${e.date}</td><td><span class="tag">${e.mode}</span></td>
-      <td>${e.results && e.results.attempted !== undefined ? `${e.results.attempted}문장 / ${e.results.passed}통과` : ''}${e.new_words && e.new_words.length ? ` · 새 단어 ${e.new_words.length}` : ''}</td>
-      <td class="muted">${e.note || ''}</td></tr>`).join('') + '</table>';
-  renderCollected();
-  renderStudied();
-}
-function collectedSentences() {
-  return DB.sentences.sentences.filter(s => s.collected);
-}
-function renderCollected() {
-  const cs = collectedSentences();
-  $('collected-count').textContent = cs.length ? `(${cs.length}개)` : '';
-  if (cs.length === 0) {
-    $('collected-actions').innerHTML = '';
-    $('collected-list').innerHTML = '<p class="muted">아직 모아둔 문장이 없어요. 받아쓰기 채점 화면이나 아래 \'공부한 문장\' 목록에서 📌 모아두기를 눌러보세요.</p>';
-    return;
-  }
-  $('collected-actions').innerHTML = `<button class="big-btn" onclick="startCollectedDrill()">▶ 모아둔 ${cs.length}문장 한번에 받아쓰기</button>`;
-  $('collected-list').innerHTML = '<table><tr><th>문장</th><th></th></tr>' +
-    cs.map(s => `<tr>
-      <td><b>${s.en}</b><div class="muted">${s.ko || ''}</div></td>
-      <td style="text-align:right;white-space:nowrap"><button class="mini-play" onclick="toggleCollectId('${s.id}')">빼기 ✕</button></td>
-    </tr>`).join('') + '</table>';
-}
-function startCollectedDrill() {
-  const cs = collectedSentences();
-  if (!cs.length) { toast('모아둔 문장이 없어요'); return; }
-  drill = { queue: cs.slice().sort(() => Math.random() - 0.5), idx: 0, results: [], newWords: [], voice: null, replays: 0 };
-  showView('drill');
-  $('drill-card').classList.remove('hidden');
-  setupSentence();
-}
+/* ───── 공부한 문장 (한 페이지 복습) ───── */
+const noteVoice = {}; // 문장별 현재 악센트
 function studiedSentences() {
   const ids = new Set();
   DB.sentences.sentences.forEach(s => { if (((s.listening && s.listening.attempts) || 0) > 0) ids.add(s.id); });
@@ -852,13 +778,13 @@ function studiedSentences() {
   const byId = {}; DB.sentences.sentences.forEach(s => byId[s.id] = s);
   return [...ids].map(id => byId[id]).filter(Boolean);
 }
-function renderStudied() {
+function renderNotes() {
   const studied = studiedSentences();
   const last = {};
   DB.log.entries.forEach(e => (e.sentences || []).forEach(id => { if (!last[id] || e.date > last[id]) last[id] = e.date; }));
-  $('studied-count').textContent = studied.length ? `(${studied.length}개)` : '';
+  $('notes-count').textContent = studied.length ? `(${studied.length}개)` : '';
   if (studied.length === 0) {
-    $('studied-list').innerHTML = '<p class="muted">아직 연습한 문장이 없어요. 받아쓰기나 상황극을 한 번 해보면 여기에 쌓입니다.</p>';
+    $('notes-list').innerHTML = '<p class="muted">아직 연습한 문장이 없어요. 받아쓰기나 상황극을 한 번 해보면 여기에 쌓입니다.</p>';
     return;
   }
   studied.sort((a, b) => {
@@ -866,19 +792,54 @@ function renderStudied() {
     if (la !== lb) return la < lb ? 1 : -1;
     return (b.listening.attempts || 0) - (a.listening.attempts || 0);
   });
-  $('studied-list').innerHTML = '<table><tr><th>문장</th><th>받아쓰기</th><th>상태</th><th>마지막</th><th>모아두기</th></tr>' +
-    studied.map(s => {
-      const at = s.listening.attempts || 0, co = s.listening.correct || 0;
-      const drill = at ? `${at}회 · ${co}통과` : '—';
-      const res = s.srs.last_result === 'pass' ? '✅' : s.srs.last_result === 'fail' ? '🔁' : '';
-      const coll = `<button class="mini-play" onclick="event.stopPropagation();toggleCollectId('${s.id}')">${s.collected ? '✅ 모아둠' : '📌 모아두기'}</button>`;
-      return `<tr style="cursor:pointer" onclick="startDrill('${s.id}')">
-        <td><b>${s.en}</b><div class="muted">${s.ko || ''}</div></td>
-        <td>${drill}</td>
-        <td>${res} <span class="tag">box ${s.srs.box}</span></td>
-        <td class="muted">${last[s.id] || s.added || ''}</td>
-        <td>${coll}</td></tr>`;
-    }).join('') + '</table>';
+  $('notes-toggle-all').innerHTML = `<button class="mini-play" onclick="notesToggleAll(true)">전체 펼치기</button>
+    <button class="mini-play" onclick="notesToggleAll(false)">전체 접기</button>`;
+  $('notes-list').innerHTML = studied.map(s => {
+    const sound = (s.study && s.study.sound) || s.notes || '';
+    const sb = studyBlock(s);
+    const hasClips = (s.yg_clips || []).length > 0;
+    return `<details class="note-item" ontoggle="noteToggled('${s.id}',this)">
+      <summary>
+        <div>
+          <div class="note-en">${s.en}</div>
+          <div class="ko" style="text-align:left;margin:4px 0 0">🇰🇷 ${s.ko || ''}</div>
+        </div>
+      </summary>
+      <div class="note-body">
+        <div style="margin-bottom:4px">
+          <button class="mini-play" onclick="notePlay('${s.id}',false)">▶ 듣기</button>
+          <button class="mini-play" onclick="notePlay('${s.id}',true)">🐢 느리게</button>
+          <button class="mini-play" onclick="noteOtherAccent('${s.id}')">🌍 다른 악센트</button>
+          <span class="muted" id="note-voice-${s.id}" style="font-size:14px"></span>
+        </div>
+        ${sound ? `<div class="notes">👂 <b>왜 안 들렸을까 (연음·발음):</b><br>${sound}</div>` : ''}
+        ${sb ? `<div class="notes" style="background:#eef2ff;border-color:#c7d2fe">${sb}</div>` : ''}
+        <div id="note-yg-${s.id}">${hasClips ? '' : '<p class="muted" style="font-size:14px;margin:4px 0">🔊 저장된 영상이 없어요 — 받아쓰기 채점 화면에서 YouGlish로 찾고 시간을 적으면 여기에 모여요.</p>'}</div>
+      </div>
+    </details>`;
+  }).join('');
+}
+// 영상은 펼칠 때 한 번만 렌더 (접힌 카드가 많아도 iframe을 미리 안 만듦)
+function noteToggled(id, el) {
+  if (!el.open || el.dataset.ygDone) return;
+  const s = DB.sentences.sentences.find(x => x.id === id);
+  if (s && (s.yg_clips || []).length) renderYgClips(s, 'note-yg-' + id);
+  el.dataset.ygDone = '1';
+}
+function notesToggleAll(open) {
+  document.querySelectorAll('#notes-list .note-item').forEach(el => { el.open = open; });
+}
+function notePlay(id, slow) {
+  const s = DB.sentences.sentences.find(x => x.id === id);
+  if (!s) return;
+  if (!noteVoice[id]) noteVoice[id] = Object.keys(VOICES)[Math.floor(Math.random() * 4)];
+  $('note-voice-' + id).textContent = VOICES[noteVoice[id]];
+  playFile(`/audio/${id}_${noteVoice[id]}${slow ? '_slow' : ''}.mp3`, s.en, slow);
+}
+function noteOtherAccent(id) {
+  const others = Object.keys(VOICES).filter(v => v !== noteVoice[id]);
+  noteVoice[id] = others[Math.floor(Math.random() * others.length)];
+  notePlay(id, false);
 }
 
 /* ───── 상황극 (롤플레이) ───── */
@@ -986,7 +947,7 @@ async function rpFinish() {
     used.map(t => `<tr><td><b>${t.en}</b></td><td class="muted">${t.ko}</td></tr>`).join('') + '</table>';
   DB.log.entries.push({ date: today(), mode: 'roleplay', scenario: rp.sc.id, sentences: used.map(t => t.ref), note: '상황극: ' + rp.sc.title });
   try { await save('data/study_log.json', DB.log); } catch (e) {}
-  renderHome(); renderHistory();
+  renderHome();
 }
 function rpExit() { rp = null; $('rp-done').classList.add('hidden'); $('rp-play').classList.add('hidden'); $('rp-list').classList.remove('hidden'); renderRoleplay(); }
 

@@ -642,14 +642,27 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-07-03",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 2,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "where",
+          "we",
+          "on",
+          "the",
+          "regulatory",
+          "do",
+          "stand",
+          "submission",
+          "right",
+          "now"
+        ],
+        "weak_accents": [
+          "us-f"
+        ]
       },
       "study": {
         "sound": "'Where do we stand on' / 'the regulatory submission' / 'right now' 세 덩어리. 'Where do we'는 do we가 약형으로 줄어 <b>웨어러위</b>처럼 흐르고, 'stand on'은 stand의 d와 on이 이어져 <b>스탠던</b>으로 붙는다(가장 잘 뭉치는 부분). 'the regulatory submission'은 둘 다 길어 어렵다 — regulatory는 미국식 앞 강세 <b>레</b>귤러토리, submission은 뒤 강세(sub-<b>MISS</b>-ion)라 <b>썹미션</b>으로 들린다. 'right now'는 또박하게 <b>라잇나우</b>로 끝난다. 전체 강세 자리는 <b>STAND</b>, <b>REG</b>ulatory, sub<b>MISS</b>ion, <b>NOW</b>.",
@@ -682,7 +695,45 @@
           }
         ],
         "tip": "프로젝트·업무 진행 현황을 점검할 때 쓰는 사내 미팅 단골 표현. 격식은 중립적이며, 상사가 팀에게 또는 PM이 담당자에게 상태를 확인할 때 자연스럽다."
-      }
+      },
+      "collected": true,
+      "yg_clips": [
+        {
+          "video": "Jzcs4ti_bdI",
+          "caption": "No.%20%5B%5B%5BWhere%5D%5D%5D%20%5B%5B%5Bdo%5D%5D%5D%20%5B%5B%5Bwe%5D%5D%5D%20%5B%5B%5Bstand%5D%5D%5D%20%5B%5B%5Bon%5D%5D%5D%20this%20issue%3F",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 1460
+        },
+        {
+          "video": "x26a-ztpQs8",
+          "caption": "%5B%5B%5BWhere%5D%5D%5D%20%5B%5B%5Bdo%5D%5D%5D%20%5B%5B%5Bwe%5D%5D%5D%20%5B%5B%5Bstand%5D%5D%5D%20%5B%5B%5Bon%5D%5D%5D%20the%20evolution",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 3428
+        },
+        {
+          "video": "oARjibprWa8",
+          "caption": "%3E%3E%3E%20LAURA%20FLANDERS%3A%20SO%20%5B%5B%5BWHERE%5D%5D%5D%20%5B%5B%5BDO%5D%5D%5D%20%5B%5B%5BWE%5D%5D%5D%20%5B%5B%5BSTAND%5D%5D%5D%20%5B%5B%5BON%5D%5D%5D%20THE",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 707
+        },
+        {
+          "video": "OkaS6ZkPml0",
+          "caption": "-%20%5B%5B%5BWhere%5D%5D%5D%20%5B%5B%5Bdo%5D%5D%5D%20%5B%5B%5Bwe%5D%5D%5D%20%5B%5B%5Bstand%5D%5D%5D%20%5B%5B%5Bon%5D%5D%5D%20IO%20plus%20IO%20combinations%3F",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 265
+        },
+        {
+          "video": "BTR63qWaS6A",
+          "caption": "MR%20KIRBY%3A%20%5B%5B%5BWhere%5D%5D%5D%20%5B%5B%5Bdo%5D%5D%5D%20%5B%5B%5Bwe%5D%5D%5D%20%5B%5B%5Bstand%5D%5D%5D%20%5B%5B%5Bon%5D%5D%5D%20whether%20terrorism%20is%20bad%3F",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 3020
+        }
+      ]
     },
     {
       "id": "s011",
@@ -1496,11 +1547,11 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-18",
+        "next_review": "2026-07-02",
         "last_result": "fail"
       },
       "listening": {
-        "attempts": 2,
+        "attempts": 3,
         "correct": 0,
         "missed_words": [
           "we've",
@@ -1511,7 +1562,9 @@
           "on",
           "the",
           "supplier",
-          "side"
+          "side",
+          "run",
+          "delay"
         ],
         "weak_accents": [
           "gb-m",
@@ -2687,20 +2740,24 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-17",
+        "next_review": "2026-07-03",
         "last_result": "fail"
       },
       "listening": {
-        "attempts": 1,
+        "attempts": 2,
         "correct": 0,
         "missed_words": [
           "inclined",
           "to",
           "with",
-          "caveat"
+          "caveat",
+          "i'm",
+          "agree",
+          "one"
         ],
         "weak_accents": [
-          "gb-m"
+          "gb-m",
+          "us-m"
         ]
       },
       "study": {
@@ -2750,14 +2807,20 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-07-02",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "devil's",
+          "advocate",
+          "for"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "<b>Let me play devil's advocate</b> / <b>for a moment</b>로 끊는다. <b>Let me</b>는 t가 약해져 <b>레미</b>~<b>렘미</b>로 들린다. <b>play devil's</b>는 <b>플레이 데블즈</b>이고, devil's의 -'s가 advocate 앞에 약하게 붙는다. advocate은 여기서 명사라 끝 -ate가 약형 <b>컷</b>이 되어 <b>애드버컷</b>으로 발음된다(동사 advocate은 '-에이트'). <b>for a moment</b>는 for a가 <b>풔러</b>로 연음되고 moment의 끝 t가 탈락해 <b>풔러 모먼(트)</b>가 된다. 강세는 play·DEV-·AD-·MO-에 떨어진다.",
@@ -2790,7 +2853,52 @@
           }
         ],
         "tip": "진짜 반대가 아니라 허점을 점검하려 일부러 반론한다는 신호 — 회의 분위기 상하지 않게 비판할 때."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "OYZlWMJlCRA",
+          "caption": "to%20be%20good%20and%20%5B%5B%5Blet%5D%5D%5D%20%5B%5B%5Bme%5D%5D%5D%20%5B%5B%5Bplay%5D%5D%5D%20%5B%5B%5Bdevil%27s%5D%5D%5D%20%5B%5B%5Badvocate%5D%5D%5D%20again.",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 987
+        },
+        {
+          "video": "LmBkr1tjSjs",
+          "caption": "Death%20of%20Privacy.%20Sharon%2C%20%5B%5B%5Blet%5D%5D%5D%20%5B%5B%5Bme%5D%5D%5D%20%5B%5B%5Bplay%5D%5D%5D%20%5B%5B%5Bdevil%27s%5D%5D%5D%20%5B%5B%5Badvocate%5D%5D%5D%20here%20and%20ask%20you%20do%20you%20think%20that",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 2031
+        },
+        {
+          "video": "ix2zLVs-Ygc",
+          "caption": "-%20Okay%2C%20so%20%5B%5B%5Blet%5D%5D%5D%20%5B%5B%5Bme%5D%5D%5D%20%5B%5B%5Bplay%5D%5D%5D%20%5B%5B%5BDevil%27s%5D%5D%5D%20%5B%5B%5BAdvocate%5D%5D%5D.",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 0
+        },
+        {
+          "video": "4yufILJi5H0",
+          "caption": "-%20So%20%5B%5B%5Blet%5D%5D%5D%20%5B%5B%5Bme%5D%5D%5D%20%5B%5B%5Bplay%5D%5D%5D%20%5B%5B%5Bdevil%27s%5D%5D%5D%20%5B%5B%5Badvocate%5D%5D%5D%20a%20little%20bit.",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 2585
+        },
+        {
+          "video": "50zyA1SBxo4",
+          "caption": "Thomas%20Perez%3A%20%5B%5B%5BLet%5D%5D%5D%20%5B%5B%5Bme%5D%5D%5D%20%5B%5B%5Bplay%5D%5D%5D%20%5B%5B%5Bdevil%27s%5D%5D%5D%20%5B%5B%5Badvocate%5D%5D%5D%20for%20a",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 3583
+        },
+        {
+          "video": "RuAFn0waams",
+          "caption": "between%20the%20three%20of%20you%2C%20%5B%5B%5Blet%5D%5D%5D%20%5B%5B%5Bme%5D%5D%5D%20%5B%5B%5Bplay%5D%5D%5D%20%5B%5B%5Bdevil%27s%5D%5D%5D%20%5B%5B%5Badvocate%5D%5D%5D",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 2224
+        }
+      ],
+      "collected": true
     },
     {
       "id": "s045",
@@ -3028,14 +3136,20 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-07-02",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "to",
+          "on",
+          "that"
+        ],
+        "weak_accents": [
+          "gb-f"
+        ]
       },
       "study": {
         "sound": "<b>Let's agree to disagree</b> / <b>on that one</b> 두 청크다. <b>Let's agree</b>는 <b>렛츠 어그리</b>로 또렷하나, <b>agree to disagree</b>에서 to가 약형 <b>트</b>로 줄어 <b>어그리 트 디서그리</b>로 들린다. agree와 disagree 둘 다 뒤 -GREE에 강세가 있어 리듬이 반복된다. <b>on that one</b>은 on·that·one이 이어져 <b>온댓원</b>으로 뭉친다. 강세는 -GREE·-GREE·THAT·ONE이며, 같은 어근(agree)이 긍정/부정으로 두 번 나와 관용구임을 알아야 빨리 잡힌다.",
@@ -4663,14 +4777,30 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-07-03",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 2,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "this",
+          "you'll",
+          "it",
+          "by",
+          "the",
+          "end",
+          "of",
+          "session",
+          "be",
+          "able",
+          "to",
+          "apply",
+          "yourself"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "<b>By the end of this session</b>에서 by the는 <b>바이더</b>, end of는 연음으로 <b>엔더(브)</b>, this session은 <b>디스세션</b>으로 굴러가 전체 <b>바이디엔더디스세션</b>처럼 들린다. 강세는 <b>end</b>와 <b>ses</b>-에 떨어진다. you'll be able to apply it yourself에서 you'll be는 <b>율비</b>로 뭉치고, able to는 t가 약해 <b>에이블투</b>~<b>에이블러</b>, apply it은 연음돼 <b>어플라이잇</b>, yourself는 <b>유어셀프</b>. able to apply it 구간이 빠르게 한 덩어리로 흘러 <b>에이블러플라이잇</b>처럼 들리니, 강세 있는 <b>end / able / apply / -self</b>만 짚어 잡으면 된다.",
@@ -4703,7 +4833,31 @@
           }
         ],
         "tip": "발표·교육 도입에서 '이 세션이 끝나면 ~할 수 있다'고 학습 가치를 약속할 때 쓰는 격식 표현. 청중의 기대를 끌어올린다."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "J_AJyuMRKRc",
+          "caption": "levels%20and%20overall%20health.%20Hopefully%20%5B%5B%5Bby%5D%5D%5D%20%5B%5B%5Bthe%5D%5D%5D%20%5B%5B%5Bend%5D%5D%5D%20%5B%5B%5Bof%5D%5D%5D%20%5B%5B%5Bthis%5D%5D%5D%20%5B%5B%5Bsession%5D%5D%5D%20%5B%5B%5Byou%27ll%5D%5D%5D%20have%20a%20better%20understanding%20%5B%5B%5Bof%5D%5D%5D",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 19
+        },
+        {
+          "video": "AXCfDm4lmEw",
+          "caption": "So%20%5B%5B%5Bby%5D%5D%5D%20%5B%5B%5Bthe%5D%5D%5D%20%5B%5B%5Bend%5D%5D%5D%20%5B%5B%5Bof%5D%5D%5D%20%5B%5B%5Bthis%5D%5D%5D%20%5B%5B%5Bsession%5D%5D%5D%2C%20%5B%5B%5Byou%27ll%5D%5D%5D%20have%20a%20solid%20understanding%20%5B%5B%5Bof%5D%5D%5D%20what%20a%20GWAC%20is%2C",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 7155
+        },
+        {
+          "video": "J8lsvvJ21Ok",
+          "caption": "%5B%5B%5BBy%5D%5D%5D%20%5B%5B%5Bthe%5D%5D%5D%20%5B%5B%5Bend%5D%5D%5D%20%5B%5B%5Bof%5D%5D%5D%20%5B%5B%5Bthis%5D%5D%5D%20%5B%5B%5Bsession%5D%5D%5D%2C%20%5B%5B%5Byou%27ll%5D%5D%5D",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 266
+        }
+      ],
+      "collected": true
     },
     {
       "id": "s075",
@@ -4939,16 +5093,22 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-28",
+        "next_review": "2026-07-03",
         "last_result": "fail"
       },
       "listening": {
-        "attempts": 1,
+        "attempts": 2,
         "correct": 0,
         "missed_words": [
           "we've",
           "of",
-          "the"
+          "the",
+          "so",
+          "far",
+          "covered",
+          "two",
+          "three",
+          "topics"
         ],
         "weak_accents": [
           "us-m"
@@ -5345,11 +5505,11 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-24",
+        "next_review": "2026-07-02",
         "last_result": "fail"
       },
       "listening": {
-        "attempts": 1,
+        "attempts": 2,
         "correct": 0,
         "missed_words": [
           "key",
@@ -5357,7 +5517,9 @@
           "remember",
           "here",
           "is",
-          "consistency"
+          "consistency",
+          "the",
+          "to"
         ],
         "weak_accents": [
           "us-f"
@@ -6040,14 +6202,22 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-07-03",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "does",
+          "that",
+          "answer",
+          "your",
+          "question"
+        ],
+        "weak_accents": [
+          "us-m"
+        ]
       },
       "study": {
         "sound": "짧지만 통으로 뭉치는 문장입니다. <b>Does that</b>은 does가 약형 [dəz]이고 that과 붙어 <b>더즈댓</b>, 빠르면 <b>더잿</b>처럼 들립니다. <b>answer your</b>는 연음돼 <b>앤서여</b>로 your가 약형 <b>여</b>로 줄고, 미국식이면 answer의 r가 굴러 <b>앤설여</b>처럼 됩니다. 끝의 question은 <b>퀘스쳔</b>. 강세는 ANswer와 QUEStion에 떨어지고 문장 끝을 올려 의문문임을 표시합니다. 전체가 <b>더즈댓 앤서여 퀘스쳔?</b>으로 한 호흡에 지나가니 앞의 Does that을 놓치기 쉽습니다.",
@@ -6080,7 +6250,66 @@
           }
         ],
         "tip": "답변 직후 상대가 만족했는지 확인하는 정중한 마무리 — 진짜 추가 질문을 받을 의향이 있을 때만 쓸 것."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "afHd9EhsJ1U",
+          "caption": "%5B%5B%5BDoes%5D%5D%5D%20%5B%5B%5Bthat%5D%5D%5D%20%5B%5B%5Banswer%5D%5D%5D%20your%20question%3F",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 2854
+        },
+        {
+          "video": "KrKEZIxFB64",
+          "caption": "%5B%5B%5BDoes%5D%5D%5D%20%5B%5B%5Bthat%5D%5D%5D%20%5B%5B%5Banswer%5D%5D%5D%20your%20question%2C%20sir%3F",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 1960
+        },
+        {
+          "video": "fPERZTi6tbA",
+          "caption": "%5B%5B%5BDoes%5D%5D%5D%20%5B%5B%5Bthat%5D%5D%5D%20%5B%5B%5Banswer%5D%5D%5D%20your%20question%20John%3F%20Yea.%20I%27ll%20be%20suprised%20if%20they%20give%20us%20a%20number.",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 240
+        },
+        {
+          "video": "O3P-Z5DFge4",
+          "caption": "%5B%5B%5BDoes%5D%5D%5D%20%5B%5B%5Bthat%5D%5D%5D%20%5B%5B%5Banswer%5D%5D%5D%20your%20question%3F",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 2805
+        },
+        {
+          "video": "NCnRZC_J_mU",
+          "caption": "%5B%5B%5BDoes%5D%5D%5D%20%5B%5B%5Bthat%5D%5D%5D%20%5B%5B%5Banswer%5D%5D%5D%20your%20question%3F",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 2220
+        },
+        {
+          "video": "h_CrDnQsHHA",
+          "caption": "Yeah.%20%5B%5B%5BDoes%5D%5D%5D%20%5B%5B%5Bthat%5D%5D%5D%20%5B%5B%5Banswer%5D%5D%5D%20you%20question%3F",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 2360
+        },
+        {
+          "video": "oXunISvhddw",
+          "caption": "So%2C%20I%20hope%20%5B%5B%5Bthat%5D%5D%5D--.%20%5B%5B%5BDoes%5D%5D%5D%20%5B%5B%5Bthat%5D%5D%5D%20%5B%5B%5Banswer%5D%5D%5D%20your%20question%3F",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 2455
+        },
+        {
+          "video": "jJOYPHVVwKs",
+          "caption": "%5B%5B%5BDoes%5D%5D%5D%20%5B%5B%5Bthat%5D%5D%5D%20%5B%5B%5Banswer%5D%5D%5D%20your%20question%20at%20all%3F",
+          "accent": "all",
+          "saved": "2026-07-02",
+          "start": 1385
+        }
+      ],
+      "collected": true
     },
     {
       "id": "s096",
@@ -6697,14 +6926,23 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-13",
-        "last_result": null
+        "next_review": "2026-07-02",
+        "last_result": "fail"
       },
       "listening": {
-        "attempts": 0,
+        "attempts": 1,
         "correct": 0,
-        "missed_words": [],
-        "weak_accents": []
+        "missed_words": [
+          "find",
+          "the",
+          "attached",
+          "report",
+          "for",
+          "your"
+        ],
+        "weak_accents": [
+          "gb-m"
+        ]
       },
       "study": {
         "sound": "격식 이메일을 소리내 읽을 때의 전형적 연음. <b>Please find the</b>는 find의 d와 the가 붙어 <b>파인더</b>처럼 들린다. <b>the attached</b>는 the가 [디]로 약화되며 attached와 연음돼 <b>디어태치트</b>, attached의 끝 -ed는 [트]로 가볍게. <b>attached report</b>는 두 강세어가 이어져 <b>어태치트리포-ㅌ</b>. 끝 <b>for your review</b>는 for와 your가 약화돼 <b>퍼여리뷰</b>로 뭉친다. 강세는 <b>FIND</b>·<b>aTTACHED</b>·<b>reVIEW</b>에.",
@@ -6733,7 +6971,17 @@
           }
         ],
         "tip": "격식 있는 이메일 문어체. 회화에선 잘 안 쓰고, 캐주얼하게는 'I've attached ~' 또는 'Here's the ~'가 자연스럽다."
-      }
+      },
+      "yg_clips": [
+        {
+          "video": "Fahl9hFlEIY",
+          "caption": "It%27s%20said%2C%20%22%5B%5B%5BAttached%5D%5D%5D%2C%20%5B%5B%5Bplease%5D%5D%5D%20%5B%5B%5Bfind%5D%5D%5D%20%5B%5B%5Bthe%5D%5D%5D%20invite--",
+          "accent": "all",
+          "saved": "2026-07-01",
+          "start": 51
+        }
+      ],
+      "collected": true
     },
     {
       "id": "s108",
@@ -6749,11 +6997,11 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-06-28",
+        "next_review": "2026-07-02",
         "last_result": "fail"
       },
       "listening": {
-        "attempts": 1,
+        "attempts": 2,
         "correct": 0,
         "missed_words": [
           "wanted",
@@ -6761,7 +7009,12 @@
           "heads",
           "up",
           "the",
-          "change"
+          "change",
+          "i",
+          "to",
+          "give",
+          "you",
+          "about"
         ],
         "weak_accents": [
           "us-m"
@@ -7084,6 +7337,126 @@
       "srs": {
         "box": 1,
         "next_review": "2026-06-15",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s117",
+      "en": "Sorry, could you back up a second? I lost you on that last bit.",
+      "ko": "죄송한데 방금 거 다시 짚어주실래요? 마지막 부분에서 놓쳤어요.",
+      "pattern": "Could you back up a second? I lost you on ~.",
+      "notes": "\"back up a second\"는 단어가 다 붙어 <b>배커퍼 세컨</b>처럼 들립니다. \"lost you\"는 t와 you가 만나 <b>로스츄</b>로, \"on that last bit\"은 <b>온댓 라슷빗</b>처럼 끝 t가 거의 안 터집니다. \"could you\"도 약하게 <b>쿠쥬</b>로 뭉쳐요.",
+      "scenario": "survival",
+      "tags": [
+        "clarify",
+        "listening"
+      ],
+      "added": "2026-06-29",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-06-29",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s118",
+      "en": "We're looking at a two-week slip, give or take.",
+      "ko": "대략 2주 정도 밀릴 것 같습니다.",
+      "pattern": "We're looking at ~, give or take.",
+      "notes": "\"looking at a\"가 연결되어 <b>루키내러</b>로 들립니다. \"give or take\"는 give와 or가 붙어 <b>기버테익</b>, t는 약하게 굴러요. \"two-week\"에 강세가 실리고 slip은 짧게 끊깁니다.",
+      "scenario": "internal-update",
+      "tags": [
+        "timeline",
+        "estimate"
+      ],
+      "added": "2026-06-29",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-06-29",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s119",
+      "en": "Can you give me a ballpark figure before we go any further?",
+      "ko": "더 진행하기 전에 대략적인 액수를 알려주실 수 있을까요?",
+      "pattern": "Can you give me a ballpark ~ before we go further?",
+      "notes": "\"give me a\"는 <b>기미어</b>로 뭉쳐 들립니다. \"before we\"는 약하게 <b>비포위</b>, \"go any further\"는 <b>고우에니 퍼더</b>처럼 이어집니다. ballpark은 첫 음절 <b>볼</b>에 강세가 있어요.",
+      "scenario": "cro-negotiation",
+      "tags": [
+        "negotiation",
+        "pricing"
+      ],
+      "added": "2026-06-29",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-06-29",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s120",
+      "en": "I'm leaning towards option two, but I'm open to other ideas.",
+      "ko": "저는 두 번째 안 쪽으로 기울지만, 다른 의견도 열려 있어요.",
+      "pattern": "I'm leaning towards ~, but I'm open to other ideas.",
+      "notes": "\"leaning towards\"는 <b>리닝터워즈</b>로 이어지고 towards의 모음이 약해집니다. \"but I'm\"은 t가 굴러 <b>버라임</b>, \"open to\"는 <b>오픈투</b>로 붙어요. other의 th 소리에 주의하세요.",
+      "scenario": "meeting",
+      "tags": [
+        "opinion",
+        "meeting"
+      ],
+      "added": "2026-06-29",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-06-29",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s121",
+      "en": "Before we wrap up, does anyone have anything to add?",
+      "ko": "마무리하기 전에, 더 하실 말씀 있으신 분 계신가요?",
+      "pattern": "Before we wrap up, does anyone have ~?",
+      "notes": "\"wrap up\"은 p와 up이 붙어 <b>래법</b>처럼 들립니다. \"does anyone\"은 <b>더제니원</b>으로, \"have anything\"은 v와 any가 이어져 <b>해베니띵</b>으로 뭉칩니다. \"to add\"는 약하게 <b>투애드</b>로 들려요.",
+      "scenario": "meeting",
+      "tags": [
+        "meeting",
+        "wrap-up"
+      ],
+      "added": "2026-06-29",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-06-29",
         "last_result": null
       },
       "listening": {
