@@ -6997,11 +6997,11 @@
       "added": "2026-06-13",
       "srs": {
         "box": 1,
-        "next_review": "2026-07-02",
+        "next_review": "2026-07-12",
         "last_result": "fail"
       },
       "listening": {
-        "attempts": 2,
+        "attempts": 3,
         "correct": 0,
         "missed_words": [
           "wanted",

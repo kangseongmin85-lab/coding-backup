@@ -160,6 +160,18 @@
         "passed": 0
       },
       "new_words": []
+    },
+    {
+      "date": "2026-07-11",
+      "mode": "dictation",
+      "sentences": [
+        "s108"
+      ],
+      "results": {
+        "attempted": 1,
+        "passed": 0
+      },
+      "new_words": []
     }
   ]
 }
