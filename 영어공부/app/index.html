@@ -69,6 +69,24 @@
   .note-item[open] > summary { border-bottom: 1px solid var(--line); background: #fafbff; }
   .note-item .note-en { font-size: 20px; font-weight: 700; line-height: 1.45; }
   .note-item .note-body { padding: 16px 18px; }
+  /* 영상 스크립트 */
+  .vid-wrap { position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 14px; overflow: hidden; background: #000; }
+  .vid-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .script-list { position: relative; max-height: 56vh; overflow-y: auto; border: 1px solid var(--line); border-radius: 12px; margin-top: 12px; }
+  .sl-item.turn { border-top: 2px solid #d1d5db; }
+  .script-line { display: flex; gap: 12px; padding: 10px 14px; cursor: pointer; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .sl-item:last-child .script-line { border-bottom: none; }
+  .script-line:hover { background: var(--accent-soft); }
+  .script-line.active { background: #fff7ed; box-shadow: inset 4px 0 0 var(--warn); }
+  .script-line .ts { flex: none; font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 700; font-size: 15px; min-width: 50px; }
+  .script-line .tx { font-size: 17px; line-height: 1.5; flex: 1; }
+  .ko-toggle { flex: none; align-self: flex-start; margin-top: 1px; border: 1px solid var(--line); background: var(--card); color: var(--sub); border-radius: 8px; padding: 3px 10px; font-size: 14px; cursor: pointer; }
+  .ko-toggle:hover { border-color: var(--accent); color: var(--accent); }
+  .ko-toggle.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .ko-panel { padding: 10px 16px 14px 62px; background: #eef6ff; border-bottom: 1px solid var(--line); }
+  .ko-panel .ko-tr { color: var(--ink); font-weight: 600; font-size: 17px; margin-bottom: 6px; }
+  .ko-panel .ko-terms { color: var(--sub); font-size: 15px; line-height: 1.75; border-top: 1px dashed #c7d2fe; padding-top: 6px; }
+  .ko-panel .ko-terms b { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -78,6 +96,7 @@
     <button data-view="home" class="active">홈</button>
     <button data-view="drill">받아쓰기</button>
     <button data-view="roleplay">상황극</button>
+    <button data-view="video">🎬 영상</button>
     <button data-view="notes">공부한 문장</button>
     <button data-view="add">문장 추가</button>
     <button data-view="vocab">단어장</button>
@@ -187,6 +206,24 @@
     <h2 style="margin-top:0">🎉 상황극 완료</h2>
     <div id="rp-done-body"></div>
     <div class="result-btns"><button class="btn-next" onclick="rpExit()">← 목록으로</button></div>
+  </div>
+</section>
+
+<!-- ───────── 영상 스크립트 ───────── -->
+<section id="view-video" class="hidden">
+  <div class="card">
+    <div id="video-empty" class="muted hidden">영상 스크립트가 아직 없어요.</div>
+    <div id="video-main">
+      <h2 id="video-title" style="margin-top:0">🎬 영상 스크립트</h2>
+      <div class="vid-wrap"><div id="yt-player"></div></div>
+      <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 영상이 재생</b>돼요. 오른쪽 <b>「한」</b> 버튼을 누르면 그 문장만 <b>한글 뜻·핵심 표현</b>이 펼쳐집니다. 재생 중엔 지금 나오는 문장이 자동으로 표시돼요.</p>
+      <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap">
+        <input type="text" id="video-search" placeholder="🔎 영어 문장 검색..." oninput="filterScript()" style="flex:1;min-width:180px">
+        <label class="muted" style="display:flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer"><input type="checkbox" id="video-follow" checked> 재생 위치 따라가기</label>
+      </div>
+      <div class="muted" id="video-count" style="margin-top:8px"></div>
+      <div class="script-list" id="script-list"></div>
+    </div>
   </div>
 </section>
 
@@ -311,6 +348,7 @@ async function load() {
   ]);
   DB = LOCAL ? { sentences: s, vocab: v, log: l } : mergeWithLocal(s, v, l);
   DB.scenarios = sc;
+  DB.videoScripts = await fetch('/data/video_scripts.json').then(r => r.json()).catch(() => ({ videos: [] }));
   // 지점(start) 없는 옛 자동수집 예문 정리 — 이제 시간 적은 것만 보관
   DB.sentences.sentences.forEach(s => {
     if (Array.isArray(s.yg_clips)) {
@@ -348,6 +386,7 @@ function showView(name) {
   $('view-' + name).classList.remove('hidden');
   document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.view === name));
   if (name === 'home') renderHome();
+  if (name === 'video') ensureVideo();
   if (name === 'notes') renderNotes();
   if (name === 'roleplay') { rp = null; $('rp-play').classList.add('hidden'); $('rp-done').classList.add('hidden'); $('rp-list').classList.remove('hidden'); renderRoleplay(); }
 }
@@ -950,6 +989,106 @@ async function rpFinish() {
   renderHome();
 }
 function rpExit() { rp = null; $('rp-done').classList.add('hidden'); $('rp-play').classList.add('hidden'); $('rp-list').classList.remove('hidden'); renderRoleplay(); }
+
+/* ───── 영상 스크립트 ───── */
+let ytPlayer = null, ytReady = false, videoData = null, videoLines = [], videoActiveIdx = -1, videoPoll = null, videoBuilt = false;
+const fmtTs = sec => Math.floor(sec / 60) + ':' + String(Math.floor(sec % 60)).padStart(2, '0');
+
+function ensureVideo() {
+  if (videoBuilt) return;
+  videoData = (DB.videoScripts && DB.videoScripts.videos && DB.videoScripts.videos[0]) || null;
+  if (!videoData) { $('video-main').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
+  $('video-title').textContent = '🎬 ' + (videoData.title || '영상 스크립트');
+  videoLines = videoData.lines || [];
+  renderScript('');
+  loadYT();
+  videoBuilt = true;
+}
+
+function renderScript(q) {
+  q = (q || '').trim().toLowerCase();
+  const list = $('script-list');
+  let shown = 0;
+  list.innerHTML = videoLines.map((L, i) => {
+    if (q && !L.en.toLowerCase().includes(q)) return '';
+    shown++;
+    return `<div class="sl-item${L.turn ? ' turn' : ''}">`
+      + `<div class="script-line${i === videoActiveIdx ? ' active' : ''}" data-idx="${i}" onclick="seekTo(${i})">`
+      + `<span class="ts">${fmtTs(L.t)}</span><span class="tx">${escapeHtml(L.en)}</span>`
+      + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(${i},this)">한</button>`
+      + `</div><div class="ko-panel hidden"></div></div>`;
+  }).join('');
+  $('video-count').textContent = q ? `“${q}” 검색 결과 ${shown}개 / 전체 ${videoLines.length}문장` : `전체 ${videoLines.length}문장`;
+}
+function escapeHtml(s) { return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+function filterScript() { renderScript($('video-search').value); }
+
+function toggleKo(i, btn) {
+  const panel = btn.closest('.sl-item').querySelector('.ko-panel');
+  const willShow = panel.classList.contains('hidden');
+  if (willShow && !panel.dataset.filled) {
+    const L = videoLines[i];
+    if (!L.ko) {
+      panel.innerHTML = '<span class="muted">아직 한글 뜻이 준비되지 않았어요. (생성 중 — 잠시 후 새로고침)</span>';
+    } else {
+      let h = `<div class="ko-tr">🇰🇷 ${escapeHtml(L.ko)}</div>`;
+      if (L.terms && L.terms.length) {
+        h += '<div class="ko-terms">' + L.terms.map(t => `<div><b>${escapeHtml(t.term)}</b> — ${escapeHtml(t.ko)}</div>`).join('') + '</div>';
+      }
+      panel.innerHTML = h;
+      panel.dataset.filled = '1';   // 뜻이 있을 때만 캐시 (생성 전이면 다음에 다시 시도)
+    }
+  }
+  panel.classList.toggle('hidden');
+  btn.classList.toggle('on', !panel.classList.contains('hidden'));
+}
+
+function seekTo(i) {
+  const t = videoLines[i].t;
+  if (ytReady && ytPlayer && ytPlayer.seekTo) { ytPlayer.seekTo(t, true); ytPlayer.playVideo(); }
+  else { window.open(`https://www.youtube.com/watch?v=${videoData.videoId}&t=${Math.floor(t)}s`, '_blank'); }
+}
+
+function loadYT() {
+  if (window.YT && window.YT.Player) { createPlayer(); return; }
+  if (!document.getElementById('yt-api-script')) {
+    const tag = document.createElement('script');
+    tag.id = 'yt-api-script'; tag.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(tag);
+  }
+  window.onYouTubeIframeAPIReady = createPlayer;
+}
+function createPlayer() {
+  if (ytPlayer) return;
+  ytPlayer = new YT.Player('yt-player', {
+    videoId: videoData.videoId,
+    playerVars: { playsinline: 1, rel: 0, modestbranding: 1 },
+    events: { onReady: () => { ytReady = true; }, onStateChange: onYtState },
+  });
+}
+function onYtState(e) {
+  if (e.data === YT.PlayerState.PLAYING) startVideoPoll(); else stopVideoPoll();
+}
+function startVideoPoll() { if (!videoPoll) videoPoll = setInterval(updateActiveLine, 500); }
+function stopVideoPoll() { if (videoPoll) { clearInterval(videoPoll); videoPoll = null; } }
+function updateActiveLine() {
+  if (!ytReady || !ytPlayer.getCurrentTime) return;
+  const t = ytPlayer.getCurrentTime();
+  let lo = 0, hi = videoLines.length - 1, idx = 0;
+  while (lo <= hi) { const mid = (lo + hi) >> 1; if (videoLines[mid].t <= t) { idx = mid; lo = mid + 1; } else hi = mid - 1; }
+  if (idx === videoActiveIdx) return;
+  const prev = $('script-list').querySelector('.script-line.active');
+  if (prev) prev.classList.remove('active');
+  videoActiveIdx = idx;
+  const el = $('script-list').querySelector(`[data-idx="${idx}"]`);
+  if (el) {
+    el.classList.add('active');
+    if ($('video-follow').checked) {
+      const box = $('script-list');
+      box.scrollTop = el.offsetTop - box.clientHeight / 2 + el.clientHeight / 2;
+    }
+  }
+}
 
 load();
 </script>
