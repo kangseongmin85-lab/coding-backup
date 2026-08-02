@@ -1085,7 +1085,7 @@ function updateActiveLine() {
     el.classList.add('active');
     if ($('video-follow').checked) {
       const box = $('script-list');
-      box.scrollTop = el.offsetTop - box.clientHeight / 2 + el.clientHeight / 2;
+      box.scrollTop = el.offsetTop;
     }
   }
 }
