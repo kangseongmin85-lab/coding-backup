@@ -7465,6 +7465,128 @@
         "missed_words": [],
         "weak_accents": []
       }
+    },
+    {
+      "id": "s122",
+      "en": "Sorry, could you speak up a bit? You're coming through pretty faint.",
+      "ko": "죄송한데 조금만 크게 말씀해 주시겠어요? 소리가 좀 작게 들려요.",
+      "pattern": "Sorry, could you speak up a bit? You're coming through ~.",
+      "notes": "could you는 붙어서 <b>쿠쥬</b>로 뭉치고, speak up은 k가 up에 넘어가 <b>스피컵</b>이 됩니다. a bit은 약화되어 <b>어빗</b> 정도로 짧게 스치고 끝 t는 거의 안 들립니다. coming through는 <b>커민쓰루</b>, pretty는 미국식 flap-t로 <b>프리리</b>처럼 들려서 '프리티'를 기다리면 놓칩니다.",
+      "scenario": "survival",
+      "tags": [
+        "survival",
+        "call",
+        "clarification"
+      ],
+      "added": "2026-08-17",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-17",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s123",
+      "en": "Sorry, there's a bit of a lag on my end — go ahead.",
+      "ko": "죄송해요, 제 쪽에 딜레이가 좀 있네요 — 말씀하세요.",
+      "pattern": "Sorry, there's a bit of a ~ on my end — go ahead.",
+      "notes": "there's a는 한 덩어리로 <b>데어저</b>, a bit of a는 flap-t가 굴러서 <b>어비러버</b>처럼 통째로 뭉갭니다. lag on은 g가 on에 붙어 <b>래건</b>, my end는 <b>마이엔드</b>로 이어집니다. go ahead는 h가 거의 사라져 <b>고어헫</b>으로 두 음절처럼 들립니다.",
+      "scenario": "survival",
+      "tags": [
+        "survival",
+        "call",
+        "interruption"
+      ],
+      "added": "2026-08-17",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-17",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s124",
+      "en": "Who's going to own this going forward, and by when?",
+      "ko": "앞으로 이건 누가 맡게 되나요? 그리고 언제까지죠?",
+      "pattern": "Who's going to own ~ going forward, and by when?",
+      "notes": "going to는 실제 발화에서 <b>거너</b>(gonna)로 줄어 who's going to가 <b>후즈거너</b> 한 덩어리가 됩니다. own this는 n과 th가 겹쳐 <b>오운디스</b>로 흐릿하게 붙고, forward의 r은 약해 <b>포워드</b>에 가깝습니다. and by는 d가 탈락해 <b>언바이</b>로 들리니 and를 또렷이 기다리면 안 됩니다.",
+      "scenario": "meeting",
+      "tags": [
+        "ownership",
+        "action-items"
+      ],
+      "added": "2026-08-17",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-17",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s125",
+      "en": "Realistically, how soon can you turn that around?",
+      "ko": "현실적으로, 그거 얼마나 빨리 처리해 주실 수 있나요?",
+      "pattern": "Realistically, how soon can you turn ~ around?",
+      "notes": "can you는 약형으로 <b>커뉴</b>가 되어 can이 거의 안 들립니다. turn that around는 that의 th가 약해지고 t가 flap으로 굴러 <b>턴대러라운드</b>처럼 한 호흡에 붙습니다. realistically는 강세가 -lis-에 있어 <b>뤼얼리스티클리</b>로 앞뒤가 뭉개집니다.",
+      "scenario": "cro-negotiation",
+      "tags": [
+        "timeline",
+        "turnaround"
+      ],
+      "added": "2026-08-17",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-17",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s126",
+      "en": "We'll need to get sign-off from legal before we move forward.",
+      "ko": "진행하기 전에 법무팀 승인을 받아야 합니다.",
+      "pattern": "We'll need to get sign-off from ~ before we ~.",
+      "notes": "We'll은 <b>윌</b>로 짧게 스치고 need to는 t가 흡수돼 <b>니투</b>가 됩니다. get sign-off는 get의 t가 거의 사라지고 sign-off가 이어져 <b>게사이너프</b>처럼 들립니다. before we는 <b>비포위</b>로 붙고 forward의 끝 d는 약하게 삼켜집니다.",
+      "scenario": "licensing",
+      "tags": [
+        "approval",
+        "process"
+      ],
+      "added": "2026-08-17",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-17",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
     }
   ]
 }

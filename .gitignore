@@ -42,3 +42,6 @@ _cache/
 
 # === 자동백업 스크립트 로그 ===
 _backup_cache/
+
+# 중첩 git 저장소 (GitHub에 자체 백업됨 — gitlink 오염 방지)
+x 수익화/issue2content/
