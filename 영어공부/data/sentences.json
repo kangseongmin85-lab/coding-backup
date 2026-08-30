@@ -7587,6 +7587,126 @@
         "missed_words": [],
         "weak_accents": []
       }
+    },
+    {
+      "id": "s127",
+      "en": "Sorry, would you mind slowing down a bit? I'm still taking notes.",
+      "ko": "죄송한데 조금만 천천히 말씀해 주시겠어요? 아직 필기 중이라서요.",
+      "pattern": "Would you mind ~ing a bit?",
+      "notes": "Would you mind는 거의 <b>우쥬 마인</b>으로 뭉치고 d는 뒤 s에 먹혀 안 들립니다. slowing down a bit에서 down a가 이어져 <b>다우너빝</b>, 끝 t는 터지지 않고 멈춥니다. I'm still은 <b>암스띨</b>처럼 짧게 지나가고 taking notes는 <b>테이킹노웃츠</b>로 붙습니다.",
+      "scenario": "survival",
+      "tags": [
+        "survival",
+        "clarification"
+      ],
+      "added": "2026-08-24",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-24",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s128",
+      "en": "Sorry to put you on the spot, but what's your take on this?",
+      "ko": "갑자기 여쭤봐서 죄송한데, 이 건에 대해 어떻게 보세요?",
+      "pattern": "Sorry to put you on the spot, but what's your take on ~?",
+      "notes": "put you는 t와 y가 합쳐져 <b>풋츄</b>로 소리 납니다. on the spot은 the가 약해져 <b>온더스팟</b> 한 덩어리, 끝 t는 거의 안 들립니다. what's your도 <b>왓츄어</b>로 뭉치고 take on this는 연음되어 <b>테이컨디스</b>처럼 들립니다.",
+      "scenario": "meeting",
+      "tags": [
+        "opinion",
+        "meeting"
+      ],
+      "added": "2026-08-24",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-24",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s129",
+      "en": "We're still ironing out a few details on our end.",
+      "ko": "저희 쪽에서 세부 사항 몇 가지를 아직 조율하고 있습니다.",
+      "pattern": "We're still ironing out ~ on our end.",
+      "notes": "We're는 거의 <b>위어</b> 한 음절로 줄고 still과 붙어 <b>위어스띨</b>이 됩니다. ironing out a는 t가 flap 되어 <b>아이어닝 아우러</b>로 굴러갑니다. on our end도 전부 이어져 <b>오나워렌(드)</b>처럼 들리며 마지막 d는 흐릿합니다.",
+      "scenario": "internal-update",
+      "tags": [
+        "update",
+        "progress"
+      ],
+      "added": "2026-08-24",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-24",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s130",
+      "en": "Is that clear so far, or should I go over it again?",
+      "ko": "여기까지 이해되셨나요, 아니면 다시 한번 짚어드릴까요?",
+      "pattern": "Is that clear so far, or should I ~ again?",
+      "notes": "Is that은 <b>이잿</b>으로 붙고 that의 끝 t는 clear 앞에서 막힙니다. or should I는 약형이라 <b>얼슈다이</b>처럼 뭉갭니다. go over it again은 flap-t와 연음이 겹쳐 <b>고우오버리러겐</b>에 가깝게 흘러갑니다.",
+      "scenario": "presentation",
+      "tags": [
+        "presentation",
+        "comprehension"
+      ],
+      "added": "2026-08-24",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-24",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
+    },
+    {
+      "id": "s131",
+      "en": "Can we lock in a date before the end of the week?",
+      "ko": "이번 주가 끝나기 전에 날짜를 확정할 수 있을까요?",
+      "pattern": "Can we lock in ~ before the end of the week?",
+      "notes": "Can we의 Can은 약형 <b>큰위</b>로 거의 사라집니다. lock in a date는 통째로 이어져 <b>라키너 데잇</b>이 되고 date의 t는 안 터집니다. end of the week은 of가 약해져 <b>엔더더윜</b>처럼 한 덩어리로 들립니다.",
+      "scenario": "meeting",
+      "tags": [
+        "scheduling",
+        "deadline"
+      ],
+      "added": "2026-08-24",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-24",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      }
     }
   ]
 }
