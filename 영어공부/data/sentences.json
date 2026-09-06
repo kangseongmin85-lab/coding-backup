@@ -7489,6 +7489,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "전화·화상 회의에서 통째로 굴러 나오는 표현이라 단어 단위로 들으면 놓칩니다. 앞 청크 <b>could you speak up a bit</b>은 could의 d와 you의 y가 합쳐져 <b>쿠쥬</b>가 되고, speak의 k가 up으로 넘어가 <b>스피껍</b>, a bit는 <b>어빗</b>이 되어 전체가 <b>쿠쥬 스피껍어빗</b> 한 덩어리로 들립니다. 강세는 <b>speak</b>과 <b>up</b>에만 떨어지고 could you는 거의 안 들릴 만큼 눌립니다. 뒤 청크 <b>You're coming through pretty faint</b>에서 You're는 <b>여</b> 정도로 줄고 coming through는 g가 삼켜져 <b>커민쓰루</b>가 됩니다. pretty의 t는 flap t라 <b>프리디</b>가 되고, faint의 끝 t는 파열되지 않아 <b>페인(트)</b>로 툭 끊깁니다. 결국 <b>여 커민쓰루 프리디 페인</b>처럼 들려서, 정작 핵심어인 faint를 가장 놓치기 쉽습니다.",
+        "examples": [
+          {
+            "en": "Sorry, could you speak up a bit? You're coming through pretty choppy on the CRO call.",
+            "ko": "죄송한데 조금만 크게 말씀해 주시겠어요? CRO 콜에서 소리가 자꾸 끊겨서 들립니다."
+          },
+          {
+            "en": "Could you speak up a bit? You're coming through a little muffled and I don't want to miss the tox numbers.",
+            "ko": "조금만 크게 말씀해 주실 수 있을까요? 소리가 좀 먹먹해서 독성 시험 수치를 놓치고 싶지 않습니다."
+          },
+          {
+            "en": "Sorry to interrupt — could you speak up a bit? The team dialing in from Boston says you're coming through faint.",
+            "ko": "끊어서 죄송한데, 조금만 크게 말씀해 주시겠어요? 보스턴에서 전화로 들어온 팀이 소리가 약하게 들린다고 합니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "speak up",
+            "ko": "목소리를 더 크게 내다. 회의에서 '의견을 내다'라는 뜻도 있어 문맥으로 구분해야 함."
+          },
+          {
+            "term": "come through",
+            "ko": "(소리·신호가) 전달되어 들리다. come through faint / clear / choppy 형태로 통화 품질을 말할 때 관용적."
+          },
+          {
+            "term": "faint",
+            "ko": "(소리가) 희미한·약한. 통화에서 weak보다 자연스럽게 쓰이는 표현."
+          },
+          {
+            "term": "a bit",
+            "ko": "요청 강도를 낮추는 완충어. could you ~ a bit? 조합으로 명령조를 피함."
+          }
+        ],
+        "tip": "상대가 누구든 무난한 정중한 요청 — 상대 목소리 탓이 아니라 회선 탓으로 돌리는 프레임이라 실례가 되지 않습니다."
       }
     },
     {
@@ -7514,6 +7550,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "앞부분 <b>there's a bit of a</b>는 기능어 다섯 개가 한 호흡에 뭉쳐 <b>데어저 비러버</b>로 들립니다. 특히 bit of a에서 t가 flap t가 되어 <b>비러버</b>가 되는 게 핵심이라, 여기서 bit를 못 잡으면 문장 전체가 무너집니다. 강세는 내용어인 <b>lag</b>에만 크게 떨어지고, lag on my end는 통째로 이어져 <b>래건 마이 엔(드)</b>이 됩니다. end의 d는 뒤에 쉼표가 오면서 거의 파열되지 않아 <b>엔</b>에서 끊깁니다. 마지막 <b>go ahead</b>는 h가 약해져 <b>고어헤(드)</b>처럼 두 음절로 붙습니다. 결국 <b>쏘리 데어저비러버 래건마이엔 — 고어헤드</b> 리듬이고, 강세는 lag과 ahead 딱 두 군데뿐입니다.",
+        "examples": [
+          {
+            "en": "Sorry, there's a bit of a delay on my end — please go ahead.",
+            "ko": "죄송해요, 제 쪽 연결이 조금 느립니다 — 먼저 말씀하세요."
+          },
+          {
+            "en": "There's a bit of a holdup on our end — the CRO hasn't sent the raw data yet.",
+            "ko": "저희 쪽에 약간 지연이 있습니다 — CRO가 아직 원본 데이터를 보내지 않았습니다."
+          },
+          {
+            "en": "Sorry, there's a bit of an echo on my end — I'll switch to headphones, go ahead.",
+            "ko": "죄송해요, 제 쪽에 에코가 좀 있네요 — 헤드폰으로 바꿀 테니 계속하세요."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "lag",
+            "ko": "화상·전화 회의의 지연(랙). There's a lag / the audio is lagging 형태로 씀."
+          },
+          {
+            "term": "on my end / on our end",
+            "ko": "제 쪽에서는 / 저희 쪽에서는. 문제나 책임 범위를 자기 쪽으로 한정해 부드럽게 만드는 표현."
+          },
+          {
+            "term": "go ahead",
+            "ko": "먼저 말씀하세요, 진행하세요. 말이 겹쳤을 때 양보하는 표준 표현."
+          },
+          {
+            "term": "a bit of a ~",
+            "ko": "a bit of a delay / holdup / problem처럼 문제를 축소해 말하는 완곡 어법."
+          }
+        ],
+        "tip": "말이 겹치거나 화면이 끊길 때 즉시 던지는 격식 낮은~중간 표현 — 사과 + 원인 + 양보를 한 문장에 담아 회의 흐름을 깔끔하게 정리해 줍니다."
       }
     },
     {
@@ -7538,6 +7610,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Who's going to</b>는 실제로는 gonna로 줄어 <b>후즈거너</b>가 되고, 뒤 own this와 이어져 <b>후즈거너 오운디스</b>로 흘러갑니다. own의 n과 this의 th가 부딪히면서 th가 약해져 <b>오운니스</b>처럼 들리기도 합니다. 강세는 <b>own</b>과 마지막 <b>when</b> 두 곳에 크게 떨어집니다. <b>going forward</b>는 앞의 going to와 같은 단어가 반복되는 구조라 더 빠르게 눌려 <b>고잉포워(드)</b>로 뭉개지고, 여기서 going이 조동사인지 부사구인지 헷갈리기 쉽습니다. 마지막 <b>and by when</b>은 and가 <b>은</b>으로 줄어 <b>은바이웬</b>으로 붙고, 끝을 올리는 억양 때문에 짧게 툭 튀어나옵니다.",
+        "examples": [
+          {
+            "en": "Who's going to own the CMC package going forward, and by when?",
+            "ko": "앞으로 CMC 자료는 누가 맡게 되나요? 그리고 기한은 언제까지인가요?"
+          },
+          {
+            "en": "Who's going to own the CRO relationship going forward, and by when do we need to decide?",
+            "ko": "앞으로 CRO 관리는 누가 담당하고, 언제까지 정해야 하나요?"
+          },
+          {
+            "en": "Before we wrap up — who's going to own the follow-up on the tox findings, and by when?",
+            "ko": "마치기 전에 — 독성 결과 후속 조치는 누가 맡고, 언제까지 하기로 할까요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "own (something)",
+            "ko": "단순히 맡는 게 아니라 책임지고 끝까지 끌고 가다. 회의 액션 아이템 정리에서 be in charge of보다 훨씬 자주 쓰임."
+          },
+          {
+            "term": "going forward",
+            "ko": "앞으로는, 향후. from now on의 비즈니스 격식 표현."
+          },
+          {
+            "term": "by when",
+            "ko": "언제까지. 담당자와 기한을 한 번에 못 박는 압박형 질문."
+          },
+          {
+            "term": "wrap up",
+            "ko": "회의를 마무리하다. Before we wrap up ~ 형태로 마지막 안건을 꺼낼 때 씀."
+          }
+        ],
+        "tip": "회의 말미 액션 아이템 확정용 표준 문구 — 직설적이라 특정인을 지목하면 몰아붙이는 느낌이 나니 팀 전체에 던지듯 말하는 편이 안전합니다."
       }
     },
     {
@@ -7562,6 +7670,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Realistically</b>는 철자가 길지만 실제로는 <b>뤼얼리스띠끌리</b> 정도로 뭉치고 강세는 <b>-LIS-</b>에 떨어집니다. 앞머리 rea-가 거의 <b>뤼</b> 하나로 눌려서 단어의 시작을 잡지 못한 채 지나가기 쉽습니다. 이어지는 <b>how soon can you</b>에서 can은 약형 <b>큰</b>이 되고 you와 붙어 <b>하우쑨 크뉴</b>처럼 들립니다. 핵심은 <b>turn that around</b>인데, that의 첫 t는 앞의 n에 먹히고 뒤 t는 flap이 되어 <b>턴대러라운(드)</b> 한 덩어리가 됩니다. 강세는 <b>soon</b>과 <b>round</b>에 떨어져 전체가 <b>뤼얼리스띠끌리 하우쑨크뉴 턴대러라운</b> 세 박자로 흘러갑니다. 문두 부사가 길게 뭉개지므로, 그 뒤 how soon부터 귀를 세우는 게 요령입니다.",
+        "examples": [
+          {
+            "en": "Realistically, how soon can you turn the draft report around?",
+            "ko": "현실적으로 초안 보고서를 얼마나 빨리 회신해 주실 수 있나요?"
+          },
+          {
+            "en": "Realistically, how soon can you turn around the revised quote?",
+            "ko": "현실적으로 수정 견적서를 얼마나 빨리 보내주실 수 있을까요?"
+          },
+          {
+            "en": "I know your team is stretched, but realistically, how soon can you turn that around?",
+            "ko": "팀이 빠듯한 건 알지만, 현실적으로 그건 얼마나 빨리 처리해 주실 수 있나요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "turn (something) around",
+            "ko": "받은 일을 처리해서 되돌려주다, 회신하다. 명사 turnaround time(처리 소요 시간)의 동사형."
+          },
+          {
+            "term": "realistically",
+            "ko": "낙관적인 답 말고 실제 가능한 선을 묻겠다는 신호어. 문두에 놓아 대화 톤을 정함."
+          },
+          {
+            "term": "be stretched",
+            "ko": "인력·자원이 빠듯하다. The team is stretched thin 형태로도 씀."
+          },
+          {
+            "term": "how soon",
+            "ko": "how fast가 속도라면 how soon은 '언제까지 받을 수 있는지'에 초점."
+          }
+        ],
+        "tip": "CRO·벤더의 낙관적 일정 답변을 걸러낼 때 쓰는 협상 표현 — 문두 Realistically가 '빈말 말고'라는 신호라 압박이 실리니 목소리 톤은 부드럽게 가져가세요."
       }
     },
     {
@@ -7586,6 +7730,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>We'll need to</b>는 We'll이 <b>윌</b>로, need to는 t가 앞 d에 흡수되어 <b>니루</b>가 되면서 <b>윌 니루</b>로 붙습니다. <b>get sign-off</b>에서 get의 t는 파열되지 않고 s에 먹혀 <b>게 싸이너프</b>처럼 들리며, 강세는 복합명사 규칙대로 <b>SIGN</b>에 떨어집니다. from legal은 from이 약형 <b>픔</b>이 되어 <b>픔리걸</b>로 흘러가고 legal의 강세는 앞 <b>LE-</b>입니다. 뒤 청크 <b>before we move forward</b>는 before의 be-가 <b>비</b>로 눌리고 move의 v가 forward의 f에 먹혀 <b>무포워드</b>로 뭉칩니다. 전체는 <b>윌니루 게싸이너프 픔리걸 / 비포위 무포워드</b> 두 덩어리이고, sign-off와 legal 두 강세만 잡으면 나머지 기능어는 저절로 따라옵니다.",
+        "examples": [
+          {
+            "en": "We'll need to get sign-off from legal before we send the term sheet.",
+            "ko": "텀시트를 보내기 전에 법무팀 승인을 받아야 합니다."
+          },
+          {
+            "en": "We'll need to get sign-off from finance before we commit to the CRO budget.",
+            "ko": "CRO 예산을 확정하기 전에 재무팀 승인을 받아야 합니다."
+          },
+          {
+            "en": "We'll need to get sign-off from the steering committee before we move forward with the in-licensing deal.",
+            "ko": "도입 라이선스 건을 진행하기 전에 운영위원회 승인을 받아야 합니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "sign-off (명사)",
+            "ko": "책임자의 공식 승인·결재. get / need sign-off from ~ 형태로 쓰고, 동사형은 sign off on ~."
+          },
+          {
+            "term": "legal",
+            "ko": "법무팀. 사내에서는 관사 없이 부서명만 부름(finance, procurement, regulatory도 동일)."
+          },
+          {
+            "term": "move forward (with ~)",
+            "ko": "(안건·거래를) 진행하다. proceed의 실무 구어체."
+          },
+          {
+            "term": "term sheet",
+            "ko": "주요 거래 조건서. 본계약 전에 핵심 조건을 정리한 문서."
+          }
+        ],
+        "tip": "진행을 늦출 때 개인의 반대가 아니라 절차상 필요로 돌려 말하는 안전한 표현 — 외부 파트너와의 협상에서 시간을 벌 때 특히 유용합니다."
       }
     },
     {
@@ -7610,6 +7790,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>would you</b>는 d와 y가 합쳐져 <b>우쥬</b>가 되고 mind와 이어져 <b>우쥬 마인</b>이 됩니다. mind의 끝 d는 뒤따르는 slowing의 s 앞에서 탈락해 <b>마인슬로윙</b>처럼 한 단어로 들립니다. <b>slowing down a bit</b>은 down의 n이 a로 넘어가고 bit의 t가 약해져 <b>슬로윙 다우너빗</b> 한 덩어리가 되며, 강세는 <b>SLOW-</b>에 떨어집니다. 뒤 문장 <b>I'm still taking notes</b>에서 I'm은 <b>암</b>으로 줄고 still의 t는 s 뒤라 된소리에 가까운 <b>스띨</b>이 됩니다. taking notes는 끝의 s까지 물려 <b>테이킹 노웃츠</b>로 나오고 여기 <b>NOTES</b>에 문장 마지막 강세가 얹힙니다. 결국 <b>쏘리 우쥬마인 슬로윙다우너빗 / 암스띨 테이킹노웃츠</b> 두 박자입니다.",
+        "examples": [
+          {
+            "en": "Would you mind slowing down a bit? I'm still taking notes on the dosing schedule.",
+            "ko": "조금만 천천히 말씀해 주시겠어요? 투여 일정을 아직 받아적고 있습니다."
+          },
+          {
+            "en": "Would you mind repeating that last part a bit more slowly? I want to get the numbers right.",
+            "ko": "마지막 부분만 조금 더 천천히 다시 말씀해 주시겠어요? 수치를 정확히 적고 싶어서요."
+          },
+          {
+            "en": "Sorry, would you mind putting that slide back up? I'm still taking notes.",
+            "ko": "죄송한데 그 슬라이드를 다시 띄워 주시겠어요? 아직 메모 중이라서요."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "Would you mind ~ing?",
+            "ko": "~해 주시겠어요? mind가 '꺼리다'라서 승낙 답이 No / Not at all인 점에 주의. could you보다 한 단계 더 정중."
+          },
+          {
+            "term": "slow down",
+            "ko": "말이나 진행 속도를 줄이다. 사람에게 쓰면 '천천히 말해 달라'는 요청."
+          },
+          {
+            "term": "take notes",
+            "ko": "메모하다. 회의 맥락에서 write down보다 훨씬 자연스러움."
+          },
+          {
+            "term": "a bit",
+            "ko": "요청 강도를 낮추는 완충어. 없으면 지시처럼 들릴 수 있음."
+          }
+        ],
+        "tip": "처음 만난 CRO 담당자나 상급자에게도 안전한 최상위 정중 요청 — 답이 Not at all이면 거절이 아니라 승낙이라는 점만 기억하세요."
       }
     },
     {
@@ -7634,6 +7850,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>put you</b>는 t와 y가 합쳐져 <b>푸츄</b>가 되고, on the spot은 the가 약해지며 <b>온너스팟</b>처럼 들립니다. spot의 끝 t는 거의 터지지 않아 <b>스팟</b>에서 뚝 끊깁니다. 앞 청크 전체가 <b>쏘리투 푸츄 온너스팟</b>으로 빠르게 지나가고 강세는 <b>SPOT</b> 하나에 몰립니다. 뒤 청크 <b>what's your take on this</b>에서 what's your는 ts와 y가 합쳐져 <b>왓쳐</b>로 확 줄고, take on this는 k가 넘어가 <b>테이컨디스</b>가 됩니다. 결국 <b>왓쳐 테이컨디스</b> 두 덩어리로만 들려서, take가 동사가 아니라 명사(견해)라는 걸 놓치기 쉽습니다. 이 문장은 관용구 두 개(put on the spot / what's your take)를 통째로 소리로 외워두는 게 유일한 해법입니다.",
+        "examples": [
+          {
+            "en": "Sorry to put you on the spot, but what's your take on the CRO's timeline?",
+            "ko": "갑자기 여쭤서 죄송한데, CRO가 제시한 일정을 어떻게 보세요?"
+          },
+          {
+            "en": "Sorry to put you on the spot, but what's your take on whether this asset is worth in-licensing?",
+            "ko": "갑작스럽게 여쭤서 죄송한데, 이 에셋을 도입할 만하다고 보시나요?"
+          },
+          {
+            "en": "I know you just joined the call — sorry to put you on the spot, but what's your take on this?",
+            "ko": "방금 콜에 들어오신 걸 아는데 — 갑자기 여쭤 죄송하지만, 이 건 어떻게 보세요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "put someone on the spot",
+            "ko": "준비되지 않은 사람에게 갑자기 답변을 요구해 곤란하게 만들다. Sorry to ~ 형태로 미리 사과를 깔고 씀."
+          },
+          {
+            "term": "what's your take on ~",
+            "ko": "~에 대한 당신의 견해는? opinion보다 가볍고 실무적인 뉘앙스."
+          },
+          {
+            "term": "Sorry to ~",
+            "ko": "Sorry to interrupt / bother you처럼 앞에 붙여 무례함을 미리 상쇄하는 완충 사과."
+          },
+          {
+            "term": "in-license",
+            "ko": "외부 물질·기술을 도입해 라이선스를 들여오다(반대는 out-license)."
+          }
+        ],
+        "tip": "회의에서 조용한 참석자의 의견을 끌어낼 때 — 사과를 먼저 깔지만 답을 강요하는 뉘앙스가 남으니, 어느 정도 관계가 있는 상대에게 쓰는 게 좋습니다."
       }
     },
     {
@@ -7658,6 +7910,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "가장 큰 함정은 <b>ironing</b>입니다. iron은 철자와 달리 r을 앞으로 당겨 <b>아이언</b>으로 읽어서 ironing은 <b>아이어닝</b>이 되고, 강세는 첫 음절 <b>I-</b>에 떨어집니다. <b>ironing out a few</b>는 out의 t가 flap이 되어 <b>아이어닝 아우러 퓨</b>로 끊김 없이 이어집니다. 앞의 <b>We're still</b>은 <b>위스띨</b>로 줄어 거의 한 음절처럼 지나갑니다. details는 미국식에서 뒤 음절에 강세가 실려 <b>디테일즈</b>로 들리는 경우가 많습니다. 마지막 <b>on our end</b>는 세 단어가 한 덩어리로 <b>오나워엔(드)</b>이 되고 end의 d는 파열되지 않습니다. 전체는 <b>위스띨 아이어닝아우러퓨 디테일즈 오나워엔</b> 두 박자로, ironing out과 on our end를 관용구 통째로 외워두면 바로 잡힙니다.",
+        "examples": [
+          {
+            "en": "We're still ironing out a few details with the CRO, but the contract should be signed this week.",
+            "ko": "CRO와 세부 사항을 몇 가지 조율 중인데, 계약은 이번 주에 체결될 것 같습니다."
+          },
+          {
+            "en": "We're still ironing out the budget on our end — I'll circle back by Thursday.",
+            "ko": "저희 쪽에서 예산을 아직 정리 중입니다 — 목요일까지 다시 알려드리겠습니다."
+          },
+          {
+            "en": "The protocol is mostly final; we're still ironing out a few details on the sampling schedule.",
+            "ko": "프로토콜은 거의 확정됐고, 샘플링 일정 관련해서 몇 가지만 조율 중입니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "iron out",
+            "ko": "(이견·문제·세부사항을) 다듬어 해결하다. iron out the details / the kinks / our differences로 자주 씀."
+          },
+          {
+            "term": "on our end",
+            "ko": "저희 쪽에서는. 진행 상황의 책임 범위를 자기 팀으로 한정하는 표현."
+          },
+          {
+            "term": "circle back",
+            "ko": "나중에 다시 연락하거나 그 안건으로 돌아오다. 이메일·회의 마무리 단골 표현."
+          },
+          {
+            "term": "a few details",
+            "ko": "남은 작업을 사소해 보이게 축소하는 완곡 표현. 실제로는 꽤 남았을 때도 씀."
+          }
+        ],
+        "tip": "아직 안 끝났다는 사실을 부정적으로 들리지 않게 전하는 진행 보고 표현 — 사내 업데이트와 파트너 대상 모두 무난합니다."
       }
     },
     {
@@ -7682,6 +7970,42 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Is that</b>는 s와 th가 붙어 <b>이잿</b>처럼 한 음절로 들리고, that의 끝 t는 뒤 clear의 c 앞에서 사라집니다. <b>clear so far</b>는 <b>클리어쏘파</b>로 이어지며 강세는 <b>CLEAR</b>와 <b>FAR</b>에 떨어집니다. 진짜 안 들리는 곳은 중간의 <b>or should I</b>인데, 셋 다 약형이라 <b>오슈다이</b> 한 덩어리로 확 줄어들어 선택 의문문(or)이라는 신호 자체를 놓치기 쉽습니다. 뒤의 <b>go over it again</b>은 over의 v와 it의 t가 모두 약해져 <b>고오버리러겐</b>처럼 미끄러지듯 흐릅니다. 앞은 올렸다 내리고 뒤는 다시 올리는 이중 억양이라, 단어를 다 못 잡아도 억양만으로 둘 중 고르라는 질문임을 알 수 있습니다.",
+        "examples": [
+          {
+            "en": "Is that clear so far, or should I walk through the study design again?",
+            "ko": "여기까지 이해되셨나요, 아니면 시험 디자인을 다시 설명드릴까요?"
+          },
+          {
+            "en": "Is the timeline clear so far, or should I go over the milestones again?",
+            "ko": "일정은 여기까지 명확한가요, 아니면 마일스톤을 다시 짚어드릴까요?"
+          },
+          {
+            "en": "Is that clear so far, or should I put the raw data back up?",
+            "ko": "여기까지 이해되셨나요, 아니면 원본 데이터를 다시 띄울까요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "go over ~",
+            "ko": "다시 짚어 설명하다, 검토하다. review의 구어체로 발표·회의에서 훨씬 자주 쓰임."
+          },
+          {
+            "term": "so far",
+            "ko": "여기까지, 지금까지. 발표 중간 점검에서 범위를 끊어 주는 표현."
+          },
+          {
+            "term": "walk (someone) through ~",
+            "ko": "처음부터 차근차근 짚어가며 설명하다. go over보다 더 상세히 안내한다는 뉘앙스."
+          },
+          {
+            "term": "put ~ back up",
+            "ko": "(슬라이드·화면을) 다시 띄우다."
+          }
+        ],
+        "tip": "발표 중간 이해도 체크용 — 청중을 시험하는 느낌 없이 다시 설명할 부담을 발표자 쪽으로 돌려 놓는 것이 이 문장의 핵심입니다."
       }
     },
     {
@@ -7706,6 +8030,334 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Can we</b>의 can은 약형이라 <b>큰위</b>로 눌리고, 문장 첫 강세는 <b>LOCK</b>에 떨어집니다. <b>lock in a date</b>는 k가 in으로, in의 n이 a로 연달아 넘어가 <b>라키너데잇</b> 한 덩어리가 되고, date의 끝 t는 파열되지 않아 <b>데잇</b>에서 툭 끊깁니다. lock in을 관용구로 모르면 lock과 in이 분리돼 들리지 않아 문장이 통째로 막힙니다. <b>before the</b>는 <b>비포더</b>로 흘러가고, <b>the end of the week</b>는 of의 f가 사라져 <b>엔더더윅</b>으로 뭉칩니다. 전체는 <b>큰위 라키너데잇 / 비포디엔더더윅</b> 두 박자이고, 강세는 lock과 week 두 군데뿐이라 나머지는 전부 흐릿하게 지나갑니다.",
+        "examples": [
+          {
+            "en": "Can we lock in a kickoff date before the end of the week?",
+            "ko": "이번 주 안에 킥오프 날짜를 확정할 수 있을까요?"
+          },
+          {
+            "en": "Can we lock in the audit slot before the end of the month?",
+            "ko": "이번 달 안에 실사 일정을 확정할 수 있을까요?"
+          },
+          {
+            "en": "I'd rather not leave this open — can we lock in a date for the data review before the end of the week?",
+            "ko": "이 건을 미확정으로 두고 싶지 않아서요 — 데이터 리뷰 날짜를 이번 주 안에 확정할 수 있을까요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "lock in",
+            "ko": "(일정·가격·조건을) 확정해 못 박다. lock in a date / a price / a slot 형태로 씀."
+          },
+          {
+            "term": "before the end of the week",
+            "ko": "이번 주 안에. 사내 메일에서는 EOW(end of week), EOD(end of day)로 줄여 쓰기도 함."
+          },
+          {
+            "term": "leave (something) open",
+            "ko": "결정하지 않고 미확정 상태로 두다."
+          },
+          {
+            "term": "kickoff",
+            "ko": "프로젝트 착수 회의. kickoff meeting / kickoff call로 자주 쓰임."
+          }
+        ],
+        "tip": "흐지부지되던 일정을 못 박을 때 — Can we ~? 형태라 압박하면서도 협조 요청처럼 들려 CRO와 내부 팀 모두에 무난합니다."
+      }
+    },
+    {
+      "id": "s132",
+      "en": "Sorry, I missed the first part — could you take it from the top?",
+      "ko": "죄송해요, 앞부분을 놓쳤어요 — 처음부터 다시 말씀해 주시겠어요?",
+      "pattern": "Sorry, I missed ~ — could you take it from the top?",
+      "notes": "<b>missed the</b>는 t가 뒤 th에 먹혀 <b>미스더</b>로 뭉개지고, <b>first part</b>는 자음 3개가 겹쳐 t가 탈락해 <b>퍼-슽팟</b>처럼 들립니다. <b>could you</b>는 구개음화로 <b>쿠쥬</b>, <b>take it from</b>은 flap-t 연음으로 <b>테이킷프럼</b>이 됩니다. 특히 'from the top'이 한 덩어리 <b>프럼더탑</b>으로 빨리 지나가니 통째로 외워두세요.",
+      "scenario": "survival",
+      "tags": [
+        "survival",
+        "clarification"
+      ],
+      "added": "2026-08-31",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-31",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "이 문장은 두 덩어리, <b>Sorry, I missed the first part</b> / <b>could you take it from the top?</b>로 끊깁니다. 앞 청크에서 missed the는 -st의 t가 뒤 th에 먹혀 <b>미스더</b>처럼 하나로 뭉치고, first part는 st 뒤에 p가 와서 t가 완전히 탈락해 <b>퍼-스파앗</b>으로 들립니다(원어민은 '퍼스트 파트'라고 또박또박 하지 않습니다). 뒤 청크의 could you는 d+y가 구개음화해 <b>쿠쥬</b>, take it은 t가 모음 사이에서 flap 되어 <b>테이킷</b>→뒤의 from과 붙으면서 t가 거의 사라져 <b>테이끼프럼</b>이 됩니다. from the는 약형이라 <b>프럼더</b>로 뭉개지고, 문장 전체의 강세는 <b>missed</b>, <b>first</b>, <b>top</b> 세 군데에만 크게 떨어집니다. 즉 실제로는 '쏘리 아이 <b>미스</b>더 <b>퍼-스</b>파앗 — 쿠쥬 테이끼프럼더 <b>탑</b>?'처럼 들리므로, take it from the top이라는 관용구 덩어리를 통째로 소리로 외워두지 않으면 마지막 부분이 한 단어처럼 스쳐 지나갑니다. Sorry도 미국식은 <b>사-리</b>, 영국식은 <b>쏘리</b>로 모음이 달라 첫 단어부터 놓치기 쉽습니다.",
+        "examples": [
+          {
+            "en": "Sorry, I missed the CRO's timeline update — could you take it from the top?",
+            "ko": "죄송해요, CRO 일정 업데이트 부분을 놓쳤어요 — 처음부터 다시 말씀해 주시겠어요?"
+          },
+          {
+            "en": "Sorry, I missed the part about the assay validation — could you take it from the top?",
+            "ko": "죄송한데 어세이 밸리데이션 관련 부분을 놓쳤어요 — 처음부터 다시 짚어 주시겠어요?"
+          },
+          {
+            "en": "Sorry, I missed the first slide of the Q&A — could you take it from the top for me?",
+            "ko": "죄송해요, Q&A 첫 슬라이드를 놓쳤습니다 — 저를 위해 처음부터 다시 해 주실 수 있을까요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "take it from the top",
+            "ko": "'처음부터 다시 (설명·연주·리허설)해 주세요'라는 관용구. 원래 음악·연극 리허설 용어인데 회의에서도 자연스럽게 씁니다. from the beginning보다 가볍고 구어적."
+          },
+          {
+            "term": "miss the first part",
+            "ko": "'앞부분을 못 들었다/놓쳤다'. 청력 문제가 아니라 접속 지연·집중 이탈 등 상황 탓으로 들려 상대가 부담 없이 다시 말해 줍니다."
+          },
+          {
+            "term": "could you ~?",
+            "ko": "can you보다 한 단계 정중한 요청. 처음 만나는 CRO 담당자나 상급자에게도 무난하게 쓸 수 있는 기본 격식 수준."
+          }
+        ],
+        "tip": "화상회의에서 앞부분을 놓쳤을 때 쓰는 가벼운 구어 표현 — 동료·CRO 담당자에게는 자연스럽지만, 아주 격식 있는 자리에서는 'Could you go over that again from the beginning?'이 더 안전합니다."
+      }
+    },
+    {
+      "id": "s133",
+      "en": "Do you mind if I record this so I can review it later?",
+      "ko": "나중에 다시 들을 수 있게 이거 녹음해도 괜찮을까요?",
+      "pattern": "Do you mind if I ~?",
+      "notes": "<b>Do you</b>는 약화되어 <b>두유</b>를 넘어 <b>드유</b>에 가깝게 들리고, <b>mind if I</b>는 통째로 이어져 <b>마인디파이</b>가 됩니다. 동사 <b>record</b>는 뒤에 강세가 와서 <b>리컬-드</b>(명사 <b>레커드</b>와 구별). 끝의 <b>review it later</b>는 flap-t로 <b>리뷰잇레이러</b>처럼 t가 ㄹ 소리로 바뀝니다.",
+      "scenario": "survival",
+      "tags": [
+        "survival",
+        "meeting"
+      ],
+      "added": "2026-08-31",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-31",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Do you mind</b> / <b>if I record this</b> / <b>so I can review it later?</b> 세 덩어리로 끊어 들으세요. Do you는 거의 항상 축약되어 <b>두유</b>, 빠르면 <b>쥬</b> 한 음절로 줄고, mind if I는 -d가 뒤 모음 i에 넘어가 <b>마인디파이</b>처럼 세 단어가 한 덩어리로 붙습니다. record는 명사일 때 앞강세(<b>레</b>커드)지만 여기서는 동사라 뒤강세 <b>리<b>코-</b>ㄷ</b>이고, 이 강세 이동을 모르면 다른 단어로 착각합니다. record this는 d와 th가 붙어 <b>리코-디스</b>로 하나가 되고, so I can의 can은 약형 /kən/이라 <b>커ㄴ</b>으로 거의 안 들립니다(부정 can't이면 오히려 또렷해집니다). 끝의 review it later는 review it이 연음되고 it later의 t가 성문음화·flap되어 <b>리뷰이레이러</b>로 흐릅니다. 결국 '두유 <b>마인</b>디파이 리<b>코-</b>디스 쏘아컨 리<b>뷰</b>이레이러?'로, 강세는 mind·record·review에만 떨어집니다.",
+        "examples": [
+          {
+            "en": "Do you mind if I record this call so I can share it with our CMC team?",
+            "ko": "이 통화를 녹음해서 저희 CMC 팀과 공유해도 괜찮을까요?"
+          },
+          {
+            "en": "Do you mind if I loop in our regulatory lead on this thread?",
+            "ko": "이 메일 스레드에 저희 인허가 담당자를 참조로 넣어도 괜찮을까요?"
+          },
+          {
+            "en": "Do you mind if I take a few notes while you walk us through the data?",
+            "ko": "데이터를 설명해 주시는 동안 메모를 좀 해도 괜찮을까요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "Do you mind if I ~?",
+            "ko": "'~해도 괜찮을까요?'. 직역은 '꺼려지시나요?'라 대답이 No일 때가 허락이라는 점을 주의. 허락을 구하는 가장 정중하고 안전한 형태."
+          },
+          {
+            "term": "record (동사)",
+            "ko": "뒤강세 /rɪˈkɔːrd/로 '녹음·녹화하다'. 앞강세 명사 record(기록·실적)와 소리로 구분되는 대표적인 강세 이동 단어."
+          },
+          {
+            "term": "review it later",
+            "ko": "'나중에 다시 보다/복기하다'. 회의 후 자료·녹음을 되짚는다는 실무 뉘앙스로, go over it again과 바꿔 쓸 수 있습니다."
+          },
+          {
+            "term": "so (I) can ~",
+            "ko": "'~할 수 있도록'이라는 목적 제시. 요청에 이유를 붙이면 상대가 훨씬 쉽게 승낙합니다."
+          }
+        ],
+        "tip": "녹음처럼 상대의 동의가 꼭 필요한 요청에 쓰는 정중한 허락 구문 — 이유(so I can ~)를 반드시 붙이고, 상대가 'No, not at all'이라고 답하면 허락이라는 점에 주의하세요."
+      }
+    },
+    {
+      "id": "s134",
+      "en": "Is there any wiggle room on the deadline, or is it fixed?",
+      "ko": "마감일에 여유가 좀 있나요, 아니면 확정인가요?",
+      "pattern": "Is there any wiggle room on ~?",
+      "notes": "<b>Is there any</b>는 세 단어가 붙어 <b>이제어레니</b>처럼 한 덩어리로 흘러갑니다. <b>room on the</b>도 연음되어 <b>루먼더</b>로 들리고, <b>or is it</b>은 flap-t까지 겹쳐 <b>오리짓</b>이 됩니다. 'wiggle room(협상 여지)'을 모르면 <b>위글룸</b>이 한 단어처럼 들려 놓치기 쉬우니 표현 자체를 기억해 두세요.",
+      "scenario": "cro-negotiation",
+      "tags": [
+        "negotiation",
+        "deadline"
+      ],
+      "added": "2026-08-31",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-31",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Is there any wiggle room</b> / <b>on the deadline</b>, / <b>or is it fixed?</b>로 끊어집니다. Is there는 z와 th가 맞붙어 <b>이z데어</b>처럼 한 덩어리가 되고, there any는 연음되어 <b>데어레니</b>로 들립니다(there와 any 사이 경계가 사라집니다). wiggle의 dark l이 뒤의 r과 이어지며 <b>위글룸</b>이 <b>위그룸</b>에 가깝게 뭉개지고, room on the는 <b>루먼더</b>로 한 덩어리가 됩니다. deadline은 앞강세 <b>데</b>들라인이라 뒤 -line이 약해지고, 마지막 or is it fixed는 세 단어가 통째로 붙어 <b>오리짓 픽스트</b>로 들리는데, fixed의 -xed는 /kst/ 자음 3개가 몰려 끝이 거의 안 들립니다. 강세는 <b>wiggle</b>, <b>deadline</b>, <b>fixed</b>에만 떨어지고 나머지는 전부 약형으로 흘러가므로, 'wiggle room'이라는 관용구를 소리 덩어리로 알고 있어야 중간을 잡을 수 있습니다.",
+        "examples": [
+          {
+            "en": "Is there any wiggle room on the CRO's quote, or is that their final number?",
+            "ko": "CRO 견적에 조정 여지가 좀 있을까요, 아니면 그게 최종 금액인가요?"
+          },
+          {
+            "en": "Is there any wiggle room on the study start date, or is it locked in?",
+            "ko": "시험 개시일에 여유가 좀 있을까요, 아니면 확정된 건가요?"
+          },
+          {
+            "en": "Is there any wiggle room on the sample size, or is it fixed by the protocol?",
+            "ko": "샘플 사이즈에 조정 여지가 있나요, 아니면 프로토콜상 고정인가요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "wiggle room",
+            "ko": "'협상·조정의 여지'. 딱딱한 flexibility보다 부드럽고 구어적이라, 압박하지 않으면서 양보 가능성을 떠보는 데 딱 좋은 표현."
+          },
+          {
+            "term": "be fixed / locked in",
+            "ko": "'확정되어 바꿀 수 없다'. locked in은 더 강하게 '못 박혔다'는 뉘앙스로, 일정·단가·계약 조건에 두루 씁니다."
+          },
+          {
+            "term": "or is it ~? (양자택일 질문)",
+            "ko": "'~인가요, 아니면 ~인가요?'로 선택지를 붙이면 상대가 대답을 회피하기 어려워집니다. 협상에서 상대 입장을 명확히 끌어내는 기술."
+          }
+        ],
+        "tip": "CRO·벤더와의 일정·비용 협상에서 상대를 몰아붙이지 않고 여지를 떠볼 때 쓰는 부드러운 표현 — 격식 있는 계약 문서나 공식 서면에는 어울리지 않고 구두 협의용입니다."
+      }
+    },
+    {
+      "id": "s135",
+      "en": "Just to set expectations, this could take another two or three weeks.",
+      "ko": "미리 말씀드리자면, 이건 2~3주 정도 더 걸릴 수 있어요.",
+      "pattern": "Just to set expectations, ~.",
+      "notes": "<b>Just to</b>는 t가 하나로 줄어 <b>저스투</b>, <b>set expectations</b>는 t가 모음과 이어져 <b>세렉스펙테이션스</b>처럼 붙습니다. <b>could take</b>는 d가 거의 사라져 <b>쿧테익</b>, <b>take another</b>는 <b>테이커나더</b>로 연음됩니다. 'two or three'도 빠르면 <b>투어쓰리</b> 한 덩어리라 숫자를 놓치기 쉬우니 주의하세요.",
+      "scenario": "internal-update",
+      "tags": [
+        "update",
+        "timeline"
+      ],
+      "added": "2026-08-31",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-31",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Just to set expectations</b>, / <b>this could take</b> / <b>another two or three weeks.</b> 앞 청크에서 Just to는 -st 뒤 t가 겹쳐 하나로 줄어 <b>저스투</b>가 되고, set expectations는 t가 모음 앞에서 flap되어 <b>쎄릭스펙테이션스</b>처럼 완전히 이어집니다(set과 expectations 사이에 경계가 없습니다). expectations는 <b>-테이-</b>에 강세가 있고 앞의 ex-는 <b>익스</b>로 약하게 뭉개집니다. this could take에서 could의 -d는 뒤 t에 먹혀 <b>디스쿠테익</b>, take another는 k가 넘어가 <b>테이커나더</b>로 붙습니다. two or three는 or이 약형 /ər/이라 <b>투어쓰리</b> 한 덩어리로 들리고, weeks의 -ks만 살짝 남습니다. 결국 '저스투 쎄릭스펙<b>테이</b>션스, 디스 쿠테이 커<b>나</b>더 투어 <b>쓰리 윅스</b>'로, 강세는 expectations·another·three weeks에 떨어집니다.",
+        "examples": [
+          {
+            "en": "Just to set expectations, the CRO won't have the interim data until mid-March.",
+            "ko": "미리 말씀드리자면, CRO 쪽에서 중간 데이터는 3월 중순이나 되어야 나올 겁니다."
+          },
+          {
+            "en": "Just to set expectations, this asset assessment could take another two or three weeks.",
+            "ko": "미리 눈높이를 맞추자면, 이 에셋 평가는 2~3주가 더 걸릴 수 있습니다."
+          },
+          {
+            "en": "Just to set expectations, we'll only be able to share top-line results at this stage.",
+            "ko": "미리 말씀드리면, 현 단계에서는 톱라인 결과만 공유가 가능합니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "set expectations",
+            "ko": "'기대치를 미리 맞추다'. 나쁜 소식·지연을 알리기 전에 완충재로 쓰는 전형적인 비즈니스 관용구로, 방어적으로 들리지 않게 해 줍니다."
+          },
+          {
+            "term": "Just to ~,",
+            "ko": "'간단히 ~하자면'. Just to clarify / Just to recap / Just to be clear처럼 발언의 목적을 미리 알려 주는 시작 신호(디스코스 마커)."
+          },
+          {
+            "term": "another two or three weeks",
+            "ko": "'추가로 2~3주 더'. another가 '이미 쓴 시간에 더해서'를 뜻하므로 지연 보고에 정확한 표현. 범위로 말하면 단정보다 부담이 적습니다."
+          },
+          {
+            "term": "could take ~",
+            "ko": "will take 대신 could를 써서 단정 대신 가능성으로 완화. 지연을 알릴 때 리스크를 남겨 두는 안전한 말투."
+          }
+        ],
+        "tip": "사내 글로벌 미팅에서 지연·한계를 미리 알릴 때 쓰는 전형적인 프로 매너 표현 — 문제 보고 앞에 붙이면 변명이 아니라 관리로 들립니다."
+      }
+    },
+    {
+      "id": "s136",
+      "en": "What's driving the delay on your end, if you don't mind me asking?",
+      "ko": "실례가 안 된다면, 그쪽에서 지연되는 원인이 뭔가요?",
+      "pattern": "What's driving ~, if you don't mind me asking?",
+      "notes": "<b>What's driving</b>는 ts가 뭉쳐 <b>왓츠드라이빙</b>으로 빠르게 지나가고, <b>on your end</b>는 y가 앞 자음과 섞여 <b>어뉴어렌드</b>처럼 들립니다. <b>if you</b>는 <b>이퓨</b>, <b>don't mind me</b>는 t 탈락으로 <b>돈마인미</b>가 됩니다. 뒷부분 전체가 정중한 관용구라 한 호흡에 흘러가니 의미 단위로 통째 기억하세요.",
+      "scenario": "meeting",
+      "tags": [
+        "question",
+        "meeting"
+      ],
+      "added": "2026-08-31",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-08-31",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>What's driving the delay</b> / <b>on your end</b>, / <b>if you don't mind me asking?</b>로 끊어 들으세요. What's driving은 -ts와 dr이 부딪혀 <b>왓쯔라이빙</b>처럼 뭉개지고, driving the는 <b>드라이빙더</b>로 약형 the가 거의 사라집니다. on your end는 n+y가 이어져 <b>어뉴어렌드</b>에 가깝게 한 덩어리가 되는데, 이 부분이 한국인이 가장 많이 놓치는 구간입니다. 뒤 청크는 관용적으로 아주 빨라져서 if you는 <b>이퓨</b>, don't mind는 t가 탈락해 <b>돈마인</b>, mind me는 d까지 사라져 <b>마인미</b>가 되어 전체가 <b>이퓨돈마인미애스킹</b> 한 덩어리로 스쳐 갑니다. 강세는 <b>driving</b>, <b>delay</b>, <b>end</b>, <b>asking</b>에만 떨어지고 나머지는 전부 약형입니다. 즉 '왓쯔 <b>드라이</b>빙더 딜<b>레이</b> 어뉴어<b>렌</b>드, 이퓨돈마인미 <b>애</b>스킹?'으로 들립니다.",
+        "examples": [
+          {
+            "en": "What's driving the delay on your end, if you don't mind me asking?",
+            "ko": "실례가 안 된다면, 그쪽에서 지연의 원인이 무엇인지 여쭤봐도 될까요?"
+          },
+          {
+            "en": "What's driving the cost increase on your end, if you don't mind me asking?",
+            "ko": "실례가 안 된다면, 그쪽 비용이 오른 원인이 무엇인지 여쭤봐도 될까요?"
+          },
+          {
+            "en": "What's driving the change in scope, if you don't mind me asking?",
+            "ko": "실례가 안 된다면, 스코프가 변경된 배경이 무엇인지 여쭤봐도 될까요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "What's driving ~?",
+            "ko": "'무엇이 ~을 야기하는가/배경이 무엇인가'. Why is it delayed?처럼 상대를 추궁하는 대신 원인을 구조적으로 묻는 세련된 표현."
+          },
+          {
+            "term": "on your end",
+            "ko": "'그쪽(귀사·귀 팀) 측에서는'. 책임 소재를 직접 지목하지 않으면서 상대 영역을 가리키는 완충 표현. 반대는 on our end."
+          },
+          {
+            "term": "if you don't mind me asking",
+            "ko": "'실례가 안 된다면 여쭙는데'. 민감한 질문 앞뒤에 붙이는 정중한 쿠션. 뒤에 붙이면 더 부드럽습니다."
+          },
+          {
+            "term": "delay",
+            "ko": "'지연'. push back(일정을 미루다), slip(일정이 밀리다)과 함께 CRO 일정 논의에서 세트로 나오는 어휘."
+          }
+        ],
+        "tip": "CRO나 타 부서의 지연 사유를 추궁하지 않고 캐물을 때 쓰는 정중한 격식 표현 — 상대를 탓하는 뉘앙스가 없어 미팅에서 안전하지만, 이미 관계가 편한 동료에게는 다소 조심스럽게 들릴 수 있습니다."
       }
     }
   ]

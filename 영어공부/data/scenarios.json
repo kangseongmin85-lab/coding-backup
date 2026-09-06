@@ -601,6 +601,131 @@
         }
       ],
       "auto": true
+    },
+    {
+      "id": "sc07",
+      "title": "Pre-IND 규제 패키지 점검 콜",
+      "scenario": "meeting",
+      "brief": "Pre-IND 미팅 신청을 앞두고 규제 컨설턴트와 급하게 잡은 30분 화상 콜이다. 브리핑 패키지에서 아직 비어 있는 CMC 항목과 전체 제출 일정이 오늘의 쟁점이고, 상대는 영국 억양에 회선 상태도 좋지 않다. 회의를 직접 열고 진행하면서 일정과 내부 절차를 정리해야 한다.",
+      "goal": "회의를 주도해 열고, 안 들린 부분은 되물어 확인하고, 제출 일정과 법무 검토 절차까지 합의하기",
+      "partner": {
+        "name": "Fiona Blackwell",
+        "role": "규제 컨설턴트 (Regulatory affairs consultant, 영국)",
+        "voice": "gb-f"
+      },
+      "turns": [
+        {
+          "role": "partner",
+          "en": "Hi there — sorry I'm a bit late, I only saw the invite twenty minutes ago.",
+          "ko": "안녕하세요, 조금 늦어서 죄송해요. 초대장을 20분 전에야 봤어요.",
+          "aid": "p01"
+        },
+        {
+          "role": "user",
+          "ref": "s013",
+          "en": "Let's get started — thanks everyone for joining on short notice.",
+          "ko": "시작하죠 — 급한데도 참석해 주셔서 감사합니다.",
+          "hint": "급하게 잡은 회의를 여는 인사 — '촉박하게 잡았는데 참석해줘서 고맙다'"
+        },
+        {
+          "role": "partner",
+          "en": "Sounds good. Where would you like to start — the nonclinical summary or the CMC section?",
+          "ko": "좋아요. 어디부터 시작할까요? 비임상 요약, 아니면 CMC 섹션?",
+          "aid": "p02"
+        },
+        {
+          "role": "user",
+          "ref": "s014",
+          "en": "Before we dive in, let me quickly go over the agenda.",
+          "ko": "본격적으로 들어가기 전에 안건을 빠르게 짚겠습니다.",
+          "hint": "본론 들어가기 전에 오늘 다룰 안건을 먼저 짚겠다고 말하기"
+        },
+        {
+          "role": "partner",
+          "en": "Right, on CMC we're still missing the comparability data from the engineering—",
+          "ko": "네, CMC 쪽은 아직 엔지니어링 배치의 동등성 데이터가 빠져 있어서— (소리 끊김)",
+          "aid": "p03"
+        },
+        {
+          "role": "user",
+          "ref": "s008",
+          "en": "Sorry, you're breaking up a little — could you repeat the last part?",
+          "ko": "죄송해요, 소리가 좀 끊기는데 마지막 부분만 다시 말씀해 주시겠어요?",
+          "hint": "회선이 끊겨 마지막 부분을 못 들었을 때 — 다시 말해달라고 요청"
+        },
+        {
+          "role": "partner",
+          "en": "I said we still need the comparability data from the three engineering batches.",
+          "ko": "엔지니어링 배치 3개의 동등성 데이터가 아직 필요하다고 했어요.",
+          "aid": "p04"
+        },
+        {
+          "role": "user",
+          "ref": "s010",
+          "en": "Where do we stand on the regulatory submission right now?",
+          "ko": "규제 제출 건은 지금 어디까지 진행됐죠?",
+          "hint": "세부 항목 말고 제출 준비 전체가 지금 어디까지 왔는지 묻기"
+        },
+        {
+          "role": "partner",
+          "en": "About seventy percent drafted. The full package should be ready soon, once CMC lands.",
+          "ko": "70% 정도 작성됐어요. CMC만 들어오면 전체 패키지는 곧 준비될 거예요.",
+          "aid": "p05"
+        },
+        {
+          "role": "user",
+          "ref": "s053",
+          "en": "When you say 'soon', what timeframe are we talking about?",
+          "ko": "'곧'이라고 하시면, 어느 정도 기간을 말씀하시는 거죠?",
+          "hint": "'곧'이라는 애매한 표현을 구체적인 기간으로 확인하기"
+        },
+        {
+          "role": "partner",
+          "en": "Realistically, two weeks after your data arrives — so mid-March at the earliest.",
+          "ko": "현실적으로는 데이터 받고 2주 뒤예요. 그러니까 빨라야 3월 중순이죠.",
+          "aid": "p06"
+        },
+        {
+          "role": "user",
+          "ref": "s005",
+          "en": "Let me make sure I got that right — you need two more weeks?",
+          "ko": "제가 제대로 이해했는지 확인할게요 — 2주가 더 필요하다는 말씀이죠?",
+          "hint": "들은 기간을 되짚어 확인 — '2주가 더 필요하다는 말씀이죠?'"
+        },
+        {
+          "role": "partner",
+          "en": "Yes, two full weeks from receipt. Anything later pushes us into April.",
+          "ko": "네, 받은 날부터 꼬박 2주요. 그보다 늦어지면 4월로 넘어갑니다.",
+          "aid": "p07"
+        },
+        {
+          "role": "user",
+          "ref": "s126",
+          "en": "We'll need to get sign-off from legal before we move forward.",
+          "ko": "진행하기 전에 법무팀 승인을 받아야 합니다.",
+          "hint": "진행 전에 내부 법무 승인이 필요하다는 절차를 미리 알리기"
+        },
+        {
+          "role": "partner",
+          "en": "Understood — I'll build the legal review into the timeline and email the open items.",
+          "ko": "알겠습니다. 법무 검토를 일정에 반영하고 미결 항목은 메일로 보낼게요.",
+          "aid": "p08"
+        },
+        {
+          "role": "user",
+          "ref": "s067",
+          "en": "Let's pencil in a follow-up for next Tuesday.",
+          "ko": "다음 주 화요일에 후속 미팅을 임시로 잡아두죠.",
+          "hint": "다음 주 화요일로 후속 미팅을 잠정 잡자고 제안하기"
+        },
+        {
+          "role": "partner",
+          "en": "Tuesday afternoon suits me. Send the invite and I'll confirm my availability.",
+          "ko": "화요일 오후 괜찮아요. 초대장 보내주시면 가능 여부 확정해서 알려드릴게요.",
+          "aid": "p09"
+        }
+      ],
+      "auto": true
     }
   ]
 }
