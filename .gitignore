@@ -39,6 +39,7 @@ Thumbs.db
 *.tmp
 _cache/
 .cache/
+.wrangler/
 
 # === 자동백업 스크립트 로그 ===
 _backup_cache/

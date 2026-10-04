@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 아이폰 '홈 화면에 추가' 시 앱처럼(전체 화면·아이콘) -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="영어공부">
+<link rel="apple-touch-icon" href="icon.png">
 <title>영어공부 — 비즈니스 영어 듣기 훈련</title>
 <style>
   :root {
@@ -215,6 +220,7 @@
     <div id="video-empty" class="muted hidden">영상 스크립트가 아직 없어요.</div>
     <div id="video-main">
       <h2 id="video-title" style="margin-top:0">🎬 영상 스크립트</h2>
+      <select id="video-select" class="hidden" onchange="pickVideo(+this.value)" style="width:100%;margin-bottom:12px;padding:11px;border-radius:10px;border:1px solid var(--line);font-size:17px"></select>
       <div class="vid-wrap"><div id="yt-player"></div></div>
       <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 영상이 재생</b>돼요. 오른쪽 <b>「한」</b> 버튼을 누르면 그 문장만 <b>한글 뜻·핵심 표현</b>이 펼쳐집니다. 재생 중엔 지금 나오는 문장이 자동으로 표시돼요.</p>
       <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap">
@@ -996,13 +1002,25 @@ const fmtTs = sec => Math.floor(sec / 60) + ':' + String(Math.floor(sec % 60)).p
 
 function ensureVideo() {
   if (videoBuilt) return;
-  videoData = (DB.videoScripts && DB.videoScripts.videos && DB.videoScripts.videos[0]) || null;
-  if (!videoData) { $('video-main').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
-  $('video-title').textContent = '🎬 ' + (videoData.title || '영상 스크립트');
-  videoLines = videoData.lines || [];
-  renderScript('');
+  const vids = (DB.videoScripts && DB.videoScripts.videos) || [];
+  if (!vids.length) { $('video-main').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
+  const sel = $('video-select');
+  sel.innerHTML = vids.map((v, i) => `<option value="${i}">${escapeHtml(v.title || v.videoId)} (${v.lines.length}문장)</option>`).join('');
+  sel.classList.toggle('hidden', vids.length < 2);
+  pickVideo(0);
   loadYT();
   videoBuilt = true;
+}
+
+function pickVideo(i) {
+  videoData = DB.videoScripts.videos[i];
+  $('video-title').textContent = '🎬 ' + (videoData.title || '영상 스크립트');
+  videoLines = videoData.lines || [];
+  videoActiveIdx = -1;
+  $('video-search').value = '';
+  renderScript('');
+  $('script-list').scrollTop = 0;
+  if (ytReady) ytPlayer.cueVideoById(videoData.videoId);
 }
 
 function renderScript(q) {
@@ -1063,7 +1081,7 @@ function createPlayer() {
   ytPlayer = new YT.Player('yt-player', {
     videoId: videoData.videoId,
     playerVars: { playsinline: 1, rel: 0, modestbranding: 1 },
-    events: { onReady: () => { ytReady = true; }, onStateChange: onYtState },
+    events: { onReady: () => { ytReady = true; if (ytPlayer.getVideoData().video_id !== videoData.videoId) ytPlayer.cueVideoById(videoData.videoId); }, onStateChange: onYtState },
   });
 }
 function onYtState(e) {

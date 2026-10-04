@@ -19,6 +19,7 @@ if OUT.exists():
 OUT.mkdir()
 
 shutil.copy(ROOT / "app" / "index.html", OUT / "index.html")
+shutil.copy(ROOT / "app" / "icon.png", OUT / "icon.png")
 shutil.copytree(ROOT / "data", OUT / "data")
 shutil.copytree(ROOT / "audio", OUT / "audio", ignore=shutil.ignore_patterns("roleplay"))
 

@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "video_scripts.json"
 
-PROMPT = """다음은 어느 영어 인터뷰 영상의 자막 문장들이다(기술/AI/반도체 관련 대화).
+PROMPT = """다음은 영어 영상 「__TITLE__」의 자막 문장들이다.
 한국인 학습자가 영어 자막을 보다가, 원할 때만 한글 뜻을 펼쳐 보기 위한 학습 데이터를 만든다.
 
 각 줄(번호)에 대해 JSON으로 다음 두 가지를 만든다:
@@ -60,12 +60,19 @@ def parse_obj(raw: str):
 
 def run(batch_size: int = 20, limit: int = 0) -> int:
     db = json.loads(DB.read_text(encoding="utf-8"))
-    lines = db["videos"][0]["lines"]
+    total = 0
+    for video in db["videos"]:
+        total += enrich_one(db, video, batch_size, limit)
+    return total
+
+
+def enrich_one(db, video, batch_size, limit) -> int:
+    lines = video["lines"]
     targets = [(i, L) for i, L in enumerate(lines) if not L.get("ko")]
     if limit:
         targets = targets[:limit]
     if not targets:
-        print("모든 줄에 이미 번역이 있습니다.")
+        print(f"[{video['id']}] 모든 줄에 이미 번역이 있습니다.")
         return 0
 
     total = 0
@@ -73,9 +80,9 @@ def run(batch_size: int = 20, limit: int = 0) -> int:
     for bi in range(0, len(targets), batch_size):
         batch = targets[bi:bi + batch_size]
         items = "\n".join(f'{i} | "{L["en"]}"' for i, L in batch)
-        obj = parse_obj(run_claude(PROMPT.replace("__ITEMS__", items)))
+        obj = parse_obj(run_claude(PROMPT.replace("__TITLE__", video["title"]).replace("__ITEMS__", items)))
         if not isinstance(obj, dict):
-            print(f"배치 {bi // batch_size + 1}/{nbatch}: 파싱 실패, 건너뜀", file=sys.stderr)
+            print(f"[{video['id']}] 배치 {bi // batch_size + 1}/{nbatch}: 파싱 실패, 건너뜀", file=sys.stderr)
             continue
         for key, val in obj.items():
             try:
@@ -94,7 +101,7 @@ def run(batch_size: int = 20, limit: int = 0) -> int:
                 lines[idx]["terms"] = terms
                 total += 1
         DB.write_text(json.dumps(db, ensure_ascii=False, indent=1), encoding="utf-8")  # 배치마다 저장
-        print(f"배치 {bi // batch_size + 1}/{nbatch}: 누적 {total}개 번역", flush=True)
+        print(f"[{video['id']}] 배치 {bi // batch_size + 1}/{nbatch}: 누적 {total}개 번역", flush=True)
     return total
 
 
