@@ -20837,6 +20837,5693 @@
      ]
     }
    ]
+  },
+  {
+   "id": "zuckerberg2026",
+   "videoId": "oX7OduG1YmI",
+   "title": "Mark Zuckerberg 인터뷰 (Meta)",
+   "url": "https://www.youtube.com/watch?v=oX7OduG1YmI",
+   "duration": 2830,
+   "lines": [
+    {
+     "t": 0.08,
+     "en": "I'd love to start with these.",
+     "turn": false,
+     "ko": "이것부터 시작하고 싶어요.",
+     "terms": [
+      {
+       "term": "I'd love to",
+       "ko": "꼭 ~하고 싶다 (정중하고 열의 있는 표현)"
+      },
+      {
+       "term": "start with",
+       "ko": "~로 시작하다"
+      }
+     ]
+    },
+    {
+     "t": 0.08,
+     "en": "10 years of work right there.",
+     "turn": false,
+     "ko": "10년의 노력이 바로 저기 담겨 있죠.",
+     "terms": [
+      {
+       "term": "right there",
+       "ko": "바로 거기에"
+      }
+     ]
+    },
+    {
+     "t": 0.08,
+     "en": "Someone on your team called these the real life Tony Stark glasses.",
+     "turn": false,
+     "ko": "팀원 중 한 분이 이걸 '현실판 토니 스타크 안경'이라고 부르더라고요.",
+     "terms": [
+      {
+       "term": "real life",
+       "ko": "현실의, 실제의"
+      }
+     ]
+    },
+    {
+     "t": 4.76,
+     "en": "Very hard to make each one of these...",
+     "turn": false,
+     "ko": "하나하나 만드는 게 정말 어려워요...",
+     "terms": [
+      {
+       "term": "each one of these",
+       "ko": "이것들 하나하나"
+      }
+     ]
+    },
+    {
+     "t": 4.76,
+     "en": "That makes me feel incredibly optimistic...",
+     "turn": false,
+     "ko": "그 덕분에 정말 엄청나게 낙관적인 기분이 들어요...",
+     "terms": [
+      {
+       "term": "makes me feel",
+       "ko": "나를 ~한 기분이 들게 하다"
+      },
+      {
+       "term": "incredibly optimistic",
+       "ko": "엄청나게 낙관적인"
+      }
+     ]
+    },
+    {
+     "t": 8.44,
+     "en": "In a world where AI gets smarter and smarter...",
+     "turn": false,
+     "ko": "AI가 점점 더 똑똑해지는 세상에서...",
+     "terms": [
+      {
+       "term": "smarter and smarter",
+       "ko": "점점 더 똑똑해지는 (비교급 and 비교급 = 점점 더 ~)"
+      }
+     ]
+    },
+    {
+     "t": 8.44,
+     "en": "This is probably going to be the next major platform after phones...",
+     "turn": false,
+     "ko": "이게 아마 휴대폰 다음의 차세대 주요 플랫폼이 될 거예요...",
+     "terms": [
+      {
+       "term": "probably going to be",
+       "ko": "아마 ~이 될 것이다"
+      },
+      {
+       "term": "the next major platform",
+       "ko": "차세대 주요 플랫폼"
+      }
+     ]
+    },
+    {
+     "t": 11.8,
+     "en": "I miss hugging my mom.",
+     "turn": false,
+     "ko": "엄마를 안아 주던 게 그리워요.",
+     "terms": [
+      {
+       "term": "miss hugging",
+       "ko": "안는 것이 그립다 (miss + -ing: ~하던 게 그립다)"
+      }
+     ]
+    },
+    {
+     "t": 11.8,
+     "en": "Yeah haptics is hard...",
+     "turn": false,
+     "ko": "네, 햅틱(촉각 피드백)은 어렵죠...",
+     "terms": [
+      {
+       "term": "haptics",
+       "ko": "햅틱, 촉각 피드백 기술"
+      }
+     ]
+    },
+    {
+     "t": 16.32,
+     "en": "How does generative AI change how social media feels?...",
+     "turn": false,
+     "ko": "생성형 AI는 소셜 미디어의 느낌을 어떻게 바꿀까요?...",
+     "terms": [
+      {
+       "term": "generative AI",
+       "ko": "생성형 AI"
+      },
+      {
+       "term": "how social media feels",
+       "ko": "소셜 미디어가 어떻게 느껴지는지, 그 체감"
+      }
+     ]
+    },
+    {
+     "t": 16.32,
+     "en": "We haven't found the end yet...",
+     "turn": false,
+     "ko": "아직 끝을 보지 못했어요...",
+     "terms": [
+      {
+       "term": "haven't found the end yet",
+       "ko": "아직 끝(한계)에 다다르지 않았다"
+      }
+     ]
+    },
+    {
+     "t": 21.32,
+     "en": "The average American has fewer friends now than they did 15 years ago.",
+     "turn": false,
+     "ko": "평균적인 미국인은 15년 전보다 친구가 더 적어요.",
+     "terms": [
+      {
+       "term": "the average American",
+       "ko": "평균적인 미국인"
+      },
+      {
+       "term": "fewer friends",
+       "ko": "더 적은 친구 (셀 수 있는 명사엔 fewer)"
+      }
+     ]
+    },
+    {
+     "t": 21.32,
+     "en": "Why do you think that's happening?",
+     "turn": false,
+     "ko": "왜 그런 일이 일어난다고 생각하세요?",
+     "terms": []
+    },
+    {
+     "t": 26.04,
+     "en": "I mean there's a lot going on to to unpack there...",
+     "turn": false,
+     "ko": "음, 거기엔 풀어서 볼 게 정말 많아요...",
+     "terms": [
+      {
+       "term": "there's a lot going on",
+       "ko": "여러 일이 얽혀 있다, 복잡하다"
+      },
+      {
+       "term": "unpack",
+       "ko": "(복잡한 문제를) 하나씩 풀어 설명하다"
+      }
+     ]
+    },
+    {
+     "t": 33.84,
+     "en": "I'm about to interview Meta CEO Mark Zuckerberg.",
+     "turn": false,
+     "ko": "저는 곧 메타 CEO 마크 저커버그를 인터뷰할 거예요.",
+     "terms": [
+      {
+       "term": "I'm about to",
+       "ko": "막 ~하려는 참이다"
+      }
+     ]
+    },
+    {
+     "t": 33.84,
+     "en": "There are not that many people with more power over what our future might look like.",
+     "turn": false,
+     "ko": "우리의 미래가 어떤 모습일지에 대해 이보다 더 큰 영향력을 가진 사람은 많지 않아요.",
+     "terms": [
+      {
+       "term": "power over",
+       "ko": "~에 대한 영향력/지배력"
+      },
+      {
+       "term": "what our future might look like",
+       "ko": "우리의 미래가 어떤 모습일지"
+      }
+     ]
+    },
+    {
+     "t": 41.08,
+     "en": "Nearly half the total human population now uses Meta products and I just tested some of their new tech that feels like science fiction.",
+     "turn": false,
+     "ko": "이제 전 인류의 거의 절반이 메타 제품을 쓰고 있고, 저는 방금 공상과학 같은 그들의 신기술을 몇 가지 체험해 봤어요.",
+     "terms": [
+      {
+       "term": "nearly half",
+       "ko": "거의 절반"
+      },
+      {
+       "term": "feels like science fiction",
+       "ko": "공상과학처럼 느껴지다"
+      }
+     ]
+    },
+    {
+     "t": 52.76,
+     "en": "This is crazy!",
+     "turn": false,
+     "ko": "이거 미쳤다!",
+     "terms": [
+      {
+       "term": "This is crazy",
+       "ko": "이거 대박이다, 말도 안 된다 (감탄)"
+      }
+     ]
+    },
+    {
+     "t": 52.76,
+     "en": "Mark Zuckerberg and the team at Meta are imagining a future that billions of other people might actually end up living in.",
+     "turn": false,
+     "ko": "마크 저커버그와 메타 팀은 수십억 명의 사람들이 실제로 살게 될지도 모르는 미래를 그리고 있어요.",
+     "terms": [
+      {
+       "term": "end up living in",
+       "ko": "결국 ~에서 살게 되다"
+      },
+      {
+       "term": "billions of",
+       "ko": "수십억의"
+      }
+     ]
+    },
+    {
+     "t": 60.16,
+     "en": "So my goal for this conversation is to try to figure out what that future really looks like.",
+     "turn": false,
+     "ko": "그래서 이 대화에서 제 목표는 그 미래가 실제로 어떤 모습인지 알아내 보는 거예요.",
+     "terms": [
+      {
+       "term": "figure out",
+       "ko": "알아내다, 파악하다"
+      },
+      {
+       "term": "what that future really looks like",
+       "ko": "그 미래가 실제로 어떤 모습인지"
+      }
+     ]
+    },
+    {
+     "t": 65.08,
+     "en": "To paint a picture of the future Mark Zuckerberg is trying to build so that you can decide for yourself what you think of it.",
+     "turn": false,
+     "ko": "마크 저커버그가 만들려는 미래의 그림을 그려 드려서, 여러분이 그것에 대해 어떻게 생각하는지 스스로 판단할 수 있게 하려는 거죠.",
+     "terms": [
+      {
+       "term": "paint a picture of",
+       "ko": "~을 생생하게 묘사하다"
+      },
+      {
+       "term": "decide for yourself",
+       "ko": "스스로 판단하다"
+      },
+      {
+       "term": "what you think of it",
+       "ko": "그것에 대해 어떻게 생각하는지"
+      }
+     ]
+    },
+    {
+     "t": 70.68,
+     "en": "Welcome to the first episode of our new series, Huge Conversations Hey, good to meet you!",
+     "turn": false,
+     "ko": "새 시리즈 '휴즈 컨버세이션' 첫 화에 오신 걸 환영합니다. 안녕하세요, 만나서 반가워요!",
+     "terms": [
+      {
+       "term": "Good to meet you",
+       "ko": "만나서 반가워요"
+      }
+     ]
+    },
+    {
+     "t": 83.01,
+     "en": "Thanks for doing this.",
+     "turn": false,
+     "ko": "이렇게 시간 내 주셔서 감사해요.",
+     "terms": [
+      {
+       "term": "Thanks for doing this",
+       "ko": "이렇게 해 주셔서(시간 내 주셔서) 고마워요"
+      }
+     ]
+    },
+    {
+     "t": 83.01,
+     "en": "Yeah looking forward to it.",
+     "turn": false,
+     "ko": "네, 기대돼요.",
+     "terms": [
+      {
+       "term": "looking forward to it",
+       "ko": "그걸 기대하고 있다"
+      }
+     ]
+    },
+    {
+     "t": 86.08,
+     "en": "Awesome.",
+     "turn": false,
+     "ko": "좋아요.",
+     "terms": []
+    },
+    {
+     "t": 86.08,
+     "en": "I'd love to tell you what my goal is of this conversation.",
+     "turn": false,
+     "ko": "이 대화에서 제 목표가 뭔지 말씀드리고 싶어요.",
+     "terms": [
+      {
+       "term": "I'd love to tell you",
+       "ko": "말씀드리고 싶어요"
+      }
+     ]
+    },
+    {
+     "t": 86.08,
+     "en": "Go for it.",
+     "turn": false,
+     "ko": "말씀하세요.",
+     "terms": [
+      {
+       "term": "Go for it",
+       "ko": "해 봐요, 어서 하세요"
+      }
+     ]
+    },
+    {
+     "t": 86.08,
+     "en": "We have a called huge if true which is this very optimistic about science and technology and the potential futures that we can build and in every episode we're sort of exploring what does it look like if you play a",
+     "turn": false,
+     "ko": "저희 채널 이름이 '휴즈 이프 트루'인데, 과학과 기술, 그리고 우리가 만들 수 있는 미래의 가능성에 대해 아주 낙관적인 채널이에요. 매 에피소드마다 우리는 이런 걸 탐구해요. 만약 어떤",
+     "terms": [
+      {
+       "term": "optimistic about",
+       "ko": "~에 대해 낙관적인"
+      },
+      {
+       "term": "sort of",
+       "ko": "일종의, 약간 (말을 부드럽게 하는 표현)"
+      },
+      {
+       "term": "play a",
+       "ko": "(play a ~ out) ~을 끝까지 전개해 보다, 시뮬레이션해 보다"
+      }
+     ]
+    },
+    {
+     "t": 105.68,
+     "en": "certain technological future out and so my goal in this conversation is to try to help people see the future that you're imagining when you're building the products that you and the Meta team",
+     "turn": false,
+     "ko": "기술적 미래를 끝까지 전개해 보면 어떤 모습일까 하는 거죠. 그래서 이 대화에서 제 목표는, 당신과 메타 팀이 만들고 있는 제품을 만들 때 상상하는 미래를 사람들이 볼 수 있도록 돕는 거예요",
+     "terms": [
+      {
+       "term": "certain technological future out",
+       "ko": "(play ~ out) 어떤 기술적 미래를 끝까지 펼쳐 보다"
+      },
+      {
+       "term": "help people see",
+       "ko": "사람들이 ~을 볼(이해할) 수 있게 돕다"
+      }
+     ]
+    },
+    {
+     "t": 117.24,
+     "en": "are building.",
+     "turn": false,
+     "ko": "(팀이) 만들고 있는 그 제품들 말이에요.",
+     "terms": []
+    },
+    {
+     "t": 117.24,
+     "en": "What are you imagining this looks like in future?",
+     "turn": false,
+     "ko": "이게 미래에 어떤 모습일 거라고 상상하세요?",
+     "terms": [
+      {
+       "term": "in future",
+       "ko": "미래에, 앞으로"
+      }
+     ]
+    },
+    {
+     "t": 117.24,
+     "en": "How are you imagining people use this?",
+     "turn": false,
+     "ko": "사람들이 이걸 어떻게 사용할 거라고 생각하세요?",
+     "terms": []
+    },
+    {
+     "t": 121.44,
+     "en": "All of that.",
+     "turn": false,
+     "ko": "그 모든 것들이요.",
+     "terms": [
+      {
+       "term": "All of that",
+       "ko": "그 모든 것"
+      }
+     ]
+    },
+    {
+     "t": 121.44,
+     "en": "Cool.",
+     "turn": false,
+     "ko": "좋네요.",
+     "terms": []
+    },
+    {
+     "t": 121.44,
+     "en": "All right awesome.",
+     "turn": false,
+     "ko": "좋아요, 멋져요.",
+     "terms": []
+    },
+    {
+     "t": 121.44,
+     "en": "So I'd love to start with these.",
+     "turn": false,
+     "ko": "그럼 이것부터 시작하고 싶어요.",
+     "terms": [
+      {
+       "term": "start with",
+       "ko": "~로 시작하다"
+      }
+     ]
+    },
+    {
+     "t": 121.44,
+     "en": "Let's do it.",
+     "turn": false,
+     "ko": "해 보죠.",
+     "terms": [
+      {
+       "term": "Let's do it",
+       "ko": "해 보자, 시작하자"
+      }
+     ]
+    },
+    {
+     "t": 121.44,
+     "en": "10 years of work right there!",
+     "turn": false,
+     "ko": "10년의 노력이 바로 여기 담겨 있죠!",
+     "terms": [
+      {
+       "term": "right there",
+       "ko": "바로 거기에"
+      }
+     ]
+    },
+    {
+     "t": 129.24,
+     "en": "I got to demo them a little bit earlier today.",
+     "turn": false,
+     "ko": "오늘 아까 잠깐 데모로 써 볼 기회가 있었어요.",
+     "terms": [
+      {
+       "term": "got to",
+       "ko": "~할 기회가 있었다, ~하게 됐다"
+      },
+      {
+       "term": "demo",
+       "ko": "시연하다, 시험 사용하다"
+      },
+      {
+       "term": "earlier today",
+       "ko": "오늘 아까"
+      }
+     ]
+    },
+    {
+     "t": 129.24,
+     "en": "I heard someone on your team call these the real life Tony Stark glasses?",
+     "turn": false,
+     "ko": "팀원 중 한 분이 이걸 '현실판 토니 스타크 안경'이라고 부르는 걸 들었는데요?",
+     "terms": [
+      {
+       "term": "I heard someone on your team call",
+       "ko": "누군가 ~라고 부르는 걸 들었다 (hear + 목적어 + 동사원형)"
+      }
+     ]
+    },
+    {
+     "t": 135.88,
+     "en": "We're getting there.",
+     "turn": false,
+     "ko": "거의 다 왔죠.",
+     "terms": [
+      {
+       "term": "We're getting there",
+       "ko": "거의 다 와 간다, 목표에 가까워지고 있다"
+      }
+     ]
+    },
+    {
+     "t": 135.88,
+     "en": "But I'd love to just hear in your voice what are these?",
+     "turn": false,
+     "ko": "그래도 직접 듣고 싶어요. 이게 뭔가요?",
+     "terms": [
+      {
+       "term": "in your voice",
+       "ko": "당신 입으로 직접"
+      }
+     ]
+    },
+    {
+     "t": 140.68,
+     "en": "Well these are the first full holographic augmented reality glasses I think that exist in the world.",
+     "turn": false,
+     "ko": "음, 이건 아마 세상에 존재하는 최초의 완전한 홀로그래픽 증강현실 안경일 거예요.",
+     "terms": [
+      {
+       "term": "augmented reality",
+       "ko": "증강현실 (AR)"
+      },
+      {
+       "term": "the first full holographic augmented reality glasses I think that exist",
+       "ko": "존재하는 최초의 ~"
+      }
+     ]
+    },
+    {
+     "t": 149.32,
+     "en": "We've made I think it's a a few thousand or something right.",
+     "turn": false,
+     "ko": "아마 몇천 개쯤 만든 것 같아요.",
+     "terms": [
+      {
+       "term": "a few thousand or something",
+       "ko": "몇천 개쯤 (or something = ~쯤, 대략)"
+      }
+     ]
+    },
+    {
+     "t": 149.32,
+     "en": "Very hard to make each one of these but this is the culmination of 10 years of research and and development that we've done to basically miniaturize all the computing that you need to have glasses not a",
+     "turn": false,
+     "ko": "하나하나 만들기가 정말 어려운데요, 이건 저희가 해 온 10년간의 연구개발의 결정체예요. 기본적으로 필요한 모든 컴퓨팅을 소형화해서 안경을 만든 거죠. 헤드셋이 아니라",
+     "terms": [
+      {
+       "term": "the culmination of",
+       "ko": "~의 결정체, 정점"
+      },
+      {
+       "term": "research and and development",
+       "ko": "연구개발 (R&D)"
+      },
+      {
+       "term": "miniaturize",
+       "ko": "소형화하다"
+      }
+     ]
+    },
+    {
+     "t": 173.44,
+     "en": "headset but glasses that can put full holograms into the world with a wide field of view.",
+     "turn": false,
+     "ko": "넓은 시야각으로 세상에 완전한 홀로그램을 띄울 수 있는 안경이요.",
+     "terms": [
+      {
+       "term": "field of view",
+       "ko": "시야, 시야각"
+      },
+      {
+       "term": "put full holograms into the world",
+       "ko": "현실 공간에 띄우다"
+      }
+     ]
+    },
+    {
+     "t": 173.44,
+     "en": "So you can imagine sort of in the future we'd be having a version of this conversation where you know maybe I or you are not even here it's like one of us is physically here and the other one is here as a as",
+     "turn": false,
+     "ko": "그러니까 미래에는 이 대화를 이런 식으로 할 수도 있다고 상상해 볼 수 있어요. 저나 당신이 여기 없을 수도 있고, 한 명은 실제로 여기 있고 다른 한 명은",
+     "terms": [
+      {
+       "term": "you can imagine",
+       "ko": "~라고 상상해 볼 수 있다"
+      },
+      {
+       "term": "a version of this conversation",
+       "ko": "이 대화의 또 다른 형태"
+      },
+      {
+       "term": "physically here",
+       "ko": "몸이 직접 여기 있는"
+      }
+     ]
+    },
+    {
+     "t": 190.68,
+     "en": "kind of a full body hologram and it's not just a video call you can actually interact you can do things I mean in the the demo we had the you know ping pong and games and things like that but",
+     "turn": false,
+     "ko": "전신 홀로그램 같은 형태로 여기 있는 거죠. 그리고 그건 단순한 영상 통화가 아니라 실제로 상호작용하고 뭔가를 같이 할 수 있어요. 데모에서도 탁구나 게임 같은 걸 해 봤잖아요. 그런데",
+     "terms": [
+      {
+       "term": "full body hologram",
+       "ko": "전신 홀로그램"
+      },
+      {
+       "term": "video call",
+       "ko": "영상 통화"
+      },
+      {
+       "term": "and things like that",
+       "ko": "그런 것들, 기타 등등"
+      }
+     ]
+    },
+    {
+     "t": 200.0,
+     "en": "I mean you could you can interact you can work together you can you know play poker play chests whatever like the holographic cards holographic board game.",
+     "turn": false,
+     "ko": "상호작용할 수도 있고, 함께 일할 수도 있고, 포커나 체스 같은 것도 할 수 있어요. 홀로그램 카드든 홀로그램 보드게임이든요.",
+     "terms": [
+      {
+       "term": "work together",
+       "ko": "함께 일하다, 협업하다"
+      },
+      {
+       "term": "whatever",
+       "ko": "뭐든지, 기타 등등"
+      }
+     ]
+    },
+    {
+     "t": 204.24,
+     "en": "I just think it's going to be wild.",
+     "turn": false,
+     "ko": "정말 엄청날 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "going to be wild",
+       "ko": "엄청날 것이다, 놀라울 것이다 (구어)"
+      }
+     ]
+    },
+    {
+     "t": 209.4,
+     "en": "it's going to remake I think so many different fields that we think about today from how we work and productivity to a lot of things around science a lot of things around education entertainment fun",
+     "turn": false,
+     "ko": "오늘날 우리가 생각하는 정말 많은 분야를 새롭게 바꿀 거라고 봐요. 일하는 방식과 생산성부터 과학, 교육, 엔터테인먼트, 재미 쪽의 많은 것들,",
+     "terms": [
+      {
+       "term": "remake",
+       "ko": "새로 만들다, 완전히 바꾸다"
+      },
+      {
+       "term": "from how we work",
+       "ko": "~부터 ~까지"
+      },
+      {
+       "term": "a lot of things around",
+       "ko": "~와 관련된 많은 것들"
+      }
+     ]
+    },
+    {
+     "t": 223.16,
+     "en": "gaming.",
+     "turn": false,
+     "ko": "게임까지요.",
+     "terms": []
+    },
+    {
+     "t": 223.16,
+     "en": "But this is just the beginning you know this is the first version, it's a prototype version that we've made in order to develop the next version which is hopefully",
+     "turn": false,
+     "ko": "하지만 이건 시작일 뿐이에요. 이건 첫 버전이고, 다음 버전을 개발하기 위해 만든 프로토타입이에요. 다음 버전은 바라건대",
+     "terms": [
+      {
+       "term": "just the beginning",
+       "ko": "시작에 불과한"
+      },
+      {
+       "term": "in order to",
+       "ko": "~하기 위해"
+      },
+      {
+       "term": "hopefully",
+       "ko": "바라건대, 잘하면"
+      }
+     ]
+    },
+    {
+     "t": 234.88,
+     "en": "going to be the consumer one that we sell to a lot of people.",
+     "turn": false,
+     "ko": "많은 사람들에게 판매할 소비자용 제품이 될 거고요.",
+     "terms": [
+      {
+       "term": "consumer one",
+       "ko": "소비자용 제품"
+      }
+     ]
+    },
+    {
+     "t": 234.88,
+     "en": "Why build these?",
+     "turn": false,
+     "ko": "왜 이걸 만드는 건가요?",
+     "terms": []
+    },
+    {
+     "t": 234.88,
+     "en": "Well I think it's going to be the next major computing platform.",
+     "turn": false,
+     "ko": "음, 이게 차세대 주요 컴퓨팅 플랫폼이 될 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "computing platform",
+       "ko": "컴퓨팅 플랫폼"
+      }
+     ]
+    },
+    {
+     "t": 239.84,
+     "en": "So if you look at like the grand arc of computing over time you've you've gone from like main frames to computers that basically like live",
+     "turn": false,
+     "ko": "컴퓨팅의 큰 흐름을 시간 순으로 보면, 메인프레임에서 시작해서 기본적으로",
+     "terms": [
+      {
+       "term": "the grand arc of",
+       "ko": "~의 큰 흐름(궤적)"
+      },
+      {
+       "term": "over time",
+       "ko": "시간이 흐르면서"
+      },
+      {
+       "term": "gone from like main frames to computers",
+       "ko": "~에서 ~로 넘어오다"
+      }
+     ]
+    },
+    {
+     "t": 251.0,
+     "en": "on you know your desk or on a tower to phones that you have in your hand that you basically like you know can take with you everywhere that you want but it's it's pretty unnatural right it",
+     "turn": false,
+     "ko": "책상 위나 타워형 본체로 존재하는 컴퓨터로, 그다음엔 손에 들고 원하는 곳 어디든 가지고 다닐 수 있는 휴대폰으로 왔죠. 그런데 그건 꽤 부자연스러워요.",
+     "terms": [
+      {
+       "term": "take with you",
+       "ko": "가지고 다니다"
+      },
+      {
+       "term": "pretty unnatural",
+       "ko": "꽤 부자연스러운"
+      }
+     ]
+    },
+    {
+     "t": 261.88,
+     "en": "takes you away from the world around you and.",
+     "turn": false,
+     "ko": "주변 세상으로부터 우리를 떼어 놓거든요.",
+     "terms": [
+      {
+       "term": "takes you away from",
+       "ko": "~로부터 멀어지게 하다, 떼어 놓다"
+      },
+      {
+       "term": "the world around you",
+       "ko": "주변 세상"
+      }
+     ]
+    },
+    {
+     "t": 261.88,
+     "en": "I think that the trend in computing is it gets more ubiquitous it gets more natural and it just gets more social right so you want to be able",
+     "turn": false,
+     "ko": "제 생각에 컴퓨팅의 흐름은 점점 더 어디에나 있게 되고, 더 자연스러워지고, 더 사회적으로 변하는 거예요. 그러니까 우리는",
+     "terms": [
+      {
+       "term": "ubiquitous",
+       "ko": "어디에나 있는, 편재하는"
+      },
+      {
+       "term": "you want to be able",
+       "ko": "~할 수 있기를 원하다"
+      }
+     ]
+    },
+    {
+     "t": 274.76,
+     "en": "to interact with people in the world around you and I think that this is probably going to be the next major platform after phones.",
+     "turn": false,
+     "ko": "주변 세상의 사람들과 상호작용할 수 있기를 원하죠. 그래서 이게 아마 휴대폰 다음의 차세대 주요 플랫폼이 될 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "interact with",
+       "ko": "~와 상호작용하다"
+      }
+     ]
+    },
+    {
+     "t": 278.72,
+     "en": "I'll give these to you.",
+     "turn": false,
+     "ko": "이거 드릴게요.",
+     "terms": []
+    },
+    {
+     "t": 278.72,
+     "en": "These are the clear ones that show all the...",
+     "turn": false,
+     "ko": "이건 투명 버전이라 내부를 다 보여 주는...",
+     "terms": [
+      {
+       "term": "the clear ones",
+       "ko": "투명한 것들"
+      }
+     ]
+    },
+    {
+     "t": 284.08,
+     "en": "The whole thing is a special edition and this is like a really special edition.",
+     "turn": false,
+     "ko": "전체가 다 특별판인데, 이건 그중에서도 정말 특별한 버전이에요.",
+     "terms": [
+      {
+       "term": "special edition",
+       "ko": "특별판, 한정판"
+      }
+     ]
+    },
+    {
+     "t": 284.08,
+     "en": "There's not a single millimeter of of space.",
+     "turn": false,
+     "ko": "남는 공간이 단 1밀리미터도 없어요.",
+     "terms": [
+      {
+       "term": "not a single",
+       "ko": "단 하나의 ~도 없는"
+      }
+     ]
+    },
+    {
+     "t": 288.16,
+     "en": "You know everything in here from the micro projectors that um basically shoot light into the wave guides right it's a special type of display system.",
+     "turn": false,
+     "ko": "안에 있는 모든 것, 그러니까 웨이브가이드로 빛을 쏘는 초소형 프로젝터부터요. 특수한 종류의 디스플레이 시스템이에요.",
+     "terms": [
+      {
+       "term": "shoot light into",
+       "ko": "~로 빛을 쏘다"
+      },
+      {
+       "term": "a special type of",
+       "ko": "특수한 종류의 ~"
+      }
+     ]
+    },
+    {
+     "t": 300.0,
+     "en": "I mean these aren't normal displays like you have in a phone or a TV or computer like the type of displays that people have been building for decades.",
+     "turn": false,
+     "ko": "그러니까 이건 휴대폰이나 TV, 컴퓨터에 있는 일반 디스플레이, 사람들이 수십 년 동안 만들어 온 그런 종류의 디스플레이가 아니에요.",
+     "terms": [
+      {
+       "term": "for decades",
+       "ko": "수십 년 동안"
+      }
+     ]
+    },
+    {
+     "t": 311.36,
+     "en": "It's a waveguide system.",
+     "turn": false,
+     "ko": "웨이브가이드(도광판) 시스템이에요.",
+     "terms": [
+      {
+       "term": "waveguide",
+       "ko": "웨이브가이드, 도광판 (빛을 유도하는 광학 부품)"
+      }
+     ]
+    },
+    {
+     "t": 311.36,
+     "en": "The projector that's shooting light basically goes into these nano etchings across the wave guide that are what catches and creates the holograms.",
+     "turn": false,
+     "ko": "빛을 쏘는 프로젝터가 웨이브가이드 전체에 새겨진 나노 식각 패턴으로 빛을 보내는데, 그게 빛을 잡아서 홀로그램을 만들어 내요.",
+     "terms": [
+      {
+       "term": "nano etchings",
+       "ko": "나노 단위 식각(새김) 패턴"
+      },
+      {
+       "term": "catches and creates",
+       "ko": "잡아내고 만들어 내다"
+      }
+     ]
+    },
+    {
+     "t": 323.24,
+     "en": "In order to synchronize that with your where you're looking there's eye tracking and little cameras, they illuminate your eyes and then of course",
+     "turn": false,
+     "ko": "그걸 사용자가 보는 방향과 동기화하기 위해 시선 추적 장치와 작은 카메라들이 있어서 눈을 비춰 주고요, 그리고 당연히",
+     "terms": [
+      {
+       "term": "synchronize that with",
+       "ko": "~와 동기화하다"
+      },
+      {
+       "term": "eye tracking",
+       "ko": "시선 추적"
+      },
+      {
+       "term": "of course",
+       "ko": "물론, 당연히"
+      }
+     ]
+    },
+    {
+     "t": 335.52,
+     "en": "there's all the basic stuff that you need all the computing, the batteries to power the whole thing, microphones, the speakers because it needs to be able to play audio and speak with you and the",
+     "turn": false,
+     "ko": "필요한 기본적인 것들이 다 있어요. 모든 컴퓨팅 장치, 전체에 전원을 공급하는 배터리, 마이크, 스피커도요. 오디오를 재생하고 사용자와 대화할 수 있어야 하니까요. 그리고",
+     "terms": [
+      {
+       "term": "basic stuff",
+       "ko": "기본적인 것들"
+      },
+      {
+       "term": "power the whole thing",
+       "ko": "전체에 전력을 공급하다"
+      },
+      {
+       "term": "needs to be able to",
+       "ko": "~할 수 있어야 한다"
+      }
+     ]
+    },
+    {
+     "t": 348.32,
+     "en": "cameras and sensors to see things around you in the world so that way when it's placing holograms in the world it can do that in the right place and understand where you are so that probably",
+     "turn": false,
+     "ko": "주변 세상을 볼 수 있는 카메라와 센서도 있어서, 홀로그램을 현실 공간에 배치할 때 정확한 위치에 놓고 사용자가 어디 있는지 파악할 수 있어요. 그래도 아마",
+     "terms": [
+      {
+       "term": "so that way",
+       "ko": "그렇게 해서, 그래야"
+      },
+      {
+       "term": "in the right place",
+       "ko": "올바른 위치에"
+      }
+     ]
+    },
+    {
+     "t": 358.04,
+     "en": "is still not covering everything because there's a lot of things that need to go into syncing up the holographic images between the two displays because you don't just have a single display",
+     "turn": false,
+     "ko": "이걸로도 다 설명한 건 아닐 거예요. 두 디스플레이 사이에서 홀로그램 이미지를 동기화하는 데 들어가는 게 정말 많거든요. 디스플레이가 하나만 있는 게 아니라서요.",
+     "terms": [
+      {
+       "term": "still not covering everything",
+       "ko": "아직 모든 걸 다루지 못하다"
+      },
+      {
+       "term": "go into",
+       "ko": "(노력·부품 등이) ~에 들어가다"
+      },
+      {
+       "term": "syncing up",
+       "ko": "동기화하기, 맞추기"
+      }
+     ]
+    },
+    {
+     "t": 368.76,
+     "en": "like you have in a phone or TV you have two and it moves around and you know physical things are hard and need to be synced up.",
+     "turn": false,
+     "ko": "휴대폰이나 TV처럼 하나가 아니라 두 개가 있고, 그게 움직이잖아요. 물리적인 건 어렵고 동기화가 필요하죠.",
+     "terms": [
+      {
+       "term": "moves around",
+       "ko": "이리저리 움직이다"
+      },
+      {
+       "term": "synced up",
+       "ko": "동기화된, 맞춰진"
+      }
+     ]
+    },
+    {
+     "t": 375.2,
+     "en": "There's also the radio that has to communicate with your other computing devices to do heavier computing um and the wrist based neural interface that you probably",
+     "turn": false,
+     "ko": "더 무거운 연산을 하기 위해 다른 컴퓨팅 기기와 통신해야 하는 무선 장치도 있고요, 음, 그리고 아마 체험해 보셨을 손목 기반 신경 인터페이스도 있어요.",
+     "terms": [
+      {
+       "term": "communicate with",
+       "ko": "~와 통신하다"
+      },
+      {
+       "term": "heavier computing",
+       "ko": "더 무거운(고부하) 연산"
+      },
+      {
+       "term": "neural interface",
+       "ko": "신경 인터페이스"
+      }
+     ]
+    },
+    {
+     "t": 385.68,
+     "en": "got to try out.",
+     "turn": false,
+     "ko": "(아마) 써 보셨을 거예요.",
+     "terms": [
+      {
+       "term": "got to try out",
+       "ko": "써 볼 기회가 있었다"
+      }
+     ]
+    },
+    {
+     "t": 385.68,
+     "en": "We kind of miniaturized all of this and fit it into uh you know normal looking pair of glasses which is...",
+     "turn": false,
+     "ko": "이 모든 걸 소형화해서, 음, 평범해 보이는 안경 하나에 넣은 거예요. 그게...",
+     "terms": [
+      {
+       "term": "fit it into",
+       "ko": "~에 집어넣다, 맞춰 넣다"
+      },
+      {
+       "term": "pair of glasses",
+       "ko": "안경 한 개"
+      }
+     ]
+    },
+    {
+     "t": 391.2,
+     "en": "you know when I told the team that we were going to do this 10 years ago you know people weren't sure if we were going to be able to but I think you not only we're going",
+     "turn": false,
+     "ko": "10년 전에 팀에게 이걸 하겠다고 말했을 때, 사람들은 우리가 해낼 수 있을지 확신하지 못했어요. 그런데 저는 우리가 이걸 해낼 수 있을 뿐만 아니라",
+     "terms": [
+      {
+       "term": "weren't sure if",
+       "ko": "~인지 확신하지 못했다"
+      },
+      {
+       "term": "not only",
+       "ko": "~뿐만 아니라"
+      }
+     ]
+    },
+    {
+     "t": 402.28,
+     "en": "to be able to do this but I think we're going to be able to get it cheaper and higher quality and even even smaller and more stylish over time.",
+     "turn": false,
+     "ko": "시간이 지나면서 더 싸고, 더 품질 좋고, 훨씬 더 작고 세련되게 만들 수 있을 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "higher quality",
+       "ko": "더 높은 품질"
+      },
+      {
+       "term": "over time",
+       "ko": "시간이 지나면서"
+      }
+     ]
+    },
+    {
+     "t": 406.12,
+     "en": "So I think this is going to be a pretty wild future.",
+     "turn": false,
+     "ko": "그래서 꽤 엄청난 미래가 될 거라고 봐요.",
+     "terms": [
+      {
+       "term": "pretty wild",
+       "ko": "꽤 놀라운, 엄청난 (구어)"
+      }
+     ]
+    },
+    {
+     "t": 411.0,
+     "en": "There are so many versions of trying to get a similar idea of digital objects in physical space.",
+     "turn": false,
+     "ko": "물리적 공간에 디지털 물체를 띄운다는 비슷한 아이디어를 구현하려는 시도는 정말 여러 가지가 있죠.",
+     "terms": [
+      {
+       "term": "so many versions of",
+       "ko": "~의 수많은 형태"
+      },
+      {
+       "term": "physical space",
+       "ko": "물리적 공간"
+      }
+     ]
+    },
+    {
+     "t": 417.24,
+     "en": "I'm thinking of for example of glasses that have heads up displays where it's headlocked and it's moving with my eyes, glasses that are really creating digital objects in physical space that",
+     "turn": false,
+     "ko": "예를 들어 헤드업 디스플레이가 달려서 화면이 머리에 고정돼 시선을 따라 움직이는 안경도 있고, 물리적 공간에 실제로 디지털 물체를 만들어 내는 안경도 있잖아요.",
+     "terms": [
+      {
+       "term": "heads up display",
+       "ko": "헤드업 디스플레이 (HUD)"
+      },
+      {
+       "term": "headlocked",
+       "ko": "머리에 고정된 (고개를 돌리면 같이 움직이는)"
+      },
+      {
+       "term": "for example",
+       "ko": "예를 들어"
+      }
+     ]
+    },
+    {
+     "t": 430.72,
+     "en": "don't move as I move, I'm thinking of these, I'm also thinking of the Snapchat Spectacles that they just announced, then on the other hand there are headsets like the Quest and also like the Apple",
+     "turn": false,
+     "ko": "제가 움직여도 따라 움직이지 않는 거요. 이것도 떠오르고, 스냅챗이 막 발표한 스펙터클스도 떠올라요. 반면에 퀘스트 같은 헤드셋이나 애플",
+     "terms": [
+      {
+       "term": "on the other hand",
+       "ko": "반면에, 다른 한편으로"
+      },
+      {
+       "term": "just announced",
+       "ko": "막 발표한"
+      }
+     ]
+    },
+    {
+     "t": 442.08,
+     "en": "Vision Pro that seem to fall into a different category.",
+     "turn": false,
+     "ko": "비전 프로 같은 건 또 다른 범주에 속하는 것 같고요.",
+     "terms": [
+      {
+       "term": "fall into",
+       "ko": "(범주에) 속하다"
+      },
+      {
+       "term": "a different category",
+       "ko": "다른 범주"
+      }
+     ]
+    },
+    {
+     "t": 442.08,
+     "en": "I'm curious how you would organize this landscape for people and how you think about people using these tools in their real lives",
+     "turn": false,
+     "ko": "이 지형을 사람들에게 어떻게 정리해서 설명하실지, 그리고 사람들이 실생활에서 이런 도구를 어떻게 쓸 거라고 생각하시는지 궁금해요.",
+     "terms": [
+      {
+       "term": "I'm curious how",
+       "ko": "어떻게 ~인지 궁금하다"
+      },
+      {
+       "term": "landscape",
+       "ko": "(분야의) 판도, 지형"
+      },
+      {
+       "term": "in their real lives",
+       "ko": "그들의 실생활에서"
+      }
+     ]
+    },
+    {
+     "t": 451.12,
+     "en": "in the near future?",
+     "turn": false,
+     "ko": "가까운 미래에요.",
+     "terms": [
+      {
+       "term": "in the near future",
+       "ko": "가까운 미래에"
+      }
+     ]
+    },
+    {
+     "t": 451.12,
+     "en": "Yeah so when we were getting started on this about 10 years ago I thought that something like this was going to be the ultimate product for everyone.",
+     "turn": false,
+     "ko": "네, 저희가 약 10년 전에 이걸 시작했을 때, 저는 이런 게 모두를 위한 궁극의 제품이 될 거라고 생각했어요.",
+     "terms": [
+      {
+       "term": "getting started on",
+       "ko": "~을 시작하다"
+      },
+      {
+       "term": "the ultimate product",
+       "ko": "궁극의 제품"
+      }
+     ]
+    },
+    {
+     "t": 456.24,
+     "en": "Right you get to you know normal looking pair of glasses and we'll continue improving that that can have full holographic",
+     "turn": false,
+     "ko": "그러니까, 평범해 보이는 안경 하나로, 계속 개선해 나가겠지만, 완전한 홀로그램",
+     "terms": [
+      {
+       "term": "continue improving",
+       "ko": "계속 개선하다"
+      }
+     ]
+    },
+    {
+     "t": 466.04,
+     "en": "images.",
+     "turn": false,
+     "ko": "이미지를 보여 줄 수 있는 거죠.",
+     "terms": []
+    },
+    {
+     "t": 466.04,
+     "en": "I think it's super powerful and it is sort of the science fiction future that I think we all hope to get to.",
+     "turn": false,
+     "ko": "정말 강력하다고 생각하고, 우리 모두가 도달하길 바라는 공상과학 같은 미래죠.",
+     "terms": [
+      {
+       "term": "super powerful",
+       "ko": "엄청 강력한"
+      },
+      {
+       "term": "hope to get to",
+       "ko": "도달하기를 바라다"
+      }
+     ]
+    },
+    {
+     "t": 471.68,
+     "en": "On the journey we took a few other approaches as well um to help us develop towards that including building glasses that don't have displays to try to learn.",
+     "turn": false,
+     "ko": "그 여정에서 저희는, 음, 그 목표를 향해 개발하는 데 도움이 되도록 몇 가지 다른 접근도 했어요. 배우기 위해 디스플레이 없는 안경을 만드는 것도 포함해서요.",
+     "terms": [
+      {
+       "term": "on the journey",
+       "ko": "그 과정에서, 여정 중에"
+      },
+      {
+       "term": "took a few other approaches",
+       "ko": "접근 방식을 취하다"
+      },
+      {
+       "term": "develop towards",
+       "ko": "~을 향해 개발해 나가다"
+      }
+     ]
+    },
+    {
+     "t": 479.56,
+     "en": "Just take a stylish pair of glasses today and put as much technology into it as you can but really focus on the form factor and that's the Ray Ban Meta glasses and it's doing really well and",
+     "turn": false,
+     "ko": "그냥 오늘날의 세련된 안경에 최대한 많은 기술을 넣되 폼팩터(외형)에 정말 집중하는 거죠. 그게 레이밴 메타 안경이고, 아주 잘 되고 있어요. 그리고",
+     "terms": [
+      {
+       "term": "as much technology into it as you can",
+       "ko": "가능한 한 많은 ~"
+      },
+      {
+       "term": "focus on",
+       "ko": "~에 집중하다"
+      },
+      {
+       "term": "form factor",
+       "ko": "폼팩터, 제품의 외형·크기"
+      }
+     ]
+    },
+    {
+     "t": 496.88,
+     "en": "initially we thought that that was sort of intro product for us to learn how to build this but one of the things that's clear now is you're going to be able to make that product a lot more affordable",
+     "turn": false,
+     "ko": "처음엔 그게 이걸 만드는 법을 배우기 위한 입문용 제품 정도라고 생각했는데, 지금 분명해진 건 그 제품을 훨씬 더 저렴하게 만들 수 있다는 거예요.",
+     "terms": [
+      {
+       "term": "intro product",
+       "ko": "입문용 제품"
+      },
+      {
+       "term": "one of the things that's clear now",
+       "ko": "이제 분명해진 것 중 하나"
+      },
+      {
+       "term": "a lot more affordable",
+       "ko": "훨씬 더 저렴한"
+      }
+     ]
+    },
+    {
+     "t": 509.92,
+     "en": "than this probably permanently.",
+     "turn": false,
+     "ko": "이것보다, 아마 영구적으로요.",
+     "terms": [
+      {
+       "term": "permanently",
+       "ko": "영구적으로, 계속"
+      }
+     ]
+    },
+    {
+     "t": 509.92,
+     "en": "So I actually think that there are going to be a bunch of different of these paths that we've taken are going to be kind of permanent product lines that people",
+     "turn": false,
+     "ko": "그래서 저는 저희가 택한 여러 경로들이 결국 사람들이 고를 수 있는 영구적인 제품 라인이 될 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "a bunch of",
+       "ko": "여러 개의, 많은"
+      },
+      {
+       "term": "product lines",
+       "ko": "제품 라인"
+      }
+     ]
+    },
+    {
+     "t": 520.44,
+     "en": "will choose.",
+     "turn": false,
+     "ko": "사람들이 선택하게 될 거예요.",
+     "terms": []
+    },
+    {
+     "t": 520.44,
+     "en": "I think you'll see display-less glasses like the Ray Ban Metas continue to get better and better, great for AI, no display but you can talk to it, it can talk back.",
+     "turn": false,
+     "ko": "레이밴 메타 같은 디스플레이 없는 안경은 계속 점점 더 좋아질 거예요. AI용으로 훌륭하죠. 디스플레이는 없지만 말을 걸 수 있고, 안경도 대답해 줘요.",
+     "terms": [
+      {
+       "term": "better and better",
+       "ko": "점점 더 좋은"
+      },
+      {
+       "term": "talk back",
+       "ko": "대답하다, 말대꾸하다"
+      }
+     ]
+    },
+    {
+     "t": 525.84,
+     "en": "I think there's going to be something in between these that's basically a heads up display, so it's not a 70° field of view,",
+     "turn": false,
+     "ko": "이것들 중간쯤 되는 게 있을 거예요. 기본적으로 헤드업 디스플레이인데, 시야각이 70도가 아니라",
+     "terms": [
+      {
+       "term": "something in between",
+       "ko": "그 중간쯤 되는 것"
+      }
+     ]
+    },
+    {
+     "t": 537.24,
+     "en": "maybe it's a 20° or 30 degree field of view, so that's not going to be what you want for putting kind of a full hologram of a person or interacting with the world around you but it's",
+     "turn": false,
+     "ko": "20도나 30도 정도일 수 있어요. 그래서 사람의 전신 홀로그램을 띄우거나 주변 세상과 상호작용할 때 원하는 건 아니겠지만,",
+     "terms": [
+      {
+       "term": "what you want for",
+       "ko": "~하는 데 원하는 것"
+      }
+     ]
+    },
+    {
+     "t": 548.36,
+     "en": "going to be great for you know when you're talking to AI, not just having voice but also being able to see what it's saying or being able to text someone with your wrist-based neural interface and",
+     "turn": false,
+     "ko": "AI와 대화할 때 정말 좋을 거예요. 음성만 있는 게 아니라 AI가 하는 말을 볼 수도 있고, 손목 기반 신경 인터페이스로 누군가에게 문자를 보낼 수도 있고,",
+     "terms": [
+      {
+       "term": "not just having voice but also",
+       "ko": "~뿐만 아니라 ~도"
+      },
+      {
+       "term": "text someone",
+       "ko": "누군가에게 문자를 보내다"
+      }
+     ]
+    },
+    {
+     "t": 558.76,
+     "en": "then have their text show up rather than having it read to you, which is, we read faster than we can listen or getting directions right or just being able to search for information get all that.",
+     "turn": false,
+     "ko": "상대의 답장이 읽어 주는 게 아니라 화면에 뜨게 할 수도 있죠. 우리는 듣는 것보다 읽는 게 더 빠르니까요. 길 안내를 받거나 그냥 정보를 검색하거나, 그런 것들 다요.",
+     "terms": [
+      {
+       "term": "show up",
+       "ko": "나타나다, (화면에) 뜨다"
+      },
+      {
+       "term": "rather than",
+       "ko": "~하기보다는, ~ 대신"
+      },
+      {
+       "term": "getting directions",
+       "ko": "길 안내를 받다"
+      }
+     ]
+    },
+    {
+     "t": 568.12,
+     "en": "So there's a lot of value for heads up display that will be somewhat more expensive than the display-less but somewhat cheaper than this.",
+     "turn": false,
+     "ko": "그래서 헤드업 디스플레이는 가치가 크고, 디스플레이 없는 것보다는 좀 더 비싸지만 이것보다는 좀 더 쌀 거예요.",
+     "terms": [
+      {
+       "term": "a lot of value",
+       "ko": "큰 가치"
+      },
+      {
+       "term": "somewhat more expensive than",
+       "ko": "~보다 다소 더 비싼"
+      }
+     ]
+    },
+    {
+     "t": 572.12,
+     "en": "Then I think you're going to get this.",
+     "turn": false,
+     "ko": "그다음에 이게 나올 거라고 봐요.",
+     "terms": []
+    },
+    {
+     "t": 572.12,
+     "en": "It's going to be probably the most premium and and expensive of glasses products but hopefully still something that you know like a computer is generally accessible to most people in the world but I think",
+     "turn": false,
+     "ko": "이건 아마 안경 제품 중 가장 고급이고 비싼 제품이 되겠지만, 바라건대 컴퓨터처럼 세상 대부분의 사람들이 대체로 접근할 수 있는 거였으면 해요. 그런데 저는",
+     "terms": [
+      {
+       "term": "the most premium",
+       "ko": "가장 고급인"
+      },
+      {
+       "term": "generally accessible",
+       "ko": "대체로 이용 가능한, 접근할 수 있는"
+      }
+     ]
+    },
+    {
+     "t": 591.2,
+     "en": "that there are going to be all of those and I I think people will like them.",
+     "turn": false,
+     "ko": "이 모든 게 다 존재할 거고, 사람들이 다 좋아할 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "all of those",
+       "ko": "그 모든 것"
+      }
+     ]
+    },
+    {
+     "t": 591.2,
+     "en": "I also think that the headsets that people are using around mixed reality will continue to be a thing too because no matter how good we get at miniaturizing the tech for this you're just going to be",
+     "turn": false,
+     "ko": "그리고 사람들이 혼합현실용으로 쓰는 헤드셋도 계속 존재할 거라고 봐요. 이걸 아무리 잘 소형화하더라도",
+     "terms": [
+      {
+       "term": "mixed reality",
+       "ko": "혼합현실 (MR)"
+      },
+      {
+       "term": "continue to be a thing",
+       "ko": "계속 존재하다, 계속 유행하다"
+      },
+      {
+       "term": "no matter how good",
+       "ko": "아무리 잘해도"
+      }
+     ]
+    },
+    {
+     "t": 604.6,
+     "en": "able to fit more compute into a full headset.",
+     "turn": false,
+     "ko": "완전한 헤드셋에는 언제나 더 많은 연산 장치를 넣을 수 있으니까요.",
+     "terms": [
+      {
+       "term": "fit more compute into",
+       "ko": "~에 더 많이 집어넣다"
+      },
+      {
+       "term": "compute",
+       "ko": "연산 능력, 컴퓨팅 자원 (명사)"
+      }
+     ]
+    },
+    {
+     "t": 604.6,
+     "en": "Fundamentally our mission is not you know build something that is advanced and only a few people can use, we want to take it you the last mile and",
+     "turn": false,
+     "ko": "근본적으로 저희의 사명은 첨단 제품을 만들어서 소수만 쓰게 하는 게 아니에요. 마지막 단계까지 끌고 가서",
+     "terms": [
+      {
+       "term": "fundamentally",
+       "ko": "근본적으로"
+      },
+      {
+       "term": "the last mile",
+       "ko": "마지막 단계, 최종 구간 (소비자에게 닿기까지)"
+      }
+     ]
+    },
+    {
+     "t": 617.2,
+     "en": "do all the innovation to get it to everyone.",
+     "turn": false,
+     "ko": "모든 사람에게 닿게 하는 혁신을 다 해내고 싶어요.",
+     "terms": [
+      {
+       "term": "get it to everyone",
+       "ko": "모든 사람에게 전달하다"
+      }
+     ]
+    },
+    {
+     "t": 617.2,
+     "en": "We you know just shipped or announced Quest 3S, the new mixed reality headset where we basically are delivering high quality mixed reality for $299.",
+     "turn": false,
+     "ko": "저희가 얼마 전에 퀘스트 3S를 출시, 아니 발표했는데요, 고품질 혼합현실을 299달러에 제공하는 새 혼합현실 헤드셋이에요.",
+     "terms": [
+      {
+       "term": "shipped",
+       "ko": "출시했다 (제품을 내놓다)"
+      },
+      {
+       "term": "delivering",
+       "ko": "제공하다, 내놓다"
+      }
+     ]
+    },
+    {
+     "t": 630.32,
+     "en": "I was really proud last year when we delivered Quest 3, the first kind of really high quality high resolution color mixed reality device for $500, right it was like, it's like a fraction of",
+     "turn": false,
+     "ko": "작년에 퀘스트 3를 내놨을 때 정말 자랑스러웠어요. 최초의 진짜 고품질, 고해상도 컬러 혼합현실 기기를 500달러에 내놓은 거죠. 그러니까 그건",
+     "terms": [
+      {
+       "term": "really proud",
+       "ko": "정말 자랑스러운"
+      },
+      {
+       "term": "a fraction of",
+       "ko": "~의 일부, 극히 일부"
+      }
+     ]
+    },
+    {
+     "t": 642.92,
+     "en": "the cost of of what the competitors are doing and I think it's actually higher quality in a lot of ways, and now we've just doubled down on that.",
+     "turn": false,
+     "ko": "경쟁사들 가격의 일부에 불과한데, 여러 면에서 품질은 오히려 더 좋다고 생각해요. 그리고 이번에 거기에 더 힘을 실은 거고요.",
+     "terms": [
+      {
+       "term": "in a lot of ways",
+       "ko": "여러 면에서"
+      },
+      {
+       "term": "doubled down on",
+       "ko": "~에 더욱 힘을 쏟다, 밀어붙이다"
+      }
+     ]
+    },
+    {
+     "t": 646.88,
+     "en": "So I think that they're all actually going to end up being important long-term product lines: display-less, heads up display, full holographic",
+     "turn": false,
+     "ko": "그래서 저는 이 모든 게 실제로 장기적으로 중요한 제품 라인이 될 거라고 생각해요. 디스플레이 없는 것, 헤드업 디스플레이, 완전한 홀로그래픽",
+     "terms": [
+      {
+       "term": "end up being",
+       "ko": "결국 ~이 되다"
+      },
+      {
+       "term": "long-term",
+       "ko": "장기적인"
+      }
+     ]
+    },
+    {
+     "t": 659.64,
+     "en": "AR, full headsets.",
+     "turn": false,
+     "ko": "AR, 그리고 완전한 헤드셋까지요.",
+     "terms": []
+    },
+    {
+     "t": 659.64,
+     "en": "I think that they're all going to be important.",
+     "turn": false,
+     "ko": "전부 다 중요해질 거라고 생각해요.",
+     "terms": []
+    },
+    {
+     "t": 659.64,
+     "en": "Yeah.",
+     "turn": false,
+     "ko": "네.",
+     "terms": []
+    },
+    {
+     "t": 659.64,
+     "en": "If you play out the future of not just the hardware that we've been talking about so Meta Ray Bans, Quest, Orion, but also",
+     "turn": false,
+     "ko": "지금까지 얘기한 하드웨어, 그러니까 메타 레이밴, 퀘스트, 오라이언뿐만 아니라",
+     "terms": [
+      {
+       "term": "play out the future",
+       "ko": "미래를 끝까지 전개해 보다"
+      },
+      {
+       "term": "not just the hardware",
+       "ko": "(not just A but also B) A뿐만 아니라 B도"
+      }
+     ]
+    },
+    {
+     "t": 676.28,
+     "en": "the Llama models, if everything goes according to you and the teams wildest dreams, I'd love for you to just begin to describe what that feels like.",
+     "turn": false,
+     "ko": "라마 모델까지 포함해서 미래를 펼쳐 본다면, 모든 게 당신과 팀이 꿈꾸는 가장 야심 찬 꿈대로 된다면, 그게 어떤 느낌일지 설명해 주시면 좋겠어요.",
+     "terms": [
+      {
+       "term": "goes according to",
+       "ko": "~대로 진행되다"
+      },
+      {
+       "term": "wildest dreams",
+       "ko": "가장 터무니없는(원대한) 꿈"
+      },
+      {
+       "term": "what that feels like",
+       "ko": "그게 어떤 느낌인지"
+      }
+     ]
+    },
+    {
+     "t": 683.16,
+     "en": "I mean I think that there are two primary values that we're trying to bring.",
+     "turn": false,
+     "ko": "음, 저희가 주려는 핵심 가치는 두 가지라고 생각해요.",
+     "terms": [
+      {
+       "term": "primary values",
+       "ko": "핵심 가치"
+      }
+     ]
+    },
+    {
+     "t": 688.28,
+     "en": "On the AR and kind of mixed reality side, the main value we're trying to bring is this feeling of presence .Right so there's something that I think is just really deep about",
+     "turn": false,
+     "ko": "AR과 혼합현실 쪽에서 저희가 주려는 핵심 가치는 '존재감'이라는 느낌이에요. 그러니까 정말 깊은 무언가가 있다고 생각하거든요,",
+     "terms": [
+      {
+       "term": "On the AR and kind of mixed reality side",
+       "ko": "~ 쪽에서는"
+      },
+      {
+       "term": "feeling of presence",
+       "ko": "함께 있는 듯한 느낌, 현존감"
+      }
+     ]
+    },
+    {
+     "t": 699.8,
+     "en": "being physically present with another person that you don't get from any other technology today and I think that's the thing when people have a very visceral reaction to experiencing virtual or mixed",
+     "turn": false,
+     "ko": "다른 사람과 물리적으로 함께 있다는 것에는요. 그건 오늘날 다른 어떤 기술로도 얻을 수 없는 거예요. 그리고 사람들이 가상현실이나 혼합",
+     "terms": [
+      {
+       "term": "physically present with",
+       "ko": "~와 몸으로 함께 있는"
+      },
+      {
+       "term": "visceral reaction",
+       "ko": "본능적인(직감적인) 반응"
+      }
+     ]
+    },
+    {
+     "t": 711.04,
+     "en": "reality what they're really reacting to is that they actually for the first time with technology feel a sense of presence like they're in a place with the person and that's super powerful.",
+     "turn": false,
+     "ko": "현실을 경험하고 아주 본능적인 반응을 보일 때, 그들이 진짜 반응하는 건 처음으로 기술을 통해 존재감을 느낀다는 거예요. 그 사람과 한 공간에 있는 것 같은 느낌이요. 그건 정말 강력하죠.",
+     "terms": [
+      {
+       "term": "reacting to",
+       "ko": "~에 반응하다"
+      },
+      {
+       "term": "for the first time",
+       "ko": "처음으로"
+      },
+      {
+       "term": "a sense of presence",
+       "ko": "존재감, 함께 있다는 느낌"
+      }
+     ]
+    },
+    {
+     "t": 716.8,
+     "en": "I focused on designing social apps and experiences for 20 years that's sort of like the Holy Grail of that is being able to build a technology platform that delivers this like deep sense of",
+     "turn": false,
+     "ko": "저는 20년 동안 소셜 앱과 경험을 설계하는 데 집중해 왔는데, 그 분야의 궁극적인 목표는 이런 깊은",
+     "terms": [
+      {
+       "term": "focused on",
+       "ko": "~에 집중했다"
+      },
+      {
+       "term": "the Holy Grail",
+       "ko": "궁극의 목표, 성배"
+      },
+      {
+       "term": "deep sense of",
+       "ko": "깊은 ~감"
+      }
+     ]
+    },
+    {
+     "t": 733.68,
+     "en": "of social presence.",
+     "turn": false,
+     "ko": "사회적 존재감을 전달하는 기술 플랫폼을 만드는 거예요.",
+     "terms": [
+      {
+       "term": "social presence",
+       "ko": "사회적 존재감 (함께 있다는 느낌)"
+      }
+     ]
+    },
+    {
+     "t": 733.68,
+     "en": "The other big track is around personalized AI and for that and that's sort of where Llama and Meta AI and all those things are going.",
+     "turn": false,
+     "ko": "다른 큰 축은 개인 맞춤형 AI예요. 라마, 메타 AI, 그리고 그런 것들이 다 그쪽으로 가고 있죠.",
+     "terms": [
+      {
+       "term": "track",
+       "ko": "축, 방향, 흐름"
+      },
+      {
+       "term": "personalized AI",
+       "ko": "개인 맞춤형 AI"
+      },
+      {
+       "term": "where Llama and Meta AI and all those things are going",
+       "ko": "~가 향하는 방향"
+      }
+     ]
+    },
+    {
+     "t": 740.48,
+     "en": "There's all this development that's going into making the models smarter and smarter over time but I think where this is going to get",
+     "turn": false,
+     "ko": "시간이 지나면서 모델을 점점 더 똑똑하게 만드는 데 정말 많은 개발이 들어가고 있지만, 제 생각에 이게 향하게 될 곳은",
+     "terms": [
+      {
+       "term": "going into",
+       "ko": "(노력·자원이) ~에 투입되다"
+      },
+      {
+       "term": "smarter and smarter",
+       "ko": "점점 더 똑똑한"
+      },
+      {
+       "term": "over time",
+       "ko": "시간이 지나면서"
+      }
+     ]
+    },
+    {
+     "t": 751.68,
+     "en": "really compelling is when it's personalized for you and in order for it to be personalized for you it has to have context and understand what's going on in your life both kind of at a global level and",
+     "turn": false,
+     "ko": "정말 매력적인 건 그게 나에게 맞춤화될 때예요. 그리고 나에게 맞춤화되려면 맥락을 갖고 내 삶에서 무슨 일이 일어나는지 이해해야 하죠. 전반적인 차원에서도, 그리고",
+     "terms": [
+      {
+       "term": "compelling",
+       "ko": "매우 매력적인, 설득력 있는"
+      },
+      {
+       "term": "personalized for you",
+       "ko": "당신에게 맞춤화된"
+      },
+      {
+       "term": "in order for it to be",
+       "ko": "그것이 ~이 되기 위해서는"
+      }
+     ]
+    },
+    {
+     "t": 764.52,
+     "en": "like what's physically happening around you right now and in order to do that I think that glasses are going to be the ideal form factor because they're positioned on your face in a way where",
+     "turn": false,
+     "ko": "지금 바로 내 주변에서 물리적으로 무슨 일이 일어나는지까지요. 그걸 하려면 안경이 이상적인 폼 팩터가 될 거라고 생각해요. 얼굴에 위치해 있어서",
+     "terms": [
+      {
+       "term": "form factor",
+       "ko": "기기의 형태, 폼 팩터"
+      },
+      {
+       "term": "positioned on",
+       "ko": "~에 위치한"
+      }
+     ]
+    },
+    {
+     "t": 773.96,
+     "en": "they can let them see what you see and hear what you hear which are the two most important senses that we use for for kind of taking information and context about the world.",
+     "turn": false,
+     "ko": "내가 보는 걸 보고 내가 듣는 걸 들을 수 있게 해주거든요. 그게 우리가 세상에 대한 정보와 맥락을 받아들이는 데 쓰는 가장 중요한 두 감각이죠.",
+     "terms": [
+      {
+       "term": "taking information",
+       "ko": "정보를 받아들이다 (take in information)"
+      }
+     ]
+    },
+    {
+     "t": 778.84,
+     "en": "I think that this is all going to be kind of really deep and profound stuff but it's basically those two things: It's this feeling of presence and this capability of really personalized intelligence that can",
+     "turn": false,
+     "ko": "이 모든 게 정말 깊고 심오한 이야기가 되겠지만, 기본적으로는 이 두 가지예요. 하나는 이 실재감(프레즌스)이고, 다른 하나는 정말 개인화된 지능이라는 능력이죠. 그게",
+     "terms": [
+      {
+       "term": "profound",
+       "ko": "심오한, 깊은"
+      },
+      {
+       "term": "feeling of presence",
+       "ko": "실재감, 함께 있는 느낌"
+      },
+      {
+       "term": "personalized intelligence",
+       "ko": "개인 맞춤형 지능(AI)"
+      }
+     ]
+    },
+    {
+     "t": 792.52,
+     "en": "help you.",
+     "turn": false,
+     "ko": "당신을 도와줄 수 있는 거죠.",
+     "terms": []
+    },
+    {
+     "t": 792.52,
+     "en": "I'd love to talk about each of those two things.",
+     "turn": false,
+     "ko": "그 두 가지 각각에 대해 이야기해 보고 싶어요.",
+     "terms": [
+      {
+       "term": "I'd love to",
+       "ko": "정말 ~하고 싶다"
+      }
+     ]
+    },
+    {
+     "t": 792.52,
+     "en": "The first on presence, I owe a lot to being able to connect with people online.",
+     "turn": false,
+     "ko": "먼저 실재감에 대해서요. 저는 온라인으로 사람들과 연결될 수 있다는 것에 많은 걸 빚지고 있어요.",
+     "terms": [
+      {
+       "term": "owe a lot to",
+       "ko": "~에 많은 신세를 지다, ~ 덕을 크게 보다"
+      },
+      {
+       "term": "connect with people",
+       "ko": "사람들과 교류하다, 연결되다"
+      }
+     ]
+    },
+    {
+     "t": 800.04,
+     "en": "Right this job that I have is by definition that, also with my family.",
+     "turn": false,
+     "ko": "제가 하는 이 일 자체가 말 그대로 그런 거고요, 가족과의 관계도 그래요.",
+     "terms": [
+      {
+       "term": "by definition",
+       "ko": "정의상, 본질적으로 당연히"
+      }
+     ]
+    },
+    {
+     "t": 805.88,
+     "en": "My parents don't live anywhere close to me.",
+     "turn": false,
+     "ko": "부모님은 저와 전혀 가까운 곳에 살지 않으세요.",
+     "terms": [
+      {
+       "term": "anywhere close to",
+       "ko": "(부정문) ~ 근처에도 (않다)"
+      }
+     ]
+    },
+    {
+     "t": 805.88,
+     "en": "I video call them a lot and when I think about the progress of technology like this in a timeline from the telegram to the telephone",
+     "turn": false,
+     "ko": "영상 통화를 자주 하는데, 이런 기술의 발전을 전보에서 전화로 이어지는 타임라인으로 생각해 보면",
+     "terms": [
+      {
+       "term": "video call",
+       "ko": "영상 통화하다 (동사로도 쓰임)"
+      },
+      {
+       "term": "the progress of technology",
+       "ko": "기술의 발전"
+      }
+     ]
+    },
+    {
+     "t": 819.68,
+     "en": "to video call to some feeling of presence with another person who's feels like they're right there in front of me, that makes me feel incredibly optimistic.",
+     "turn": false,
+     "ko": "영상 통화, 그리고 바로 내 앞에 있는 것처럼 느껴지는 상대와의 실재감까지 이어진다면, 정말 엄청나게 낙관적인 기분이 들어요.",
+     "terms": [
+      {
+       "term": "right there in front of me",
+       "ko": "바로 내 눈앞에"
+      },
+      {
+       "term": "incredibly optimistic",
+       "ko": "엄청나게 낙관적인"
+      }
+     ]
+    },
+    {
+     "t": 825.16,
+     "en": "I would love a future where like I can lose in Scrabble to my mom and feel like she's really there in front of me.",
+     "turn": false,
+     "ko": "엄마한테 스크래블 게임에서 지면서도 엄마가 정말 내 앞에 있는 것처럼 느낄 수 있는 미래가 오면 좋겠어요.",
+     "terms": [
+      {
+       "term": "lose in Scrabble to my mom",
+       "ko": "엄마에게 스크래블에서 지다 (lose to A: A에게 지다)"
+      },
+      {
+       "term": "I would love a future where",
+       "ko": "~한 미래가 오면 정말 좋겠다"
+      }
+     ]
+    },
+    {
+     "t": 831.2,
+     "en": "Yeah and it feels like we're not that far away from something - I agree!",
+     "turn": false,
+     "ko": "네, 그리고 우리가 그런 것에서 그리 멀지 않은 것 같아요 — 동의해요!",
+     "terms": [
+      {
+       "term": "not that far away from",
+       "ko": "~에서 그리 멀지 않은"
+      }
+     ]
+    },
+    {
+     "t": 837.2,
+     "en": "- that persuades my brain that that's happening.",
+     "turn": false,
+     "ko": "— 그게 실제로 일어나고 있다고 내 뇌를 설득하는 무언가요.",
+     "terms": [
+      {
+       "term": "persuades my brain that",
+       "ko": "내 뇌가 ~라고 믿게 만들다"
+      }
+     ]
+    },
+    {
+     "t": 837.2,
+     "en": "Yeah totally.",
+     "turn": false,
+     "ko": "네, 정말 그래요.",
+     "terms": []
+    },
+    {
+     "t": 841.64,
+     "en": "And also I miss hugging my mom right like that never goes away.",
+     "turn": false,
+     "ko": "그리고 엄마를 안아보는 게 그리워요. 그런 마음은 절대 사라지지 않잖아요.",
+     "terms": [
+      {
+       "term": "miss hugging",
+       "ko": "안는 것이 그립다 (miss + -ing)"
+      },
+      {
+       "term": "never goes away",
+       "ko": "결코 사라지지 않다"
+      }
+     ]
+    },
+    {
+     "t": 841.64,
+     "en": "Yeah haptics is hard.",
+     "turn": false,
+     "ko": "네, 햅틱(촉각 기술)은 어려워요.",
+     "terms": [
+      {
+       "term": "haptics",
+       "ko": "햅틱, 촉각 피드백 기술"
+      }
+     ]
+    },
+    {
+     "t": 841.64,
+     "en": "Yeah and so my question is about that it's about this this feeling of like it's hard for me to imagine um a future where real physical presence is not different and special in some way",
+     "turn": false,
+     "ko": "네, 그래서 제 질문은 바로 그거예요. 실제로 몸이 함께 있는 것이 어떤 식으로든 다르고 특별하지 않은 미래는 상상하기 어렵다는 느낌에 관한 거죠.",
+     "terms": [
+      {
+       "term": "physical presence",
+       "ko": "물리적으로 함께 있음"
+      },
+      {
+       "term": "in some way",
+       "ko": "어떤 식으로든"
+      },
+      {
+       "term": "it's hard for me to imagine",
+       "ko": "상상하기 어렵다"
+      }
+     ]
+    },
+    {
+     "t": 865.52,
+     "en": "where I don't miss literally hugging my mom and I'm curious how you think about the parts of human connection that are eye contact and physical touch and things that our ape brains",
+     "turn": false,
+     "ko": "엄마를 말 그대로 안아보는 걸 그리워하지 않게 되는 미래 말이에요. 그리고 눈 맞춤이나 신체 접촉처럼, 우리의 유인원 뇌가",
+     "terms": [
+      {
+       "term": "eye contact",
+       "ko": "눈 맞춤"
+      },
+      {
+       "term": "physical touch",
+       "ko": "신체 접촉"
+      },
+      {
+       "term": "I'm curious how",
+       "ko": "어떻게 ~하는지 궁금하다"
+      }
+     ]
+    },
+    {
+     "t": 881.36,
+     "en": "value for connection with other people.",
+     "turn": false,
+     "ko": "다른 사람과 유대를 맺는 데 중요하게 여기는 인간관계의 측면들을 어떻게 생각하시는지 궁금해요.",
+     "terms": [
+      {
+       "term": "value",
+       "ko": "(동사) 소중히 여기다, 중시하다"
+      },
+      {
+       "term": "connection with",
+       "ko": "~와의 유대, 연결"
+      }
+     ]
+    },
+    {
+     "t": 881.36,
+     "en": "Yeah well eye contact I think we're going to get to a lot before the the touch part.",
+     "turn": false,
+     "ko": "네, 음, 눈 맞춤은 촉각 부분보다 훨씬 먼저 상당 부분 구현하게 될 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "get to",
+       "ko": "~에 이르다, ~까지 해내다"
+      }
+     ]
+    },
+    {
+     "t": 887.52,
+     "en": "For haptics I do think we'll make progress on that but it's it's obviously there's a spectrum there too from kind of hands which is where if you you draw out the kind",
+     "turn": false,
+     "ko": "햅틱도 분명 진전이 있을 거라고 생각하지만, 거기에도 당연히 스펙트럼이 있어요. 손부터 시작해서요. 손은 말하자면",
+     "terms": [
+      {
+       "term": "make progress on",
+       "ko": "~에 진전을 이루다"
+      },
+      {
+       "term": "there's a spectrum",
+       "ko": "다양한 단계(범위)가 있다"
+      },
+      {
+       "term": "draw out",
+       "ko": "그려내다, 펼쳐 보이다"
+      }
+     ]
+    },
+    {
+     "t": 901.12,
+     "en": "of like homunculus version of a person in terms of like what are what are our kind of sensory you know what what's like the majority of what we're sensing it's like yeah yeah so I think being",
+     "turn": false,
+     "ko": "우리 감각 측면에서 사람을 호문쿨루스 버전으로 그려보면, 우리가 느끼는 감각의 대부분이 어디에 몰려 있는지 보이잖아요. 네, 그래서 제 생각에는",
+     "terms": [
+      {
+       "term": "in terms of",
+       "ko": "~의 측면에서"
+      },
+      {
+       "term": "the majority of",
+       "ko": "~의 대부분"
+      }
+     ]
+    },
+    {
+     "t": 910.76,
+     "en": "able to do that for your hands is probably the most important place to start and you have a rough version of that with controllers today.",
+     "turn": false,
+     "ko": "손에서 그걸 구현하는 게 아마 가장 중요한 출발점일 거고, 지금은 컨트롤러로 그 초보적인 버전이 있죠.",
+     "terms": [
+      {
+       "term": "the most important place to start",
+       "ko": "가장 중요한 출발점"
+      },
+      {
+       "term": "a rough version",
+       "ko": "대략적인, 초보적인 버전"
+      }
+     ]
+    },
+    {
+     "t": 916.52,
+     "en": "I think that that'll get even more over time.",
+     "turn": false,
+     "ko": "시간이 지나면서 그게 훨씬 더 발전할 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "over time",
+       "ko": "시간이 지나면서"
+      }
+     ]
+    },
+    {
+     "t": 916.52,
+     "en": "We have this demo playing pingpong where you have a controller where as the digital ball hits the ping pong paddle you feel it hit the as if it's hitting the ping pong paddle wherever it is so you actually",
+     "turn": false,
+     "ko": "저희에게 탁구 치는 데모가 있는데, 컨트롤러를 쥐고 있으면 디지털 공이 탁구채에 맞을 때, 공이 탁구채 어디에 맞든 정말 맞는 것처럼 느껴져요. 그래서 실제로",
+     "terms": [
+      {
+       "term": "as if",
+       "ko": "마치 ~인 것처럼"
+      },
+      {
+       "term": "wherever it is",
+       "ko": "그게 어디든"
+      }
+     ]
+    },
+    {
+     "t": 931.6,
+     "en": "have a sense of like where it's it's hitting the the the paddle so I think that was that was just a wild demo so I think we'll get some of that the most extreme version of this is wanting",
+     "turn": false,
+     "ko": "공이 탁구채 어디에 맞는지 감각이 생기죠. 정말 놀라운 데모였어요. 그래서 그런 건 어느 정도 가능해질 거예요. 이것의 가장 극단적인 버전은",
+     "terms": [
+      {
+       "term": "have a sense of",
+       "ko": "~에 대한 감각이 있다"
+      },
+      {
+       "term": "wild",
+       "ko": "(구어) 놀라운, 엄청난"
+      },
+      {
+       "term": "the most extreme version",
+       "ko": "가장 극단적인 형태"
+      }
+     ]
+    },
+    {
+     "t": 941.92,
+     "en": "force feedback right so I mean like for doing a lot of sports right it's it's like okay we can kind of do a good approximation of like boxing today or you get like good feedback on your hands but it",
+     "turn": false,
+     "ko": "힘 피드백(포스 피드백)을 원하는 거죠. 많은 스포츠를 할 때처럼요. 지금도 복싱 정도는 꽤 그럴듯하게 흉내 낼 수 있어요. 손에 피드백이 잘 오니까요. 하지만",
+     "terms": [
+      {
+       "term": "force feedback",
+       "ko": "힘 피드백 (물리적 저항감을 주는 기술)"
+      },
+      {
+       "term": "a good approximation of",
+       "ko": "~의 꽤 괜찮은 근사치"
+      }
+     ]
+    },
+    {
+     "t": 954.12,
+     "en": "would be hard to do a virtual reality version of Jiu-Jitsu where you're like grappling with someone and you need like real kind of force feedback on that so that's probably like the hardest thing",
+     "turn": false,
+     "ko": "주짓수를 가상현실로 구현하는 건 어려울 거예요. 누군가와 뒤엉켜 맞붙는데 진짜 힘 피드백이 필요하니까요. 그래서 그게 아마 가장 어려운 일일 거예요.",
+     "terms": [
+      {
+       "term": "grappling with",
+       "ko": "~와 맞붙어 씨름하다 (비유: ~로 고심하다)"
+      },
+      {
+       "term": "the hardest thing",
+       "ko": "가장 어려운 일"
+      }
+     ]
+    },
+    {
+     "t": 964.04,
+     "en": "right to go do but I think we'll get there.",
+     "turn": false,
+     "ko": "해내기에는요. 그래도 결국 거기까지 갈 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "get there",
+       "ko": "목표에 도달하다, 결국 해내다"
+      }
+     ]
+    },
+    {
+     "t": 964.04,
+     "en": "You know I think like most science fiction it's not this binary thing that you just like wake up one day and we're like oh we've realized all the",
+     "turn": false,
+     "ko": "대부분의 SF가 그렇듯, 이건 어느 날 눈을 떠 보니 '아, 우리가 다 실현했네' 하는 식의 이분법적인 일이 아니에요.",
+     "terms": [
+      {
+       "term": "binary thing",
+       "ko": "이분법적인 것 (되거나 안 되거나)"
+      },
+      {
+       "term": "wake up one day",
+       "ko": "어느 날 깨어나 보니"
+      }
+     ]
+    },
+    {
+     "t": 974.96,
+     "en": "dreams but but I I do think that these platforms are going to be the first time that I think that there's a realistic sense of presence in all the ways that that's special to people for",
+     "turn": false,
+     "ko": "그 모든 꿈을요. 하지만 저는 이 플랫폼들이 처음으로 현실적인 실재감을 주게 될 거라고 확실히 생각해요. 사람들에게 특별한 모든 면에서요.",
+     "terms": [
+      {
+       "term": "realistic sense of presence",
+       "ko": "현실적인 실재감"
+      },
+      {
+       "term": "special to people",
+       "ko": "사람들에게 특별한"
+      }
+     ]
+    },
+    {
+     "t": 989.08,
+     "en": "most things that people want to do which are not the most physical ones and even some of the basic physical ones I think we'll get.",
+     "turn": false,
+     "ko": "사람들이 하고 싶어 하는 대부분의 일에 대해서요. 가장 몸을 많이 쓰는 활동은 아니겠지만, 기본적인 신체 활동 일부는 가능해질 거라고 봐요.",
+     "terms": []
+    },
+    {
+     "t": 993.64,
+     "en": "But then there's a long tale of other stuff I mean smell is also really important for people yeah right it's I think it's disproportionately important for",
+     "turn": false,
+     "ko": "하지만 그 밖에도 길게 남아 있는 것들(롱테일)이 있어요. 냄새도 사람들에게 정말 중요하잖아요. 네, 맞아요. 냄새는 유독 크게 중요한 것 같아요.",
+     "terms": [
+      {
+       "term": "long tale",
+       "ko": "(= long tail) 롱테일, 길게 남은 나머지 것들"
+      },
+      {
+       "term": "disproportionately important",
+       "ko": "비중 이상으로 유난히 중요한"
+      }
+     ]
+    },
+    {
+     "t": 1002.52,
+     "en": "memories and that's not really a thing that I think in the next few years we're going to have in any of these devices I mean that's a very difficult and challenging thing on its own.",
+     "turn": false,
+     "ko": "기억에 있어서요. 그런데 그건 앞으로 몇 년 안에 이런 기기들 어디에도 들어가지 않을 거예요. 그 자체로 매우 어렵고 까다로운 과제거든요.",
+     "terms": [
+      {
+       "term": "in the next few years",
+       "ko": "앞으로 몇 년 안에"
+      },
+      {
+       "term": "on its own",
+       "ko": "그 자체로"
+      }
+     ]
+    },
+    {
+     "t": 1009.24,
+     "en": "What is the piece of that that you feel most interested in, that you keep coming back to in your mind?",
+     "turn": false,
+     "ko": "그중에서 가장 관심이 가고, 머릿속에서 자꾸 다시 떠올리게 되는 부분은 뭔가요?",
+     "terms": [
+      {
+       "term": "keep coming back to",
+       "ko": "계속 ~로 되돌아오다, 자꾸 생각하게 되다"
+      }
+     ]
+    },
+    {
+     "t": 1015.16,
+     "en": "This has the frustrating property to develop that the sense of presence is almost like when you're designing something that that's sort of trying to artificially deliver it you're delivering",
+     "turn": false,
+     "ko": "이건 개발하기에 답답한 특성이 있어요. 실재감이라는 건, 그걸 인위적으로 전달하려는 무언가를 설계할 때 보면, 사실상 전달하는 게",
+     "terms": [
+      {
+       "term": "frustrating property",
+       "ko": "답답한(짜증 나는) 특성"
+      },
+      {
+       "term": "artificially deliver",
+       "ko": "인위적으로 전달하다"
+      }
+     ]
+    },
+    {
+     "t": 1032.28,
+     "en": "an illusion to a person and more than any one thing that provides a sense of presence it's actually more the case that any one thing done wrong breaks the sense of presence.",
+     "turn": false,
+     "ko": "사람에게 일종의 환상인 셈이에요. 그리고 실재감을 만들어주는 어느 한 가지보다는, 사실 어느 하나라도 잘못되면 실재감이 깨져버린다는 쪽이 더 맞는 말이에요.",
+     "terms": [
+      {
+       "term": "illusion",
+       "ko": "환상, 착각"
+      },
+      {
+       "term": "it's actually more the case that",
+       "ko": "사실은 오히려 ~라는 쪽이 맞다"
+      },
+      {
+       "term": "breaks the sense of presence",
+       "ko": "실재감을 깨뜨리다"
+      }
+     ]
+    },
+    {
+     "t": 1040.28,
+     "en": "You kind of know that you're interacting with technology but it's so convincing that um that you just kind of go along with it.",
+     "turn": false,
+     "ko": "기술과 상호작용하고 있다는 건 어느 정도 알지만, 너무 그럴듯해서 그냥 받아들이게 되는 거죠.",
+     "terms": [
+      {
+       "term": "so convincing that",
+       "ko": "너무 그럴듯해서 ~하다"
+      },
+      {
+       "term": "go along with",
+       "ko": "(그대로) 받아들이다, 따라가다"
+      }
+     ]
+    },
+    {
+     "t": 1053.08,
+     "en": "You're like okay yeah no this person feels like it feel like they're there right.",
+     "turn": false,
+     "ko": "'그래, 이 사람이 정말 여기 있는 것 같아' 하는 느낌이 드는 거예요.",
+     "terms": [
+      {
+       "term": "You're like",
+       "ko": "(구어) ~라는 반응이 나오다, ~라고 느끼다"
+      }
+     ]
+    },
+    {
+     "t": 1057.68,
+     "en": "When I did that pingpong demo I like at the end of it I dropped the pingpong paddle on the virtual table and it shattered so that was not the best for for our internal development but",
+     "turn": false,
+     "ko": "그 탁구 데모를 했을 때, 끝나고 나서 가상 탁구대 위에 탁구채를 내려놓았는데 그게 박살이 났어요. 그래서 내부 개발에는 별로 좋은 일이 아니었지만",
+     "terms": [
+      {
+       "term": "at the end of it",
+       "ko": "그것이 끝날 때, 마지막에"
+      },
+      {
+       "term": "shattered",
+       "ko": "산산조각 났다"
+      },
+      {
+       "term": "not the best for",
+       "ko": "~에 그다지 좋지 않은"
+      }
+     ]
+    },
+    {
+     "t": 1070.92,
+     "en": "like that's winning in our in our development right it's like when when you feel like something is is kind of so realistic that you you're just convinced that um that it's there now and there",
+     "turn": false,
+     "ko": "저희 개발 관점에서는 그게 바로 성공인 거죠. 뭔가가 너무 사실적이어서 그게 지금 거기 있다고 그냥 확신하게 될 때 말이에요. 그리고",
+     "terms": [
+      {
+       "term": "that's winning",
+       "ko": "그게 바로 성공(승리)이다"
+      },
+      {
+       "term": "convinced that",
+       "ko": "~라고 확신하는"
+      }
+     ]
+    },
+    {
+     "t": 1081.88,
+     "en": "are a lot of things that can break that right so I think a a field of view that's too low right so something feels real but then you turn your head and it's not there um latency read physics that",
+     "turn": false,
+     "ko": "그걸 깨뜨릴 수 있는 것들이 많아요. 예를 들어 시야각이 너무 좁은 거요. 뭔가가 진짜처럼 느껴지는데 고개를 돌리면 사라져 있는 거죠. 그리고 지연 시간, 그리고 물리 법칙이",
+     "terms": [
+      {
+       "term": "field of view",
+       "ko": "시야각, 시야"
+      },
+      {
+       "term": "turn your head",
+       "ko": "고개를 돌리다"
+      },
+      {
+       "term": "latency",
+       "ko": "지연 시간, 레이턴시"
+      }
+     ]
+    },
+    {
+     "t": 1092.6,
+     "en": "don't behave like realistic physics.",
+     "turn": false,
+     "ko": "현실의 물리처럼 움직이지 않는 것도요.",
+     "terms": [
+      {
+       "term": "behave like",
+       "ko": "~처럼 작동하다, 움직이다"
+      }
+     ]
+    },
+    {
+     "t": 1092.6,
+     "en": "It also is interesting in some ways what people can accept as physically real even though it's not right so like we've done a ton of work on avatars we",
+     "turn": false,
+     "ko": "또 어떤 면에서는, 실제가 아닌데도 사람들이 물리적으로 진짜라고 받아들일 수 있는 게 뭔지도 흥미로워요. 저희가 아바타 작업을 엄청 많이 했거든요. 저희는",
+     "terms": [
+      {
+       "term": "in some ways",
+       "ko": "어떤 면에서는"
+      },
+      {
+       "term": "accept as",
+       "ko": "~로 받아들이다"
+      },
+      {
+       "term": "a ton of work",
+       "ko": "엄청난 양의 작업"
+      }
+     ]
+    },
+    {
+     "t": 1105.56,
+     "en": "we have this whole work stream on Kodak avatars to do these photo avatars and it's I think it's going to be incredbly compelling and people are going to love it but one of the things I found",
+     "turn": false,
+     "ko": "사진처럼 실감 나는 아바타를 만드는 코덱(Codec) 아바타 작업 라인이 통째로 있는데, 정말 매력적일 거고 사람들이 엄청 좋아할 거라고 생각해요. 그런데 제가 흥미롭다고 느낀 것 중 하나는",
+     "terms": [
+      {
+       "term": "work stream",
+       "ko": "(프로젝트의) 작업 라인, 업무 흐름"
+      },
+      {
+       "term": "one of the things I found",
+       "ko": "내가 ~라고 느낀 것 중 하나"
+      }
+     ]
+    },
+    {
+     "t": 1116.04,
+     "en": "interesting is the ability to mix photorealistic and expressive kind of the cartoony avatars with photorealistic worlds and kind of more cartoony computer game type worlds so you can have the",
+     "turn": false,
+     "ko": "실사 같은 아바타와 표현력 있는 만화풍 아바타를, 실사 같은 세계나 좀 더 만화 같은 게임풍 세계와 섞을 수 있다는 점이에요. 그래서",
+     "terms": [
+      {
+       "term": "photorealistic",
+       "ko": "사진처럼 사실적인"
+      },
+      {
+       "term": "expressive",
+       "ko": "표현력이 풍부한"
+      },
+      {
+       "term": "cartoony",
+       "ko": "만화 같은"
+      }
+     ]
+    },
+    {
+     "t": 1129.52,
+     "en": "a Kodak kind of photorealistic avatar of a person in what is clearly like a video game or cartoon world and people are generally pretty fine with that it's like okay that",
+     "turn": false,
+     "ko": "누가 봐도 비디오 게임이나 만화 세계인 곳에 코덱 방식의 실사 아바타를 둘 수도 있는데, 사람들은 대체로 그걸 꽤 괜찮게 받아들여요. '좋아, 이거",
+     "terms": [
+      {
+       "term": "what is clearly",
+       "ko": "누가 봐도 분명히 ~인 것"
+      },
+      {
+       "term": "pretty fine with",
+       "ko": "~을 꽤 괜찮게 여기는"
+      }
+     ]
+    },
+    {
+     "t": 1138.92,
+     "en": "that feels pretty good and similarly having a photorealistic world but good increasingly good kind of cartoon avatars as long as the avatars move in a way that feels authentic to",
+     "turn": false,
+     "ko": "꽤 괜찮은데' 하는 식이죠. 마찬가지로 실사 같은 세계에 점점 좋아지는 만화풍 아바타가 있어도, 아바타가 진짜 그 사람답게 느껴지는 방식으로 움직이기만 하면",
+     "terms": [
+      {
+       "term": "as long as",
+       "ko": "~하기만 하면"
+      },
+      {
+       "term": "authentic to",
+       "ko": "~에게 진짜다운, ~ 고유의"
+      },
+      {
+       "term": "increasingly good",
+       "ko": "점점 좋아지는"
+      }
+     ]
+    },
+    {
+     "t": 1153.16,
+     "en": "the person you're interacting with it actually feels pretty good you know it's when you look at a 2d still frame of it some of the stuff can look a little bit silly and and we've certainly",
+     "turn": false,
+     "ko": "상호작용하는 상대방답게 말이에요. 그러면 실제로 꽤 괜찮게 느껴져요. 2D 정지 화면으로 보면 좀 우스꽝스러워 보이는 것도 있고, 저희도 분명",
+     "terms": [
+      {
+       "term": "still frame",
+       "ko": "정지 화면"
+      },
+      {
+       "term": "look a little bit silly",
+       "ko": "좀 우스꽝스러워 보이다"
+      }
+     ]
+    },
+    {
+     "t": 1162.64,
+     "en": "you know had had a our share of memes around that but um but when you're in there you know and you you've played around with lot of the stuff it feels realistic because it's basically mimicking",
+     "turn": false,
+     "ko": "그걸로 밈이 될 만큼 됐죠. 하지만 그 안에 들어가서 이것저것 직접 써보면 사실적으로 느껴져요. 기본적으로 흉내 내고 있으니까요.",
+     "terms": [
+      {
+       "term": "our share of",
+       "ko": "(had our share of) ~을 겪을 만큼 겪다"
+      },
+      {
+       "term": "played around with",
+       "ko": "이것저것 만져보다, 가지고 놀다"
+      },
+      {
+       "term": "mimicking",
+       "ko": "흉내 내는, 모방하는"
+      }
+     ]
+    },
+    {
+     "t": 1172.48,
+     "en": "the kind of authentic mannerisms of of a person that you're interacting with and even if it's not a Kodak photo realistic avatar if it's kind of a more cartoony expressive one so I I think that",
+     "turn": false,
+     "ko": "상대하는 사람의 진짜 버릇과 몸짓을요. 코덱 실사 아바타가 아니라 좀 더 만화 같고 표현력 있는 아바타라도 말이에요. 그래서 제 생각에",
+     "terms": [
+      {
+       "term": "mannerisms",
+       "ko": "(사람 특유의) 버릇, 몸짓"
+      },
+      {
+       "term": "even if",
+       "ko": "비록 ~일지라도"
+      }
+     ]
+    },
+    {
+     "t": 1182.4,
+     "en": "that's it's very interesting to see kind of which pieces you need to unlock and what where you just need to be like very technically excellent and consistent but it's um this isn't a space",
+     "turn": false,
+     "ko": "어떤 요소를 풀어내야 하는지, 그리고 어디서 기술적으로 아주 뛰어나고 일관되어야 하는지 보는 게 정말 흥미로워요. 하지만 이건",
+     "terms": [
+      {
+       "term": "unlock",
+       "ko": "(비유) 풀어내다, 가능하게 하다"
+      },
+      {
+       "term": "technically excellent",
+       "ko": "기술적으로 뛰어난"
+      },
+      {
+       "term": "consistent",
+       "ko": "일관된"
+      }
+     ]
+    },
+    {
+     "t": 1192.84,
+     "en": "where it's like you deliver one thing and it's good this is like there's a wide breth of things that you need to nail and then have it all come together and that's why these are you know 10 year",
+     "turn": false,
+     "ko": "한 가지만 잘 해내면 되는 분야가 아니에요. 완벽하게 해내야 할 것들이 아주 폭넓게 있고, 그걸 전부 하나로 맞물리게 해야 하죠. 그래서 이런 게 10년짜리",
+     "terms": [
+      {
+       "term": "wide breth of",
+       "ko": "(= wide breadth of) 폭넓은 범위의"
+      },
+      {
+       "term": "nail",
+       "ko": "(구어) 완벽하게 해내다"
+      },
+      {
+       "term": "come together",
+       "ko": "하나로 합쳐지다, 맞아떨어지다"
+      }
+     ]
+    },
+    {
+     "t": 1203.48,
+     "en": "projects.",
+     "turn": false,
+     "ko": "프로젝트인 거예요.",
+     "terms": []
+    },
+    {
+     "t": 1203.48,
+     "en": "It seems like an interesting way to learn about the human brain and what we actually care about with respect to what feels real.",
+     "turn": false,
+     "ko": "인간의 뇌에 대해, 그리고 무엇이 진짜처럼 느껴지는지와 관련해 우리가 실제로 무엇을 중요하게 여기는지 알아가는 흥미로운 방법 같네요.",
+     "terms": [
+      {
+       "term": "with respect to",
+       "ko": "~에 관해, ~와 관련하여"
+      },
+      {
+       "term": "care about",
+       "ko": "~을 중요하게 여기다"
+      }
+     ]
+    },
+    {
+     "t": 1211.84,
+     "en": "I was wondering about, there was this moment in an interview that you did with Lex Friedman, you quoted research that says that the average American has",
+     "turn": false,
+     "ko": "궁금했던 게 있는데요, 렉스 프리드먼과 하신 인터뷰에서 이런 장면이 있었어요. 평균적인 미국인이",
+     "terms": [
+      {
+       "term": "I was wondering about",
+       "ko": "~에 대해 궁금했다"
+      },
+      {
+       "term": "quoted research",
+       "ko": "연구를 인용했다"
+      }
+     ]
+    },
+    {
+     "t": 1225.04,
+     "en": "fewer friends now than they did 15 years ago and I was so interested in that because it seems like if we want to get to a world where there's more human connection this is the trend",
+     "turn": false,
+     "ko": "15년 전보다 지금 친구가 더 적다는 연구를 인용하셨죠. 그게 정말 흥미로웠던 게, 인간적 유대가 더 많은 세상으로 가고 싶다면 이게 바로",
+     "terms": [
+      {
+       "term": "fewer friends now than",
+       "ko": "~보다 지금 친구가 더 적은"
+      },
+      {
+       "term": "human connection",
+       "ko": "인간적 유대, 사람 간의 연결"
+      }
+     ]
+    },
+    {
+     "t": 1236.44,
+     "en": "that we're going to have to grapple with and just to give some data on this in the American Time Use Survey over the last 20 years the amount of time American adults spend socializing in person has",
+     "turn": false,
+     "ko": "우리가 씨름해야 할 추세인 것 같거든요. 관련 데이터를 좀 드리자면, 미국인 시간 사용 조사에서 지난 20년간 미국 성인이 직접 만나 어울리는 시간이",
+     "terms": [
+      {
+       "term": "grapple with",
+       "ko": "~와 씨름하다, 해결하려 애쓰다"
+      },
+      {
+       "term": "socializing in person",
+       "ko": "직접 만나 어울리기"
+      },
+      {
+       "term": "over the last 20 years",
+       "ko": "지난 20년간"
+      }
+     ]
+    },
+    {
+     "t": 1249.12,
+     "en": "dropped by nearly 30%.",
+     "turn": false,
+     "ko": "거의 30% 줄었어요.",
+     "terms": [
+      {
+       "term": "dropped by",
+       "ko": "~만큼 감소하다 (감소 폭)"
+      }
+     ]
+    },
+    {
+     "t": 1249.12,
+     "en": "For ages 15 to 24 according to the Surgeon General it's nearly 70%.",
+     "turn": false,
+     "ko": "공중보건국장에 따르면 15~24세는 거의 70%나 줄었어요.",
+     "terms": [
+      {
+       "term": "according to",
+       "ko": "~에 따르면"
+      }
+     ]
+    },
+    {
+     "t": 1249.12,
+     "en": "and I look at that data and I think to myself well maybe if we're all socializing digitally that doesn't matter so much maybe there's a future where that's actually fine but there's also data that suggest",
+     "turn": false,
+     "ko": "그 데이터를 보면서 속으로 생각해요. 우리가 다 디지털로 교류한다면 그게 별로 중요하지 않을 수도 있겠다, 사실 괜찮은 미래일 수도 있겠다고요. 하지만 이런 걸 시사하는 데이터도 있어요.",
+     "terms": [
+      {
+       "term": "think to myself",
+       "ko": "속으로 생각하다"
+      },
+      {
+       "term": "doesn't matter so much",
+       "ko": "그다지 중요하지 않다"
+      },
+      {
+       "term": "data that suggest",
+       "ko": "~을 시사하는 데이터"
+      }
+     ]
+    },
+    {
+     "t": 1268.64,
+     "en": "that we're struggling somewhat.",
+     "turn": false,
+     "ko": "우리가 다소 힘들어하고 있다는 걸요.",
+     "terms": [
+      {
+       "term": "struggling",
+       "ko": "힘들어하는, 고전하는"
+      },
+      {
+       "term": "somewhat",
+       "ko": "다소, 어느 정도"
+      }
+     ]
+    },
+    {
+     "t": 1268.64,
+     "en": "The number of Americans who say that they don't have a single close friend - yeah it's really sad - that share has jumped from 3% to 12% in the last 30 years.",
+     "turn": false,
+     "ko": "가까운 친구가 단 한 명도 없다고 말하는 미국인의 수가 — 네, 정말 슬프죠 — 그 비율이 지난 30년 동안 3%에서 12%로 뛰었어요.",
+     "terms": [
+      {
+       "term": "don't have a single close friend",
+       "ko": "가까운 친구가 단 한 명도 없다"
+      },
+      {
+       "term": "jumped from 3% to 12%",
+       "ko": "3%에서 12%로 급증했다 (jump from A to B)"
+      },
+      {
+       "term": "that share",
+       "ko": "그 비율"
+      }
+     ]
+    },
+    {
+     "t": 1275.24,
+     "en": "It feels to me like with all the tools that we've built for human connection, we're struggling to connect and I'm curious",
+     "turn": false,
+     "ko": "제가 느끼기엔, 인간적 유대를 위해 우리가 만든 그 모든 도구가 있는데도 우리는 서로 연결되는 데 어려움을 겪고 있는 것 같아요. 그래서 궁금한데요,",
+     "terms": [
+      {
+       "term": "with all the tools",
+       "ko": "그 모든 도구가 있는데도"
+      },
+      {
+       "term": "struggling to connect",
+       "ko": "연결되는 데 어려움을 겪다"
+      }
+     ]
+    },
+    {
+     "t": 1293.44,
+     "en": "why do you think that's happening?",
+     "turn": false,
+     "ko": "왜 그런 일이 일어나고 있다고 생각하세요?",
+     "terms": []
+    },
+    {
+     "t": 1293.44,
+     "en": "I mean there's a lot going on to to unpack there.",
+     "turn": false,
+     "ko": "음, 거기엔 하나하나 풀어볼 게 많아요.",
+     "terms": [
+      {
+       "term": "there's a lot going on",
+       "ko": "여러 일이 얽혀 있다"
+      },
+      {
+       "term": "unpack",
+       "ko": "(복잡한 문제를) 풀어서 분석하다"
+      }
+     ]
+    },
+    {
+     "t": 1293.44,
+     "en": "A lot has changed sort of economically and socially during that period and a lot of those trends go back before a lot of the modern technology.",
+     "turn": false,
+     "ko": "그 기간 동안 경제적으로나 사회적으로 많은 게 바뀌었고, 그런 추세 중 상당수는 현대 기술 대부분이 나오기 전으로 거슬러 올라가요.",
+     "terms": [
+      {
+       "term": "go back before",
+       "ko": "~ 이전으로 거슬러 올라가다"
+      },
+      {
+       "term": "during that period",
+       "ko": "그 기간 동안"
+      }
+     ]
+    },
+    {
+     "t": 1309.12,
+     "en": "So I mean this is something that a lot of academics and folks have have studied but it is an interesting lens to look at this though because I think whenever",
+     "turn": false,
+     "ko": "그러니까 이건 많은 학자와 사람들이 연구해 온 주제지만, 그래도 이걸 바라보는 흥미로운 관점이긴 해요. 왜냐하면",
+     "terms": [
+      {
+       "term": "academics",
+       "ko": "학자들"
+      },
+      {
+       "term": "lens",
+       "ko": "(비유) 관점, 렌즈"
+      }
+     ]
+    },
+    {
+     "t": 1321.52,
+     "en": "you're talking about building digital types of connection one of the first questions that you get is is that going to replace the physical connection and my answer to that especially in the",
+     "turn": false,
+     "ko": "디지털 방식의 연결을 만드는 이야기를 할 때마다 가장 먼저 받는 질문 중 하나가 '그게 물리적인 연결을 대체할 것인가'거든요. 그리고 그에 대한 제 대답은, 특히",
+     "terms": [
+      {
+       "term": "one of the first questions",
+       "ko": "가장 먼저 나오는 질문 중 하나"
+      },
+      {
+       "term": "replace",
+       "ko": "대체하다"
+      }
+     ]
+    },
+    {
+     "t": 1336.28,
+     "en": "case of something like this is that no because people already don't have as much connection as they would like to have.",
+     "turn": false,
+     "ko": "이런 경우에는 '아니다'예요. 사람들은 이미 원하는 만큼 충분한 관계를 갖고 있지 않으니까요.",
+     "terms": [
+      {
+       "term": "as much connection as they would like to have",
+       "ko": "원하는 만큼의 관계"
+      },
+      {
+       "term": "case of something like this",
+       "ko": "(in the case of) 이런 것의 경우"
+      }
+     ]
+    },
+    {
+     "t": 1345.2,
+     "en": "It's not like this is replacing some sort of better physical connection that they would have otherwise had.",
+     "turn": false,
+     "ko": "이게 원래라면 가졌을 더 나은 물리적 관계를 대체하는 게 아니라는 거죠.",
+     "terms": [
+      {
+       "term": "It's not like",
+       "ko": "~인 것도 아니다"
+      },
+      {
+       "term": "would have otherwise had",
+       "ko": "그렇지 않았다면 가졌을"
+      }
+     ]
+    },
+    {
+     "t": 1350.48,
+     "en": "It's that the average person would like to have 10 friends and they have two right or three and there's just more demand to socialize than what people are",
+     "turn": false,
+     "ko": "평균적인 사람은 친구가 10명쯤 있었으면 하는데 실제로는 둘이나 셋뿐이에요. 사람들이 교류하고 싶어 하는 수요가",
+     "terms": [
+      {
+       "term": "would like to",
+       "ko": "~하고 싶다"
+      },
+      {
+       "term": "demand to socialize",
+       "ko": "교류하려는 욕구(수요)"
+      }
+     ]
+    },
+    {
+     "t": 1365.88,
+     "en": "able to do given the current construct and giving people the ability to be present with people who are in other places physically just seems like it will unlock more.",
+     "turn": false,
+     "ko": "현재 구조에서 실제로 할 수 있는 것보다 더 많은 거죠. 그러니 물리적으로 다른 곳에 있는 사람들과 함께 있을 수 있게 해주면 더 많은 가능성이 열릴 것 같아요.",
+     "terms": [
+      {
+       "term": "given the current construct",
+       "ko": "현재의 구조(여건)를 고려하면"
+      },
+      {
+       "term": "be present with",
+       "ko": "~와 함께 있다"
+      },
+      {
+       "term": "unlock more",
+       "ko": "더 많은 가능성을 열다"
+      }
+     ]
+    },
+    {
+     "t": 1372.2,
+     "en": "It's not going to make it so, if I have glasses, it's not going to make it that I spend less time with my wife, it's going",
+     "turn": false,
+     "ko": "제가 안경을 쓴다고 해서 아내와 보내는 시간이 줄어드는 건 아니에요. 오히려",
+     "terms": [
+      {
+       "term": "make it so",
+       "ko": "(make it so that) ~하게 만들다"
+      },
+      {
+       "term": "spend less time with",
+       "ko": "~와 보내는 시간이 줄다"
+      }
+     ]
+    },
+    {
+     "t": 1380.56,
+     "en": "to make it so that I spend more time with you know my sister who lives across the country.",
+     "turn": false,
+     "ko": "나라 반대편에 사는 여동생과 더 많은 시간을 보내게 해줄 거예요.",
+     "terms": [
+      {
+       "term": "spend more time with",
+       "ko": "~와 더 많은 시간을 보내다"
+      },
+      {
+       "term": "across the country",
+       "ko": "나라 반대편에, 멀리 떨어진 곳에"
+      }
+     ]
+    },
+    {
+     "t": 1380.56,
+     "en": "And that's, I think that's good.",
+     "turn": false,
+     "ko": "그리고 그건 좋은 일이라고 생각해요.",
+     "terms": []
+    },
+    {
+     "t": 1386.36,
+     "en": "I think people need that.",
+     "turn": false,
+     "ko": "사람들에겐 그게 필요하다고 생각해요.",
+     "terms": []
+    },
+    {
+     "t": 1386.36,
+     "en": "As for the rest, I I think we could probably spend a multi-hour podcast just going into all of the different kind of socioeconomic political dynamics that are going on but none of the trends that I've seen",
+     "turn": false,
+     "ko": "나머지에 대해서는, 지금 벌어지는 온갖 사회경제적·정치적 역학을 파고드는 것만으로도 몇 시간짜리 팟캐스트를 할 수 있을 거예요. 하지만 제가 본 추세 중 어느 것도",
+     "terms": [
+      {
+       "term": "As for the rest",
+       "ko": "나머지에 대해서는"
+      },
+      {
+       "term": "going into",
+       "ko": "~을 자세히 다루다, 파고들다"
+      },
+      {
+       "term": "dynamics",
+       "ko": "역학 관계"
+      }
+     ]
+    },
+    {
+     "t": 1408.52,
+     "en": "does it seem like the primary thing that's going on is that because people are interacting online they're now not interacting with their with people physically.",
+     "turn": false,
+     "ko": "사람들이 온라인에서 교류하기 때문에 이제 직접 만나 교류하지 않는다는 게 주된 원인으로 보이지는 않아요.",
+     "terms": [
+      {
+       "term": "the primary thing",
+       "ko": "주된 요인"
+      },
+      {
+       "term": "interacting with",
+       "ko": "~와 교류하다"
+      }
+     ]
+    },
+    {
+     "t": 1413.52,
+     "en": "Now certainly I think you you I do interact with people online who I also like to interact with physically but and I think",
+     "turn": false,
+     "ko": "물론 저도 온라인으로 교류하는 사람들 중에 직접 만나서도 어울리고 싶은 사람들이 있어요. 그리고 제 생각에",
+     "terms": []
+    },
+    {
+     "t": 1428.48,
+     "en": "that that's kind of like a combination um like more combined richer relationship that you have overall but I think that there's a lot going on with the loss of of kind of social capital and",
+     "turn": false,
+     "ko": "그건 일종의 결합, 즉 전체적으로 더 통합되고 풍성한 관계가 되는 거예요. 하지만 사회적 자본과",
+     "terms": [
+      {
+       "term": "richer relationship",
+       "ko": "더 풍성한 관계"
+      },
+      {
+       "term": "overall",
+       "ko": "전반적으로"
+      },
+      {
+       "term": "social capital",
+       "ko": "사회적 자본"
+      }
+     ]
+    },
+    {
+     "t": 1441.08,
+     "en": "connections that really predates a lot of the modern technology.",
+     "turn": false,
+     "ko": "인간관계가 사라지는 문제에서 일어나는 많은 일들은 사실 현대 기술 대부분보다 먼저 시작됐어요.",
+     "terms": [
+      {
+       "term": "predates",
+       "ko": "~보다 먼저 일어나다, 앞서다"
+      }
+     ]
+    },
+    {
+     "t": 1441.08,
+     "en": "The goal of what, I'm what I'm trying most to learn about is how we can structure the technologies that we use in the future to get",
+     "turn": false,
+     "ko": "제가 가장 알고 싶은 건, 미래에 우리가 쓸 기술을 어떻게 설계해야",
+     "terms": [
+      {
+       "term": "trying most to learn about",
+       "ko": "가장 알고 싶어 하는"
+      },
+      {
+       "term": "structure",
+       "ko": "(동사) 구조화하다, 설계하다"
+      }
+     ]
+    },
+    {
+     "t": 1455.92,
+     "en": "toward this future I think you're imagining of more human connection in more ways.",
+     "turn": false,
+     "ko": "말씀하신 것처럼 더 다양한 방식으로 인간적 유대가 많아지는 미래로 나아갈 수 있느냐예요.",
+     "terms": [
+      {
+       "term": "toward this future",
+       "ko": "(get toward) 이 미래를 향해 나아가다"
+      },
+      {
+       "term": "in more ways",
+       "ko": "더 다양한 방식으로"
+      }
+     ]
+    },
+    {
+     "t": 1455.92,
+     "en": "I'm curious, you brought up the other big pillar of AI and in some of your conversations, I'm thinking of a conversation with Tim Ferris in particular, you talked about a lot of different use cases of AI and they seem",
+     "turn": false,
+     "ko": "궁금한 게, 또 다른 큰 축인 AI를 언급하셨잖아요. 몇몇 대화에서, 특히 팀 페리스와의 대화가 떠오르는데, AI의 다양한 활용 사례를 이야기하셨는데요. 그것들이",
+     "terms": [
+      {
+       "term": "brought up",
+       "ko": "(화제를) 꺼냈다"
+      },
+      {
+       "term": "pillar",
+       "ko": "기둥, 핵심 축"
+      },
+      {
+       "term": "use cases",
+       "ko": "활용 사례"
+      }
+     ]
+    },
+    {
+     "t": 1475.48,
+     "en": "to me to fall on somewhat of a spectrum.",
+     "turn": false,
+     "ko": "제가 보기엔 일종의 스펙트럼 위에 놓여 있는 것 같아요.",
+     "terms": [
+      {
+       "term": "fall on somewhat of a spectrum",
+       "ko": "일종의 스펙트럼 위 어딘가에 놓이다"
+      }
+     ]
+    },
+    {
+     "t": 1475.48,
+     "en": "Like for example you mentioned automatic real-time translation, like basically the Star Trek Universal translator.",
+     "turn": false,
+     "ko": "예를 들어 자동 실시간 번역을 말씀하셨죠. 기본적으로 스타트렉의 만능 번역기 같은 거요.",
+     "terms": [
+      {
+       "term": "real-time translation",
+       "ko": "실시간 번역"
+      }
+     ]
+    },
+    {
+     "t": 1482.76,
+     "en": "We're pretty much there!",
+     "turn": false,
+     "ko": "거의 다 왔어요!",
+     "terms": [
+      {
+       "term": "pretty much there",
+       "ko": "거의 다 도달한"
+      }
+     ]
+    },
+    {
+     "t": 1487.52,
+     "en": "Yeah and that's one example on one end of the spectrum where some people might argue that there is a chance that someone is less likely for example to learn a language because we can all",
+     "turn": false,
+     "ko": "네, 그게 스펙트럼 한쪽 끝에 있는 예시예요. 어떤 사람들은, 예를 들어 언어를 배울 가능성이 줄어들 수 있다고 주장할지도 모르죠. 우리 모두가",
+     "terms": [
+      {
+       "term": "on one end of the spectrum",
+       "ko": "스펙트럼의 한쪽 끝에"
+      },
+      {
+       "term": "might argue that",
+       "ko": "~라고 주장할지도 모른다"
+      },
+      {
+       "term": "less likely",
+       "ko": "(less likely to) ~할 가능성이 더 적은"
+      }
+     ]
+    },
+    {
+     "t": 1499.36,
+     "en": "speak to each other in real time in different languages.",
+     "turn": false,
+     "ko": "서로 다른 언어로 실시간 대화할 수 있으니까요.",
+     "terms": [
+      {
+       "term": "in real time",
+       "ko": "실시간으로"
+      }
+     ]
+    },
+    {
+     "t": 1499.36,
+     "en": "I think nobody would really argue that therefore we shouldn't have that kind of universal translator.",
+     "turn": false,
+     "ko": "하지만 그렇다고 해서 그런 만능 번역기가 없어야 한다고 진지하게 주장할 사람은 아무도 없을 거예요.",
+     "terms": [
+      {
+       "term": "argue that",
+       "ko": "~라고 주장하다"
+      }
+     ]
+    },
+    {
+     "t": 1504.04,
+     "en": "People still learn Latin and Greek.",
+     "turn": false,
+     "ko": "사람들은 여전히 라틴어와 그리스어를 배우잖아요.",
+     "terms": []
+    },
+    {
+     "t": 1508.56,
+     "en": "Right exactly and so I think that end of the spectrum is something like um technologies that really measurably unlock our humanity because they remove a struggle between people and then on",
+     "turn": false,
+     "ko": "맞아요, 바로 그거죠. 그래서 스펙트럼의 그쪽 끝은 사람 사이의 어려움을 없애줘서 우리의 인간다움을 눈에 띄게 끌어내 주는 기술 같은 거라고 생각해요. 그리고",
+     "terms": [
+      {
+       "term": "measurably",
+       "ko": "측정할 수 있을 만큼, 눈에 띄게"
+      },
+      {
+       "term": "unlock our humanity",
+       "ko": "인간다움을 끌어내다"
+      },
+      {
+       "term": "remove a struggle",
+       "ko": "어려움을 없애다"
+      }
+     ]
+    },
+    {
+     "t": 1523.84,
+     "en": "the other end of the spectrum there are a lot of educational things for example where the struggle is kind of the point right?",
+     "turn": false,
+     "ko": "스펙트럼의 반대쪽 끝에는, 예를 들어 애쓰는 과정 자체가 핵심인 교육적인 것들이 많잖아요?",
+     "terms": [
+      {
+       "term": "the other end of the spectrum",
+       "ko": "스펙트럼의 반대쪽 끝"
+      },
+      {
+       "term": "the struggle is kind of the point",
+       "ko": "애쓰는 과정 자체가 핵심이다"
+      }
+     ]
+    },
+    {
+     "t": 1527.64,
+     "en": "Like it's like building a muscle.",
+     "turn": false,
+     "ko": "근육을 키우는 것처럼요.",
+     "terms": [
+      {
+       "term": "building a muscle",
+       "ko": "근육을 키우다 (비유: 능력을 단련하다)"
+      }
+     ]
+    },
+    {
+     "t": 1527.64,
+     "en": "I can think of so many times in my life where like the reason why I was doing something was not the output it was the fact that",
+     "turn": false,
+     "ko": "제 인생을 돌아보면, 뭔가를 했던 이유가 결과물 때문이 아니라",
+     "terms": [
+      {
+       "term": "I can think of so many times",
+       "ko": "그런 때가 수없이 떠오른다"
+      },
+      {
+       "term": "the output",
+       "ko": "결과물"
+      }
+     ]
+    },
+    {
+     "t": 1536.96,
+     "en": "I was trying so hard to do it.",
+     "turn": false,
+     "ko": "그걸 해내려고 정말 애썼다는 사실 그 자체였던 때가 아주 많아요.",
+     "terms": [
+      {
+       "term": "trying so hard to",
+       "ko": "~하려고 몹시 애쓰다"
+      }
+     ]
+    },
+    {
+     "t": 1536.96,
+     "en": "There's one example in the Tim Ferris interview where you talked about your kids struggling to articulate themselves emotionally and adults very much had",
+     "turn": false,
+     "ko": "팀 페리스 인터뷰에서 이런 예시가 있었어요. 아이들이 자기 감정을 말로 표현하는 데 어려움을 겪는다고, 그리고 어른들도 똑같이",
+     "terms": [
+      {
+       "term": "struggling to",
+       "ko": "~하는 데 어려움을 겪는"
+      },
+      {
+       "term": "articulate themselves",
+       "ko": "자기 생각·감정을 명확히 표현하다"
+      }
+     ]
+    },
+    {
+     "t": 1548.04,
+     "en": "the same problem and you talked about AI as a way to help them articulate those emotions.",
+     "turn": false,
+     "ko": "그런 문제가 있다고 하시면서, 그런 감정을 표현하도록 돕는 방법으로 AI를 이야기하셨죠.",
+     "terms": [
+      {
+       "term": "as a way to",
+       "ko": "~하는 방법으로"
+      },
+      {
+       "term": "articulate those emotions",
+       "ko": "그런 감정을 말로 표현하다"
+      }
+     ]
+    },
+    {
+     "t": 1548.04,
+     "en": "Yeah and I thought about all of the many times in my life where I have struggled to articulate my emotions and how I really could have used some help in those moments and I also found myself thinking",
+     "turn": false,
+     "ko": "네, 그래서 제 인생에서 감정을 표현하려고 애썼던 수많은 순간들, 그리고 그때 정말 누가 좀 도와줬으면 좋았겠다는 생각이 들었어요. 그러면서 동시에 이런 생각도 하게 됐죠.",
+     "terms": [
+      {
+       "term": "could have used some help",
+       "ko": "도움이 있었으면 좋았을 것이다"
+      },
+      {
+       "term": "found myself thinking",
+       "ko": "나도 모르게 ~을 생각하고 있었다"
+      }
+     ]
+    },
+    {
+     "t": 1564.24,
+     "en": "about the times when that was really building a muscle where like the act of struggling to communicate with someone and understand what they wanted from me was was important to my development.",
+     "turn": false,
+     "ko": "그게 정말 근육을 키우는 일이었던 때들 말이에요. 누군가와 소통하려고, 그 사람이 나에게 원하는 게 뭔지 이해하려고 애쓰는 행위 자체가 제 성장에 중요했던 때요.",
+     "terms": [
+      {
+       "term": "what they wanted from me",
+       "ko": "그들이 내게 원하는 것"
+      },
+      {
+       "term": "important to my development",
+       "ko": "나의 성장에 중요한"
+      }
+     ]
+    },
+    {
+     "t": 1574.08,
+     "en": "And so my question is if you think about that as a spectrum between things that are really important to our humanity where and the struggle being removed is helpful versus things where the",
+     "turn": false,
+     "ko": "그래서 제 질문은, 이걸 하나의 스펙트럼으로 생각해 본다면요. 한쪽은 인간다움에 정말 중요하면서 어려움이 사라지는 게 도움이 되는 것들이고, 다른 한쪽은",
+     "terms": [
+      {
+       "term": "important to our humanity",
+       "ko": "우리의 인간다움에 중요한"
+      },
+      {
+       "term": "versus",
+       "ko": "~ 대(對), ~와 대조적으로"
+      }
+     ]
+    },
+    {
+     "t": 1585.44,
+     "en": "struggle is the point and it unlocks something about our humanity and is important to preserve like building a muscle, how do you draw the line between those things and how do",
+     "turn": false,
+     "ko": "애쓰는 것 자체가 핵심이고, 우리 인간다움의 무언가를 끌어내며, 근육을 키우는 것처럼 지켜야 할 중요한 것들이죠. 그 둘 사이에 어떻게 선을 그으시나요? 그리고 어떻게 해야",
+     "terms": [
+      {
+       "term": "important to preserve",
+       "ko": "지켜야 할 중요한"
+      },
+      {
+       "term": "draw the line between",
+       "ko": "~ 사이에 선을 긋다, 구분하다"
+      }
+     ]
+    },
+    {
+     "t": 1597.48,
+     "en": "we ensure that the muscles that we're building for this future are stronger and not weaker?",
+     "turn": false,
+     "ko": "우리가 이 미래를 위해 키우는 근육이 약해지지 않고 더 강해지도록 할 수 있을까요?",
+     "terms": [
+      {
+       "term": "ensure that",
+       "ko": "반드시 ~하도록 하다, 보장하다"
+      }
+     ]
+    },
+    {
+     "t": 1597.48,
+     "en": "Yeah it's interesting I mean I think we're always going to find new things to struggle with and I mean it's you can always get better at communicating with other people and kind of expressing yourself and",
+     "turn": false,
+     "ko": "네, 흥미롭네요. 저는 우리가 늘 새로 씨름할 거리를 찾게 될 거라고 생각해요. 다른 사람과 소통하고, 자신을 표현하고,",
+     "terms": [
+      {
+       "term": "struggle with",
+       "ko": "~와 씨름하다"
+      },
+      {
+       "term": "get better at",
+       "ko": "~을 더 잘하게 되다"
+      },
+      {
+       "term": "expressing yourself",
+       "ko": "자신을 표현하기"
+      }
+     ]
+    },
+    {
+     "t": 1612.04,
+     "en": "understanding other people so having a tool that can help you do that better isn't going to mean that like oh now we perfectly understand every you know it's I mean I think the maybe one",
+     "turn": false,
+     "ko": "다른 사람을 이해하는 건 언제나 더 잘할 수 있으니까요. 그러니 그걸 더 잘하게 돕는 도구가 생긴다고 해서 '아, 이제 우리가 모든 걸 완벽히 이해한다'는 뜻은 아니에요. 제 생각에 아마",
+     "terms": [
+      {
+       "term": "help you do that better",
+       "ko": "그걸 더 잘하도록 돕다"
+      },
+      {
+       "term": "isn't going to mean that",
+       "ko": "~라는 뜻은 아니다"
+      }
+     ]
+    },
+    {
+     "t": 1625.6,
+     "en": "of the most functional aspects of this you're already seeing a lot of these AI models really help people with coding right like a generation ago um before I was getting started a lot of",
+     "turn": false,
+     "ko": "가장 실용적인 측면 중 하나로, 이미 많은 AI 모델이 사람들의 코딩을 정말 많이 돕고 있잖아요. 한 세대 전, 제가 시작하기 전에는",
+     "terms": [
+      {
+       "term": "functional aspects",
+       "ko": "실용적인 측면"
+      },
+      {
+       "term": "help people with",
+       "ko": "사람들의 ~을 돕다"
+      },
+      {
+       "term": "a generation ago",
+       "ko": "한 세대 전"
+      }
+     ]
+    },
+    {
+     "t": 1634.92,
+     "en": "coding was like really low-level system software and you know then by the time that I got into it there was a little bit of that but um you you can make websites pretty easily make apps pretty",
+     "turn": false,
+     "ko": "코딩이 대부분 아주 로우레벨 시스템 소프트웨어였어요. 제가 코딩에 입문할 무렵에도 그런 게 좀 있긴 했지만, 웹사이트를 꽤 쉽게 만들 수 있었고 앱도 꽤",
+     "terms": [
+      {
+       "term": "low-level",
+       "ko": "저수준의 (하드웨어에 가까운)"
+      },
+      {
+       "term": "by the time",
+       "ko": "~할 무렵에는"
+      },
+      {
+       "term": "got into it",
+       "ko": "(get into) ~에 입문하다, 빠지다"
+      }
+     ]
+    },
+    {
+     "t": 1646.84,
+     "en": "easily and I think in 20 years or a lot sooner than that you're going to basically be in a world where kids will be able to just describe the things that they want and build incredibly complex",
+     "turn": false,
+     "ko": "쉽게 만들 수 있었죠. 그리고 20년 후, 아니 그보다 훨씬 빨리, 아이들이 원하는 걸 그냥 설명하기만 하면 엄청나게 복잡한",
+     "terms": [
+      {
+       "term": "a lot sooner than that",
+       "ko": "그보다 훨씬 빨리"
+      },
+      {
+       "term": "describe the things that they want",
+       "ko": "원하는 것을 설명하다"
+      }
+     ]
+    },
+    {
+     "t": 1659.48,
+     "en": "pieces of software so it's um in that world are kids going to be not struggling I I don't think so I think that they're going to be just expressing their creativity and and it'll it'll",
+     "turn": false,
+     "ko": "소프트웨어를 만들 수 있는 세상이 올 거예요. 그런 세상에서 아이들이 애쓰지 않게 될까요? 저는 그렇지 않다고 봐요. 아이들은 그저 창의성을 표현하게 될 거고, 그건",
+     "terms": [
+      {
+       "term": "pieces of software",
+       "ko": "소프트웨어 (셀 때 쓰는 표현)"
+      },
+      {
+       "term": "expressing their creativity",
+       "ko": "창의성을 발휘하다"
+      }
+     ]
+    },
+    {
+     "t": 1671.88,
+     "en": "be this kind of constant iterative feedback loop around like okay like yeah I you know took a few minutes to describe this thing and like yeah this whole like amazing virtual world was created that",
+     "turn": false,
+     "ko": "끊임없이 반복되는 피드백 루프가 될 거예요. '좋아, 몇 분 들여서 이걸 설명했더니 이렇게 놀라운 가상 세계가 통째로 만들어졌네,",
+     "terms": [
+      {
+       "term": "iterative feedback loop",
+       "ko": "반복적인 피드백 루프"
+      },
+      {
+       "term": "took a few minutes to",
+       "ko": "~하는 데 몇 분이 걸렸다"
+      }
+     ]
+    },
+    {
+     "t": 1685.12,
+     "en": "I can have see on my glasses or whatever but like these things are not exactly what I want them to be so now I need to like go back and edit them it just I don't know I think that there's always",
+     "turn": false,
+     "ko": "내 안경 같은 걸로 볼 수 있는 세계가. 그런데 내가 원하는 거랑 딱 맞지는 않으니까 다시 돌아가서 수정해야겠어' 하는 식으로요. 잘 모르겠지만, 저는 언제나",
+     "terms": [
+      {
+       "term": "or whatever",
+       "ko": "뭐 그런 것"
+      },
+      {
+       "term": "not exactly what I want",
+       "ko": "내가 원하는 것과 딱 맞지는 않는"
+      },
+      {
+       "term": "go back and edit",
+       "ko": "다시 돌아가서 수정하다"
+      }
+     ]
+    },
+    {
+     "t": 1695.04,
+     "en": "more.",
+     "turn": false,
+     "ko": "할 게 더 있다고 생각해요.",
+     "terms": []
+    },
+    {
+     "t": 1695.04,
+     "en": "Another way to get this - it's one of the things that I think makes makes people so good.",
+     "turn": false,
+     "ko": "이걸 다른 방식으로 보자면 — 그게 사람을 이렇게 대단하게 만드는 것 중 하나라고 생각해요.",
+     "terms": [
+      {
+       "term": "one of the things that",
+       "ko": "~하는 것 중 하나"
+      }
+     ]
+    },
+    {
+     "t": 1695.04,
+     "en": "It just there's there's always more to do.",
+     "turn": false,
+     "ko": "그냥 언제나 할 일이 더 있다는 거죠.",
+     "terms": [
+      {
+       "term": "there's always more to do",
+       "ko": "언제나 할 일이 더 있다"
+      }
+     ]
+    },
+    {
+     "t": 1701.12,
+     "en": "We'll always find the struggle?",
+     "turn": false,
+     "ko": "우리는 늘 씨름할 거리를 찾게 된다는 거죠?",
+     "terms": []
+    },
+    {
+     "t": 1701.12,
+     "en": "Yeah.",
+     "turn": false,
+     "ko": "네.",
+     "terms": []
+    },
+    {
+     "t": 1701.12,
+     "en": "Another way to get at this is if you if you play this out to make the tools even better in like 10 years let's say your kids are in high school are there ways that you would want them using AI because you think it",
+     "turn": false,
+     "ko": "이걸 다른 방식으로 접근해 보면, 도구가 훨씬 더 좋아진 10년 후쯤을 가정해 볼게요. 자녀분들이 고등학생이라고 해보죠. 아이들이 AI를 이렇게 썼으면 좋겠다 싶은 방식이 있나요? 그게",
+     "terms": [
+      {
+       "term": "get at",
+       "ko": "(핵심에) 접근하다, 파악하다"
+      },
+      {
+       "term": "play this out",
+       "ko": "이걸 끝까지 전개해 보다, 가정해 보다"
+      },
+      {
+       "term": "let's say",
+       "ko": "예를 들어 ~라고 해보자"
+      }
+     ]
+    },
+    {
+     "t": 1715.76,
+     "en": "would accelerate them intellectually and ways that you would advocate for them not to use it or things that you would have concerns about?",
+     "turn": false,
+     "ko": "아이들을 지적으로 빠르게 성장시켜 줄 거라고 생각해서요. 그리고 쓰지 말라고 권하고 싶은 방식이나 걱정되는 점도 있나요?",
+     "terms": [
+      {
+       "term": "accelerate",
+       "ko": "가속하다, 빠르게 성장시키다"
+      },
+      {
+       "term": "advocate for",
+       "ko": "~을 지지하다, 권하다"
+      },
+      {
+       "term": "have concerns about",
+       "ko": "~에 대해 우려하다"
+      }
+     ]
+    },
+    {
+     "t": 1722.68,
+     "en": "I mean I think that there's some things that you need to be able to do yourself.",
+     "turn": false,
+     "ko": "음, 스스로 할 수 있어야 하는 것들이 있다고 생각해요.",
+     "terms": [
+      {
+       "term": "do yourself",
+       "ko": "스스로 하다"
+      }
+     ]
+    },
+    {
+     "t": 1726.56,
+     "en": "I think that's a lot of the basic fear that people have around this is that while we're building these amazing tools we get away from this self-confidence and ability of",
+     "turn": false,
+     "ko": "이와 관련해 사람들이 갖는 기본적인 두려움의 상당 부분은, 우리가 이런 놀라운 도구를 만드는 동안 자신감과",
+     "terms": [
+      {
+       "term": "fear that people have around",
+       "ko": "~에 대해 사람들이 가진 두려움"
+      },
+      {
+       "term": "get away from",
+       "ko": "~에서 멀어지다"
+      },
+      {
+       "term": "self-confidence",
+       "ko": "자신감"
+      }
+     ]
+    },
+    {
+     "t": 1741.84,
+     "en": "being able to do like this basic stuff yourself so it's like all right you have a calculator but it's still good to be able to do kind of basic math in your head because there are a lot of things that",
+     "turn": false,
+     "ko": "이런 기본적인 걸 스스로 해낼 수 있는 능력에서 멀어진다는 거예요. 그러니까, 계산기가 있어도 기본적인 계산은 암산으로 할 수 있는 게 여전히 좋다는 거죠. 왜냐하면",
+     "terms": [
+      {
+       "term": "basic stuff",
+       "ko": "기본적인 것들"
+      },
+      {
+       "term": "math in your head",
+       "ko": "(do math in your head) 암산하다"
+      }
+     ]
+    },
+    {
+     "t": 1753.0,
+     "en": "come up throughout the day that you just want to have a general numeracy around right that often they're not expressed in numerical terms but just in terms of understanding trends or understanding",
+     "turn": false,
+     "ko": "하루를 보내다 보면 대략적인 수 감각이 있었으면 하는 일들이 많이 생기거든요. 꼭 숫자로 표현되지 않더라도, 추세를 이해하거나",
+     "terms": [
+      {
+       "term": "come up",
+       "ko": "(일이) 생기다, 발생하다"
+      },
+      {
+       "term": "numeracy",
+       "ko": "수리 능력, 수 감각"
+      },
+      {
+       "term": "in numerical terms",
+       "ko": "수치로, 숫자로"
+      }
+     ]
+    },
+    {
+     "t": 1765.52,
+     "en": "arguments that people are making, you you kind of need to understand the shape of how numbers come together and so I think one of the big debates is like should we still teach our kids to program",
+     "turn": false,
+     "ko": "사람들이 펴는 주장을 이해할 때, 숫자들이 어떻게 맞물리는지 그 대략적인 모양은 알아야 하죠. 그래서 큰 논쟁거리 중 하나가 이런 거라고 생각해요. 우리 아이들에게 여전히 컴퓨터 프로그래밍을 가르쳐야 할까?",
+     "terms": [
+      {
+       "term": "arguments that people are making",
+       "ko": "사람들이 펴는 주장 (make an argument)"
+      },
+      {
+       "term": "come together",
+       "ko": "맞물리다, 합쳐지다"
+      },
+      {
+       "term": "one of the big debates",
+       "ko": "큰 논쟁거리 중 하나"
+      }
+     ]
+    },
+    {
+     "t": 1775.44,
+     "en": "computers even though you're going to have these tools in the future that are just so much more powerful than anything that we have now to produce incredibly complicated pieces of software.",
+     "turn": false,
+     "ko": "앞으로는 지금 우리가 가진 어떤 것보다도 훨씬 강력해서 엄청나게 복잡한 소프트웨어를 만들어내는 도구들이 있을 텐데도 말이에요.",
+     "terms": [
+      {
+       "term": "even though",
+       "ko": "~임에도 불구하고"
+      },
+      {
+       "term": "so much more powerful than",
+       "ko": "~보다 훨씬 더 강력한"
+      }
+     ]
+    },
+    {
+     "t": 1789.0,
+     "en": "I think the answer to that is probably yes because I think teaching someone how to code is teaching them a way to think rigorously and that even if they're not doing most of the code",
+     "turn": false,
+     "ko": "그 질문에 대한 답은 아마 '그렇다'일 거예요. 코딩을 가르치는 건 엄밀하게 사고하는 법을 가르치는 거라서, 설령 코드 대부분을 직접 짜지 않게 되더라도",
+     "terms": [
+      {
+       "term": "think rigorously",
+       "ko": "엄밀하게 사고하다"
+      },
+      {
+       "term": "even if",
+       "ko": "설령 ~하더라도"
+      }
+     ]
+    },
+    {
+     "t": 1801.52,
+     "en": "production I think it's important that you kind of have the ability to think in that way and I think it's going to just make you generally a better thinker and better person so yeah maybe that's",
+     "turn": false,
+     "ko": "(코드 작성을 직접 하지 않더라도) 그런 방식으로 생각할 수 있는 능력을 갖추는 건 중요하다고 봐요. 그러면 전반적으로 더 생각을 잘하는 사람, 더 나은 사람이 될 거예요. 그러니까 어쩌면 그건",
+     "terms": [
+      {
+       "term": "have the ability to",
+       "ko": "~할 능력이 있다"
+      },
+      {
+       "term": "a better thinker",
+       "ko": "생각을 더 잘하는 사람"
+      }
+     ]
+    },
+    {
+     "t": 1814.0,
+     "en": "like this generation's version of calculators it's like so you you want to you want to use the calculator but you'll also want to be able to generally do without it.",
+     "turn": false,
+     "ko": "이 세대판 계산기 같은 거예요. 계산기를 쓰고는 싶지만, 대체로 계산기 없이도 할 수 있기를 바라는 것처럼요.",
+     "terms": [
+      {
+       "term": "this generation's version of",
+       "ko": "이 세대의 ~판(버전)"
+      },
+      {
+       "term": "do without",
+       "ko": "~없이 해내다/지내다"
+      }
+     ]
+    },
+    {
+     "t": 1818.2,
+     "en": "Other ones like language I don't know I mean different people can come out I think this is one of the interesting questions about parenting these days is like is is just kind of like what what's important to",
+     "turn": false,
+     "ko": "언어 같은 다른 것들은, 글쎄요, 사람마다 생각이 다를 수 있죠. 요즘 육아에서 흥미로운 질문 중 하나가 바로 이거예요. 무엇이 중요한지, 즉",
+     "terms": [
+      {
+       "term": "come out",
+       "ko": "(결론·입장이) ~하게 나오다"
+      },
+      {
+       "term": "these days",
+       "ko": "요즘"
+      }
+     ]
+    },
+    {
+     "t": 1834.92,
+     "en": "teach your your kids and in an era where so much is going to change over the the time that they're even in school.",
+     "turn": false,
+     "ko": "아이들에게 무엇을 가르쳐야 하는지요. 그것도 아이들이 학교에 다니는 그 기간 동안에도 너무 많은 게 바뀔 시대에 말이죠.",
+     "terms": [
+      {
+       "term": "in an era where",
+       "ko": "~한 시대에"
+      }
+     ]
+    },
+    {
+     "t": 1840.12,
+     "en": "Language I think you can make similar arguments.",
+     "turn": false,
+     "ko": "언어도 비슷한 주장을 할 수 있다고 생각해요.",
+     "terms": [
+      {
+       "term": "make similar arguments",
+       "ko": "비슷한 주장을 펴다"
+      }
+     ]
+    },
+    {
+     "t": 1840.12,
+     "en": "I think there's a lot of it's like it's probably going to be less functionally relevant in the future to learn multiple languages",
+     "turn": false,
+     "ko": "앞으로는 여러 언어를 배우는 게 실용적인 면에서는 덜 중요해질 가능성이 크다는 측면이 많아요",
+     "terms": [
+      {
+       "term": "functionally relevant",
+       "ko": "실용적으로 의미 있는"
+      },
+      {
+       "term": "multiple languages",
+       "ko": "여러 언어"
+      }
+     ]
+    },
+    {
+     "t": 1849.6,
+     "en": "but it sort of helps you think in different ways, you know I found from the languages that I've studied that a lot of it you learn about the structure of your own language, you can",
+     "turn": false,
+     "ko": "그래도 다른 방식으로 생각하는 데 도움이 돼요. 제가 공부한 언어들을 통해 느낀 건, 그 과정에서 상당 부분 자기 모국어의 구조를 배우게 된다는 거예요. 그리고",
+     "terms": [
+      {
+       "term": "sort of",
+       "ko": "어느 정도, 약간 (말을 누그러뜨리는 표현)"
+      },
+      {
+       "term": "the structure of",
+       "ko": "~의 구조"
+      }
+     ]
+    },
+    {
+     "t": 1860.64,
+     "en": "you know you also learn about the culture right because so much of how things are expressed in different places is tied to the nuance and the history of kind of what how so I think",
+     "turn": false,
+     "ko": "문화도 배우게 되죠. 각 지역에서 무언가를 표현하는 방식의 상당 부분이 미묘한 뉘앙스와 역사에 얽혀 있으니까요. 그래서 제 생각엔",
+     "terms": [
+      {
+       "term": "is tied to",
+       "ko": "~와 얽혀 있다, 결부되어 있다"
+      },
+      {
+       "term": "nuance",
+       "ko": "미묘한 차이, 뉘앙스"
+      }
+     ]
+    },
+    {
+     "t": 1869.96,
+     "en": "like you that's all valuable and interesting stuff to get into but then I don't know at the same time we only have so many hours in the day so people need to prioritize what they're going",
+     "turn": false,
+     "ko": "그런 건 다 파고들 만한 가치 있고 흥미로운 것들이에요. 그런데 한편으로는 하루에 쓸 수 있는 시간이 한정돼 있으니, 사람들은 무엇을 배울지 우선순위를 정해야 해요",
+     "terms": [
+      {
+       "term": "get into",
+       "ko": "~에 빠져들다, 파고들다"
+      },
+      {
+       "term": "at the same time",
+       "ko": "한편으로는, 동시에"
+      },
+      {
+       "term": "only have so many hours in the day",
+       "ko": "하루 시간은 한정되어 있다"
+      }
+     ]
+    },
+    {
+     "t": 1878.64,
+     "en": "to learn and it may be that okay in a world with perfect translation which by the way we basically just announced on the Ray Ban Metas that now you're going to be able to just like you go to",
+     "turn": false,
+     "ko": "말이에요. 그리고 완벽한 번역이 가능한 세상이라면 — 그나저나 저희가 막 레이밴 메타 글래스에서 발표했는데요, 이제 그냥 다른",
+     "terms": [
+      {
+       "term": "by the way",
+       "ko": "그나저나, 그런데"
+      },
+      {
+       "term": "just announced",
+       "ko": "막 발표했다"
+      }
+     ]
+    },
+    {
+     "t": 1888.52,
+     "en": "countries yeah we're starting out with just a few languages but we'll roll it out to more and you know you'll be you could be traveling anywhere and you have your glasses and they just translate in",
+     "turn": false,
+     "ko": "나라에 가면 — 네, 처음엔 몇 개 언어로만 시작하지만 더 많은 언어로 확대할 거예요 — 어디를 여행하든 안경만 쓰고 있으면 실시간으로",
+     "terms": [
+      {
+       "term": "starting out with",
+       "ko": "~로 시작하다"
+      },
+      {
+       "term": "roll it out",
+       "ko": "출시하다, 확대 적용하다"
+      }
+     ]
+    },
+    {
+     "t": 1896.8,
+     "en": "real time in your ear.",
+     "turn": false,
+     "ko": "귀에 바로 통역해 줘요.",
+     "terms": [
+      {
+       "term": "real time",
+       "ko": "실시간"
+      }
+     ]
+    },
+    {
+     "t": 1896.8,
+     "en": "So it's wild, yeah so I think people are going to need to choose what what what they want to focus on going forward.",
+     "turn": false,
+     "ko": "정말 놀랍죠. 그래서 사람들은 앞으로 무엇에 집중할지 선택해야 할 거예요.",
+     "terms": [
+      {
+       "term": "it's wild",
+       "ko": "정말 놀랍다, 대단하다"
+      },
+      {
+       "term": "going forward",
+       "ko": "앞으로"
+      },
+      {
+       "term": "focus on",
+       "ko": "~에 집중하다"
+      }
+     ]
+    },
+    {
+     "t": 1902.84,
+     "en": "How do the developments that we've been talking about in AI intersect with social media and the platforms that most people use today?",
+     "turn": false,
+     "ko": "지금까지 이야기한 AI의 발전은 소셜 미디어, 그리고 오늘날 대부분의 사람들이 쓰는 플랫폼과 어떻게 맞물릴까요?",
+     "terms": [
+      {
+       "term": "intersect with",
+       "ko": "~와 교차하다, 맞물리다"
+      },
+      {
+       "term": "developments",
+       "ko": "발전, 진전"
+      }
+     ]
+    },
+    {
+     "t": 1908.08,
+     "en": "There's a future where there's images and generated text and maybe AI influencers.",
+     "turn": false,
+     "ko": "이미지와 생성된 텍스트, 어쩌면 AI 인플루언서까지 있는 미래가 있겠죠.",
+     "terms": [
+      {
+       "term": "generated text",
+       "ko": "(AI가) 생성한 텍스트"
+      }
+     ]
+    },
+    {
+     "t": 1914.76,
+     "en": "How does generative AI change how social media feels in the future?",
+     "turn": false,
+     "ko": "생성형 AI는 앞으로 소셜 미디어의 느낌을 어떻게 바꿀까요?",
+     "terms": [
+      {
+       "term": "generative AI",
+       "ko": "생성형 AI"
+      }
+     ]
+    },
+    {
+     "t": 1923.68,
+     "en": "Yeah I mean I think that that's a really deep one.",
+     "turn": false,
+     "ko": "네, 그건 정말 깊이 있는 질문이네요.",
+     "terms": [
+      {
+       "term": "a really deep one",
+       "ko": "아주 심오한 질문"
+      }
+     ]
+    },
+    {
+     "t": 1930.28,
+     "en": "You know there's already been one big shift which is that social media started out as people primarily interacting with their friends and now it is you know at least half of",
+     "turn": false,
+     "ko": "이미 큰 변화가 하나 있었어요. 소셜 미디어는 처음엔 주로 친구들과 교류하는 곳으로 시작했는데, 지금은 적어도 절반은",
+     "terms": [
+      {
+       "term": "big shift",
+       "ko": "큰 변화"
+      },
+      {
+       "term": "started out as",
+       "ko": "~로 시작했다"
+      },
+      {
+       "term": "at least",
+       "ko": "적어도"
+      }
+     ]
+    },
+    {
+     "t": 1943.2,
+     "en": "the content is basically people interacting with creators or content that's not created by people who they kind of personally know so we sort sort of already have that paradigm and",
+     "turn": false,
+     "ko": "콘텐츠가 사실상 크리에이터, 혹은 개인적으로 알지 못하는 사람들이 만든 콘텐츠와 교류하는 거예요. 그러니까 우리는 이미 그런 패러다임을 어느 정도 갖고 있고",
+     "terms": [
+      {
+       "term": "personally know",
+       "ko": "개인적으로 알다"
+      },
+      {
+       "term": "paradigm",
+       "ko": "패러다임, 틀"
+      }
+     ]
+    },
+    {
+     "t": 1956.32,
+     "en": "I think AI is probably going to accelerate that.",
+     "turn": false,
+     "ko": "AI가 아마 그 흐름을 가속화할 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "accelerate",
+       "ko": "가속화하다"
+      }
+     ]
+    },
+    {
+     "t": 1956.32,
+     "en": "It will give all these people additional tools right so your friends will create kind of funnier memes and more interesting content um that'll come from",
+     "turn": false,
+     "ko": "AI는 이 모든 사람들에게 추가적인 도구를 줄 거예요. 그래서 친구들이 더 웃긴 밈과 더 흥미로운 콘텐츠를 만들게 될 거고, 그건",
+     "terms": [
+      {
+       "term": "additional tools",
+       "ko": "추가적인 도구"
+      },
+      {
+       "term": "memes",
+       "ko": "밈(인터넷 유행 콘텐츠)"
+      },
+      {
+       "term": "come from",
+       "ko": "~에서 나오다"
+      }
+     ]
+    },
+    {
+     "t": 1969.88,
+     "en": "a lot of different ways.",
+     "turn": false,
+     "ko": "여러 다양한 방식으로 나올 거예요.",
+     "terms": []
+    },
+    {
+     "t": 1969.88,
+     "en": "I think some of it will be okay your friends have glasses and they capture a bunch of stuff and before they might have not been able bble to edit it to make it interesting",
+     "turn": false,
+     "ko": "그중 일부는 이런 거예요. 친구들이 안경을 쓰고 이것저것 많이 찍는데, 예전에는 그걸 재미있게 편집할 수 없었을 수도 있고",
+     "terms": [
+      {
+       "term": "a bunch of stuff",
+       "ko": "이것저것 많은 것"
+      },
+      {
+       "term": "capture",
+       "ko": "촬영하다, 담아내다"
+      }
+     ]
+    },
+    {
+     "t": 1979.04,
+     "en": "or maybe it was just too much work or they didn't even realize that they captured something amazing but now the AI is like hey I like made this thing for you out of your content um it's like okay",
+     "turn": false,
+     "ko": "아니면 그냥 너무 손이 많이 갔거나, 자기가 대단한 걸 찍었다는 걸 몰랐을 수도 있죠. 그런데 이제는 AI가 '이봐, 네 콘텐츠로 이런 걸 만들어 봤어'라고 하는 거예요. 그러면 '오,",
+     "terms": [
+      {
+       "term": "too much work",
+       "ko": "너무 손이 많이 가는 일"
+      },
+      {
+       "term": "out of your content",
+       "ko": "네 콘텐츠를 재료로"
+      }
+     ]
+    },
+    {
+     "t": 1987.88,
+     "en": "that's awesome like people will enjoy that.",
+     "turn": false,
+     "ko": "멋진데'라고 하겠죠. 사람들이 그걸 좋아할 거예요.",
+     "terms": [
+      {
+       "term": "that's awesome",
+       "ko": "멋지다, 대단하다"
+      }
+     ]
+    },
+    {
+     "t": 1987.88,
+     "en": "Creators obviously kind of much more specialized skills are going to be able to use even more advanced AI tools to make more compelling content but then I",
+     "turn": false,
+     "ko": "크리에이터들은 당연히 훨씬 더 전문화된 기술을 갖고 있으니, 더 발전된 AI 도구를 써서 더 매력적인 콘텐츠를 만들 수 있을 거예요. 그런데",
+     "terms": [
+      {
+       "term": "specialized skills",
+       "ko": "전문화된 기술"
+      },
+      {
+       "term": "compelling content",
+       "ko": "사람을 끌어당기는 콘텐츠"
+      }
+     ]
+    },
+    {
+     "t": 2000.76,
+     "en": "think that there will be a bunch of kind of green field type stuff where maybe in the future there will be content that is purely generated by AI by the system personalized for you maybe it's",
+     "turn": false,
+     "ko": "또 일종의 '그린필드', 즉 완전히 새로운 영역도 많이 생길 거예요. 어쩌면 미래에는 시스템이 순전히 AI로 생성해 당신에게 맞춤화한 콘텐츠가 나올 수도 있죠. 어쩌면 그건",
+     "terms": [
+      {
+       "term": "green field",
+       "ko": "아무것도 없는 새 영역(그린필드)"
+      },
+      {
+       "term": "purely",
+       "ko": "순전히"
+      },
+      {
+       "term": "personalized for you",
+       "ko": "당신에게 맞춤화된"
+      }
+     ]
+    },
+    {
+     "t": 2015.48,
+     "en": "summarizing things that are out there that that are going to be interesting maybe it's um just producing something funny that makes you laugh this is going to be like a very kind of deep zone",
+     "turn": false,
+     "ko": "세상에 나와 있는 흥미로운 것들을 요약해 주는 걸 수도 있고, 그냥 당신을 웃게 만드는 재미있는 걸 만들어 주는 걸 수도 있어요. 이건 아주 깊이 있는 영역이 될 거고",
+     "terms": [
+      {
+       "term": "out there",
+       "ko": "세상에 나와 있는"
+      },
+      {
+       "term": "makes you laugh",
+       "ko": "웃게 만들다"
+      }
+     ]
+    },
+    {
+     "t": 2026.96,
+     "en": "that there's a lot to to experiment with.",
+     "turn": false,
+     "ko": "실험해 볼 게 많은 분야예요.",
+     "terms": [
+      {
+       "term": "experiment with",
+       "ko": "~로 실험해 보다"
+      }
+     ]
+    },
+    {
+     "t": 2026.96,
+     "en": "I think there are going to be AI creators as well, as creators building AI versions of themselves, I mean that's a thing that we just showed too",
+     "turn": false,
+     "ko": "AI 크리에이터도 생길 거라고 생각해요. 크리에이터들이 자기 자신의 AI 버전을 만드는 거죠. 그건 저희가 이번에",
+     "terms": [
+      {
+       "term": "AI versions of themselves",
+       "ko": "자기 자신의 AI 버전"
+      },
+      {
+       "term": "that's a thing",
+       "ko": "실제로 있는 일이다"
+      }
+     ]
+    },
+    {
+     "t": 2038.04,
+     "en": "at Connect is basically I mean if you're a Creator one of the big challenges is like all right there are only so many hours in the day and your community probably has a",
+     "turn": false,
+     "ko": "Connect 행사에서도 보여준 건데요, 크리에이터라면 가장 큰 어려움 중 하나가 '하루 시간은 한정돼 있다'는 거예요. 그리고 커뮤니티는 아마",
+     "terms": [
+      {
+       "term": "one of the big challenges",
+       "ko": "큰 어려움(과제) 중 하나"
+      },
+      {
+       "term": "only so many hours in the day",
+       "ko": "하루 시간은 한정되어 있다"
+      }
+     ]
+    },
+    {
+     "t": 2048.04,
+     "en": "nearly unlimited demand to interact with you and you want to interact with them because you're trying to grow your community.",
+     "turn": false,
+     "ko": "당신과 교류하고 싶은 욕구가 거의 무한할 거고, 당신도 커뮤니티를 키우고 싶으니 그들과 교류하고 싶죠.",
+     "terms": [
+      {
+       "term": "nearly unlimited demand",
+       "ko": "거의 무한한 수요"
+      },
+      {
+       "term": "grow your community",
+       "ko": "커뮤니티를 키우다"
+      }
+     ]
+    },
+    {
+     "t": 2051.92,
+     "en": "I mean that's both socially and from a business perspective that's sort of you know growing the community is an important part of what every creator does so",
+     "turn": false,
+     "ko": "그건 사회적으로도, 비즈니스 관점에서도 그래요. 커뮤니티를 키우는 건 모든 크리에이터가 하는 일의 중요한 부분이니까요. 그래서",
+     "terms": [
+      {
+       "term": "from a business perspective",
+       "ko": "비즈니스 관점에서"
+      },
+      {
+       "term": "an important part of",
+       "ko": "~의 중요한 부분"
+      }
+     ]
+    },
+    {
+     "t": 2060.92,
+     "en": "okay if we can make it so that each creator can basically make an like an AI artifact that their community can interact with people be clear it's not the actual creator themselves but",
+     "turn": false,
+     "ko": "좋아요, 만약 각 크리에이터가 커뮤니티가 교류할 수 있는 일종의 AI 작품을 만들 수 있게 해 준다면 — 분명히 해 두자면 그건 실제 크리에이터 본인은 아니지만",
+     "terms": [
+      {
+       "term": "make it so that",
+       "ko": "~하게 만들다, ~할 수 있게 하다"
+      },
+      {
+       "term": "be clear",
+       "ko": "분명히 해 두자면"
+      }
+     ]
+    },
+    {
+     "t": 2072.88,
+     "en": "it's almost like a piece of digital art that you're producing like an interactive sculpture or something that it's like it's like you train it to here's the context that I wanted to have",
+     "turn": false,
+     "ko": "거의 당신이 만드는 디지털 아트 작품 같은 거예요. 인터랙티브 조각 같은 거죠. 그걸 학습시키는 거예요. '내가 원하는 맥락은 이거고,",
+     "terms": [
+      {
+       "term": "a piece of digital art",
+       "ko": "디지털 예술 작품 한 점"
+      },
+      {
+       "term": "or something",
+       "ko": "~ 같은 것"
+      },
+      {
+       "term": "train it",
+       "ko": "그것을 학습시키다"
+      }
+     ]
+    },
+    {
+     "t": 2081.44,
+     "en": "here's the topics I wanted to communicate on here's stuff that I wanted to stay away from you're giving your community something to interact with when you can't be there to to kind",
+     "turn": false,
+     "ko": "소통했으면 하는 주제는 이거고, 피했으면 하는 건 이거다'라고요. 당신이 그 자리에 있을 수 없을 때 커뮤니티에 교류할 무언가를 주는 거죠. 모든 질문에",
+     "terms": [
+      {
+       "term": "communicate on",
+       "ko": "~에 대해 소통하다"
+      },
+      {
+       "term": "stay away from",
+       "ko": "~을 멀리하다, 피하다"
+      },
+      {
+       "term": "be there",
+       "ko": "그 자리에 있다, 곁에 있다"
+      }
+     ]
+    },
+    {
+     "t": 2091.72,
+     "en": "of answer all the questions and I think that's going to be super compelling so there's like these interesting things but I think it's I AI it's kind of like the internet in a way where",
+     "turn": false,
+     "ko": "일일이 답해 줄 수 없을 때요. 그건 굉장히 매력적일 거라고 생각해요. 이런 흥미로운 것들이 있는데, 제 생각에 AI는 어떤 면에서 인터넷과 비슷해요.",
+     "terms": [
+      {
+       "term": "super compelling",
+       "ko": "굉장히 매력적인"
+      },
+      {
+       "term": "in a way",
+       "ko": "어떤 면에서"
+      }
+     ]
+    },
+    {
+     "t": 2104.72,
+     "en": "it's probably going to change almost every field and almost every feature of every application that we use um it seems sort of hyperbolic to say that but I do think that's true and it's just hard to",
+     "turn": false,
+     "ko": "아마 거의 모든 분야와 우리가 쓰는 모든 앱의 거의 모든 기능을 바꿀 거예요. 과장처럼 들리겠지만 저는 정말 그렇다고 생각해요. 다만",
+     "terms": [
+      {
+       "term": "hyperbolic",
+       "ko": "과장된"
+      },
+      {
+       "term": "almost every",
+       "ko": "거의 모든"
+      }
+     ]
+    },
+    {
+     "t": 2118.84,
+     "en": "sort of enumerate all the different things up front but I think that over the next 5 to 10 years we're just going to explore the impacts in each of these areas and it's going to be",
+     "turn": false,
+     "ko": "그 모든 걸 미리 하나하나 열거하기는 어렵죠. 하지만 앞으로 5년에서 10년 동안 우리는 이 각 분야에서 그 영향을 탐구하게 될 거고, 그건",
+     "terms": [
+      {
+       "term": "enumerate",
+       "ko": "하나하나 열거하다"
+      },
+      {
+       "term": "up front",
+       "ko": "미리, 사전에"
+      },
+      {
+       "term": "over the next 5 to 10 years",
+       "ko": "향후 5~10년에 걸쳐"
+      }
+     ]
+    },
+    {
+     "t": 2127.08,
+     "en": "like an amazing amount of innovation and really exciting.",
+     "turn": false,
+     "ko": "엄청난 혁신이 일어나는, 정말 흥미진진한 시기가 될 거예요.",
+     "terms": [
+      {
+       "term": "an amazing amount of",
+       "ko": "엄청난 양의"
+      }
+     ]
+    },
+    {
+     "t": 2127.08,
+     "en": "I feel two things simultaneously when you say that.",
+     "turn": false,
+     "ko": "그 말씀을 들으면 저는 두 가지 감정을 동시에 느껴요.",
+     "terms": [
+      {
+       "term": "simultaneously",
+       "ko": "동시에"
+      }
+     ]
+    },
+    {
+     "t": 2132.84,
+     "en": "I feel both like I really want to be optimistic about the future of these platforms and I obviously have gained so much from an enormous pace of change right like everything",
+     "turn": false,
+     "ko": "한편으로는 이 플랫폼들의 미래에 대해 정말 낙관적이고 싶고, 엄청난 변화 속도 덕분에 분명 많은 걸 얻기도 했어요. 지금 우리가 하고 있는",
+     "terms": [
+      {
+       "term": "gained so much from",
+       "ko": "~로부터 많은 것을 얻었다"
+      },
+      {
+       "term": "pace of change",
+       "ko": "변화의 속도"
+      }
+     ]
+    },
+    {
+     "t": 2145.56,
+     "en": "that we're doing now and what I actually feel is worried.",
+     "turn": false,
+     "ko": "이 모든 것처럼요. 그런데 실제로 느끼는 건 걱정이에요.",
+     "terms": [
+      {
+       "term": "what I actually feel is",
+       "ko": "내가 실제로 느끼는 건"
+      }
+     ]
+    },
+    {
+     "t": 2145.56,
+     "en": "I feel some specific concerns around the way that you know I might communicate with an audience and the way that they might respond to",
+     "turn": false,
+     "ko": "제가 청중과 소통하는 방식, 그리고 청중이 그것에 반응하는 방식에 대해 구체적인 우려가 있어요",
+     "terms": [
+      {
+       "term": "specific concerns around",
+       "ko": "~에 대한 구체적인 우려"
+      },
+      {
+       "term": "respond to",
+       "ko": "~에 반응하다"
+      }
+     ]
+    },
+    {
+     "t": 2157.8,
+     "en": "that or the way that human communication might change but also more generalized just sort of fear of the pace of change and and worry and I don't think I'm alone in that feeling.",
+     "turn": false,
+     "ko": "또는 인간의 소통 방식이 바뀔 수 있다는 점도요. 그리고 더 일반적으로는 변화 속도 자체에 대한 막연한 두려움과 걱정이 있어요. 그렇게 느끼는 게 저만은 아닐 거예요.",
+     "terms": [
+      {
+       "term": "the pace of change",
+       "ko": "변화의 속도"
+      },
+      {
+       "term": "I'm alone in",
+       "ko": "~하는 게 나 혼자다 (not과 함께: 나만 그런 게 아니다)"
+      }
+     ]
+    },
+    {
+     "t": 2162.6,
+     "en": "Yeah and you're supposed to be the optimist!",
+     "turn": false,
+     "ko": "그러게요, 낙관론자여야 할 분이 말이죠!",
+     "terms": [
+      {
+       "term": "you're supposed to be",
+       "ko": "당신은 ~이어야 하는 사람이다"
+      },
+      {
+       "term": "optimist",
+       "ko": "낙관주의자"
+      }
+     ]
+    },
+    {
+     "t": 2167.12,
+     "en": "I know!",
+     "turn": false,
+     "ko": "그러니까요!",
+     "terms": []
+    },
+    {
+     "t": 2167.12,
+     "en": "And I'm curious like how you talk to people who feel that way.",
+     "turn": false,
+     "ko": "그래서 그렇게 느끼는 사람들과 어떻게 이야기하시는지 궁금해요.",
+     "terms": [
+      {
+       "term": "I'm curious",
+       "ko": "궁금하다"
+      }
+     ]
+    },
+    {
+     "t": 2174.12,
+     "en": "What concerns do you feel are most legitimate and what do you feel most misunderstood?",
+     "turn": false,
+     "ko": "어떤 우려가 가장 타당하다고 보시고, 어떤 게 가장 오해받고 있다고 보시나요?",
+     "terms": [
+      {
+       "term": "legitimate",
+       "ko": "정당한, 타당한"
+      },
+      {
+       "term": "misunderstood",
+       "ko": "오해받는"
+      }
+     ]
+    },
+    {
+     "t": 2174.12,
+     "en": "I think the pace of change is always a concerning thing right it's there is a lot of uncertainty about how how things will go in the future and we're all going to get really amazing new tools",
+     "turn": false,
+     "ko": "변화의 속도는 늘 걱정스러운 거죠. 앞으로 일이 어떻게 흘러갈지에 대한 불확실성이 크니까요. 그리고 우리 모두 정말 놀라운 새 도구들을 얻게 될 거예요",
+     "terms": [
+      {
+       "term": "a lot of uncertainty about",
+       "ko": "~에 대한 큰 불확실성"
+      },
+      {
+       "term": "how things will go",
+       "ko": "일이 어떻게 흘러갈지"
+      }
+     ]
+    },
+    {
+     "t": 2195.56,
+     "en": "to do both our hobbies and our jobs and they'll make it so we can do better work and have better lives but at least on the professional side it's going to be our responsibility to keep",
+     "turn": false,
+     "ko": "취미와 일 모두에 쓸 도구들이요. 그 도구 덕분에 일을 더 잘하고 더 나은 삶을 살게 되겠지만, 적어도 직업적인 면에서는 그 흐름을",
+     "terms": [
+      {
+       "term": "on the professional side",
+       "ko": "직업적인 측면에서"
+      },
+      {
+       "term": "our responsibility",
+       "ko": "우리의 책임"
+      }
+     ]
+    },
+    {
+     "t": 2208.8,
+     "en": "up with that or else it's going to be difficult for us to compete with other people who are doing a good job of kind of keeping up with the new trends.",
+     "turn": false,
+     "ko": "따라가는 게 우리 책임이 될 거예요. 그렇지 않으면 새로운 트렌드를 잘 따라가는 다른 사람들과 경쟁하기 어려워질 테니까요.",
+     "terms": [
+      {
+       "term": "keeping up with",
+       "ko": "~을 뒤처지지 않고 따라가다"
+      },
+      {
+       "term": "or else",
+       "ko": "그렇지 않으면"
+      },
+      {
+       "term": "compete with",
+       "ko": "~와 경쟁하다"
+      }
+     ]
+    },
+    {
+     "t": 2213.2,
+     "en": "So I get it.",
+     "turn": false,
+     "ko": "그러니까 이해해요.",
+     "terms": [
+      {
+       "term": "I get it",
+       "ko": "이해한다, 무슨 말인지 안다"
+      }
+     ]
+    },
+    {
+     "t": 2213.2,
+     "en": "I mean I think you know especially in the you know line of of work of being a creator and it's a very sort of competitive space, I don't think that like creators necessarily think about it as competitive but it",
+     "turn": false,
+     "ko": "특히 크리에이터라는 직종은 매우 경쟁적인 공간이잖아요. 크리에이터들이 그걸 꼭 경쟁적이라고 생각하진 않을지 몰라도",
+     "terms": [
+      {
+       "term": "line of of work",
+       "ko": "직종, 하는 일 (line of work)"
+      },
+      {
+       "term": "necessarily",
+       "ko": "(not과 함께) 꼭 ~인 것은 아닌"
+      },
+      {
+       "term": "think about it as",
+       "ko": "그것을 ~로 여기다"
+      }
+     ]
+    },
+    {
+     "t": 2227.8,
+     "en": "is right it's like it's you know and um and so I get it.",
+     "turn": false,
+     "ko": "실제로는 그렇죠. 그래서 이해해요.",
+     "terms": []
+    },
+    {
+     "t": 2227.8,
+     "en": "I think that this is going to make it so that like the quality of work that people produce and how interesting it is and how much they can",
+     "turn": false,
+     "ko": "제 생각엔 이걸로 사람들이 만들어 내는 작업의 질, 그게 얼마나 흥미로운지, 그리고 얼마나 많이",
+     "terms": [
+      {
+       "term": "make it so that",
+       "ko": "~하게 만들다"
+      },
+      {
+       "term": "the quality of work",
+       "ko": "작업의 질"
+      }
+     ]
+    },
+    {
+     "t": 2240.64,
+     "en": "communicate and like really efficiently is is just going to kind of go through the roof but but when you're staring down a set of changes like you know that there's some big change coming and",
+     "turn": false,
+     "ko": "정말 효율적으로 소통할 수 있는지가 그야말로 하늘 높이 치솟을 거예요. 하지만 일련의 변화를 마주하고 있을 때, 그러니까 뭔가 큰 변화가 오고 있다는 건 아는데",
+     "terms": [
+      {
+       "term": "go through the roof",
+       "ko": "천정부지로 치솟다"
+      },
+      {
+       "term": "staring down",
+       "ko": "~을 정면으로 마주하다"
+      },
+      {
+       "term": "a set of changes",
+       "ko": "일련의 변화"
+      }
+     ]
+    },
+    {
+     "t": 2255.88,
+     "en": "you don't know what it is that's always a time of anxiety so I get it.",
+     "turn": false,
+     "ko": "그게 뭔지 모를 때는 늘 불안한 시기죠. 그래서 이해해요.",
+     "terms": [
+      {
+       "term": "a time of anxiety",
+       "ko": "불안한 시기"
+      }
+     ]
+    },
+    {
+     "t": 2255.88,
+     "en": "If I take my creator hat off and I'm just a person who is youngish starting out my career-ish, starting out building a family,",
+     "turn": false,
+     "ko": "크리에이터라는 입장을 내려놓고 보면, 저는 그냥 커리어를 막 시작한 젊은 축의 사람이고, 가정도 막 꾸리기 시작했어요.",
+     "terms": [
+      {
+       "term": "take my creator hat off",
+       "ko": "크리에이터로서의 입장을 내려놓다"
+      },
+      {
+       "term": "youngish",
+       "ko": "젊은 편인 (-ish: ~쯤, 대략)"
+      },
+      {
+       "term": "starting out",
+       "ko": "막 시작하는"
+      }
+     ]
+    },
+    {
+     "t": 2271.32,
+     "en": "how would you advise someone like me to prepare well for the future that we're headed toward to be able to learn new skills now or just think about this future in an educated way?",
+     "turn": false,
+     "ko": "저 같은 사람이 우리가 향하고 있는 미래에 잘 대비하려면, 지금 새로운 기술을 배우거나 이 미래를 제대로 알고 생각하려면 어떻게 하라고 조언하시겠어요?",
+     "terms": [
+      {
+       "term": "prepare well for",
+       "ko": "~에 잘 대비하다"
+      },
+      {
+       "term": "headed toward",
+       "ko": "~로 향하고 있는"
+      },
+      {
+       "term": "in an educated way",
+       "ko": "제대로 알고, 근거 있게"
+      }
+     ]
+    },
+    {
+     "t": 2280.72,
+     "en": "Yeah I mean I just think maintaining curiosity about things is is important.",
+     "turn": false,
+     "ko": "음, 저는 그저 여러 가지에 대한 호기심을 유지하는 게 중요하다고 생각해요.",
+     "terms": [
+      {
+       "term": "maintaining curiosity",
+       "ko": "호기심을 유지하는 것"
+      }
+     ]
+    },
+    {
+     "t": 2289.44,
+     "en": "I do think we can overstate to what extent the next 10 years is going to be sort of different from the last 10 or 15.",
+     "turn": false,
+     "ko": "앞으로의 10년이 지난 10년, 15년과 얼마나 다를지를 우리가 과장하고 있을 수도 있다고 생각해요.",
+     "terms": [
+      {
+       "term": "overstate",
+       "ko": "과장하다"
+      },
+      {
+       "term": "to what extent",
+       "ko": "어느 정도까지"
+      }
+     ]
+    },
+    {
+     "t": 2296.92,
+     "en": "I mean a ton of stuff changed over the last 10 or 15 years too.",
+     "turn": false,
+     "ko": "지난 10년, 15년 동안에도 정말 많은 게 바뀌었잖아요.",
+     "terms": [
+      {
+       "term": "a ton of stuff",
+       "ko": "엄청 많은 것"
+      }
+     ]
+    },
+    {
+     "t": 2301.4,
+     "en": "It's not like this is the only time in history where there's some technology it's going to make it so there's new opportunities and things change",
+     "turn": false,
+     "ko": "어떤 기술이 새로운 기회를 만들고 상황이 바뀌는 게 역사상 지금이 처음인 것도 아니고요.",
+     "terms": [
+      {
+       "term": "It's not like",
+       "ko": "~인 것도 아니다"
+      },
+      {
+       "term": "the only time in history",
+       "ko": "역사상 유일한 때"
+      }
+     ]
+    },
+    {
+     "t": 2310.52,
+     "en": "the internet coming into maturity and everyone having smartphones has already rewired things dramatically and I mean maybe the next period will be a somewhat bigger change or maybe it won't I",
+     "turn": false,
+     "ko": "인터넷이 성숙기에 접어들고 모두가 스마트폰을 갖게 되면서 이미 세상이 극적으로 재편됐어요. 어쩌면 다음 시기는 좀 더 큰 변화일 수도 있고, 아닐 수도 있죠.",
+     "terms": [
+      {
+       "term": "coming into maturity",
+       "ko": "성숙기에 접어드는"
+      },
+      {
+       "term": "rewired",
+       "ko": "(구조를) 완전히 재편했다"
+      },
+      {
+       "term": "dramatically",
+       "ko": "극적으로"
+      }
+     ]
+    },
+    {
+     "t": 2324.76,
+     "en": "think it'll feel different to different people but I don't think this is like going from zero to one it's not like okay everything's just kind of been normal and now like now it's about to change",
+     "turn": false,
+     "ko": "사람마다 다르게 느낄 거라고 생각해요. 하지만 이게 무에서 유로 가는 건 아니에요. '지금까지 모든 게 평범했는데 이제 막 바뀌려 한다'는 게 아니라",
+     "terms": [
+      {
+       "term": "going from zero to one",
+       "ko": "무에서 유로 가다(완전히 새로 시작하다)"
+      },
+      {
+       "term": "about to change",
+       "ko": "막 바뀌려는"
+      }
+     ]
+    },
+    {
+     "t": 2335.32,
+     "en": "it's like the technology of evolves over time and and like the opportunities that we have evolve and improve and I think that's like the people who do well I think are are people who are generally",
+     "turn": false,
+     "ko": "기술은 시간이 지나며 진화하고, 우리가 가진 기회도 진화하고 나아지는 거예요. 그리고 잘 해내는 사람들은 대체로",
+     "terms": [
+      {
+       "term": "evolves over time",
+       "ko": "시간이 지나며 진화하다"
+      },
+      {
+       "term": "do well",
+       "ko": "잘 해내다, 성공하다"
+      }
+     ]
+    },
+    {
+     "t": 2346.64,
+     "en": "curious about it and and dig in and and try to use it to live better lives rather than the people who who basically you know try to fight it in in some way.",
+     "turn": false,
+     "ko": "그것에 호기심을 갖고 파고들어서 더 나은 삶을 사는 데 활용하려는 사람들이지, 어떻게든 그걸 거부하려는 사람들이 아니라고 생각해요.",
+     "terms": [
+      {
+       "term": "dig in",
+       "ko": "깊이 파고들다"
+      },
+      {
+       "term": "rather than",
+       "ko": "~보다는, ~가 아니라"
+      },
+      {
+       "term": "fight it",
+       "ko": "그것에 맞서다, 거부하다"
+      }
+     ]
+    },
+    {
+     "t": 2354.8,
+     "en": "One thing that I really want to ask you about is open source.",
+     "turn": false,
+     "ko": "꼭 여쭤보고 싶은 것 하나가 오픈 소스예요.",
+     "terms": [
+      {
+       "term": "ask you about",
+       "ko": "~에 대해 당신에게 묻다"
+      },
+      {
+       "term": "open source",
+       "ko": "오픈 소스(소스 공개)"
+      }
+     ]
+    },
+    {
+     "t": 2363.4,
+     "en": "Yeah.",
+     "turn": false,
+     "ko": "네.",
+     "terms": []
+    },
+    {
+     "t": 2363.4,
+     "en": "I think imagine that we're talking to an audience that has maybe heard that term but doesn't have any real idea of how that might impact them in the development of AI.",
+     "turn": false,
+     "ko": "이 용어를 들어 봤을 수는 있지만, AI 개발에서 그게 자신에게 어떤 영향을 미칠지 전혀 감이 없는 시청자에게 이야기한다고 상상해 보죠.",
+     "terms": [
+      {
+       "term": "have any real idea",
+       "ko": "제대로 감을 잡다 (부정문: 전혀 모르다)"
+      },
+      {
+       "term": "impact",
+       "ko": "영향을 미치다"
+      }
+     ]
+    },
+    {
+     "t": 2377.44,
+     "en": "How would you explain the reasonable debate that people in your field are having about this right now?",
+     "turn": false,
+     "ko": "지금 업계 사람들이 이 문제를 두고 벌이고 있는 합리적인 논쟁을 어떻게 설명하시겠어요?",
+     "terms": [
+      {
+       "term": "reasonable debate",
+       "ko": "합리적인 논쟁"
+      },
+      {
+       "term": "in your field",
+       "ko": "당신의 분야에서"
+      }
+     ]
+    },
+    {
+     "t": 2381.64,
+     "en": "Well I think there are two pieces.",
+     "turn": false,
+     "ko": "음, 두 가지 측면이 있다고 생각해요.",
+     "terms": [
+      {
+       "term": "two pieces",
+       "ko": "두 가지 부분(측면)"
+      }
+     ]
+    },
+    {
+     "t": 2381.64,
+     "en": "I mean so what does open source mean?",
+     "turn": false,
+     "ko": "그러니까, 오픈 소스가 무슨 뜻이냐면요?",
+     "terms": []
+    },
+    {
+     "t": 2381.64,
+     "en": "It means that people can build a lot of different things right so at a high level I look at the vision that a bunch of companies have right so Open AI, Google, they're building an AI right like one AI that I think",
+     "turn": false,
+     "ko": "사람들이 다양한 걸 많이 만들 수 있다는 뜻이에요. 큰 틀에서 보면, 저는 여러 회사가 가진 비전을 봐요. OpenAI, 구글 같은 곳은 하나의 AI를 만들고 있죠. 제 생각엔",
+     "terms": [
+      {
+       "term": "at a high level",
+       "ko": "큰 틀에서 보면"
+      },
+      {
+       "term": "the vision",
+       "ko": "비전, 구상"
+      }
+     ]
+    },
+    {
+     "t": 2399.52,
+     "en": "in general they're like okay this is going to be it's like you're going to use they think you're going to use Gemini or ChatGPT for like all the different things that you want to interact with",
+     "turn": false,
+     "ko": "대체로 그들은 '이게 정답이다'라는 식이에요. 사람들이 원하는 모든 일에 제미나이나 ChatGPT를 쓸 거라고 생각하는 거죠",
+     "terms": [
+      {
+       "term": "in general",
+       "ko": "대체로"
+      },
+      {
+       "term": "interact with",
+       "ko": "~와 상호작용하다"
+      }
+     ]
+    },
+    {
+     "t": 2407.52,
+     "en": "and at a high level that's just not how I think the world is going to go.",
+     "turn": false,
+     "ko": "그런데 큰 틀에서 보면, 저는 세상이 그렇게 흘러가지 않을 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "at a high level",
+       "ko": "큰 틀에서 보면"
+      },
+      {
+       "term": "that's just not how",
+       "ko": "그건 ~하는 방식이 아니다"
+      }
+     ]
+    },
+    {
+     "t": 2407.52,
+     "en": "I think we're going to have a lot of different AI systems just like we're going to have we have a lot of different apps.",
+     "turn": false,
+     "ko": "우리에게 다양한 앱이 많이 있는 것처럼, 다양한 AI 시스템도 많이 생길 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "just like",
+       "ko": "~와 마찬가지로"
+      }
+     ]
+    },
+    {
+     "t": 2417.16,
+     "en": "I think in the future every business just like they have a website and a phone number and an email address and a social media account is also going to have an AI that can interact with with",
+     "turn": false,
+     "ko": "미래에는 모든 비즈니스가 웹사이트, 전화번호, 이메일 주소, 소셜 미디어 계정을 갖고 있는 것처럼, 고객과 소통할 수 있는 AI도 갖게 될 거라고 생각해요",
+     "terms": [
+      {
+       "term": "just like they have",
+       "ko": "~를 갖고 있는 것처럼"
+      },
+      {
+       "term": "social media account",
+       "ko": "소셜 미디어 계정"
+      }
+     ]
+    },
+    {
+     "t": 2428.04,
+     "en": "their customers to help them sell things to help them do support.",
+     "turn": false,
+     "ko": "물건을 팔고 고객 지원을 하는 데 도움을 주는 AI요.",
+     "terms": [
+      {
+       "term": "help them sell things",
+       "ko": "그들이 물건 파는 것을 돕다"
+      },
+      {
+       "term": "do support",
+       "ko": "고객 지원을 하다"
+      }
+     ]
+    },
+    {
+     "t": 2428.04,
+     "en": "I think a lot of creators will have their own AIs right I think like a lot of people will interact with with a bunch of different things.",
+     "turn": false,
+     "ko": "많은 크리에이터도 자기만의 AI를 갖게 될 거고, 많은 사람들이 여러 다양한 것들과 교류하게 될 거예요.",
+     "terms": [
+      {
+       "term": "their own",
+       "ko": "자기만의"
+      },
+      {
+       "term": "a bunch of",
+       "ko": "여러, 많은"
+      }
+     ]
+    },
+    {
+     "t": 2439.0,
+     "en": "There's a question of okay do you want a future that's fundamentally kind of very concentrated and where you're interacting with kind of one system for everything or do you want",
+     "turn": false,
+     "ko": "그러니까 질문은 이거예요. 근본적으로 아주 집중된 미래, 모든 걸 하나의 시스템과 해결하는 미래를 원하나요, 아니면",
+     "terms": [
+      {
+       "term": "fundamentally",
+       "ko": "근본적으로"
+      },
+      {
+       "term": "concentrated",
+       "ko": "집중된, 독점된"
+      }
+     ]
+    },
+    {
+     "t": 2450.24,
+     "en": "one where a lot of different people are building a lot of different AIs and systems just kind of like you probably didn't want there to be you know just one app or just one website.",
+     "turn": false,
+     "ko": "많은 사람들이 다양한 AI와 시스템을 만드는 미래를 원하나요? 앱이 딱 하나, 웹사이트가 딱 하나만 있기를 원하지 않았던 것처럼요.",
+     "terms": [
+      {
+       "term": "just kind of like",
+       "ko": "마치 ~처럼"
+      }
+     ]
+    },
+    {
+     "t": 2456.28,
+     "en": "It's like a richer world when there's a diversity of different things so that's one piece is is just giving people the ability to build it themselves and what open source does it makes it that everyone",
+     "turn": false,
+     "ko": "다양한 것들이 있을 때 더 풍요로운 세상이 되죠. 그게 한 측면이에요. 사람들에게 스스로 만들 수 있는 능력을 주는 거죠. 오픈 소스가 하는 일은 모든 사람이",
+     "terms": [
+      {
+       "term": "a richer world",
+       "ko": "더 풍요로운 세상"
+      },
+      {
+       "term": "a diversity of",
+       "ko": "다양한"
+      },
+      {
+       "term": "build it themselves",
+       "ko": "스스로 만들다"
+      }
+     ]
+    },
+    {
+     "t": 2469.24,
+     "en": "can take and modify the model and build stuff on top of it which is different from the kind of closed and centralized approach.",
+     "turn": false,
+     "ko": "모델을 가져다 수정하고 그 위에 무언가를 만들 수 있게 하는 거예요. 폐쇄적이고 중앙집중적인 방식과는 다르죠.",
+     "terms": [
+      {
+       "term": "build stuff on top of",
+       "ko": "~ 위에 무언가를 구축하다"
+      },
+      {
+       "term": "different from",
+       "ko": "~와 다른"
+      },
+      {
+       "term": "centralized approach",
+       "ko": "중앙집중식 접근"
+      }
+     ]
+    },
+    {
+     "t": 2475.36,
+     "en": "The safety debate is a specific part of this which is in a world where AI gets smarter and smarter, what's the way that we have the highest chance of of having a",
+     "turn": false,
+     "ko": "안전성 논쟁은 이 중 특정한 부분인데요, AI가 점점 더 똑똑해지는 세상에서 우리가 가장 높은 확률로",
+     "terms": [
+      {
+       "term": "smarter and smarter",
+       "ko": "점점 더 똑똑해지는"
+      },
+      {
+       "term": "the highest chance of",
+       "ko": "~할 가장 높은 가능성"
+      }
+     ]
+    },
+    {
+     "t": 2495.12,
+     "en": "a a kind of positive future and and not having a lot of the safety concerns?",
+     "turn": false,
+     "ko": "긍정적인 미래를 맞이하고 여러 안전 문제를 피할 수 있는 방법은 뭘까요?",
+     "terms": [
+      {
+       "term": "safety concerns",
+       "ko": "안전에 대한 우려"
+      }
+     ]
+    },
+    {
+     "t": 2495.12,
+     "en": "And I think some people think that if we keep the model closed and don't give it to a lot of developers that should make it safer because then you don't get bad developers doing bad things with the model.",
+     "turn": false,
+     "ko": "어떤 사람들은 모델을 비공개로 두고 많은 개발자에게 주지 않으면 더 안전할 거라고 생각해요. 그러면 나쁜 개발자들이 그 모델로 나쁜 짓을 하지 못할 테니까요.",
+     "terms": [
+      {
+       "term": "keep the model closed",
+       "ko": "모델을 비공개로 유지하다"
+      },
+      {
+       "term": "doing bad things with",
+       "ko": "~로 나쁜 짓을 하다"
+      }
+     ]
+    },
+    {
+     "t": 2519.44,
+     "en": "Historically I think what we've seen with open source is actually the opposite which is that this is not the first open source project right I mean this is obviously this has been a thing in",
+     "turn": false,
+     "ko": "역사적으로 보면, 오픈 소스에서 우리가 본 건 사실 그 반대예요. 이게 첫 오픈 소스 프로젝트도 아니잖아요. 이건 분명 업계에서",
+     "terms": [
+      {
+       "term": "the opposite",
+       "ko": "정반대"
+      },
+      {
+       "term": "has been a thing",
+       "ko": "계속 있어 온 일이다"
+      }
+     ]
+    },
+    {
+     "t": 2529.24,
+     "en": "the industry for decades and I think what we've traditionally seen is that open source software is safer and more secure largely because you put it out there more people can scrutinize it because",
+     "turn": false,
+     "ko": "수십 년 동안 있어 온 일이고, 전통적으로 우리가 본 건 오픈 소스 소프트웨어가 더 안전하고 보안이 뛰어나다는 거예요. 주된 이유는 세상에 공개하면 더 많은 사람이 면밀히 살펴볼 수 있기 때문이죠. 왜냐하면",
+     "terms": [
+      {
+       "term": "for decades",
+       "ko": "수십 년 동안"
+      },
+      {
+       "term": "put it out there",
+       "ko": "세상에 내놓다, 공개하다"
+      },
+      {
+       "term": "scrutinize",
+       "ko": "면밀히 살펴보다"
+      }
+     ]
+    },
+    {
+     "t": 2540.96,
+     "en": "they can see all parts of the system and then there are inevitably issues with any software there are bugs there are security issues and initially with open source people thought hey if",
+     "turn": false,
+     "ko": "시스템의 모든 부분을 볼 수 있으니까요. 그리고 어떤 소프트웨어든 문제는 필연적으로 있어요. 버그도 있고 보안 문제도 있죠. 오픈 소스 초기에 사람들은 '만약",
+     "terms": [
+      {
+       "term": "inevitably",
+       "ko": "필연적으로, 불가피하게"
+      },
+      {
+       "term": "security issues",
+       "ko": "보안 문제"
+      }
+     ]
+    },
+    {
+     "t": 2552.44,
+     "en": "you're putting the software out there and there are holes in it isn't everyone just going to go exploit those holes and especially the bad guys but it turned out that it sort of in this",
+     "turn": false,
+     "ko": "소프트웨어를 공개했는데 거기에 구멍이 있으면, 다들, 특히 나쁜 사람들이 그 구멍을 악용하러 몰려가지 않겠어?'라고 생각했어요. 그런데 알고 보니, 이게",
+     "terms": [
+      {
+       "term": "exploit",
+       "ko": "(취약점을) 악용하다"
+      },
+      {
+       "term": "the bad guys",
+       "ko": "나쁜 사람들, 악당"
+      },
+      {
+       "term": "it turned out that",
+       "ko": "알고 보니 ~였다"
+      }
+     ]
+    },
+    {
+     "t": 2561.28,
+     "en": "counterintuitive way that by making by adding more scrutiny to the systems the holes became apparent quicker and then were fixed and then people roll out a new version just like we roll out",
+     "turn": false,
+     "ko": "직관에 반하는 방식으로, 시스템에 대한 검증을 늘리니까 구멍이 더 빨리 드러나고 고쳐졌어요. 그러고 나서 사람들이 새 버전을 내놓죠. 저희가",
+     "terms": [
+      {
+       "term": "counterintuitive",
+       "ko": "직관에 반하는"
+      },
+      {
+       "term": "became apparent",
+       "ko": "분명히 드러났다"
+      },
+      {
+       "term": "roll out",
+       "ko": "출시하다, 배포하다"
+      }
+     ]
+    },
+    {
+     "t": 2572.68,
+     "en": "a new version of our models right Llama 3, Llama 3.1, Llama 3.2 everyone upgrades, so I think the same thing is going to happen here I think it's sort of this counterintuitive thing where even",
+     "turn": false,
+     "ko": "모델의 새 버전을 내놓는 것처럼요. Llama 3, Llama 3.1, Llama 3.2 하면서 모두가 업그레이드하죠. 그래서 여기서도 같은 일이 일어날 거라고 봐요. 이건 일종의 직관에 반하는 현상인데, 비록",
+     "terms": [
+      {
+       "term": "the same thing is going to happen",
+       "ko": "같은 일이 일어날 것이다"
+      },
+      {
+       "term": "counterintuitive thing",
+       "ko": "직관에 반하는 일"
+      }
+     ]
+    },
+    {
+     "t": 2584.96,
+     "en": "though I I think there's some concern around all right are bad guys going to do bad things with these models.",
+     "turn": false,
+     "ko": "'나쁜 사람들이 이 모델로 나쁜 짓을 하지 않을까' 하는 우려가 어느 정도 있긴 하지만요.",
+     "terms": [
+      {
+       "term": "some concern around",
+       "ko": "~에 대한 어느 정도의 우려"
+      }
+     ]
+    },
+    {
+     "t": 2592.2,
+     "en": "I actually think you just get a kind of smarter and safer model for everyone the more it's rolled out and the more kind of scrutiny is on it and then part of that is we get",
+     "turn": false,
+     "ko": "실제로는 더 널리 배포되고 더 많은 검증을 받을수록 모두에게 더 똑똑하고 안전한 모델이 된다고 생각해요. 그리고 그 과정의 일부로 저희는",
+     "terms": [
+      {
+       "term": "the more it's rolled out",
+       "ko": "더 널리 배포될수록"
+      },
+      {
+       "term": "part of that is",
+       "ko": "그 일부는 ~이다"
+      }
+     ]
+    },
+    {
+     "t": 2603.32,
+     "en": "feedback and we make the model safer so that is we roll it out to to more people it's safer for more people to use.",
+     "turn": false,
+     "ko": "피드백을 받아 모델을 더 안전하게 만들어요. 그래서 더 많은 사람에게 배포할수록 더 많은 사람이 안전하게 쓸 수 있죠.",
+     "terms": [
+      {
+       "term": "roll it out to",
+       "ko": "~에게 배포하다"
+      }
+     ]
+    },
+    {
+     "t": 2607.8,
+     "en": "So I think that the history of open source in the software industry generally would suggest that open source is going to lead to a more prosperous and safer future.",
+     "turn": false,
+     "ko": "그래서 소프트웨어 업계 전반의 오픈 소스 역사를 보면, 오픈 소스가 더 번영하고 안전한 미래로 이어질 거라고 생각해요.",
+     "terms": [
+      {
+       "term": "would suggest that",
+       "ko": "~임을 시사하다"
+      },
+      {
+       "term": "lead to",
+       "ko": "~로 이어지다"
+      },
+      {
+       "term": "prosperous",
+       "ko": "번영하는"
+      }
+     ]
+    },
+    {
+     "t": 2613.52,
+     "en": "Our show is called Huge If True and what I mean by that is kind of testing the most optimistic non-obvious thing and so my question to you is what is the biggest open genuine question on your mind right",
+     "turn": false,
+     "ko": "저희 쇼의 이름은 'Huge If True(사실이라면 엄청난 일)'인데, 가장 낙관적이면서도 뻔하지 않은 걸 검증해 본다는 뜻이에요. 그래서 여쭤보고 싶은 건, 진짜 답이 안 나온 가장 큰 질문이 뭔가요? 바로",
+     "terms": [
+      {
+       "term": "what I mean by that is",
+       "ko": "그 말의 의미는 ~이다"
+      },
+      {
+       "term": "non-obvious",
+       "ko": "뻔하지 않은"
+      },
+      {
+       "term": "on your mind",
+       "ko": "마음속에 있는, 고민 중인"
+      }
+     ]
+    },
+    {
+     "t": 2631.68,
+     "en": "now?",
+     "turn": false,
+     "ko": "지금 머릿속에 있는 것 중에서요.",
+     "terms": []
+    },
+    {
+     "t": 2631.68,
+     "en": "In which field?",
+     "turn": false,
+     "ko": "어떤 분야에서요?",
+     "terms": []
+    },
+    {
+     "t": 2631.68,
+     "en": "You're in so many!",
+     "turn": false,
+     "ko": "워낙 여러 분야에 계시잖아요!",
+     "terms": []
+    },
+    {
+     "t": 2631.68,
+     "en": "I am particularly curious about the combination of AI and hardware but I realize that we've covered a lot so I'm curious the direction you'd take this",
+     "turn": false,
+     "ko": "저는 특히 AI와 하드웨어의 결합이 궁금하긴 한데, 이미 많은 걸 다뤘다는 걸 알아서요. 그래서 이 질문을 어떤 방향으로 가져가실지 궁금해요",
+     "terms": [
+      {
+       "term": "particularly curious about",
+       "ko": "특히 ~이 궁금한"
+      },
+      {
+       "term": "covered a lot",
+       "ko": "많은 것을 다뤘다"
+      },
+      {
+       "term": "the direction you'd take this",
+       "ko": "이걸 어떤 방향으로 끌고 갈지"
+      }
+     ]
+    },
+    {
+     "t": 2652.4,
+     "en": "on a question that occupies you right now.",
+     "turn": false,
+     "ko": "지금 당신 머릿속을 차지하고 있는 질문으로요.",
+     "terms": [
+      {
+       "term": "occupies you",
+       "ko": "당신의 머릿속을 차지하다"
+      }
+     ]
+    },
+    {
+     "t": 2652.4,
+     "en": "Gosh I mean I think maybe one that's a little more AI specific is there a current set of methods that seem to be scaling very well right so with",
+     "turn": false,
+     "ko": "와, 음, 좀 더 AI에 특화된 질문을 꼽자면, 지금 아주 잘 확장되고 있는 것처럼 보이는 일련의 방법들이 있어요. 그러니까",
+     "terms": [
+      {
+       "term": "AI specific",
+       "ko": "AI에 특화된"
+      },
+      {
+       "term": "scaling very well",
+       "ko": "매우 잘 확장되는"
+      }
+     ]
+    },
+    {
+     "t": 2665.48,
+     "en": "past AI architecture you could kind of feed an AI system a certain amount of data and and use a certain amount of compute but eventually it hit a plateau and one of the interesting things",
+     "turn": false,
+     "ko": "과거의 AI 아키텍처에서는 AI 시스템에 일정량의 데이터를 넣고 일정량의 연산을 쓸 수 있었지만, 결국엔 정체기에 부딪혔어요. 그리고 흥미로운 점 하나는",
+     "terms": [
+      {
+       "term": "feed an AI system",
+       "ko": "AI 시스템에 (데이터를) 주입하다"
+      },
+      {
+       "term": "compute",
+       "ko": "연산 자원"
+      },
+      {
+       "term": "hit a plateau",
+       "ko": "정체기에 이르다"
+      }
+     ]
+    },
+    {
+     "t": 2677.2,
+     "en": "about these new transformer based architectures over the last you know 5 to 10 years is that we haven't found the end yet.",
+     "turn": false,
+     "ko": "지난 5~10년 동안의 이 새로운 트랜스포머 기반 아키텍처는 아직 끝을 발견하지 못했다는 거예요.",
+     "terms": [
+      {
+       "term": "transformer based",
+       "ko": "트랜스포머 기반의"
+      },
+      {
+       "term": "haven't found the end yet",
+       "ko": "아직 끝(한계)을 찾지 못했다"
+      }
+     ]
+    },
+    {
+     "t": 2684.24,
+     "en": "So that leads to this dynamic where Llama 3 you know we could train on you know 10 to 20,000 gpus, Llama 4 we could train on you know more more than 100,000 gpus, Llama 5",
+     "turn": false,
+     "ko": "그래서 이런 흐름이 생겨요. Llama 3는 1만~2만 개의 GPU로 학습시킬 수 있었고, Llama 4는 10만 개가 넘는 GPU로 학습시킬 수 있었고, Llama 5는",
+     "terms": [
+      {
+       "term": "leads to",
+       "ko": "~로 이어지다"
+      },
+      {
+       "term": "dynamic",
+       "ko": "역학, 흐름"
+      },
+      {
+       "term": "train on",
+       "ko": "~로(~을 써서) 학습시키다"
+      }
+     ]
+    },
+    {
+     "t": 2699.48,
+     "en": "we can plan to scale even further and there's just an interesting question of how far that goes.",
+     "turn": false,
+     "ko": "더 크게 확장할 계획이에요. 그리고 그게 어디까지 갈지가 흥미로운 질문이죠.",
+     "terms": [
+      {
+       "term": "scale even further",
+       "ko": "훨씬 더 확장하다"
+      },
+      {
+       "term": "how far that goes",
+       "ko": "그게 어디까지 가는지"
+      }
+     ]
+    },
+    {
+     "t": 2699.48,
+     "en": "It's totally possible that at some point we just like hit a limit and just like previous systems there's an asymptote and it doesn't keep on growing but it's also possible that that limit is not going",
+     "turn": false,
+     "ko": "어느 시점에 우리가 그냥 한계에 부딪혀서, 이전 시스템들처럼 점근선이 생기고 더 이상 성장하지 않을 가능성도 충분히 있어요. 하지만 그 한계가",
+     "terms": [
+      {
+       "term": "totally possible",
+       "ko": "충분히 가능한"
+      },
+      {
+       "term": "hit a limit",
+       "ko": "한계에 부딪히다"
+      },
+      {
+       "term": "keep on growing",
+       "ko": "계속 성장하다"
+      }
+     ]
+    },
+    {
+     "t": 2717.88,
+     "en": "to happen anytime soon and that we're going to be able to keep on just building more clusters and generating more you know synthetic data train the systems and that they're just going to keep on",
+     "turn": false,
+     "ko": "당분간은 오지 않을 수도 있고, 우리가 계속해서 더 많은 클러스터를 구축하고 더 많은 합성 데이터를 만들어 시스템을 학습시킬 수 있을 수도 있죠. 그리고 시스템들은 계속",
+     "terms": [
+      {
+       "term": "anytime soon",
+       "ko": "(부정문) 당분간은, 조만간"
+      },
+      {
+       "term": "synthetic data",
+       "ko": "합성 데이터"
+      },
+      {
+       "term": "keep on",
+       "ko": "계속 ~하다"
+      }
+     ]
+    },
+    {
+     "t": 2730.4,
+     "en": "getting more and more useful for people for quite a while to come and it's a really big and high stakes question I think for for the company is because we're basically making these bets on how",
+     "turn": false,
+     "ko": "꽤 오랫동안 사람들에게 점점 더 유용해질 수도 있어요. 그리고 이건 회사 입장에서 정말 크고 중대한 질문이에요. 왜냐하면 저희는 기본적으로 얼마나 많은",
+     "terms": [
+      {
+       "term": "for quite a while to come",
+       "ko": "앞으로 꽤 오랫동안"
+      },
+      {
+       "term": "high stakes",
+       "ko": "걸린 게 큰, 중대한"
+      },
+      {
+       "term": "making these bets on",
+       "ko": "~에 이런 베팅을 하다"
+      }
+     ]
+    },
+    {
+     "t": 2742.76,
+     "en": "much infrastructure to build out for the future and this is like hundreds of billions of dollars of infrastructure so like I'm clearly betting that this is going to keep scaling for a while",
+     "turn": false,
+     "ko": "인프라를 미래를 위해 구축할지에 베팅하고 있으니까요. 이건 수천억 달러 규모의 인프라예요. 그러니까 저는 분명히 이게 한동안 계속 확장될 거라는 데 걸고 있는 거죠",
+     "terms": [
+      {
+       "term": "build out",
+       "ko": "(대규모로) 구축하다"
+      },
+      {
+       "term": "hundreds of billions of dollars",
+       "ko": "수천억 달러"
+      },
+      {
+       "term": "betting that",
+       "ko": "~라는 데 걸다"
+      }
+     ]
+    },
+    {
+     "t": 2754.28,
+     "en": "but it's one of the big questions I think in the field because it is possible that it doesn't.",
+     "turn": false,
+     "ko": "하지만 그게 이 분야의 큰 질문 중 하나라고 생각해요. 그렇지 않을 가능성도 있으니까요.",
+     "terms": [
+      {
+       "term": "one of the big questions",
+       "ko": "큰 질문 중 하나"
+      }
+     ]
+    },
+    {
+     "t": 2754.28,
+     "en": "You know that obviously would lead to a very different world where it's I mean I'm sure people still figure it out eventually just need to make some new fundamental improvements to the architecture",
+     "turn": false,
+     "ko": "그렇게 되면 분명 아주 다른 세상이 되겠죠. 물론 사람들이 결국엔 해법을 찾아낼 거라고 확신해요. 아키텍처에 근본적인 개선을 새로 해야 할 뿐이겠죠",
+     "terms": [
+      {
+       "term": "figure it out",
+       "ko": "해법을 찾아내다, 알아내다"
+      },
+      {
+       "term": "eventually",
+       "ko": "결국"
+      },
+      {
+       "term": "fundamental improvements",
+       "ko": "근본적인 개선"
+      }
+     ]
+    },
+    {
+     "t": 2769.04,
+     "en": "in some way but that might be a somewhat longer trajectory for okay maybe you know the the kind of fundamental AI advances slow down for a bit and we just take some time to build new products",
+     "turn": false,
+     "ko": "어떤 식으로든요. 하지만 그건 좀 더 긴 경로가 될 수도 있어요. 예컨대 근본적인 AI 발전이 한동안 둔화되고, 우리는 시간을 들여 그걸 중심으로 새로운 제품을 만드는 거죠",
+     "terms": [
+      {
+       "term": "trajectory",
+       "ko": "궤적, 경로"
+      },
+      {
+       "term": "slow down",
+       "ko": "둔화되다, 느려지다"
+      },
+      {
+       "term": "take some time to",
+       "ko": "시간을 들여 ~하다"
+      }
+     ]
+    },
+    {
+     "t": 2781.6,
+     "en": "around this or it could be the case and that's what I'm betting on that the fundamental AI will just continue advancing for quite a while and that we're going to get both a new set of products that",
+     "turn": false,
+     "ko": "아니면 — 제가 베팅하고 있는 쪽인데요 — 근본적인 AI가 꽤 오랫동안 계속 발전하고, 우리가 새로운 제품군을 얻게 될 수도 있어요. 그 제품들은",
+     "terms": [
+      {
+       "term": "it could be the case",
+       "ko": "~일 수도 있다"
+      },
+      {
+       "term": "betting on",
+       "ko": "~에 걸다"
+      },
+      {
+       "term": "for quite a while",
+       "ko": "꽤 오랫동안"
+      }
+     ]
+    },
+    {
+     "t": 2791.84,
+     "en": "are just really compelling in all these ways and that the technology landscape and what's possible will just continue being dynamic over like a 20-year period and that's probably what",
+     "turn": false,
+     "ko": "여러모로 정말 매력적일 거고, 기술 지형과 가능성의 범위도 20년에 걸쳐 계속 역동적으로 변할 거예요. 그리고 아마 그게",
+     "terms": [
+      {
+       "term": "in all these ways",
+       "ko": "여러모로"
+      },
+      {
+       "term": "technology landscape",
+       "ko": "기술 지형(판도)"
+      },
+      {
+       "term": "dynamic",
+       "ko": "역동적인"
+      }
+     ]
+    },
+    {
+     "t": 2802.0,
+     "en": "I'd guess is going to happen but it I think it's one of the bigger questions in the industry and kind of for technology across the world today.",
+     "turn": false,
+     "ko": "제가 예상하는 일이에요. 하지만 이건 업계에서, 그리고 오늘날 전 세계 기술 전반에서 더 큰 질문 중 하나라고 생각해요.",
+     "terms": [
+      {
+       "term": "I'd guess",
+       "ko": "아마 ~일 것 같다(추측)"
+      },
+      {
+       "term": "across the world",
+       "ko": "전 세계에 걸쳐"
+      }
+     ]
+    },
+    {
+     "t": 2806.68,
+     "en": "Is there anything else that you want to say?",
+     "turn": false,
+     "ko": "더 하고 싶은 말씀 있으세요?",
+     "terms": []
+    },
+    {
+     "t": 2806.68,
+     "en": "I don't know!",
+     "turn": false,
+     "ko": "모르겠네요!",
+     "terms": []
+    },
+    {
+     "t": 2812.52,
+     "en": "Awesome.",
+     "turn": false,
+     "ko": "좋아요.",
+     "terms": []
+    },
+    {
+     "t": 2812.52,
+     "en": "We're good.",
+     "turn": false,
+     "ko": "이 정도면 됐어요.",
+     "terms": [
+      {
+       "term": "We're good",
+       "ko": "이 정도면 됐다, 괜찮다"
+      }
+     ]
+    },
+    {
+     "t": 2812.52,
+     "en": "Amazing yeah thank you so much for doing this.",
+     "turn": false,
+     "ko": "정말 좋았어요. 네, 이렇게 함께해 주셔서 정말 감사해요.",
+     "terms": [
+      {
+       "term": "thank you so much for doing this",
+       "ko": "이렇게 해 줘서 정말 고맙다"
+      }
+     ]
+    },
+    {
+     "t": 2812.52,
+     "en": "Yeah no thank you...",
+     "turn": false,
+     "ko": "네, 아니에요, 제가 감사하죠...",
+     "terms": [
+      {
+       "term": "no thank you",
+       "ko": "(거절이 아니라) 아니에요, 제가 고맙죠"
+      }
+     ]
+    }
+   ]
   }
  ]
 }

@@ -16,6 +16,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "video_scripts.json"
+MAX_CHARS = 120  # 이보다 긴 문장은 다음 자막 조각 경계에서 끊는다
 
 
 def split_lines(snippets):
@@ -41,6 +42,8 @@ def split_lines(snippets):
             buf.append(tok)
             if re.search(r"[.?!][\"')\]]*$", tok):
                 flush()
+        if len(" ".join(buf)) > MAX_CHARS:  # 문장부호 없는 자막: 자막 조각 끝에서 끊음
+            flush()
     flush()
     return lines
 
