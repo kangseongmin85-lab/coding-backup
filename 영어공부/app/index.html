@@ -92,6 +92,18 @@
   .ko-panel .ko-tr { color: var(--ink); font-weight: 600; font-size: 17px; margin-bottom: 6px; }
   .ko-panel .ko-terms { color: var(--sub); font-size: 15px; line-height: 1.75; border-top: 1px dashed #c7d2fe; padding-top: 6px; }
   .ko-panel .ko-terms b { color: var(--accent); }
+  /* 영상 탭: 오른쪽 '내 문장' 패널 (좁은 화면에선 스크립트 아래로) */
+  #view-video { max-width: 1320px; }
+  .video-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 16px; align-items: start; }
+  .picks-card { position: sticky; top: 86px; max-height: calc(100vh - 106px); display: flex; flex-direction: column; padding: 20px; }
+  .picks-list { overflow-y: auto; min-height: 0; }
+  .picks-list .script-line { padding: 9px 6px; gap: 8px; }
+  .picks-list .script-line .ts { min-width: 40px; }
+  .picks-list .script-line .tx { font-size: 16px; }
+  .picks-list .ko-panel { padding-left: 54px; }
+  .picks-group { font-weight: 700; font-size: 14px; color: var(--sub); margin: 14px 0 4px; }
+  .ko-toggle.pick-btn.on { background: #fff7ed; color: var(--warn); border-color: var(--warn); }
+  @media (max-width: 1100px) { .video-grid { grid-template-columns: 1fr; } .picks-card { position: static; max-height: none; } }
 </style>
 </head>
 <body>
@@ -216,13 +228,14 @@
 
 <!-- ───────── 영상 스크립트 ───────── -->
 <section id="view-video" class="hidden">
+ <div class="video-grid">
   <div class="card">
     <div id="video-empty" class="muted hidden">영상 스크립트가 아직 없어요.</div>
     <div id="video-main">
       <h2 id="video-title" style="margin-top:0">🎬 영상 스크립트</h2>
       <select id="video-select" class="hidden" onchange="pickVideo(+this.value)" style="width:100%;margin-bottom:12px;padding:11px;border-radius:10px;border:1px solid var(--line);font-size:17px"></select>
       <div class="vid-wrap"><div id="yt-player"></div></div>
-      <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 영상이 재생</b>돼요. 오른쪽 <b>「한」</b> 버튼을 누르면 그 문장만 <b>한글 뜻·핵심 표현</b>이 펼쳐집니다. 재생 중엔 지금 나오는 문장이 자동으로 표시돼요.</p>
+      <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 영상이 재생</b>돼요. 오른쪽 <b>「한」</b> 버튼을 누르면 그 문장만 <b>한글 뜻·핵심 표현</b>이 펼쳐지고, <b>☆</b>를 누르면 <b>⭐ 내 문장</b>에 담겨 계속 복습할 수 있어요. 재생 중엔 지금 나오는 문장이 자동으로 표시돼요.</p>
       <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap">
         <input type="text" id="video-search" placeholder="🔎 영어 문장 검색..." oninput="filterScript()" style="flex:1;min-width:180px">
         <label class="muted" style="display:flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer"><input type="checkbox" id="video-follow" checked> 재생 위치 따라가기</label>
@@ -231,6 +244,12 @@
       <div class="script-list" id="script-list"></div>
     </div>
   </div>
+  <div class="card picks-card" id="picks-card">
+    <h3 style="margin:0 0 4px">⭐ 내 문장 <span id="picks-count" class="muted" style="font-weight:400"></span></h3>
+    <p class="muted" style="margin:0 0 6px;font-size:14px">스크립트의 ☆로 담고, 누르면 그 지점부터 재생돼요.</p>
+    <div class="picks-list" id="picks-list"></div>
+  </div>
+ </div>
 </section>
 
 <!-- ───────── 공부한 문장 (한 페이지 복습) ───────── -->
@@ -275,7 +294,7 @@ const VOICES = { 'us-m': '🇺🇸 미국 남', 'us-f': '🇺🇸 미국 여', '
 const BOX_DAYS = { 1: 1, 2: 2, 3: 4, 4: 7, 5: 14 };
 // 로컬(PC 서버) vs 온라인(Netlify 등 정적 호스팅) 모드 자동 감지
 const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
-const LS_KEYS = { 'data/sentences.json': 'engstudy.sentences', 'data/vocab.json': 'engstudy.vocab', 'data/study_log.json': 'engstudy.log' };
+const LS_KEYS = { 'data/sentences.json': 'engstudy.sentences', 'data/vocab.json': 'engstudy.vocab', 'data/study_log.json': 'engstudy.log', 'data/video_picks.json': 'engstudy.picks' };
 let DB = { sentences: null, vocab: null, log: null };
 let drill = null; // {queue:[], idx, voice, results:[], newWords:[], replays}
 let audioEl = null;
@@ -355,6 +374,8 @@ async function load() {
   DB = LOCAL ? { sentences: s, vocab: v, log: l } : mergeWithLocal(s, v, l);
   DB.scenarios = sc;
   DB.videoScripts = await fetch('/data/video_scripts.json').then(r => r.json()).catch(() => ({ videos: [] }));
+  DB.picks = await fetch('/data/video_picks.json').then(r => r.json()).catch(() => ({ picks: [] }));
+  if (!LOCAL) DB.picks = mergePicks(DB.picks, lsGet(LS_KEYS['data/video_picks.json']));
   // 지점(start) 없는 옛 자동수집 예문 정리 — 이제 시간 적은 것만 보관
   DB.sentences.sentences.forEach(s => {
     if (Array.isArray(s.yg_clips)) {
@@ -1003,16 +1024,17 @@ const fmtTs = sec => Math.floor(sec / 60) + ':' + String(Math.floor(sec % 60)).p
 function ensureVideo() {
   if (videoBuilt) return;
   const vids = (DB.videoScripts && DB.videoScripts.videos) || [];
-  if (!vids.length) { $('video-main').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
+  if (!vids.length) { $('video-main').classList.add('hidden'); $('picks-card').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
   const sel = $('video-select');
   sel.innerHTML = vids.map((v, i) => `<option value="${i}">${escapeHtml(v.title || v.videoId)} (${v.lines.length}문장)</option>`).join('');
   sel.classList.toggle('hidden', vids.length < 2);
   pickVideo(0);
+  renderPicks();
   loadYT();
   videoBuilt = true;
 }
 
-function pickVideo(i) {
+function pickVideo(i, startAt) {
   videoData = DB.videoScripts.videos[i];
   $('video-title').textContent = '🎬 ' + (videoData.title || '영상 스크립트');
   videoLines = videoData.lines || [];
@@ -1020,20 +1042,26 @@ function pickVideo(i) {
   $('video-search').value = '';
   renderScript('');
   $('script-list').scrollTop = 0;
-  if (ytReady) ytPlayer.cueVideoById(videoData.videoId);
+  if (!ytReady) return;
+  if (startAt != null) ytPlayer.loadVideoById(videoData.videoId, startAt); // 바로 그 지점부터 재생 (cue 뒤에 load하면 무시됨)
+  else ytPlayer.cueVideoById(videoData.videoId);
 }
 
 function renderScript(q) {
   q = (q || '').trim().toLowerCase();
   const list = $('script-list');
   let shown = 0;
+  const vid = videoData.videoId;
+  const picked = new Set(DB.picks.picks.filter(p => p.v === vid).map(p => p.i));
   list.innerHTML = videoLines.map((L, i) => {
     if (q && !L.en.toLowerCase().includes(q)) return '';
     shown++;
+    const on = picked.has(i);
     return `<div class="sl-item${L.turn ? ' turn' : ''}">`
       + `<div class="script-line${i === videoActiveIdx ? ' active' : ''}" data-idx="${i}" onclick="seekTo(${i})">`
       + `<span class="ts">${fmtTs(L.t)}</span><span class="tx">${escapeHtml(L.en)}</span>`
-      + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(${i},this)">한</button>`
+      + `<button class="ko-toggle pick-btn${on ? ' on' : ''}" title="내 문장에 담기" onclick="event.stopPropagation();togglePick('${vid}',${i})">${on ? '★' : '☆'}</button>`
+      + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(videoLines[${i}],this)">한</button>`
       + `</div><div class="ko-panel hidden"></div></div>`;
   }).join('');
   $('video-count').textContent = q ? `“${q}” 검색 결과 ${shown}개 / 전체 ${videoLines.length}문장` : `전체 ${videoLines.length}문장`;
@@ -1041,11 +1069,10 @@ function renderScript(q) {
 function escapeHtml(s) { return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 function filterScript() { renderScript($('video-search').value); }
 
-function toggleKo(i, btn) {
+function toggleKo(L, btn) {
   const panel = btn.closest('.sl-item').querySelector('.ko-panel');
   const willShow = panel.classList.contains('hidden');
   if (willShow && !panel.dataset.filled) {
-    const L = videoLines[i];
     if (!L.ko) {
       panel.innerHTML = '<span class="muted">아직 한글 뜻이 준비되지 않았어요. (생성 중 — 잠시 후 새로고침)</span>';
     } else {
@@ -1065,6 +1092,57 @@ function seekTo(i) {
   const t = videoLines[i].t;
   if (ytReady && ytPlayer && ytPlayer.seekTo) { ytPlayer.seekTo(t, true); ytPlayer.playVideo(); }
   else { window.open(`https://www.youtube.com/watch?v=${videoData.videoId}&t=${Math.floor(t)}s`, '_blank'); }
+}
+
+/* ───── ⭐ 내 문장 (영상에서 고른 문장 모아 복습) ─────
+   picks: [{v: videoId, i: 줄 번호}] — 타임스탬프는 영상 안에서 중복될 수 있어 줄 번호로 식별.
+   ponytail: 줄 번호 기준이라 이미 담은 영상의 스크립트를 다시 만들면(재분할) 엉뚱한 줄을 가리킴 — 그땐 en으로 재매핑 필요 */
+let pickRows = [];
+// 온라인: 배포된 PC 선택분 + 이 브라우저 선택분 합침. 이 브라우저에서 뺀 것(removed)은 다시 살아나지 않게 제외
+function mergePicks(seed, ls) {
+  const removed = (ls && ls.removed) || [], seen = new Set(removed), picks = [];
+  [...((ls && ls.picks) || []), ...seed.picks].forEach(p => {
+    const k = p.v + '@' + p.i;
+    if (!seen.has(k)) { seen.add(k); picks.push(p); }
+  });
+  return { picks, removed };
+}
+function togglePick(v, i) {
+  const P = DB.picks, k = v + '@' + i;
+  const at = P.picks.findIndex(p => p.v === v && p.i === i);
+  if (at >= 0) { P.picks.splice(at, 1); if (P.removed) P.removed.push(k); }
+  else { P.picks.push({ v, i }); if (P.removed) P.removed = P.removed.filter(x => x !== k); }
+  save('data/video_picks.json', P);
+  renderPicks();
+  const b = v === videoData.videoId && $('script-list').querySelector(`[data-idx="${i}"] .pick-btn`);
+  if (b) { b.classList.toggle('on', at < 0); b.textContent = at < 0 ? '★' : '☆'; }
+}
+function renderPicks() {
+  const vids = DB.videoScripts.videos;
+  pickRows = DB.picks.picks
+    .map(p => { const vi = vids.findIndex(x => x.videoId === p.v); return { p, vi, L: vi >= 0 && vids[vi].lines[p.i] }; })
+    .filter(r => r.L)
+    .sort((a, b) => a.vi - b.vi || a.p.i - b.p.i);
+  $('picks-count').textContent = pickRows.length ? `(${pickRows.length})` : '';
+  let h = '', lastVi = -1;
+  pickRows.forEach((r, k) => {
+    if (r.vi !== lastVi) { h += `<div class="picks-group">🎬 ${escapeHtml(vids[r.vi].title || r.p.v)}</div>`; lastVi = r.vi; }
+    h += `<div class="sl-item"><div class="script-line" onclick="playPick(${k})">`
+      + `<span class="ts">${fmtTs(r.L.t)}</span><span class="tx">${escapeHtml(r.L.en)}</span>`
+      + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(pickRows[${k}].L,this)">한</button>`
+      + `<button class="ko-toggle" title="빼기" onclick="event.stopPropagation();togglePick('${r.p.v}',${r.p.i})">✕</button>`
+      + `</div><div class="ko-panel hidden"></div></div>`;
+  });
+  $('picks-list').innerHTML = h || '<p class="muted" style="font-size:15px">아직 담은 문장이 없어요.</p>';
+}
+function playPick(k) {
+  const r = pickRows[k];
+  if (DB.videoScripts.videos[r.vi] !== videoData) {
+    $('video-select').value = r.vi;
+    pickVideo(r.vi, r.L.t);
+    if (ytReady) return;
+  }
+  seekTo(r.p.i);
 }
 
 function loadYT() {

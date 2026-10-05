@@ -16,7 +16,7 @@ from datetime import date
 
 ROOT = Path(__file__).resolve().parent.parent
 PORT = 8770
-ALLOWED_SAVE = {"data/sentences.json", "data/vocab.json", "data/study_log.json"}
+ALLOWED_SAVE = {"data/sentences.json", "data/vocab.json", "data/study_log.json", "data/video_picks.json"}
 GEN_SCRIPT = ROOT / ".claude/skills/multi-accent-audio/scripts/generate_audio.py"
 
 META_PROMPT = """당신은 비즈니스 영어 학습 데이터 생성기다. 사용자는 한국인 바이오 R&D 프로젝트 매니저다.
