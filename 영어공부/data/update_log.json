@@ -1,14 +1,68 @@
 [
   {
-    "date": "2026-06-13",
+    "date": "2026-07-27",
+    "added_ids": [],
+    "count": 0,
+    "claude_ok": false
+  },
+  {
+    "date": "2026-08-12",
+    "added_ids": [],
+    "count": 0,
+    "claude_ok": false
+  },
+  {
+    "date": "2026-08-24",
     "added_ids": [
-      "s008",
-      "s009",
-      "s010",
-      "s011",
-      "s012"
+      "s127",
+      "s128",
+      "s129",
+      "s130",
+      "s131"
     ],
     "count": 5,
     "claude_ok": true
+  },
+  {
+    "date": "2026-08-31",
+    "added_ids": [
+      "s132",
+      "s133",
+      "s134",
+      "s135",
+      "s136"
+    ],
+    "count": 5,
+    "claude_ok": true
+  },
+  {
+    "date": "2026-09-07",
+    "added_ids": [],
+    "count": 0,
+    "claude_ok": false
+  },
+  {
+    "date": "2026-09-15",
+    "added_ids": [],
+    "count": 0,
+    "claude_ok": false
+  },
+  {
+    "date": "2026-09-21",
+    "added_ids": [],
+    "count": 0,
+    "claude_ok": false
+  },
+  {
+    "date": "2026-09-28",
+    "added_ids": [],
+    "count": 0,
+    "claude_ok": false
+  },
+  {
+    "date": "2026-10-05",
+    "added_ids": [],
+    "count": 0,
+    "claude_ok": false
   }
 ]

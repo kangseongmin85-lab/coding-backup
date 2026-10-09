@@ -67,6 +67,111 @@
       "new_words": [
         "w005"
       ]
+    },
+    {
+      "date": "2026-06-16",
+      "mode": "dictation",
+      "sentences": [
+        "s043",
+        "s059",
+        "s003",
+        "s062",
+        "s073",
+        "s080",
+        "s067"
+      ],
+      "results": {
+        "attempted": 8,
+        "passed": 2
+      },
+      "new_words": []
+    },
+    {
+      "date": "2026-06-17",
+      "mode": "dictation",
+      "sentences": [
+        "s023",
+        "s072",
+        "s069",
+        "s025"
+      ],
+      "results": {
+        "attempted": 4,
+        "passed": 0
+      },
+      "new_words": []
+    },
+    {
+      "date": "2026-06-23",
+      "mode": "dictation",
+      "sentences": [
+        "s084"
+      ],
+      "results": {
+        "attempted": 1,
+        "passed": 0
+      },
+      "new_words": []
+    },
+    {
+      "date": "2026-06-27",
+      "mode": "dictation",
+      "sentences": [
+        "s079",
+        "s108",
+        "s081"
+      ],
+      "results": {
+        "attempted": 3,
+        "passed": 0
+      },
+      "new_words": []
+    },
+    {
+      "date": "2026-07-01",
+      "mode": "dictation",
+      "sentences": [
+        "s107",
+        "s049",
+        "s044",
+        "s010",
+        "s108",
+        "s084",
+        "s025"
+      ],
+      "results": {
+        "attempted": 7,
+        "passed": 0
+      },
+      "new_words": []
+    },
+    {
+      "date": "2026-07-02",
+      "mode": "dictation",
+      "sentences": [
+        "s074",
+        "s095",
+        "s010",
+        "s079",
+        "s043"
+      ],
+      "results": {
+        "attempted": 6,
+        "passed": 0
+      },
+      "new_words": []
+    },
+    {
+      "date": "2026-07-11",
+      "mode": "dictation",
+      "sentences": [
+        "s108"
+      ],
+      "results": {
+        "attempted": 1,
+        "passed": 0
+      },
+      "new_words": []
     }
   ]
 }
