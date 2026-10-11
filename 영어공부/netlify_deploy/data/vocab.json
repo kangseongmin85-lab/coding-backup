@@ -1,0 +1,59 @@
+{
+  "words": [
+    {
+      "id": "w001",
+      "term": "Could you walk me through",
+      "ko": "차근차근 설명해 주시겠어요?",
+      "example": "",
+      "sentence_ref": "s001",
+      "source": "dictation",
+      "added": "2026-06-13",
+      "encounters": 1,
+      "last_seen": "2026-06-13"
+    },
+    {
+      "id": "w002",
+      "term": "Just to confirm",
+      "ko": "확인차 말씀드리면",
+      "example": "",
+      "sentence_ref": "s003",
+      "source": "dictation",
+      "added": "2026-06-13",
+      "encounters": 1,
+      "last_seen": "2026-06-13"
+    },
+    {
+      "id": "w003",
+      "term": "From our side",
+      "ko": "저희 쪽에서",
+      "example": "",
+      "sentence_ref": "s004",
+      "source": "dictation",
+      "added": "2026-06-13",
+      "encounters": 1,
+      "last_seen": "2026-06-13"
+    },
+    {
+      "id": "w004",
+      "term": "Let me make sure I got that right",
+      "ko": "제가 제대로 이해했는지 확인할게요",
+      "example": "",
+      "sentence_ref": "s005",
+      "source": "dictation",
+      "added": "2026-06-13",
+      "encounters": 1,
+      "last_seen": "2026-06-13"
+    },
+    {
+      "id": "w005",
+      "term": "run into",
+      "ko": "(문제·지연 등)에 부딪히다/맞닥뜨리다. 예상치 못한 장애를 만났을 때 쓰는 구동사.",
+      "example": "",
+      "sentence_ref": "s025",
+      "source": "dictation",
+      "added": "2026-06-15",
+      "encounters": 1,
+      "last_seen": "2026-06-15"
+    }
+  ]
+}
