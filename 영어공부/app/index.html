@@ -250,8 +250,7 @@
     <h3 style="margin:0 0 4px">⭐ 내 문장 <span id="picks-count" class="muted" style="font-weight:400"></span></h3>
     <p class="muted" style="margin:0 0 6px;font-size:14px">스크립트의 ☆로 담고, 누르면 <b>그 문장만 반복 재생</b>돼요. 다시 누르면 멈춰요.</p>
     <div class="picks-ctrl">
-      <button class="ko-toggle" onclick="ytPlayer && ytReady && ytPlayer.pauseVideo()">⏸ 정지</button>
-      <button class="ko-toggle" onclick="ytPlayer && ytReady && ytPlayer.playVideo()">▶ 재생</button>
+      <button class="ko-toggle" id="play-btn" onclick="togglePlay()">▶ 재생</button>
       <button class="ko-toggle rate-btn on" data-rate="1" onclick="setRate(1)">1x</button>
       <button class="ko-toggle rate-btn" data-rate="0.5" onclick="setRate(0.5)">0.5x</button>
     </div>
@@ -1201,7 +1200,12 @@ function setRate(r) {
   document.querySelectorAll('.rate-btn').forEach(b => b.classList.toggle('on', +b.dataset.rate === r));
   if (ytReady) ytPlayer.setPlaybackRate(r);
 }
+function togglePlay() {
+  if (!ytReady) return;
+  if (ytPlayer.getPlayerState() === YT.PlayerState.PLAYING) ytPlayer.pauseVideo(); else ytPlayer.playVideo();
+}
 function onYtState(e) {
+  $('play-btn').textContent = e.data === YT.PlayerState.PLAYING ? '⏸ 정지' : '▶ 재생'; // 영상 직접 조작해도 맞춰짐
   if (e.data === YT.PlayerState.PLAYING && ytPlayer.getPlaybackRate() !== playRate) ytPlayer.setPlaybackRate(playRate);
   if (e.data === YT.PlayerState.PLAYING) startVideoPoll(); else stopVideoPoll();
   if (e.data === YT.PlayerState.ENDED && pickLoop) { ytPlayer.seekTo(pickLoop.start, true); ytPlayer.playVideo(); } // 마지막 문장 반복
