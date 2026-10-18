@@ -101,6 +101,8 @@
   .picks-list .script-line .ts { min-width: 40px; }
   .picks-list .script-line .tx { font-size: 16px; }
   .picks-list .ko-panel { padding-left: 54px; }
+  .picks-ctrl { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 8px; }
+  .picks-ctrl .ko-toggle { margin: 0; font-size: 15px; padding: 5px 12px; }
   .picks-group { font-weight: 700; font-size: 14px; color: var(--sub); margin: 14px 0 4px; }
   .ko-toggle.pick-btn.on { background: #fff7ed; color: var(--warn); border-color: var(--warn); }
   @media (max-width: 1100px) { .video-grid { grid-template-columns: 1fr; } .picks-card { position: static; max-height: none; } }
@@ -247,6 +249,12 @@
   <div class="card picks-card" id="picks-card">
     <h3 style="margin:0 0 4px">⭐ 내 문장 <span id="picks-count" class="muted" style="font-weight:400"></span></h3>
     <p class="muted" style="margin:0 0 6px;font-size:14px">스크립트의 ☆로 담고, 누르면 <b>그 문장만 반복 재생</b>돼요. 다시 누르면 멈춰요.</p>
+    <div class="picks-ctrl">
+      <button class="ko-toggle" onclick="ytPlayer && ytReady && ytPlayer.pauseVideo()">⏸ 정지</button>
+      <button class="ko-toggle" onclick="ytPlayer && ytReady && ytPlayer.playVideo()">▶ 재생</button>
+      <button class="ko-toggle rate-btn on" data-rate="1" onclick="setRate(1)">1x</button>
+      <button class="ko-toggle rate-btn" data-rate="0.5" onclick="setRate(0.5)">0.5x</button>
+    </div>
     <div class="picks-list" id="picks-list"></div>
   </div>
  </div>
@@ -1186,7 +1194,15 @@ function createPlayer() {
     events: { onReady: () => { ytReady = true; if (ytPlayer.getVideoData().video_id !== videoData.videoId) ytPlayer.cueVideoById(videoData.videoId); }, onStateChange: onYtState },
   });
 }
+// 재생 속도 — 영상을 바꾸면(loadVideoById) 1x로 돌아가므로 재생 시작 때마다 다시 맞춤
+let playRate = 1;
+function setRate(r) {
+  playRate = r;
+  document.querySelectorAll('.rate-btn').forEach(b => b.classList.toggle('on', +b.dataset.rate === r));
+  if (ytReady) ytPlayer.setPlaybackRate(r);
+}
 function onYtState(e) {
+  if (e.data === YT.PlayerState.PLAYING && ytPlayer.getPlaybackRate() !== playRate) ytPlayer.setPlaybackRate(playRate);
   if (e.data === YT.PlayerState.PLAYING) startVideoPoll(); else stopVideoPoll();
   if (e.data === YT.PlayerState.ENDED && pickLoop) { ytPlayer.seekTo(pickLoop.start, true); ytPlayer.playVideo(); } // 마지막 문장 반복
 }
