@@ -33,6 +33,7 @@
   .player-ctrl { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
   .player-ctrl .ko-toggle { margin: 0; font-size: 17px; padding: 8px 20px; }
   .player-ctrl label.ko-toggle { display: flex; align-items: center; gap: 6px; }
+  @media (max-width: 600px) { .player-ctrl { gap: 6px; } .player-ctrl .ko-toggle { font-size: 15px; padding: 6px 10px; } }
   .script-list { position: relative; max-height: calc(100vh - var(--bar-h, 0px) - 24px); overflow-y: auto; border: 1px solid var(--line); border-radius: 12px; margin-top: 12px; }
   .sl-item.turn { border-top: 2px solid #d1d5db; }
   .script-line { display: flex; gap: 12px; padding: 10px 14px; cursor: pointer; border-bottom: 1px solid var(--line); align-items: baseline; }
@@ -70,11 +71,14 @@
  <div class="player-bar" id="player-bar">
   <div class="vid-wrap"><div id="yt-player"></div></div>
   <div class="player-ctrl">
+    <button class="ko-toggle" title="이전 문장" onclick="stepLine(-1)">⏮</button>
     <button class="ko-toggle" id="play-btn" onclick="togglePlay()">▶ 재생</button>
+    <button class="ko-toggle" title="다음 문장" onclick="stepLine(1)">⏭</button>
     <button class="ko-toggle rate-btn on" data-rate="1" onclick="setRate(1)">1x</button>
     <button class="ko-toggle rate-btn" data-rate="0.5" onclick="setRate(0.5)">0.5x</button>
     <button class="ko-toggle pick-btn" id="bar-pick" title="지금 나오는 문장을 내 문장에 담기" onclick="pickCurrent()">☆ 담기</button>
     <label class="ko-toggle"><input type="checkbox" id="video-follow" checked> 따라가기</label>
+    <label class="ko-toggle" title="문장이 끝날 때마다 멈춤 — 따라 말한 뒤 ▶ 재생"><input type="checkbox" id="shadow"> 쉐도잉</label>
   </div>
  </div>
  <div class="video-grid">
@@ -203,8 +207,15 @@ function toggleKo(L, btn) {
 function seekTo(i) {
   if (pickLoop) { pickLoop = null; renderPicks(); }
   const t = videoLines[i].t;
-  if (ytReady && ytPlayer && ytPlayer.seekTo) { ytPlayer.seekTo(t, true); ytPlayer.playVideo(); }
+  if (ytReady && ytPlayer && ytPlayer.seekTo) { ytPlayer.seekTo(t, true); ytPlayer.playVideo(); setActive(i); } // 바로 표시 — ⏭ 연타해도 다음 줄로
   else { window.open(`https://www.youtube.com/watch?v=${videoData.videoId}&t=${Math.floor(t)}s`, '_blank'); }
+}
+// 이전/다음 문장 — 같은 시각 줄은 한 문장으로 보고 건너뜀
+function nextLine(i) { for (let j = i + 1; j < videoLines.length; j++) if (videoLines[j].t > videoLines[i].t) return j; return -1; }
+function prevLine(i) { for (let j = i - 1; j >= 0; j--) if (videoLines[j].t < videoLines[i].t) return j; return 0; }
+function stepLine(d) {
+  const i = videoActiveIdx < 0 ? 0 : d > 0 ? nextLine(videoActiveIdx) : prevLine(videoActiveIdx);
+  if (i >= 0) seekTo(i);
 }
 
 /* ───── ⭐ 내 문장 (영상에서 고른 문장 모아 복습) ─────
@@ -283,8 +294,8 @@ function playPick(k) {
   if (other) { $('video-select').value = r.vi; pickVideo(r.vi, r.L.t); }
   if (!other || !ytReady) seekTo(P.i);
   if (!ytReady) return;
-  const next = videoLines.slice(P.i + 1).find(L => L.t > r.L.t); // 같은 시각 줄은 건너뜀
-  pickLoop = { v: P.v, i: P.i, start: r.L.t, end: next ? next.t : Infinity };
+  const n = nextLine(P.i);
+  pickLoop = { v: P.v, i: P.i, start: r.L.t, end: n >= 0 ? videoLines[n].t : Infinity };
   renderPicks();
 }
 
@@ -322,14 +333,24 @@ function onYtState(e) {
   if (e.data === YT.PlayerState.PLAYING) startVideoPoll(); else stopVideoPoll();
   if (e.data === YT.PlayerState.ENDED && pickLoop) { ytPlayer.seekTo(pickLoop.start, true); ytPlayer.playVideo(); } // 마지막 문장 반복
 }
+let shadowLastT = 0;
 function startVideoPoll() { if (!videoPoll) videoPoll = setInterval(updateActiveLine, 200); }
 function stopVideoPoll() { if (videoPoll) { clearInterval(videoPoll); videoPoll = null; } }
 function updateActiveLine() {
   if (!ytReady || !ytPlayer.getCurrentTime) return;
   const t = ytPlayer.getCurrentTime();
   if (pickLoop && t >= pickLoop.end) { ytPlayer.seekTo(pickLoop.start, true); return; } // ⭐ 내 문장 반복
+  // 쉐도잉: 재생이 흘러서(점프 아님) 다음 문장 시작을 넘으면 멈추고 그 문장 시작으로 맞춤
+  if ($('shadow').checked && !pickLoop && videoActiveIdx >= 0) {
+    const n = nextLine(videoActiveIdx), end = n >= 0 && videoLines[n].t;
+    if (n >= 0 && shadowLastT < end && t >= end && t - shadowLastT < 1) { ytPlayer.pauseVideo(); ytPlayer.seekTo(end, true); }
+  }
+  shadowLastT = t;
   let lo = 0, hi = videoLines.length - 1, idx = 0;
   while (lo <= hi) { const mid = (lo + hi) >> 1; if (videoLines[mid].t <= t) { idx = mid; lo = mid + 1; } else hi = mid - 1; }
+  setActive(idx);
+}
+function setActive(idx) {
   if (idx === videoActiveIdx) return;
   const prev = $('script-list').querySelector('.script-line.active');
   if (prev) prev.classList.remove('active');
