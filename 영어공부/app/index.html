@@ -30,8 +30,9 @@
   .player-bar { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 12px 0 10px; }
   .vid-wrap { position: relative; width: min(100%, 71vh); aspect-ratio: 16 / 9; margin: 0 auto; border-radius: 14px; overflow: hidden; background: #000; }
   .vid-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .player-ctrl { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
+  .player-ctrl { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
   .player-ctrl .ko-toggle { margin: 0; font-size: 17px; padding: 8px 20px; }
+  .player-ctrl label.ko-toggle { display: flex; align-items: center; gap: 6px; }
   .script-list { position: relative; max-height: calc(100vh - var(--bar-h, 0px) - 24px); overflow-y: auto; border: 1px solid var(--line); border-radius: 12px; margin-top: 12px; }
   .sl-item.turn { border-top: 2px solid #d1d5db; }
   .script-line { display: flex; gap: 12px; padding: 10px 14px; cursor: pointer; border-bottom: 1px solid var(--line); align-items: baseline; }
@@ -72,6 +73,8 @@
     <button class="ko-toggle" id="play-btn" onclick="togglePlay()">▶ 재생</button>
     <button class="ko-toggle rate-btn on" data-rate="1" onclick="setRate(1)">1x</button>
     <button class="ko-toggle rate-btn" data-rate="0.5" onclick="setRate(0.5)">0.5x</button>
+    <button class="ko-toggle pick-btn" id="bar-pick" title="지금 나오는 문장을 내 문장에 담기" onclick="pickCurrent()">☆ 담기</button>
+    <label class="ko-toggle"><input type="checkbox" id="video-follow" checked> 따라가기</label>
   </div>
  </div>
  <div class="video-grid">
@@ -81,10 +84,8 @@
       <h2 id="video-title" style="margin-top:0">🎬 영상 스크립트</h2>
       <select id="video-select" class="hidden" onchange="pickVideo(+this.value)" style="width:100%;margin-bottom:12px;padding:11px;border-radius:10px;border:1px solid var(--line);font-size:17px"></select>
       <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 영상이 재생</b>돼요. 오른쪽 <b>「한」</b> 버튼을 누르면 그 문장만 <b>한글 뜻·핵심 표현</b>이 펼쳐지고, <b>☆</b>를 누르면 <b>⭐ 내 문장</b>에 담겨 계속 복습할 수 있어요. 재생 중엔 지금 나오는 문장이 자동으로 표시돼요.</p>
-      <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap">
-        <input type="text" id="video-search" placeholder="🔎 영어 문장 검색..." oninput="filterScript()" style="flex:1;min-width:180px">
-        <label class="muted" style="display:flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer"><input type="checkbox" id="video-follow" checked> 재생 위치 따라가기</label>
-      </div>
+      <input type="text" id="video-search" placeholder="🔎 영어 문장 검색..." oninput="filterScript()" style="margin-top:12px">
+
       <div class="muted" id="video-count" style="margin-top:8px"></div>
       <div class="script-list" id="script-list"></div>
     </div>
@@ -151,6 +152,7 @@ function pickVideo(i, startAt) {
   videoActiveIdx = -1;
   $('video-search').value = '';
   renderScript('');
+  updateBarPick();
   $('script-list').scrollTop = 0;
   if (!ytReady) return;
   if (startAt != null) ytPlayer.loadVideoById(videoData.videoId, startAt); // 바로 그 지점부터 재생 (cue 뒤에 load하면 무시됨)
@@ -261,6 +263,17 @@ function renderPicks() {
       + `</div><div class="ko-panel hidden"></div></div>`;
   });
   $('picks-list').innerHTML = h || '<p class="muted" style="font-size:15px">아직 담은 문장이 없어요.</p>';
+  updateBarPick();
+}
+// 상단 바 ☆ = 지금 재생 중인 문장 담기/빼기
+function pickCurrent() {
+  if (videoActiveIdx < 0) { toast('영상을 재생하면 지금 나오는 문장을 담을 수 있어요'); return; }
+  togglePick(videoData.videoId, videoActiveIdx);
+}
+function updateBarPick() {
+  const on = DB.picks.picks.some(p => p.v === videoData.videoId && p.i === videoActiveIdx);
+  $('bar-pick').classList.toggle('on', on);
+  $('bar-pick').textContent = on ? '★ 담음' : '☆ 담기';
 }
 // 누르면 그 문장만 반복(다음 문장 시작 시각까지), 다시 누르면 반복 끄고 일시정지
 function playPick(k) {
@@ -321,6 +334,7 @@ function updateActiveLine() {
   const prev = $('script-list').querySelector('.script-line.active');
   if (prev) prev.classList.remove('active');
   videoActiveIdx = idx;
+  updateBarPick();
   const el = $('script-list').querySelector(`[data-idx="${idx}"]`);
   if (el) {
     el.classList.add('active');
