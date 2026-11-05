@@ -57,18 +57,9 @@
   .ko-panel .ko-tr { color: var(--ink); font-weight: 600; font-size: 17px; margin-bottom: 6px; }
   .ko-panel .ko-terms { color: var(--sub); font-size: 15px; line-height: 1.75; border-top: 1px dashed #c7d2fe; padding-top: 6px; }
   .ko-panel .ko-terms b { color: var(--accent); }
-  /* 오른쪽 '내 문장' 패널 (좁은 화면에선 스크립트 아래로) */
-  #view-video { max-width: 1320px; }
-  .video-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 16px; align-items: start; }
-  .picks-card { position: sticky; top: var(--bar-h, 0px); max-height: calc(100vh - var(--bar-h, 0px) - var(--nav-h, 0px) - 16px); display: flex; flex-direction: column; padding: 20px; }
-  .picks-list { overflow-y: auto; min-height: 0; }
-  .picks-list .script-line { padding: 8px 6px 10px; }
-  .picks-list .script-line .tx { font-size: 17px; }
-  .picks-list .ko-panel { padding: 10px 8px 14px; }
-  .picks-group { font-weight: 700; font-size: 14px; color: var(--sub); margin: 14px 0 4px; }
+  #view-video { max-width: 960px; min-width: 0; }
   .ko-toggle.pick-btn.on { background: #fff7ed; color: var(--warn); border-color: var(--warn); }
-  /* minmax(0,…) — 긴 영상 제목(select)이 카드를 화면 밖으로 밀어내지 않게 */
-  @media (max-width: 1100px) { .video-grid { grid-template-columns: minmax(0, 1fr); } .picks-card { position: static; max-height: none; } .picks-list { max-height: calc(100vh - var(--bar-h, 0px) - var(--nav-h, 0px) - 24px); } }
+  .star-filter { display: flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 16px; cursor: pointer; width: fit-content; }
   @media (max-width: 600px) { main { padding-left: 8px; padding-right: 8px; } .card { padding: 16px 12px; } .card h2 { font-size: 22px; } .script-line { padding: 8px 10px 12px; } .script-line .tx { font-size: 17px; } }
 </style>
 </head>
@@ -80,25 +71,18 @@
  <div class="player-bar" id="player-bar">
   <div class="vid-wrap"><div id="yt-player"></div></div>
  </div>
- <div class="video-grid">
   <div class="card">
     <div id="video-empty" class="muted hidden">영상 스크립트가 아직 없어요.</div>
     <div id="video-main">
       <h2 id="video-title" style="margin-top:0">🎬 영상 스크립트</h2>
       <select id="video-select" class="hidden" onchange="pickVideo(+this.value)" style="width:100%;margin-bottom:12px;padding:11px;border-radius:10px;border:1px solid var(--line);font-size:17px"></select>
-      <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 영상이 재생</b>돼요. 오른쪽 <b>「한」</b> 버튼을 누르면 그 문장만 <b>한글 뜻·핵심 표현</b>이 펼쳐지고, <b>☆</b>를 누르면 <b>⭐ 내 문장</b>에 담겨 계속 복습할 수 있어요. 재생 중엔 지금 나오는 문장이 자동으로 표시돼요.</p>
+      <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 재생</b>, <b>🔁</b>는 <b>그 문장만 반복</b>(다시 누르면 멈춤), <b>「한」</b>은 <b>한글 뜻·핵심 표현</b>, <b>☆</b>는 <b>내 문장 표시</b>예요.</p>
       <input type="text" id="video-search" placeholder="🔎 영어 문장 검색..." oninput="filterScript()" style="margin-top:12px">
-
+      <label class="star-filter"><input type="checkbox" id="star-only" onchange="filterScript()"> ⭐ 내 문장만 보기</label>
       <div class="muted" id="video-count" style="margin-top:8px"></div>
       <div class="script-list" id="script-list"></div>
     </div>
   </div>
-  <div class="card picks-card" id="picks-card">
-    <h3 style="margin:0 0 4px">⭐ 내 문장 <span id="picks-count" class="muted" style="font-weight:400"></span></h3>
-    <p class="muted" style="margin:0 0 6px;font-size:14px">스크립트의 ☆로 담고, 누르면 <b>그 문장만 반복 재생</b>돼요. 다시 누르면 멈춰요.</p>
-    <div class="picks-list" id="picks-list"></div>
-  </div>
- </div>
 </section>
 
 </main>
@@ -144,25 +128,25 @@ async function save(file, content) {
 
 /* ───── 영상 스크립트 ───── */
 let ytPlayer = null, ytReady = false, videoData = null, videoLines = [], videoActiveIdx = -1, videoPoll = null, videoBuilt = false;
-let pickLoop = null; // ⭐ 내 문장 반복 구간 {v, i, start, end} — 그 문장만 반복 재생
+let lineLoop = null; // 🔁 반복 구간 {i, start, end} — 지금 영상의 그 문장만 반복 재생
 const fmtTs = sec => Math.floor(sec / 60) + ':' + String(Math.floor(sec % 60)).padStart(2, '0');
 
 function ensureVideo() {
   if (videoBuilt) return;
   const vids = (DB.videoScripts && DB.videoScripts.videos) || [];
-  if (!vids.length) { $('video-main').classList.add('hidden'); $('picks-card').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
+  if (!vids.length) { $('video-main').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
   const sel = $('video-select');
-  sel.innerHTML = vids.map((v, i) => `<option value="${i}">${escapeHtml(v.title || v.videoId)} (${v.lines.length}문장)</option>`).join('');
+  sel.innerHTML = vids.map((v, i) => `<option value="${i}"></option>`).join('');
+  starCounts();
   sel.classList.toggle('hidden', vids.length < 2);
   pickVideo(0);
-  renderPicks();
   loadYT();
   videoBuilt = true;
 }
 
-function pickVideo(i, startAt) {
+function pickVideo(i) {
   videoData = DB.videoScripts.videos[i];
-  if (pickLoop) { pickLoop = null; renderPicks(); }
+  lineLoop = null;
   $('video-title').textContent = '🎬 ' + (videoData.title || '영상 스크립트');
   videoLines = videoData.lines || [];
   videoActiveIdx = -1;
@@ -170,8 +154,7 @@ function pickVideo(i, startAt) {
   renderScript('');
   $('script-list').scrollTop = 0;
   if (!ytReady) return;
-  if (startAt != null) ytPlayer.loadVideoById(videoData.videoId, startAt); // 바로 그 지점부터 재생 (cue 뒤에 load하면 무시됨)
-  else ytPlayer.cueVideoById(videoData.videoId);
+  ytPlayer.cueVideoById(videoData.videoId);
 }
 
 function renderScript(q) {
@@ -180,22 +163,31 @@ function renderScript(q) {
   let shown = 0;
   const vid = videoData.videoId;
   const picked = new Set(DB.picks.picks.filter(p => p.v === vid).map(p => p.i));
+  const starOnly = $('star-only').checked;
   list.innerHTML = videoLines.map((L, i) => {
-    if (q && !L.en.toLowerCase().includes(q)) return '';
-    shown++;
     const on = picked.has(i);
+    if ((q && !L.en.toLowerCase().includes(q)) || (starOnly && !on)) return '';
+    shown++;
     return `<div class="sl-item${L.turn ? ' turn' : ''}">`
       + `<div class="script-line${i === videoActiveIdx ? ' active' : ''}" data-idx="${i}" onclick="seekTo(${i})">`
       + `<div class="sl-meta"><span class="ts">${fmtTs(L.t)}</span>`
+      + `<button class="ko-toggle loop-btn${lineLoop && lineLoop.i === i ? ' on' : ''}" title="이 문장만 반복 (다시 누르면 멈춤)" onclick="event.stopPropagation();toggleLoop(${i})">🔁</button>`
       + `<button class="ko-toggle pick-btn${on ? ' on' : ''}" title="내 문장에 담기" onclick="event.stopPropagation();togglePick('${vid}',${i})">${on ? '★' : '☆'}</button>`
       + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(videoLines[${i}],this)">한</button></div>`
       + `<div class="tx">${escapeHtml(L.en)}</div>`
       + `</div><div class="ko-panel hidden"></div></div>`;
   }).join('');
-  $('video-count').textContent = q ? `“${q}” 검색 결과 ${shown}개 / 전체 ${videoLines.length}문장` : `전체 ${videoLines.length}문장`;
+  $('video-count').textContent = (q || starOnly) ? `${starOnly ? '⭐ ' : ''}${q ? `“${q}” ` : ''}${shown}문장 / 전체 ${videoLines.length}문장` : `전체 ${videoLines.length}문장`;
 }
 function escapeHtml(s) { return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 function filterScript() { renderScript($('video-search').value); }
+// 영상 선택 목록에 영상별 ⭐ 개수 — 내 문장이 어느 영상에 있는지 바로 보이게
+function starCounts() {
+  DB.videoScripts.videos.forEach((v, i) => {
+    const n = DB.picks.picks.filter(p => p.v === v.videoId).length;
+    $('video-select').options[i].textContent = `${v.title || v.videoId} (${v.lines.length}문장${n ? ` · ⭐${n}` : ''})`;
+  });
+}
 
 function toggleKo(L, btn) {
   const panel = btn.closest('.sl-item').querySelector('.ko-panel');
@@ -217,7 +209,7 @@ function toggleKo(L, btn) {
 }
 
 function seekTo(i) {
-  if (pickLoop) { pickLoop = null; renderPicks(); }
+  if (lineLoop) { lineLoop = null; markLoop(); }
   const t = videoLines[i].t;
   if (ytReady && ytPlayer && ytPlayer.seekTo) { ytPlayer.seekTo(t, true); ytPlayer.playVideo(); setActive(i); } // 바로 표시 — ⏭ 연타해도 다음 줄로
   else { window.open(`https://www.youtube.com/watch?v=${videoData.videoId}&t=${Math.floor(t)}s`, '_blank'); }
@@ -230,10 +222,9 @@ function stepLine(d) {
   if (i >= 0) seekTo(i);
 }
 
-/* ───── ⭐ 내 문장 (영상에서 고른 문장 모아 복습) ─────
+/* ───── ⭐ 내 문장 (스크립트 줄의 ☆로 표시, '⭐ 내 문장만 보기'로 모아 봄) ─────
    picks: [{v: videoId, i: 줄 번호}] — 타임스탬프는 영상 안에서 중복될 수 있어 줄 번호로 식별.
    ponytail: 줄 번호 기준이라 이미 담은 영상의 스크립트를 다시 만들면(재분할) 엉뚱한 줄을 가리킴 — 그땐 en으로 재매핑 필요 */
-let pickRows = [];
 /* PC·폰 공유: Netlify 함수(netlify/functions/picks.mjs)가 원본 목록, 각 기기 파일/localStorage는 오프라인용 사본.
    담기/빼기는 연산({v,i,on})으로 보내 양쪽 변경이 누적됨. 못 보낸 연산은 PICKS_PENDING에 쌓았다가 다음 동기화 때 재전송 */
 const PICKS_API = (LOCAL ? 'https://tubular-pavlova-e88756.netlify.app' : '') + '/api/picks';
@@ -248,7 +239,7 @@ async function syncPicks(ops = []) {
     if (JSON.stringify(picks) !== JSON.stringify(DB.picks.picks)) {
       DB.picks = { picks };
       save('data/video_picks.json', DB.picks);
-      if (videoBuilt && videoData) { renderScript($('video-search').value); renderPicks(); }
+      if (videoBuilt && videoData) { filterScript(); starCounts(); }
     }
     return true;
   } catch (e) {
@@ -264,41 +255,23 @@ function togglePick(v, i) {
   if (at >= 0) P.picks.splice(at, 1); else P.picks.push({ v, i });
   save('data/video_picks.json', P);
   syncPicks([{ v, i, on: at < 0 }]);
-  renderPicks();
+  starCounts();
   const b = v === videoData.videoId && $('script-list').querySelector(`[data-idx="${i}"] .pick-btn`);
   if (b) { b.classList.toggle('on', at < 0); b.textContent = at < 0 ? '★' : '☆'; }
 }
-function renderPicks() {
-  const vids = DB.videoScripts.videos;
-  pickRows = DB.picks.picks
-    .map(p => { const vi = vids.findIndex(x => x.videoId === p.v); return { p, vi, L: vi >= 0 && vids[vi].lines[p.i] }; })
-    .filter(r => r.L)
-    .sort((a, b) => a.vi - b.vi || a.p.i - b.p.i);
-  $('picks-count').textContent = pickRows.length ? `(${pickRows.length})` : '';
-  let h = '', lastVi = -1;
-  pickRows.forEach((r, k) => {
-    if (r.vi !== lastVi) { h += `<div class="picks-group">🎬 ${escapeHtml(vids[r.vi].title || r.p.v)}</div>`; lastVi = r.vi; }
-    const looping = pickLoop && pickLoop.v === r.p.v && pickLoop.i === r.p.i;
-    h += `<div class="sl-item"><div class="script-line${looping ? ' active' : ''}" onclick="playPick(${k})">`
-      + `<div class="sl-meta"><span class="ts">${looping ? '🔁 ' : ''}${fmtTs(r.L.t)}</span>`
-      + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(pickRows[${k}].L,this)">한</button>`
-      + `<button class="ko-toggle" title="빼기" onclick="event.stopPropagation();togglePick('${r.p.v}',${r.p.i})">✕</button></div>`
-      + `<div class="tx">${escapeHtml(r.L.en)}</div>`
-      + `</div><div class="ko-panel hidden"></div></div>`;
-  });
-  $('picks-list').innerHTML = h || '<p class="muted" style="font-size:15px">아직 담은 문장이 없어요.</p>';
-}
-// 누르면 그 문장만 반복(다음 문장 시작 시각까지), 다시 누르면 반복 끄고 일시정지
-function playPick(k) {
-  const r = pickRows[k], P = r.p;
-  if (pickLoop && pickLoop.v === P.v && pickLoop.i === P.i) { pickLoop = null; renderPicks(); if (ytReady) ytPlayer.pauseVideo(); return; }
-  const other = DB.videoScripts.videos[r.vi] !== videoData;
-  if (other) { $('video-select').value = r.vi; pickVideo(r.vi, r.L.t); }
-  if (!other || !ytReady) seekTo(P.i);
+// 🔁 = 그 문장만 반복(다음 문장 시작 시각까지), 같은 문장 다시 누르면 반복 끄고 일시정지
+function toggleLoop(i) {
+  if (lineLoop && lineLoop.i === i) { lineLoop = null; markLoop(); if (ytReady) ytPlayer.pauseVideo(); return; }
+  seekTo(i);
   if (!ytReady) return;
-  const n = nextLine(P.i);
-  pickLoop = { v: P.v, i: P.i, start: r.L.t, end: n >= 0 ? videoLines[n].t : Infinity };
-  renderPicks();
+  const n = nextLine(i);
+  lineLoop = { i, start: videoLines[i].t, end: n >= 0 ? videoLines[n].t : Infinity };
+  markLoop();
+}
+function markLoop() {
+  $('script-list').querySelectorAll('.loop-btn.on').forEach(b => b.classList.remove('on'));
+  const b = lineLoop && $('script-list').querySelector(`[data-idx="${lineLoop.i}"] .loop-btn`);
+  if (b) b.classList.add('on');
 }
 
 function loadYT() {
@@ -333,14 +306,14 @@ function onYtState(e) {
   $('play-btn').textContent = e.data === YT.PlayerState.PLAYING ? '⏸' : '▶'; // 영상 직접 조작해도 맞춰짐
   if (e.data === YT.PlayerState.PLAYING && ytPlayer.getPlaybackRate() !== playRate) ytPlayer.setPlaybackRate(playRate);
   if (e.data === YT.PlayerState.PLAYING) startVideoPoll(); else stopVideoPoll();
-  if (e.data === YT.PlayerState.ENDED && pickLoop) { ytPlayer.seekTo(pickLoop.start, true); ytPlayer.playVideo(); } // 마지막 문장 반복
+  if (e.data === YT.PlayerState.ENDED && lineLoop) { ytPlayer.seekTo(lineLoop.start, true); ytPlayer.playVideo(); } // 마지막 문장 반복
 }
 function startVideoPoll() { if (!videoPoll) videoPoll = setInterval(updateActiveLine, 200); }
 function stopVideoPoll() { if (videoPoll) { clearInterval(videoPoll); videoPoll = null; } }
 function updateActiveLine() {
   if (!ytReady || !ytPlayer.getCurrentTime) return;
   const t = ytPlayer.getCurrentTime();
-  if (pickLoop && t >= pickLoop.end) { ytPlayer.seekTo(pickLoop.start, true); return; } // ⭐ 내 문장 반복
+  if (lineLoop && t >= lineLoop.end) { ytPlayer.seekTo(lineLoop.start, true); return; } // 🔁 문장 반복
   let lo = 0, hi = videoLines.length - 1, idx = 0;
   while (lo <= hi) { const mid = (lo + hi) >> 1; if (videoLines[mid].t <= t) { idx = mid; lo = mid + 1; } else hi = mid - 1; }
   setActive(idx);
