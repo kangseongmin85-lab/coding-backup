@@ -13,8 +13,18 @@
      "en": "Special episode this week.",
      "turn": false,
      "ko": "이번 주는 특별 방송입니다.",
-     "terms": [],
-     "note": "'This is a special episode this week'에서 주어·동사(This is)를 뺀 방송 오프닝식 구어체예요. 진행자가 쇼를 여는 전형적인 첫마디입니다."
+     "terms": [
+      {
+       "term": "Special episode",
+       "ko": "특별 방송·특집 회차. episode = (방송·연재물의) 한 회. 예: the final episode 마지막 회."
+      },
+      {
+       "term": "this week (Special episode this week.)",
+       "ko": "주어·동사가 생략된 구어체 문장(= This week is a special episode). 방송 오프닝에서 흔한 말투."
+      }
+     ],
+     "note": "'This is a special episode this week'에서 주어·동사(This is)를 뺀 방송 오프닝식 구어체예요. 진행자가 쇼를 여는 전형적인 첫마디입니다.",
+     "lvl": "ms"
     },
     {
      "t": 0.0,
@@ -24,15 +34,28 @@
      "ko": "정규 방송을 미루고 모셨는데, 저희가 방송을 미루는 사람은 딱 세 명뿐이에요.",
      "terms": [
       {
-       "term": "preempt (a show)",
-       "ko": "(더 중요한 일로) 정규 방송·일정을 밀어내다. 예: The game preempted the evening news."
+       "term": "We've preempted (현재완료)",
+       "ko": "have + p.p. — 방금 결정해 지금 효과가 있는 일. '편성을 이미 바꿔 놓았다'는 느낌."
       },
       {
-       "term": "there's only ~",
-       "ko": "'~는 딱 ~뿐이다' — 구어에선 복수 명사 앞에도 there's를 자주 씀(격식 글에선 there are)."
+       "term": "preempt (a show)",
+       "ko": "(정규 방송을) 다른 프로그램으로 대체·결방시키다. 예: The game preempted the evening news."
+      },
+      {
+       "term": "the weekly show",
+       "ko": "매주 하는 정규 방송. weekly = 매주의(daily 매일의, monthly 매달의)."
+      },
+      {
+       "term": "there's only three people (구어체 수 일치)",
+       "ko": "원칙은 there are지만 말할 땐 there's + 복수명사를 흔히 씀."
+      },
+      {
+       "term": "three people we preempt the show for (관계사 생략 + 전치사 끝)",
+       "ko": "= three people (whom) we preempt the show for. 목적격 관계대명사가 빠지고 전치사 for가 끝에 남은 구조."
       }
      ],
-     "note": "We've preempted(현재완료)로 '이미 정규 편성을 밀어냈다'는 사실을 말하고, 뒤 절 'there's only three people (that) we preempt the show for'는 관계대명사가 생략된 구조예요. 원래 문법상 there are가 맞지만 구어에선 there's를 흔히 씁니다. 손님을 띄워주는 농담의 빌드업입니다."
+     "note": "We've preempted(현재완료)로 '이미 정규 편성을 밀어냈다'는 사실을 말하고, 뒤 절 'there's only three people (that) we preempt the show for'는 관계대명사가 생략된 구조예요. 원래 문법상 there are가 맞지만 구어에선 there's를 흔히 씁니다. 손님을 띄워주는 농담의 빌드업입니다.",
+     "lvl": "ms"
     },
     {
      "t": 6.76,
@@ -40,8 +63,14 @@
      "en": "President Trump, Jesus, and Jensen.",
      "turn": false,
      "ko": "트럼프 대통령, 예수님, 그리고 젠슨이죠.",
-     "terms": [],
-     "note": "앞 문장의 '세 사람'을 공개하는 펀치라인이에요. 대통령·예수와 같은 급으로 올려 손님을 과장되게 치켜세우는 농담입니다."
+     "terms": [
+      {
+       "term": "President Trump, Jesus, and Jensen.",
+       "ko": "앞 문장 'three people'을 나열한 명사만의 문장(동사 생략). 예수와 나란히 놓아 띄워주는 농담."
+      }
+     ],
+     "note": "앞 문장의 '세 사람'을 공개하는 펀치라인이에요. 대통령·예수와 같은 급으로 올려 손님을 과장되게 치켜세우는 농담입니다.",
+     "lvl": "ms"
     },
     {
      "t": 11.16,
@@ -51,11 +80,20 @@
      "ko": "순서는 마음대로 정하셔도 돼요.",
      "terms": [
       {
-       "term": "I'll let you pick",
-       "ko": "'고르는 건 당신에게 맡길게요' — 선택권을 넘기는 부드러운 표현. 비슷한 말: I'll leave it up to you."
+       "term": "I'll let you pick (let + 목적어 + 동사원형)",
+       "ko": "let A do = A가 ~하게 해주다. 예: Let me know. 알려줘."
+      },
+      {
+       "term": "pick",
+       "ko": "고르다(= choose). 구어에서 더 자주 씀."
+      },
+      {
+       "term": "which order we do that (간접의문문)",
+       "ko": "의문사절이 목적어 자리에 오면 '의문사 + 주어 + 동사' 순서(which order do we X). '어떤 순서로 할지'."
       }
      ],
-     "note": "let + 사람 + 동사원형 = '~가 …하게 해주다'. 'which order we do that'은 간접의문문이라 어순이 평서문(we do)이에요. 세 사람 중 누가 '1등'인지 고르라는 농담을 이어갑니다."
+     "note": "let + 사람 + 동사원형 = '~가 …하게 해주다'. 'which order we do that'은 간접의문문이라 어순이 평서문(we do)이에요. 세 사람 중 누가 '1등'인지 고르라는 농담을 이어갑니다.",
+     "lvl": "ms"
     },
     {
      "t": 13.24,
@@ -65,15 +103,28 @@
      "ko": "그동안 정말 대단한 성과를 내셨고, 행사도 훌륭했어요.",
      "terms": [
       {
-       "term": "what an amazing run",
-       "ko": "'정말 대단한 상승세였다' — run = 연속된 좋은 흐름(a run of success). 주식·스포츠·커리어에 다 씀."
+       "term": "what an amazing run you've had (감탄문)",
+       "ko": "what + a + 형용사 + 명사 + 주어 + 동사! = '정말 대단한 ~구나!'"
+      },
+      {
+       "term": "run",
+       "ko": "(일정 기간 이어진) 연속 성공·잘나가는 시기. 예: a winning run 연승 행진."
+      },
+      {
+       "term": "you've had (현재완료)",
+       "ko": "지금까지 이어져 온 기간을 말할 때. 최근 몇 년의 성과 전체를 가리킴."
+      },
+      {
+       "term": "and and (말 더듬음)",
+       "ko": "말하다 반복한 것. 의미 없음."
       },
       {
        "term": "a great event",
-       "ko": "칭찬 인사말로 자주 붙는 표현. 회의·행사 후 'Great event!' 한마디로도 충분."
+       "ko": "대단한 행사. 여기서는 엔비디아 GTC 같은 큰 행사를 가리킴."
       }
      ],
-     "note": "'What an amazing run (you've had)!'는 What + a + 형용사 + 명사 감탄문이에요. 'and and'는 말하다 반복된 것. run은 여기서 '연이은 성공·상승세'라는 뜻입니다."
+     "note": "'What an amazing run (you've had)!'는 What + a + 형용사 + 명사 감탄문이에요. 'and and'는 말하다 반복된 것. run은 여기서 '연이은 성공·상승세'라는 뜻입니다.",
+     "lvl": "ms"
     },
     {
      "t": 16.48,
@@ -131,15 +182,28 @@
      "ko": "대단하죠. 그리고 지난 1년간 가장 큰 발표 중 하나가 Grok(인수)이었어요.",
      "terms": [
       {
-       "term": "one of the great announcements",
-       "ko": "one of the + 최상급/형용사 + 복수명사 = '손꼽히는 ~ 중 하나'. 명사는 꼭 복수형."
+       "term": "Extraordinary",
+       "ko": "대단한, 비범한(extra + ordinary = 평범함을 넘어선). 앞 말에 대한 한 단어 맞장구."
       },
       {
-       "term": "the past year",
-       "ko": "'지난 1년(지금까지)' — 현재완료와 잘 어울림. last year는 '작년(달력상)'."
+       "term": "one of the great announcements (one of the + 복수명사)",
+       "ko": "'가장 ~한 것 중 하나'. one of 뒤에는 반드시 복수형."
+      },
+      {
+       "term": "announcement",
+       "ko": "발표, 공지. 동사 announce 발표하다."
+      },
+      {
+       "term": "of the past year",
+       "ko": "지난 1년 동안의. past = 지난. 예: over the past decade 지난 10년간."
+      },
+      {
+       "term": "has been (현재완료, 주어는 one)",
+       "ko": "주어가 one이라 단수 has. 긴 주어 뒤 동사 찾기 연습 포인트."
       }
      ],
-     "note": "앞의 감탄을 Extraordinary로 마무리하고 바로 화제를 전환해요. 'one of the + 복수명사'는 '~ 중 하나' 패턴이고, has been(현재완료)으로 '지난 1년 동안 지금까지'의 기간을 표현합니다."
+     "note": "앞의 감탄을 Extraordinary로 마무리하고 바로 화제를 전환해요. 'one of the + 복수명사'는 '~ 중 하나' 패턴이고, has been(현재완료)으로 '지난 1년 동안 지금까지'의 기간을 표현합니다.",
+     "lvl": "ms"
     },
     {
      "t": 29.08,
@@ -149,15 +213,32 @@
      "ko": "Grok을 인수하실 때, Chamath가 얼마나 못 봐줄 정도로 잘난 척하게 될지 아셨어요?",
      "terms": [
       {
+       "term": "When you made the purchase of Grok (시간 부사절)",
+       "ko": "When + 주어 + 과거동사, 주절 — '~했을 때'."
+      },
+      {
        "term": "make the purchase of",
-       "ko": "'~을 구매·인수하다' — buy/acquire보다 약간 격식 있는 말투. 예: make the purchase of a company."
+       "ko": "~을 구매하다(= purchase/buy를 격식 있게 늘린 표현). make a decision, make a call 과 같은 패턴."
+      },
+      {
+       "term": "did you realize",
+       "ko": "알았나요, 깨달았나요. realize = (사실을) 알아차리다."
+      },
+      {
+       "term": "how insufferable Chamath would become (간접의문문 + would)",
+       "ko": "how + 형용사 + 주어 + 동사 순서. would = 과거에서 본 미래 '~하게 될지'."
       },
       {
        "term": "insufferable",
-       "ko": "'참아주기 힘든(잘난 척이 심한)' — 친구 놀릴 때 반농담으로 자주 씀. 예: He's been insufferable since he won."
+       "ko": "(잘난 척이) 참을 수 없을 만큼 짜증 나는. 친구를 놀릴 때 농담으로 자주 씀."
+      },
+      {
+       "term": "become",
+       "ko": "~이 되다. 형용사 보어를 받음(become famous)."
       }
      ],
-     "note": "'did you realize how insufferable X would become'은 how + 형용사 + 주어 + 동사의 간접의문문이에요. Chamath는 거래에 관여해 자랑할 거리가 생긴 친구를 놀리는 농담이고, 이름 반복은 말 더듬음입니다."
+     "note": "'did you realize how insufferable X would become'은 how + 형용사 + 주어 + 동사의 간접의문문이에요. Chamath는 거래에 관여해 자랑할 거리가 생긴 친구를 놀리는 농담이고, 이름 반복은 말 더듬음입니다.",
+     "lvl": "ms"
     },
     {
      "t": 35.72,
@@ -167,11 +248,20 @@
      "ko": "어렴풋이 그럴 줄 알았죠…",
      "terms": [
       {
+       "term": "I had a I had (말 더듬음)",
+       "ko": "말을 고르느라 반복. 실제 말은 I had an inkling."
+      },
+      {
        "term": "have an inkling (that ~)",
-       "ko": "'~일 거란 낌새·짐작이 있다' — 확신은 아닐 때. 부정형 'I had no inkling'=전혀 몰랐다."
+       "ko": "어렴풋이 짐작하다, 낌새를 느끼다. 예: I had an inkling he'd quit. 그가 그만둘 것 같은 예감이 있었다."
+      },
+      {
+       "term": "that that that (말 끊김)",
+       "ko": "that절을 시작하려다 말이 끊긴 것. 문장이 완성되지 않음."
       }
      ],
-     "note": "'I had a, I had an inkling that that that…'처럼 말을 고르며 반복한 구어 그대로예요. inkling은 '확실하진 않은 낌새'라서, 웃으며 '알긴 알았다'고 받아치는 뉘앙스입니다."
+     "note": "'I had a, I had an inkling that that that…'처럼 말을 고르며 반복한 구어 그대로예요. inkling은 '확실하진 않은 낌새'라서, 웃으며 '알긴 알았다'고 받아치는 뉘앙스입니다.",
+     "lvl": "ms"
     },
     {
      "t": 39.24,

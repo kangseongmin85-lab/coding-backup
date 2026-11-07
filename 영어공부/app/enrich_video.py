@@ -3,7 +3,7 @@
 
 영어 자막을 기본으로 보되, 원할 때만 토글로 한글 뜻·관용표현을 확인하기 위한 데이터.
 각 줄에 ko(한국어 번역), note(문장 해설 — 구조·뉘앙스·맥락), terms([{term, ko}] — 관용어·구동사·중요단어 + 쓰임)를 넣는다.
-이미 note가 있는 줄은 건너뛴다(멱등, 재실행으로 이어서 채움). note 없던 기존 줄은 ko·terms도 새로 만든다.
+terms = 미국 중학교 이상 수준 단어·문법·구문 전부. 이미 lvl == LVL인 줄은 건너뛴다(멱등, 재실행으로 이어서 채움).
 Claude CLI로 batch_size개씩 묶어 생성하고, 배치마다 저장해 중단돼도 재개된다.
 
 실행:  python app/enrich_video.py            # ko 없는 줄 전부
@@ -17,6 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "video_scripts.json"
+LVL = "ms"  # terms 기준 표시: 중학교 이상 전부. 기준 바뀌면 값 바꿔 전체 재생성
 
 PROMPT = """다음은 영어 영상 「__TITLE__」의 자막 문장들이다.
 한국인 학습자가 영어 자막을 보다가, 원할 때만 한글 뜻을 펼쳐 보기 위한 학습 데이터를 만든다.
@@ -27,9 +28,12 @@ PROMPT = """다음은 영어 영상 「__TITLE__」의 자막 문장들이다.
 - "note": 문장 해설 2~3문장(한국어). 문장 구조(어디서 끊어 읽는지, 생략·도치·가정법 등 문법 포인트),
   말하는 사람의 뉘앙스·말투(겸손/강조/농담/구어체 등), 앞뒤 맥락에서 이 말이 무슨 뜻인지를 설명.
   번역을 반복하지 말 것. "Uh", "Yeah.", "Right." 같은 짧은 맞장구·추임새는 "".
-- "terms": 그 문장에서 학습자가 알아둘 만한 관용어·구동사·콜로케이션·중요 표현 0~4개.
-  각각 {"term": 표현(영어, 원문 그대로), "ko": 뜻 + 쓰임(언제 쓰는지, 비슷한 표현이나 짧은 예시 1개)을
-  한국어로 1~2문장}. 아주 쉬운 기초 단어나 고유명사는 넣지 말 것. 짧은 맞장구 문장은 빈 배열.
+- "terms": 그 문장에서 미국 중학교(7학년) 이상 수준의 단어·문법·구문은 하나도 빠짐없이 전부.
+  단어(어려운 명사·동사·형용사·부사), 구동사·관용어·콜로케이션, 문법·구문(가정법, 분사구문, 관계사절,
+  도치, 강조구문, 생략, 완료·수동 등)을 모두 포함하고 개수 제한은 없다. 문장에 나온 순서대로.
+  각각 {"term": 표현(영어, 원문 그대로. 문법·구문이면 해당 부분 + 괄호로 문법명), "ko": 뜻 + 쓰임
+  (언제 쓰는지, 비슷한 표현이나 짧은 예시 1개)을 한국어로 1~2문장}.
+  초등 수준 기초 단어(go, big, people 등)와 고유명사만 뺀다. 짧은 맞장구 문장은 빈 배열.
 
 문장 목록(번호 | 영어):
 __ITEMS__
@@ -71,7 +75,7 @@ def run(batch_size: int = 20, limit: int = 0) -> int:
 
 def enrich_one(db, video, batch_size, limit) -> int:
     lines = video["lines"]
-    targets = [(i, L) for i, L in enumerate(lines) if "note" not in L]
+    targets = [(i, L) for i, L in enumerate(lines) if L.get("lvl") != LVL]
     if limit:
         targets = targets[:limit]
     if not targets:
@@ -96,13 +100,14 @@ def enrich_one(db, video, batch_size, limit) -> int:
                 continue
             ko = str(val.get("ko", "")).strip()
             terms = []
-            for t in (val.get("terms") or [])[:5]:
+            for t in (val.get("terms") or []):
                 if isinstance(t, dict) and str(t.get("term", "")).strip():
                     terms.append({"term": str(t["term"]).strip(), "ko": str(t.get("ko", "")).strip()})
             if ko:
                 lines[idx]["ko"] = ko
                 lines[idx]["note"] = str(val.get("note", "")).strip()
                 lines[idx]["terms"] = terms
+                lines[idx]["lvl"] = LVL
                 total += 1
         DB.write_text(json.dumps(db, ensure_ascii=False, indent=1), encoding="utf-8")  # 배치마다 저장
         print(f"[{video['id']}] 배치 {bi // batch_size + 1}/{nbatch}: 누적 {total}개 번역", flush=True)
