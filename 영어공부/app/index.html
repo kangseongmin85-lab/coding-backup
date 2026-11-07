@@ -20,93 +20,89 @@
   }
   * { box-sizing: border-box; }
   body { margin: 0; font-family: 'Segoe UI', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--ink); font-size: 18px; display: flex; flex-direction: column; min-height: 100vh; }
-  main { flex: 1; display: flex; width: 100%; padding: 0 16px 40px; }
+  main { flex: 1; display: flex; width: 100%; padding: 0 16px calc(var(--nav-h, 0px) + 16px); }
   main > section { margin: 0 auto; width: 100%; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
   .card h2 { font-size: 26px; }
   .muted { color: var(--sub); font-size: 16px; }
   input[type=text] { padding: 13px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font-size: 18px; width: 100%; }
   .hidden { display: none; }
-  .toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 20px; border-radius: 20px; font-size: 14px; opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .toast { position: fixed; bottom: calc(var(--nav-h, 0px) + 14px); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 20px; border-radius: 20px; font-size: 14px; opacity: 0; transition: opacity .3s; pointer-events: none; }
   .toast.show { opacity: 1; }
-  /* 영상 + 정지·속도: 상단 고정 (--bar-h = 이 바의 높이, JS가 갱신 → 아래 목록 높이 계산용) */
+  /* 영상: 상단 고정 (--bar-h = 이 바의 높이, JS가 갱신 → 아래 목록 높이 계산용) */
   .player-bar { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 12px 0 10px; }
   .vid-wrap { position: relative; width: min(100%, 71vh); aspect-ratio: 16 / 9; margin: 0 auto; border-radius: 14px; overflow: hidden; background: #000; }
   .vid-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .player-ctrl { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
-  .player-ctrl .ko-toggle { margin: 0; font-size: 17px; padding: 8px 20px; }
-  .player-ctrl label.ko-toggle { display: flex; align-items: center; gap: 6px; }
-  @media (max-width: 600px) { .player-ctrl { gap: 6px; } .player-ctrl .ko-toggle { font-size: 15px; padding: 6px 10px; } }
-  .script-list { position: relative; max-height: calc(100vh - var(--bar-h, 0px) - 24px); overflow-y: auto; border: 1px solid var(--line); border-radius: 12px; margin-top: 12px; }
+  /* 재생 컨트롤: 하단 고정 (--nav-h = 이 바의 높이). 버튼 폭을 고정해 라벨이 바뀌어도 배치가 안 움직임 */
+  .ctrl-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--card); border-top: 1px solid var(--line); box-shadow: 0 -4px 14px rgba(0,0,0,.06); padding: 8px 8px max(8px, env(safe-area-inset-bottom)); display: flex; justify-content: center; gap: 18px; }
+  .ctrl-bar .grp { display: flex; gap: 6px; }
+  .ctrl-bar .ko-toggle { margin: 0; height: 46px; font-size: 18px; padding: 0; display: flex; align-items: center; justify-content: center; }
+  .ctrl-bar .nav-btn { width: 52px; }
+  .ctrl-bar #play-btn { width: 64px; font-size: 20px; }
+  .ctrl-bar .rate-btn { width: 50px; font-size: 16px; }
+  .ctrl-bar label.ko-toggle { width: 104px; gap: 5px; font-size: 15px; }
+  @media (max-width: 600px) { .ctrl-bar { gap: 10px; } .ctrl-bar .grp { gap: 4px; } .ctrl-bar .nav-btn { width: 44px; } .ctrl-bar #play-btn { width: 54px; } .ctrl-bar .rate-btn { width: 42px; font-size: 14px; } .ctrl-bar label.ko-toggle { width: 90px; font-size: 14px; } }
+  .script-list { position: relative; max-height: calc(100vh - var(--bar-h, 0px) - var(--nav-h, 0px) - 24px); overflow-y: auto; border: 1px solid var(--line); border-radius: 12px; margin-top: 12px; }
   .sl-item.turn { border-top: 2px solid #3a4150; }
-  .script-line { display: flex; gap: 12px; padding: 10px 14px; cursor: pointer; border-bottom: 1px solid var(--line); align-items: baseline; }
+  /* 문장 줄: 위 = 시각·버튼(작게), 아래 = 영어 문장(전체 폭) */
+  .script-line { padding: 8px 14px 12px; cursor: pointer; border-bottom: 1px solid var(--line); }
   .sl-item:last-child .script-line { border-bottom: none; }
   .script-line:hover { background: var(--accent-soft); }
   .script-line.active { background: #2a2114; box-shadow: inset 4px 0 0 var(--warn); }
-  .script-line .ts { flex: none; font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 700; font-size: 15px; min-width: 50px; }
-  .script-line .tx { font-size: 17px; line-height: 1.5; flex: 1; }
-  .ko-toggle { flex: none; align-self: flex-start; margin-top: 1px; border: 1px solid var(--line); background: var(--card); color: var(--sub); border-radius: 8px; padding: 3px 10px; font-size: 14px; cursor: pointer; }
+  .sl-meta { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+  .sl-meta .ts { flex: 1; font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 700; font-size: 14px; }
+  .sl-meta .ko-toggle { width: 38px; height: 28px; padding: 0; }
+  .script-line .tx { font-size: 18px; line-height: 1.55; }
+  .ko-toggle { flex: none; border: 1px solid var(--line); background: var(--card); color: var(--sub); border-radius: 8px; padding: 3px 10px; font-size: 14px; cursor: pointer; }
   .ko-toggle:hover { border-color: var(--accent); color: var(--accent); }
   .ko-toggle.on { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-  .ko-panel { padding: 10px 16px 14px 62px; background: #141c2b; border-bottom: 1px solid var(--line); }
+  .ko-panel { padding: 10px 14px 14px; background: #141c2b; border-bottom: 1px solid var(--line); }
   .ko-panel .ko-tr { color: var(--ink); font-weight: 600; font-size: 17px; margin-bottom: 6px; }
   .ko-panel .ko-terms { color: var(--sub); font-size: 15px; line-height: 1.75; border-top: 1px dashed #334155; padding-top: 6px; }
   .ko-panel .ko-note { color: var(--ink); font-size: 15px; line-height: 1.7; margin-bottom: 8px; opacity: .9; }
   .ko-panel .ko-terms b { color: var(--accent); }
-  /* 오른쪽 '내 문장' 패널 (좁은 화면에선 스크립트 아래로) */
-  #view-video { max-width: 1320px; }
-  .video-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 16px; align-items: start; }
-  .picks-card { position: sticky; top: var(--bar-h, 0px); max-height: calc(100vh - var(--bar-h, 0px) - 16px); display: flex; flex-direction: column; padding: 20px; }
-  .picks-list { overflow-y: auto; min-height: 0; }
-  .picks-list .script-line { padding: 9px 6px; gap: 8px; }
-  .picks-list .script-line .ts { min-width: 40px; }
-  .picks-list .script-line .tx { font-size: 16px; }
-  .picks-list .ko-panel { padding-left: 54px; }
-  .picks-group { font-weight: 700; font-size: 14px; color: var(--sub); margin: 14px 0 4px; }
+  #view-video { max-width: 960px; min-width: 0; }
   .ko-toggle.pick-btn.on { background: #2a2114; color: var(--warn); border-color: var(--warn); }
-  @media (max-width: 1100px) { .video-grid { grid-template-columns: 1fr; } .picks-card { position: static; max-height: none; } .picks-list { max-height: calc(100vh - var(--bar-h, 0px) - 24px); } }
+  .star-filter { display: flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 16px; cursor: pointer; width: fit-content; }
+  @media (max-width: 600px) { main { padding-left: 8px; padding-right: 8px; } .card { padding: 16px 12px; } .card h2 { font-size: 22px; } .script-line { padding: 8px 10px 12px; } .script-line .tx { font-size: 17px; } }
 </style>
 </head>
 <body>
 <main>
 <!-- ───────── 영상 스크립트 ───────── -->
 <section id="view-video">
- <!-- 영상 + 정지·속도: 스크롤해도 항상 상단에 고정 -->
+ <!-- 영상: 스크롤해도 항상 상단에 고정 (재생 컨트롤은 하단 고정 바) -->
  <div class="player-bar" id="player-bar">
   <div class="vid-wrap"><div id="yt-player"></div></div>
-  <div class="player-ctrl">
-    <button class="ko-toggle" title="이전 문장" onclick="stepLine(-1)">⏮</button>
-    <button class="ko-toggle" id="play-btn" onclick="togglePlay()">▶ 재생</button>
-    <button class="ko-toggle" title="다음 문장" onclick="stepLine(1)">⏭</button>
-    <button class="ko-toggle rate-btn on" data-rate="1" onclick="setRate(1)">1x</button>
-    <button class="ko-toggle rate-btn" data-rate="0.5" onclick="setRate(0.5)">0.5x</button>
-    <button class="ko-toggle pick-btn" id="bar-pick" title="지금 나오는 문장을 내 문장에 담기" onclick="pickCurrent()">☆ 담기</button>
-    <label class="ko-toggle"><input type="checkbox" id="video-follow" checked> 따라가기</label>
-    <label class="ko-toggle" title="문장이 끝날 때마다 멈춤 — 따라 말한 뒤 ▶ 재생"><input type="checkbox" id="shadow"> 쉐도잉</label>
-  </div>
  </div>
- <div class="video-grid">
   <div class="card">
     <div id="video-empty" class="muted hidden">영상 스크립트가 아직 없어요.</div>
     <div id="video-main">
       <h2 id="video-title" style="margin-top:0">🎬 영상 스크립트</h2>
       <select id="video-select" class="hidden" onchange="pickVideo(+this.value)" style="width:100%;margin-bottom:12px;padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:17px"></select>
-      <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 영상이 재생</b>돼요. 오른쪽 <b>「한」</b> 버튼을 누르면 그 문장만 <b>한글 뜻·핵심 표현</b>이 펼쳐지고, <b>☆</b>를 누르면 <b>⭐ 내 문장</b>에 담겨 계속 복습할 수 있어요. 재생 중엔 지금 나오는 문장이 자동으로 표시돼요.</p>
+      <p class="muted" id="video-hint" style="margin:10px 0 0">문장을 누르면 <b>그 지점부터 재생</b>, <b>🔁</b>는 <b>그 문장만 반복</b>(다시 누르면 멈춤), <b>「한」</b>은 <b>한글 뜻·핵심 표현</b>, <b>☆</b>는 <b>내 문장 표시</b>예요.</p>
       <input type="text" id="video-search" placeholder="🔎 영어 문장 검색..." oninput="filterScript()" style="margin-top:12px">
-
+      <label class="star-filter"><input type="checkbox" id="star-only" onchange="filterScript()"> ⭐ 내 문장만 보기</label>
       <div class="muted" id="video-count" style="margin-top:8px"></div>
       <div class="script-list" id="script-list"></div>
     </div>
   </div>
-  <div class="card picks-card" id="picks-card">
-    <h3 style="margin:0 0 4px">⭐ 내 문장 <span id="picks-count" class="muted" style="font-weight:400"></span></h3>
-    <p class="muted" style="margin:0 0 6px;font-size:14px">스크립트의 ☆로 담고, 누르면 <b>그 문장만 반복 재생</b>돼요. 다시 누르면 멈춰요.</p>
-    <div class="picks-list" id="picks-list"></div>
-  </div>
- </div>
 </section>
 
 </main>
+<!-- 재생 컨트롤: 하단 고정 -->
+<nav class="ctrl-bar" id="ctrl-bar">
+  <div class="grp">
+    <button class="ko-toggle nav-btn" title="이전 문장" onclick="stepLine(-1)">⏮</button>
+    <button class="ko-toggle" id="play-btn" title="재생/정지" onclick="togglePlay()">▶</button>
+    <button class="ko-toggle nav-btn" title="다음 문장" onclick="stepLine(1)">⏭</button>
+  </div>
+  <div class="grp">
+    <button class="ko-toggle rate-btn on" data-rate="1" onclick="setRate(1)">1x</button>
+    <button class="ko-toggle rate-btn" data-rate="0.5" onclick="setRate(0.5)">0.5x</button>
+  </div>
+  <label class="ko-toggle" title="재생 중인 문장으로 목록 자동 스크롤"><input type="checkbox" id="video-follow" checked> 따라가기</label>
+</nav>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -136,35 +132,33 @@ async function save(file, content) {
 
 /* ───── 영상 스크립트 ───── */
 let ytPlayer = null, ytReady = false, videoData = null, videoLines = [], videoActiveIdx = -1, videoPoll = null, videoBuilt = false;
-let pickLoop = null; // ⭐ 내 문장 반복 구간 {v, i, start, end} — 그 문장만 반복 재생
+let lineLoop = null; // 🔁 반복 구간 {i, start, end} — 지금 영상의 그 문장만 반복 재생
 const fmtTs = sec => Math.floor(sec / 60) + ':' + String(Math.floor(sec % 60)).padStart(2, '0');
 
 function ensureVideo() {
   if (videoBuilt) return;
   const vids = (DB.videoScripts && DB.videoScripts.videos) || [];
-  if (!vids.length) { $('video-main').classList.add('hidden'); $('picks-card').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
+  if (!vids.length) { $('video-main').classList.add('hidden'); $('video-empty').classList.remove('hidden'); videoBuilt = true; return; }
   const sel = $('video-select');
-  sel.innerHTML = vids.map((v, i) => `<option value="${i}">${escapeHtml(v.title || v.videoId)} (${v.lines.length}문장)</option>`).join('');
+  sel.innerHTML = vids.map((v, i) => `<option value="${i}"></option>`).join('');
+  starCounts();
   sel.classList.toggle('hidden', vids.length < 2);
   pickVideo(0);
-  renderPicks();
   loadYT();
   videoBuilt = true;
 }
 
-function pickVideo(i, startAt) {
+function pickVideo(i) {
   videoData = DB.videoScripts.videos[i];
-  if (pickLoop) { pickLoop = null; renderPicks(); }
+  lineLoop = null;
   $('video-title').textContent = '🎬 ' + (videoData.title || '영상 스크립트');
   videoLines = videoData.lines || [];
   videoActiveIdx = -1;
   $('video-search').value = '';
   renderScript('');
-  updateBarPick();
   $('script-list').scrollTop = 0;
   if (!ytReady) return;
-  if (startAt != null) ytPlayer.loadVideoById(videoData.videoId, startAt); // 바로 그 지점부터 재생 (cue 뒤에 load하면 무시됨)
-  else ytPlayer.cueVideoById(videoData.videoId);
+  ytPlayer.cueVideoById(videoData.videoId);
 }
 
 function renderScript(q) {
@@ -173,21 +167,31 @@ function renderScript(q) {
   let shown = 0;
   const vid = videoData.videoId;
   const picked = new Set(DB.picks.picks.filter(p => p.v === vid).map(p => p.i));
+  const starOnly = $('star-only').checked;
   list.innerHTML = videoLines.map((L, i) => {
-    if (q && !L.en.toLowerCase().includes(q)) return '';
-    shown++;
     const on = picked.has(i);
+    if ((q && !L.en.toLowerCase().includes(q)) || (starOnly && !on)) return '';
+    shown++;
     return `<div class="sl-item${L.turn ? ' turn' : ''}">`
       + `<div class="script-line${i === videoActiveIdx ? ' active' : ''}" data-idx="${i}" onclick="seekTo(${i})">`
-      + `<span class="ts">${fmtTs(L.t)}</span><span class="tx">${escapeHtml(L.en)}</span>`
+      + `<div class="sl-meta"><span class="ts">${fmtTs(L.t)}</span>`
+      + `<button class="ko-toggle loop-btn${lineLoop && lineLoop.i === i ? ' on' : ''}" title="이 문장만 반복 (다시 누르면 멈춤)" onclick="event.stopPropagation();toggleLoop(${i})">🔁</button>`
       + `<button class="ko-toggle pick-btn${on ? ' on' : ''}" title="내 문장에 담기" onclick="event.stopPropagation();togglePick('${vid}',${i})">${on ? '★' : '☆'}</button>`
-      + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(videoLines[${i}],this)">한</button>`
+      + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(videoLines[${i}],this)">한</button></div>`
+      + `<div class="tx">${escapeHtml(L.en)}</div>`
       + `</div><div class="ko-panel hidden"></div></div>`;
   }).join('');
-  $('video-count').textContent = q ? `“${q}” 검색 결과 ${shown}개 / 전체 ${videoLines.length}문장` : `전체 ${videoLines.length}문장`;
+  $('video-count').textContent = (q || starOnly) ? `${starOnly ? '⭐ ' : ''}${q ? `“${q}” ` : ''}${shown}문장 / 전체 ${videoLines.length}문장` : `전체 ${videoLines.length}문장`;
 }
 function escapeHtml(s) { return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 function filterScript() { renderScript($('video-search').value); }
+// 영상 선택 목록에 영상별 ⭐ 개수 — 내 문장이 어느 영상에 있는지 바로 보이게
+function starCounts() {
+  DB.videoScripts.videos.forEach((v, i) => {
+    const n = DB.picks.picks.filter(p => p.v === v.videoId).length;
+    $('video-select').options[i].textContent = `${v.title || v.videoId} (${v.lines.length}문장${n ? ` · ⭐${n}` : ''})`;
+  });
+}
 
 function toggleKo(L, btn) {
   const panel = btn.closest('.sl-item').querySelector('.ko-panel');
@@ -210,7 +214,7 @@ function toggleKo(L, btn) {
 }
 
 function seekTo(i) {
-  if (pickLoop) { pickLoop = null; renderPicks(); }
+  if (lineLoop) { lineLoop = null; markLoop(); }
   const t = videoLines[i].t;
   if (ytReady && ytPlayer && ytPlayer.seekTo) { ytPlayer.seekTo(t, true); ytPlayer.playVideo(); setActive(i); } // 바로 표시 — ⏭ 연타해도 다음 줄로
   else { window.open(`https://www.youtube.com/watch?v=${videoData.videoId}&t=${Math.floor(t)}s`, '_blank'); }
@@ -223,10 +227,9 @@ function stepLine(d) {
   if (i >= 0) seekTo(i);
 }
 
-/* ───── ⭐ 내 문장 (영상에서 고른 문장 모아 복습) ─────
+/* ───── ⭐ 내 문장 (스크립트 줄의 ☆로 표시, '⭐ 내 문장만 보기'로 모아 봄) ─────
    picks: [{v: videoId, i: 줄 번호}] — 타임스탬프는 영상 안에서 중복될 수 있어 줄 번호로 식별.
    ponytail: 줄 번호 기준이라 이미 담은 영상의 스크립트를 다시 만들면(재분할) 엉뚱한 줄을 가리킴 — 그땐 en으로 재매핑 필요 */
-let pickRows = [];
 /* PC·폰 공유: Netlify 함수(netlify/functions/picks.mjs)가 원본 목록, 각 기기 파일/localStorage는 오프라인용 사본.
    담기/빼기는 연산({v,i,on})으로 보내 양쪽 변경이 누적됨. 못 보낸 연산은 PICKS_PENDING에 쌓았다가 다음 동기화 때 재전송 */
 const PICKS_API = (LOCAL ? 'https://tubular-pavlova-e88756.netlify.app' : '') + '/api/picks';
@@ -241,7 +244,7 @@ async function syncPicks(ops = []) {
     if (JSON.stringify(picks) !== JSON.stringify(DB.picks.picks)) {
       DB.picks = { picks };
       save('data/video_picks.json', DB.picks);
-      if (videoBuilt && videoData) { renderScript($('video-search').value); renderPicks(); }
+      if (videoBuilt && videoData) { filterScript(); starCounts(); }
     }
     return true;
   } catch (e) {
@@ -257,52 +260,23 @@ function togglePick(v, i) {
   if (at >= 0) P.picks.splice(at, 1); else P.picks.push({ v, i });
   save('data/video_picks.json', P);
   syncPicks([{ v, i, on: at < 0 }]);
-  renderPicks();
+  starCounts();
   const b = v === videoData.videoId && $('script-list').querySelector(`[data-idx="${i}"] .pick-btn`);
   if (b) { b.classList.toggle('on', at < 0); b.textContent = at < 0 ? '★' : '☆'; }
 }
-function renderPicks() {
-  const vids = DB.videoScripts.videos;
-  pickRows = DB.picks.picks
-    .map(p => { const vi = vids.findIndex(x => x.videoId === p.v); return { p, vi, L: vi >= 0 && vids[vi].lines[p.i] }; })
-    .filter(r => r.L)
-    .sort((a, b) => a.vi - b.vi || a.p.i - b.p.i);
-  $('picks-count').textContent = pickRows.length ? `(${pickRows.length})` : '';
-  let h = '', lastVi = -1;
-  pickRows.forEach((r, k) => {
-    if (r.vi !== lastVi) { h += `<div class="picks-group">🎬 ${escapeHtml(vids[r.vi].title || r.p.v)}</div>`; lastVi = r.vi; }
-    const looping = pickLoop && pickLoop.v === r.p.v && pickLoop.i === r.p.i;
-    h += `<div class="sl-item"><div class="script-line${looping ? ' active' : ''}" onclick="playPick(${k})">`
-      + `<span class="ts">${looping ? '🔁 ' : ''}${fmtTs(r.L.t)}</span><span class="tx">${escapeHtml(r.L.en)}</span>`
-      + `<button class="ko-toggle" title="한글 뜻·표현 보기" onclick="event.stopPropagation();toggleKo(pickRows[${k}].L,this)">한</button>`
-      + `<button class="ko-toggle" title="빼기" onclick="event.stopPropagation();togglePick('${r.p.v}',${r.p.i})">✕</button>`
-      + `</div><div class="ko-panel hidden"></div></div>`;
-  });
-  $('picks-list').innerHTML = h || '<p class="muted" style="font-size:15px">아직 담은 문장이 없어요.</p>';
-  updateBarPick();
-}
-// 상단 바 ☆ = 지금 재생 중인 문장 담기/빼기
-function pickCurrent() {
-  if (videoActiveIdx < 0) { toast('영상을 재생하면 지금 나오는 문장을 담을 수 있어요'); return; }
-  togglePick(videoData.videoId, videoActiveIdx);
-}
-function updateBarPick() {
-  const on = DB.picks.picks.some(p => p.v === videoData.videoId && p.i === videoActiveIdx);
-  $('bar-pick').classList.toggle('on', on);
-  $('bar-pick').textContent = on ? '★ 담음' : '☆ 담기';
-}
-// 누르면 그 문장만 반복(다음 문장 시작 시각까지), 다시 누르면 반복 끄고 일시정지
-function playPick(k) {
-  const r = pickRows[k], P = r.p;
-  if (pickLoop && pickLoop.v === P.v && pickLoop.i === P.i) { pickLoop = null; renderPicks(); if (ytReady) ytPlayer.pauseVideo(); return; }
-  const other = DB.videoScripts.videos[r.vi] !== videoData;
-  if (other) { $('video-select').value = r.vi; pickVideo(r.vi, r.L.t); }
-  if (!other || !ytReady) seekTo(P.i);
+// 🔁 = 그 문장만 반복(다음 문장 시작 시각까지), 같은 문장 다시 누르면 반복 끄고 일시정지
+function toggleLoop(i) {
+  if (lineLoop && lineLoop.i === i) { lineLoop = null; markLoop(); if (ytReady) ytPlayer.pauseVideo(); return; }
+  seekTo(i);
   if (!ytReady) return;
-  // 끝 = 그 문장의 끝 시각 e (다음 줄 t는 같은 자막 조각에서 시작해 이 문장이 끝나기 전일 수 있음)
-  const n = nextLine(P.i);
-  pickLoop = { v: P.v, i: P.i, start: r.L.t, end: r.L.e || (n >= 0 ? videoLines[n].t : Infinity) };
-  renderPicks();
+  const n = nextLine(i);
+  lineLoop = { i, start: videoLines[i].t, end: videoLines[i].e || (n >= 0 ? videoLines[n].t : Infinity) }; // e = 문장 끝 (다음 줄 t는 이 문장이 끝나기 전일 수 있음)
+  markLoop();
+}
+function markLoop() {
+  $('script-list').querySelectorAll('.loop-btn.on').forEach(b => b.classList.remove('on'));
+  const b = lineLoop && $('script-list').querySelector(`[data-idx="${lineLoop.i}"] .loop-btn`);
+  if (b) b.classList.add('on');
 }
 
 function loadYT() {
@@ -334,24 +308,17 @@ function togglePlay() {
   if (ytPlayer.getPlayerState() === YT.PlayerState.PLAYING) ytPlayer.pauseVideo(); else ytPlayer.playVideo();
 }
 function onYtState(e) {
-  $('play-btn').textContent = e.data === YT.PlayerState.PLAYING ? '⏸ 정지' : '▶ 재생'; // 영상 직접 조작해도 맞춰짐
+  $('play-btn').textContent = e.data === YT.PlayerState.PLAYING ? '⏸' : '▶'; // 영상 직접 조작해도 맞춰짐
   if (e.data === YT.PlayerState.PLAYING && ytPlayer.getPlaybackRate() !== playRate) ytPlayer.setPlaybackRate(playRate);
   if (e.data === YT.PlayerState.PLAYING) startVideoPoll(); else stopVideoPoll();
-  if (e.data === YT.PlayerState.ENDED && pickLoop) { ytPlayer.seekTo(pickLoop.start, true); ytPlayer.playVideo(); } // 마지막 문장 반복
+  if (e.data === YT.PlayerState.ENDED && lineLoop) { ytPlayer.seekTo(lineLoop.start, true); ytPlayer.playVideo(); } // 마지막 문장 반복
 }
-let shadowLastT = 0;
 function startVideoPoll() { if (!videoPoll) videoPoll = setInterval(updateActiveLine, 200); }
 function stopVideoPoll() { if (videoPoll) { clearInterval(videoPoll); videoPoll = null; } }
 function updateActiveLine() {
   if (!ytReady || !ytPlayer.getCurrentTime) return;
   const t = ytPlayer.getCurrentTime();
-  if (pickLoop && t >= pickLoop.end) { ytPlayer.seekTo(pickLoop.start, true); return; } // ⭐ 내 문장 반복
-  // 쉐도잉: 재생이 흘러서(점프 아님) 다음 문장 시작을 넘으면 멈추고 그 문장 시작으로 맞춤
-  if ($('shadow').checked && !pickLoop && videoActiveIdx >= 0) {
-    const n = nextLine(videoActiveIdx), end = n >= 0 && videoLines[n].t;
-    if (n >= 0 && shadowLastT < end && t >= end && t - shadowLastT < 1) { ytPlayer.pauseVideo(); ytPlayer.seekTo(end, true); }
-  }
-  shadowLastT = t;
+  if (lineLoop && t >= lineLoop.end) { ytPlayer.seekTo(lineLoop.start, true); return; } // 🔁 문장 반복
   let lo = 0, hi = videoLines.length - 1, idx = 0;
   while (lo <= hi) { const mid = (lo + hi) >> 1; if (videoLines[mid].t <= t) { idx = mid; lo = mid + 1; } else hi = mid - 1; }
   setActive(idx);
@@ -361,7 +328,6 @@ function setActive(idx) {
   const prev = $('script-list').querySelector('.script-line.active');
   if (prev) prev.classList.remove('active');
   videoActiveIdx = idx;
-  updateBarPick();
   const el = $('script-list').querySelector(`[data-idx="${idx}"]`);
   if (el) {
     el.classList.add('active');
@@ -372,8 +338,10 @@ function setActive(idx) {
   }
 }
 
-// 상단 고정 바 높이 → CSS --bar-h (스크립트·내 문장 목록이 바 아래 화면에 딱 맞게)
-new ResizeObserver(([e]) => document.documentElement.style.setProperty('--bar-h', e.target.offsetHeight + 'px')).observe($('player-bar'));
+// 상단 영상 바·하단 컨트롤 바 높이 → CSS --bar-h / --nav-h (스크립트·내 문장 목록이 두 바 사이 화면에 딱 맞게)
+const trackH = (el, v) => new ResizeObserver(() => document.documentElement.style.setProperty(v, el.offsetHeight + 'px')).observe(el);
+trackH($('player-bar'), '--bar-h');
+trackH($('ctrl-bar'), '--nav-h');
 load();
 </script>
 </body>
