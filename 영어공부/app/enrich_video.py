@@ -47,7 +47,7 @@ def run_claude(prompt: str) -> str:
     try:
         p = subprocess.run(
             "claude -p", input=prompt.encode("utf-8"), shell=True,
-            capture_output=True, timeout=300, cwd=str(ROOT),
+            capture_output=True, timeout=600, cwd=str(ROOT),
         )
         return p.stdout.decode("utf-8", errors="replace")
     except Exception as e:  # noqa: BLE001
