@@ -726,6 +726,131 @@
         }
       ],
       "auto": true
+    },
+    {
+      "id": "sc08",
+      "title": "바이오분석 CRO 밸리데이션 재시험 대응 콜",
+      "scenario": "cro-negotiation",
+      "brief": "외부 바이오분석 CRO에 맡긴 분석법 밸리데이션 중 두 번째 런이 허용 기준을 통과하지 못했다. CRO 측 PM이 재시험이 필요하다며 긴급 콜을 요청했다. 원인을 파악하고 일정·비용 조건을 다시 맞춰야 한다.",
+      "goal": "지연 원인을 확인하고, 일정을 앞당기는 조건을 협상해 서면 합의까지 끌어내기",
+      "partner": {
+        "name": "Rachel Hughes",
+        "role": "바이오분석 CRO 프로젝트 매니저",
+        "voice": "gb-f"
+      },
+      "turns": [
+        {
+          "role": "partner",
+          "en": "Hi, thanks for making time today. I'm afraid we've hit a snag with the validation.",
+          "ko": "안녕하세요, 시간 내주셔서 감사합니다. 죄송하지만 밸리데이션에 문제가 좀 생겼어요.",
+          "aid": "p01"
+        },
+        {
+          "role": "user",
+          "ref": "s123",
+          "en": "Sorry, there's a bit of a lag on my end — go ahead.",
+          "ko": "죄송해요, 제 쪽에 딜레이가 좀 있네요 — 말씀하세요.",
+          "hint": "제 쪽 연결이 좀 늦네요 — 말씀하세요 (화상콜 지연 시)"
+        },
+        {
+          "role": "partner",
+          "en": "No problem. The second validation run failed the acceptance criteria, so we'll need to repeat it.",
+          "ko": "괜찮아요. 두 번째 밸리데이션 런이 허용 기준을 통과하지 못해서 다시 해야 합니다.",
+          "aid": "p02"
+        },
+        {
+          "role": "user",
+          "ref": "s136",
+          "en": "What's driving the delay on your end, if you don't mind me asking?",
+          "ko": "실례가 안 된다면, 그쪽에서 지연되는 원인이 뭔가요?",
+          "hint": "실례지만 그쪽에서 지연되는 원인이 뭔지 여쭤봐도 될까요?"
+        },
+        {
+          "role": "partner",
+          "en": "One reference standard lot degraded, so our QC samples drifted out of range.",
+          "ko": "표준품 한 로트가 분해돼서 QC 시료 값이 범위를 벗어났어요.",
+          "aid": "p03"
+        },
+        {
+          "role": "user",
+          "ref": "s004",
+          "en": "From our side, the main concern is the reproducibility of the assay.",
+          "ko": "저희 쪽에서 가장 우려하는 부분은 어세이의 재현성입니다.",
+          "hint": "저희 입장에서 가장 큰 우려는 분석법의 재현성입니다"
+        },
+        {
+          "role": "partner",
+          "en": "Understood. We've ordered a fresh lot and will rerun the full precision and accuracy set.",
+          "ko": "알겠습니다. 새 로트를 주문했고 정밀도·정확도 세트 전체를 다시 돌리겠습니다.",
+          "aid": "p04"
+        },
+        {
+          "role": "user",
+          "ref": "s125",
+          "en": "Realistically, how soon can you turn that around?",
+          "ko": "현실적으로, 그거 얼마나 빨리 처리해 주실 수 있나요?",
+          "hint": "현실적으로 얼마나 빨리 끝내주실 수 있나요?"
+        },
+        {
+          "role": "partner",
+          "en": "If the standard arrives on schedule, we're looking at about three weeks.",
+          "ko": "표준품이 일정대로 도착하면 3주 정도 걸릴 것 같습니다.",
+          "aid": "p05"
+        },
+        {
+          "role": "user",
+          "ref": "s058",
+          "en": "Would it be possible to move the deadline up a week?",
+          "ko": "마감을 일주일 당기는 게 가능할까요?",
+          "hint": "마감을 일주일 앞당기는 게 가능할까요?"
+        },
+        {
+          "role": "partner",
+          "en": "We could prioritize your runs, but that means weekend shifts at extra cost.",
+          "ko": "귀사 런을 우선 처리할 수는 있지만, 주말 근무라 추가 비용이 듭니다.",
+          "aid": "p06"
+        },
+        {
+          "role": "user",
+          "ref": "s060",
+          "en": "I can offer a little flexibility on price, not on timing.",
+          "ko": "가격은 조금 양보할 수 있지만 일정은 어렵습니다.",
+          "hint": "가격은 조금 유연하게 해드릴 수 있지만 일정은 안 됩니다"
+        },
+        {
+          "role": "partner",
+          "en": "Fair enough. I'll send over a revised quote and timeline by tomorrow.",
+          "ko": "좋습니다. 내일까지 수정 견적과 일정을 보내드릴게요.",
+          "aid": "p07"
+        },
+        {
+          "role": "user",
+          "ref": "s065",
+          "en": "Let's put that in writing to avoid any confusion.",
+          "ko": "혼선 방지를 위해 그건 문서로 남기죠.",
+          "hint": "혼선 없도록 서면으로 남겨두죠"
+        },
+        {
+          "role": "partner",
+          "en": "Absolutely. I'll include the root cause analysis in the same document.",
+          "ko": "물론입니다. 같은 문서에 근본 원인 분석도 넣겠습니다.",
+          "aid": "p08"
+        },
+        {
+          "role": "user",
+          "ref": "s141",
+          "en": "Going forward, it'd be helpful to get the data a bit earlier.",
+          "ko": "앞으로는 데이터를 조금 더 일찍 받으면 도움이 될 것 같아요.",
+          "hint": "앞으로는 데이터를 좀 더 일찍 받으면 좋겠습니다"
+        },
+        {
+          "role": "partner",
+          "en": "Noted. We'll share interim results with you every week from now on.",
+          "ko": "알겠습니다. 앞으로는 매주 중간 결과를 공유드리겠습니다.",
+          "aid": "p09"
+        }
+      ],
+      "auto": true
     }
   ]
 }

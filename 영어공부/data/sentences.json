@@ -7242,6 +7242,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>Sorry,</b> / <b>could you drop that</b> / <b>in the chat</b> / <b>for me?</b> 네 덩어리입니다. could you는 d와 y가 붙어 <b>쿠쥬</b>로 들리고, could의 o는 거의 사라져 짧게 지나갑니다. drop that은 p가 터지지 않고 닫히기만 해서 <b>드랍댓</b>, that의 t도 다음 in과 이어지며 flap 되어 <b>드랍대린</b>처럼 뭉개집니다. in the chat은 the가 약형 [ðə]로 줄어 <b>인더챗</b>, 마지막 t는 거의 소리가 안 납니다. for me는 for가 [fər]로 약해져 <b>퍼미</b>로 들립니다. 강세는 <b>DROP</b>과 <b>CHAT</b>에 떨어지고 나머지는 빠르게 흘러가니 이 두 단어를 기준으로 잡으세요.",
+        "examples": [
+          {
+            "en": "Could you drop the CRO's revised quote in the chat?",
+            "ko": "CRO 수정 견적서를 채팅창에 올려주시겠어요?"
+          },
+          {
+            "en": "Sorry, could you drop the link to the deck in the chat for everyone?",
+            "ko": "죄송한데, 발표 자료 링크를 모두가 보게 채팅창에 올려주시겠어요?"
+          },
+          {
+            "en": "Could you drop the compound ID in the chat so I can check it later?",
+            "ko": "나중에 확인할 수 있게 화합물 ID를 채팅창에 적어주시겠어요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "drop ~ in the chat",
+            "ko": "화상회의 채팅창에 (링크·숫자·이름 등을) 올리다. 'type/post'보다 가볍고 자연스러운 구어 표현"
+          },
+          {
+            "term": "for me",
+            "ko": "문장 끝에 붙여 요청을 부드럽게 만드는 완충 표현 ('~ 좀 해주실래요?' 느낌)"
+          },
+          {
+            "term": "Sorry, ...",
+            "ko": "사과가 아니라 끼어들거나 요청을 꺼낼 때 쓰는 쿠션어"
+          }
+        ],
+        "tip": "온라인 회의에서 숫자·고유명사·URL을 못 알아들었을 때 쓰는 최고의 생존 문장. 상사·외부 파트너 누구에게나 써도 무례하지 않습니다."
       }
     },
     {
@@ -7272,6 +7304,38 @@
         "weak_accents": [
           "us-f"
         ]
+      },
+      "study": {
+        "sound": "청크는 <b>Sorry,</b> / <b>hang on</b> / <b>was that fifteen</b> / <b>or fifty?</b>입니다. hang on은 ng가 다음 모음 o로 넘어가 <b>행안</b>이 아니라 <b>행언</b>처럼 한 단어로 붙습니다. was that은 was가 약형 [wəz]로 줄고 z와 ð가 이어져 <b>워댓</b>처럼 들립니다. 핵심 대비는 강세 위치입니다 — fif<b>TEEN</b>은 뒤에 강세가 오고 n이 분명하며 길게, <b>FIF</b>ty는 앞에 강세가 오고 미국식은 t가 flap 되어 <b>피프디</b>로 짧게 끝납니다. or는 [ər]로 약해져 <b>얼</b> 정도로 스치니, 귀는 두 숫자의 강세 차이에만 집중하세요.",
+        "examples": [
+          {
+            "en": "Sorry, was that thirteen or thirty patients in the cohort?",
+            "ko": "죄송한데, 코호트 환자가 13명이었나요, 30명이었나요?"
+          },
+          {
+            "en": "Hang on — was that per batch or for the whole study?",
+            "ko": "잠깐만요, 그게 배치당인가요, 아니면 연구 전체 기준인가요?"
+          },
+          {
+            "en": "Was that Q2 or Q3 for the IND filing?",
+            "ko": "IND 제출이 2분기였나요, 3분기였나요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "hang on",
+            "ko": "'잠깐만요' — 상대 말을 끊고 확인할 때 쓰는 구어. 'wait a second'보다 부드러움"
+          },
+          {
+            "term": "Was that A or B?",
+            "ko": "방금 들은 내용을 두 선택지로 좁혀 되묻는 확인 패턴. 다시 말해달라는 것보다 효율적"
+          },
+          {
+            "term": "-teen vs -ty",
+            "ko": "13~19와 30~90은 강세 위치로 구분 — 견적·수량 협상에서 실수가 잦은 지점"
+          }
+        ],
+        "tip": "숫자가 걸린 견적·일정·샘플 수 논의에서 바로 쓰세요. 애매하게 넘어가는 것보다 되묻는 쪽이 훨씬 프로페셔널합니다."
       }
     },
     {
@@ -7296,6 +7360,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>Can we take</b> / <b>a step back</b> / <b>for a second here?</b>입니다. Can we는 can이 약형 [kən]으로 줄어 <b>큰위</b>로 짧게 지나가 거의 안 들립니다. take a는 k가 a에 붙어 <b>테이커</b>, a step back은 <b>어스텝백</b>으로 이어지는데 step의 p는 닫히기만 해서 <b>스텝빽</b>처럼 붙습니다. for a second는 <b>퍼러세컨</b>으로 연음되고 second의 마지막 d는 탈락합니다. 강세는 <b>STEP BACK</b>과 <b>SEC</b>ond에 오고, 문장 끝 here는 가볍게 올라가며 흐려집니다.",
+        "examples": [
+          {
+            "en": "Can we take a step back and look at why the assay keeps failing?",
+            "ko": "잠깐 한발 물러서서 왜 분석이 계속 실패하는지 살펴볼까요?"
+          },
+          {
+            "en": "Before we pick a CRO, can we take a step back and agree on the criteria?",
+            "ko": "CRO를 정하기 전에, 한발 물러서서 선정 기준부터 합의할까요?"
+          },
+          {
+            "en": "Can we take a step back for a second? I'm not sure we're solving the right problem.",
+            "ko": "잠깐 한발 물러서 볼까요? 우리가 맞는 문제를 풀고 있는지 모르겠어요."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "take a step back",
+            "ko": "세부 논의를 멈추고 큰 그림·전제를 다시 보자는 관용구"
+          },
+          {
+            "term": "for a second",
+            "ko": "'잠깐만' — 요청의 부담을 줄여주는 완충 표현"
+          },
+          {
+            "term": "here",
+            "ko": "문장 끝 here는 '이 논의에서' 정도의 가벼운 맥락 표지, 뉘앙스를 부드럽게 함"
+          }
+        ],
+        "tip": "논의가 세부로 빠지거나 방향이 틀어질 때 흐름을 잡는 퍼실리테이션 표현입니다. 공손하지만 주도권을 가져오는 말이라 PM에게 특히 유용합니다."
       }
     },
     {
@@ -7320,6 +7416,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>We're still waiting</b> / <b>to hear back</b> / <b>on that.</b>입니다. We're는 <b>위어</b>가 아니라 <b>윌</b>처럼 한 음절로 줄어듭니다. still waiting은 l이 어둡게 처리되고 waiting의 t가 flap 되어 <b>스틸웨이링</b>, 끝 g는 거의 안 들려 <b>웨이린</b>에 가깝습니다. to hear back은 to가 [tə]로 약해지고 hear의 h가 약해지며 <b>터히얼백</b>으로 이어집니다. on that은 n과 ð가 붙어 <b>온냇</b>처럼 들리고 t는 닫히기만 합니다. 강세는 <b>STILL</b>과 <b>BACK</b>에 오니 이 두 단어가 의미의 기둥입니다.",
+        "examples": [
+          {
+            "en": "We're still waiting to hear back from the CRO on the revised timeline.",
+            "ko": "수정 일정에 대해 CRO 답변을 아직 기다리고 있습니다."
+          },
+          {
+            "en": "We're still waiting to hear back on the licensing terms from their BD team.",
+            "ko": "상대 BD팀으로부터 라이선스 조건 회신을 아직 기다리는 중입니다."
+          },
+          {
+            "en": "We're still waiting to hear back on the stability data, so I'll update you next week.",
+            "ko": "안정성 데이터 회신을 아직 기다리고 있어서, 다음 주에 업데이트드리겠습니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "hear back (from/on)",
+            "ko": "(연락했던 상대에게서) 회신을 받다. 'get a reply'보다 자연스러운 구동사"
+          },
+          {
+            "term": "still waiting",
+            "ko": "아직 진행 중임을 알리되 내 책임이 아님을 은근히 드러내는 표현"
+          },
+          {
+            "term": "on that",
+            "ko": "'그 건에 대해서는' — 직전 안건을 받아 짧게 답할 때"
+          }
+        ],
+        "tip": "사내 진행상황 보고에서 '외부 대기 중'을 중립적으로 말하는 표준 표현. 뒤에 다음 액션(언제 팔로업할지)을 붙이면 더 좋습니다."
       }
     },
     {
@@ -7344,6 +7472,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>Let's not</b> / <b>get ahead of ourselves</b> / <b>just yet.</b>입니다. Let's not은 s와 n이 붙고 not의 t가 닫혀 <b>렛츠낫</b>, get ahead는 t가 flap 되어 다음 모음과 붙으며 <b>게러헤드</b>로 들립니다. ahead of는 d와 o가 이어져 <b>어헤더브</b>, of ourselves는 <b>어바월셀브즈</b>로 한 덩어리처럼 흘러갑니다. just yet은 just의 t가 탈락해 <b>저스옛</b>처럼 들립니다. 강세는 <b>NOT</b>, a<b>HEAD</b>, <b>YET</b>에 오고 of/our는 거의 뭉개집니다.",
+        "examples": [
+          {
+            "en": "Let's not get ahead of ourselves — we only have data from one animal model.",
+            "ko": "너무 앞서가지 맙시다. 아직 동물 모델 하나의 데이터밖에 없어요."
+          },
+          {
+            "en": "Let's not get ahead of ourselves on the Phase 2 design until the tox results are in.",
+            "ko": "독성 결과가 나오기 전까지 2상 설계는 너무 앞서 나가지 말죠."
+          },
+          {
+            "en": "It looks promising, but let's not get ahead of ourselves before due diligence.",
+            "ko": "유망해 보이지만, 실사 전에 너무 앞서가지는 맙시다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "get ahead of oneself",
+            "ko": "근거보다 앞서 결론·계획을 서두르다. 들뜬 분위기를 차분히 누르는 관용구"
+          },
+          {
+            "term": "just yet",
+            "ko": "'아직은' — 지금은 아니지만 나중엔 가능하다는 여지를 남김"
+          },
+          {
+            "term": "Let's not ~",
+            "ko": "상대를 지적하지 않고 '우리'로 묶어 부드럽게 제동을 거는 패턴"
+          }
+        ],
+        "tip": "에셋 평가나 초기 데이터 리뷰에서 낙관론에 제동 걸 때 씁니다. '우리'를 주어로 해 상대 기분을 상하지 않게 하는 게 포인트."
       }
     },
     {
@@ -7368,6 +7528,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>Sorry,</b> / <b>could you back up a second?</b> / <b>I lost you</b> / <b>on that last bit.</b>입니다. could you는 <b>쿠쥬</b>, back up a는 k와 p가 모음에 붙어 <b>배껍어</b>처럼 이어집니다. second는 끝 d가 탈락해 <b>세컨</b>. I lost you는 st 뒤 t가 y와 만나 <b>아이로스츄</b>로 들립니다. on that last bit은 that의 t가 닫히고 last의 t가 탈락해 <b>온댓래스빗</b>, bit의 t도 터지지 않고 끝납니다. 강세는 <b>BACK UP</b>, <b>LOST</b>, <b>LAST BIT</b>에 오니 이 단어들만 잡아도 의미가 들어옵니다.",
+        "examples": [
+          {
+            "en": "Could you back up a second? I lost you on the dosing schedule.",
+            "ko": "잠깐 앞으로 돌아가 주시겠어요? 투여 일정 부분에서 놓쳤어요."
+          },
+          {
+            "en": "Sorry, could you back up? I lost you when you mentioned the second endpoint.",
+            "ko": "죄송한데 다시 앞으로 가주시겠어요? 2차 평가변수 얘기하실 때 놓쳤습니다."
+          },
+          {
+            "en": "Could you back up a slide? I lost you on the cost breakdown.",
+            "ko": "슬라이드 하나만 앞으로 가주시겠어요? 비용 내역 부분에서 놓쳤어요."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "back up",
+            "ko": "(설명을) 조금 앞으로 되돌리다. 'go back'보다 구어적이고 자연스러움"
+          },
+          {
+            "term": "I lost you (on ~)",
+            "ko": "'(~부분에서) 따라가지 못했어요' — 내 탓으로 돌려 상대를 배려하는 표현"
+          },
+          {
+            "term": "the last bit",
+            "ko": "'방금 그 부분' — bit은 '조금, 일부분'을 뜻하는 영국·미국 공통 구어"
+          }
+        ],
+        "tip": "못 알아들은 걸 숨기지 않고 정확히 '어디서' 놓쳤는지 짚어 다시 들을 수 있는 고급 생존 문장. 외부 미팅에서도 충분히 공손합니다."
       }
     },
     {
@@ -7392,6 +7584,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>We're looking at</b> / <b>a two-week slip,</b> / <b>give or take.</b>입니다. We're는 <b>윌</b>로 줄고, looking at은 g가 탈락하고 at과 붙어 <b>루낀앳</b>, at의 t는 다음 a와 이어져 flap 되며 <b>루킨애러</b>처럼 들립니다. two-week slip은 k와 s가 붙어 <b>투윅슬립</b>, slip의 p는 닫히고 끝납니다. give or take는 give의 v가 or와 붙고 or가 약해져 <b>기버테익</b>으로 한 덩어리입니다. 강세는 <b>TWO-WEEK SLIP</b>에 강하게 오고 give or take는 뒤에 덧붙이듯 낮게 흘려 말합니다.",
+        "examples": [
+          {
+            "en": "We're looking at about three months for the GLP tox study, give or take.",
+            "ko": "GLP 독성시험은 대략 3개월 정도 걸릴 것 같습니다."
+          },
+          {
+            "en": "We're looking at a ten percent cost overrun, give or take.",
+            "ko": "대략 10% 정도 비용 초과가 예상됩니다."
+          },
+          {
+            "en": "With the reagent delay, we're looking at a one-month slip on the readout.",
+            "ko": "시약 지연 때문에 결과 발표가 한 달 정도 밀릴 것 같습니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "We're looking at ~",
+            "ko": "'~가 예상된다/~ 정도 된다' — 일정·비용·리스크 추정을 말할 때 쓰는 구어"
+          },
+          {
+            "term": "slip",
+            "ko": "일정 지연(명사/동사). 'delay'보다 실무적이고 덜 무겁게 들림"
+          },
+          {
+            "term": "give or take",
+            "ko": "'대략, 앞뒤로 조금' — 숫자 뒤에 붙여 오차 범위를 인정하는 관용구"
+          }
+        ],
+        "tip": "나쁜 소식(지연·초과)을 담담하게 전달하는 보고 표현. 숫자를 먼저 말하고 원인과 대응책을 바로 이어 말하면 신뢰를 줍니다."
       }
     },
     {
@@ -7416,6 +7640,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>Can you give me</b> / <b>a ballpark figure</b> / <b>before we go</b> / <b>any further?</b>입니다. Can you give me는 can이 약해지고 give me의 v가 m에 동화되어 <b>큰유기미</b>로 빠르게 지나갑니다. a ballpark은 <b>어볼팍</b>, ballpark의 k와 figure의 f가 붙어 <b>볼팍피겨</b>처럼 이어집니다. go any further는 go와 any가 w소리로 이어져 <b>고우에니</b>, further는 [fɜːrðər] <b>퍼덜</b>. 강세는 <b>BALL</b>park와 <b>FUR</b>ther에 떨어지고 before we는 <b>비포위</b>로 약하게 흐릅니다.",
+        "examples": [
+          {
+            "en": "Can you give me a ballpark cost for the bioanalysis before we go any further?",
+            "ko": "더 진행하기 전에 생체분석 비용을 대략이라도 알려주실 수 있나요?"
+          },
+          {
+            "en": "Just a ballpark is fine — roughly how long would the method transfer take?",
+            "ko": "대략적인 수치면 됩니다. 방법 이전이 얼마나 걸릴까요?"
+          },
+          {
+            "en": "Before we draft the term sheet, can you give me a ballpark on the upfront?",
+            "ko": "텀시트 초안 쓰기 전에 계약금 수준을 대략 알려주실 수 있나요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "ballpark figure",
+            "ko": "대략적인 수치·어림값. 정식 견적 전에 감을 잡기 위해 묻는 표현"
+          },
+          {
+            "term": "before we go any further",
+            "ko": "'더 진행하기 전에' — 조건 확인 없이는 진도를 안 나가겠다는 협상용 표현"
+          },
+          {
+            "term": "in the ballpark",
+            "ko": "'예상 범위 안인' — That's in the ballpark (그 정도면 괜찮은 범위네요)"
+          }
+        ],
+        "tip": "CRO 견적 협상 초기에 예산 적합성부터 확인할 때 씁니다. 상대가 정확한 숫자를 피할 때 부담을 줄여 범위를 끌어내는 효과가 있습니다."
       }
     },
     {
@@ -7440,6 +7696,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>I'm leaning towards</b> / <b>option two,</b> / <b>but I'm open</b> / <b>to other ideas.</b>입니다. I'm leaning은 m과 l이 붙어 <b>암리닝</b>, towards는 [tɔːrdz] <b>톨즈</b>로 한 음절처럼 짧게 들립니다(영국식은 <b>터워즈</b>). option two는 <b>압션투</b>. but I'm은 t가 flap 되어 <b>버라임</b>, open to는 <b>오픈터</b>로 to가 약해집니다. other ideas는 r 뒤에 모음이 이어져 <b>어더라이디어즈</b>로 연결됩니다. 강세는 <b>LEAN</b>ing, <b>TWO</b>, <b>O</b>pen에 오니 숫자 two를 놓치지 마세요.",
+        "examples": [
+          {
+            "en": "I'm leaning towards the US-based CRO, but I'm open to other ideas.",
+            "ko": "미국 CRO 쪽으로 기울고 있지만, 다른 의견도 열려 있습니다."
+          },
+          {
+            "en": "I'm leaning towards delaying the readout, but I'd like to hear what the team thinks.",
+            "ko": "결과 발표를 미루는 쪽으로 생각하고 있지만, 팀 의견을 듣고 싶어요."
+          },
+          {
+            "en": "We're leaning towards in-licensing the asset, but nothing is final yet.",
+            "ko": "이 에셋을 도입하는 쪽으로 기울고 있지만, 아직 확정된 건 없습니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "lean towards ~",
+            "ko": "~ 쪽으로 마음이 기울다. 확정은 아니지만 선호를 밝히는 표현"
+          },
+          {
+            "term": "open to ~",
+            "ko": "~를 받아들일 여지가 있다. 'open to suggestions/feedback'으로도 자주 씀"
+          },
+          {
+            "term": "option two",
+            "ko": "회의에서 선택지를 번호로 부르는 방식 — 숫자를 정확히 들어야 함"
+          }
+        ],
+        "tip": "의견은 분명히 밝히되 결정을 강요하지 않는 균형 잡힌 표현. 리더가 팀 토론을 열어둘 때 특히 좋습니다."
       }
     },
     {
@@ -7464,6 +7752,38 @@
         "correct": 0,
         "missed_words": [],
         "weak_accents": []
+      },
+      "study": {
+        "sound": "청크는 <b>Before we wrap up,</b> / <b>does anyone have</b> / <b>anything to add?</b>입니다. Before we는 <b>비포위</b>, wrap up은 p가 u와 붙어 <b>래퍼프</b>로 들리고 w는 거의 r만 남습니다(wr의 w 묵음). does anyone은 does가 약형 [dəz]로 줄고 z가 a와 붙어 <b>더제니원</b>으로 이어집니다. anything to add는 anything의 g가 탈락하고 to가 약해지며 <b>에니띵터애드</b>, add의 d는 가볍게 끝납니다. 강세는 <b>WRAP UP</b>과 <b>ADD</b>에 오고 does anyone have는 빠르게 뭉쳐집니다.",
+        "examples": [
+          {
+            "en": "Before we wrap up, let's quickly recap the action items.",
+            "ko": "마무리하기 전에, 실행 항목을 빠르게 정리해 보죠."
+          },
+          {
+            "en": "Before we wrap up, does anyone have any concerns about the timeline?",
+            "ko": "마치기 전에, 일정에 대해 우려 사항 있으신 분 계신가요?"
+          },
+          {
+            "en": "Before we wrap up, is there anything else the CRO needs from us?",
+            "ko": "마무리하기 전에, CRO 측에서 저희에게 더 필요한 게 있을까요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "wrap up",
+            "ko": "(회의·논의를) 마무리하다. 'finish'보다 자연스러운 회의용 구동사"
+          },
+          {
+            "term": "anything to add",
+            "ko": "'덧붙일 말씀' — 마지막 발언 기회를 주는 정형 표현"
+          },
+          {
+            "term": "action items",
+            "ko": "회의 후 담당자별 실행 과제 — wrap-up 단계에서 꼭 나오는 단어"
+          }
+        ],
+        "tip": "회의 진행자가 끝내기 직전에 쓰는 정석 멘트. 외부·사내 미팅 모두 격식에 맞고, 뒤에 action item 정리를 붙이면 깔끔합니다."
       }
     },
     {
@@ -8358,6 +8678,291 @@
           }
         ],
         "tip": "CRO나 타 부서의 지연 사유를 추궁하지 않고 캐물을 때 쓰는 정중한 격식 표현 — 상대를 탓하는 뉘앙스가 없어 미팅에서 안전하지만, 이미 관계가 편한 동료에게는 다소 조심스럽게 들릴 수 있습니다."
+      }
+    },
+    {
+      "id": "s137",
+      "en": "Could you elaborate a bit on what you mean by that?",
+      "ko": "그게 무슨 뜻인지 조금 더 자세히 설명해 주시겠어요?",
+      "pattern": "Could you elaborate a bit on ~?",
+      "notes": "<b>Could you</b>는 <b>쿠쥬</b>로 붙어서 들립니다. <b>elaborate a bit on</b>은 <b>일래버레잇어빗온</b> → t가 플랩되어 <b>일래버레이러비론</b>처럼 이어집니다. <b>what you mean</b>은 <b>왓츄민</b>, <b>by that</b>은 <b>바이댓</b>으로 끝이 약하게 끊깁니다.",
+      "scenario": "survival",
+      "tags": [
+        "clarification",
+        "survival"
+      ],
+      "added": "2026-11-09",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-11-09",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Could you</b>는 d와 y가 붙어 <b>쿠쥬</b>로 한 덩어리가 되고, 문장 첫머리라서 아주 빠르고 약하게 지나갑니다. 강세는 <b>e-LAB-o-rate</b>의 두 번째 음절 <b>랩</b>에 떨어지고, 앞의 e는 거의 <b>을</b> 정도로 약해집니다. <b>elaborate a bit on</b>은 t가 모음 사이에서 flap 되며 이어져 <b>일래버레이러 비론</b>처럼 들리고, a와 on은 약형이라 따로 잡히지 않습니다. <b>what you mean</b>은 t+y가 합쳐져 <b>와츄 민</b>이 되고 강세는 <b>mean</b>에 실립니다. 끝의 <b>by that</b>은 <b>바이댓</b>으로 빠르게 붙고 마지막 t는 터뜨리지 않고 막아서(<b>댓ㅡ</b>) 거의 안 들립니다. 결국 귀에 확실히 남는 건 <b>랩</b>·<b>빗</b>·<b>민</b> 세 곳뿐이라 나머지를 덩어리로 기억해 둬야 합니다.",
+        "examples": [
+          {
+            "en": "Could you elaborate a bit on how the CRO plans to handle the assay validation?",
+            "ko": "CRO가 분석법 밸리데이션을 어떻게 처리할 계획인지 조금 더 자세히 설명해 주시겠어요?"
+          },
+          {
+            "en": "Could you elaborate a bit on the main risks you see in this asset?",
+            "ko": "이 에셋에서 보시는 주요 리스크를 조금 더 설명해 주실 수 있을까요?"
+          },
+          {
+            "en": "Could you elaborate a bit on why the timeline slipped by two weeks?",
+            "ko": "일정이 왜 2주 밀렸는지 조금 더 자세히 말씀해 주시겠어요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "elaborate on ~",
+            "ko": "~에 대해 더 자세히 설명하다. 동사일 때는 'on'과 함께 쓰며, 상대 발언을 공손하게 파고들 때 쓰는 대표 표현"
+          },
+          {
+            "term": "a bit",
+            "ko": "'조금'. 요청의 강도를 낮춰 질문이 따지는 느낌으로 들리지 않게 해 주는 완충어"
+          },
+          {
+            "term": "what you mean by that",
+            "ko": "'그게 무슨 뜻인지'. 상대 발언의 의도를 되묻는 정형 구문으로, 오해를 미리 막을 때 씀"
+          }
+        ],
+        "tip": "미팅·Q&A 어디서나 쓸 수 있는 정중한 되묻기 표현입니다. 'What do you mean?'만 쓰면 따지는 것처럼 들릴 수 있으니 'a bit'까지 붙여 부드럽게 말하세요."
+      }
+    },
+    {
+      "id": "s138",
+      "en": "Sorry, what does that acronym stand for, just so I know?",
+      "ko": "죄송한데, 그 약어가 뭘 뜻하는지 알려주실 수 있을까요?",
+      "pattern": "Sorry, what does ~ stand for?",
+      "notes": "<b>what does that</b>는 <b>왓더즈댓</b>이 아니라 <b>와러즈댓</b>처럼 뭉개집니다. <b>stand for</b>는 d가 거의 안 들려 <b>스탠퍼</b>로 들립니다. <b>just so I know</b>는 <b>저스쏘아이노</b>로 t가 사라집니다.",
+      "scenario": "survival",
+      "tags": [
+        "clarification",
+        "survival",
+        "acronym"
+      ],
+      "added": "2026-11-09",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-11-09",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Sorry,</b> 뒤에 짧게 쉬고 <b>what does that</b>이 한 번에 몰려 <b>워더즈댓</b>처럼 뭉개집니다. what의 t는 거의 안 들리고 does는 약형 <b>더즈</b>로 줄어듭니다. 강세는 <b>ACronym</b>의 첫 음절 <b>애</b>에 강하게 오고 뒤는 <b>애크러님</b>으로 흐려집니다. <b>stand for</b>는 d가 탈락해 <b>스탠풔</b>처럼 이어지고 for는 약하게 <b>풔</b>로 지나갑니다. 끝의 <b>just so I know</b>는 t가 떨어져 <b>저쏘아이노우</b>로 빨리 붙어 덧붙이는 말투가 되고, 억양은 내려가며 마무리됩니다. 핵심 정보는 <b>애크러님</b>과 <b>스탠</b>이니 이 두 곳에 귀를 맞추세요.",
+        "examples": [
+          {
+            "en": "Sorry, what does CMC stand for in this context, just so I'm on the same page?",
+            "ko": "죄송한데, 여기서 CMC가 무슨 약자인지 여쭤봐도 될까요? 제대로 이해하려고요."
+          },
+          {
+            "en": "Sorry, what does TPP stand for? I haven't seen that in your earlier slides.",
+            "ko": "죄송한데 TPP가 무슨 약자인가요? 앞 슬라이드에서는 못 본 것 같아서요."
+          },
+          {
+            "en": "Sorry, what does the 'R' in that study code stand for?",
+            "ko": "죄송한데 그 시험 코드의 'R'은 무슨 뜻인가요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "stand for ~",
+            "ko": "(약어·기호가) ~를 나타내다·의미하다. 약어 뜻을 물을 때 가장 자연스러운 구동사"
+          },
+          {
+            "term": "acronym",
+            "ko": "머리글자 약어(예: CRO, IND). 바이오 업계 미팅에서 매우 자주 등장"
+          },
+          {
+            "term": "just so I know",
+            "ko": "'참고로 알아두려고요'. 질문의 부담을 덜고 '내가 확인하려는 것'이라는 뉘앙스를 더하는 덧붙임"
+          },
+          {
+            "term": "on the same page",
+            "ko": "같은 이해를 하고 있는. 오해를 확인할 때 자주 쓰는 관용구"
+          }
+        ],
+        "tip": "모르는 약어는 미팅 중에 바로 물어보는 게 글로벌 미팅에서는 자연스럽습니다. 'Sorry'와 'just so I know'로 감싸면 흐름을 끊어도 무례하게 들리지 않습니다."
+      }
+    },
+    {
+      "id": "s139",
+      "en": "I'll get back to you on that once I've checked with the team.",
+      "ko": "팀이랑 확인해 보고 그 부분 다시 말씀드릴게요.",
+      "pattern": "I'll get back to you on ~ once I've ~.",
+      "notes": "<b>get back to you</b>는 <b>겟백투유</b>가 아니라 <b>겟빽트유</b>로 빠르게 지나가고, <b>on that</b>은 <b>온냇</b>처럼 연결됩니다. <b>once I've</b>는 <b>원싸이브</b>, <b>checked with</b>는 <b>첵트위드</b>에서 t가 약하게 들립니다.",
+      "scenario": "meeting",
+      "tags": [
+        "follow-up",
+        "commitment"
+      ],
+      "added": "2026-11-09",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-11-09",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>I'll get back to you</b>는 I'll이 <b>알</b>로 줄고 get의 t가 flap 되어 <b>알게백투유</b>, 빠르면 <b>알겟백츄</b>처럼 들립니다. 강세는 <b>BACK</b>에 실리고 to는 약형 <b>트</b>로 묻힙니다. <b>on that</b>은 <b>온댓</b>으로 이어지고, 이어지는 <b>once I've</b>는 s와 I가 연음되어 <b>원싸이브</b>, I've의 v는 거의 사라집니다. <b>checked with the team</b>은 -ed가 <b>트</b>로 짧게 끝나고 with the에서 th가 겹쳐 <b>첵트위더팀</b>처럼 한 번에 흘러갑니다. 강세 리듬은 <b>BACK – CHECKED – TEAM</b> 세 박자로 기억하면 잘 잡힙니다.",
+        "examples": [
+          {
+            "en": "I'll get back to you on the revised quote once I've checked with our finance team.",
+            "ko": "수정 견적은 재무팀과 확인한 뒤에 다시 연락드리겠습니다."
+          },
+          {
+            "en": "I'll get back to you on the licensing terms once I've reviewed them with legal.",
+            "ko": "라이선스 조건은 법무팀과 검토한 뒤 다시 말씀드리겠습니다."
+          },
+          {
+            "en": "I'll get back to you on the new timeline once I've confirmed capacity with the CRO.",
+            "ko": "새 일정은 CRO 쪽 가용 인력을 확인한 뒤 다시 알려드리겠습니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "get back to someone on ~",
+            "ko": "~에 대해 (확인 후) 다시 연락하다. 즉답을 피하면서 책임 있게 보류할 때 쓰는 핵심 구동사"
+          },
+          {
+            "term": "check with ~",
+            "ko": "~에게 확인하다·의견을 구하다. 내부 결재·협의가 필요함을 자연스럽게 알림"
+          },
+          {
+            "term": "once I've p.p.",
+            "ko": "'~하고 나면'. 후속 조치의 조건을 명확히 제시해 막연한 약속처럼 들리지 않게 함"
+          }
+        ],
+        "tip": "바로 답하기 어려운 질문에 쓰는 가장 안전한 보류 표현입니다. 신뢰를 지키려면 'by Friday'처럼 기한을 붙이고 실제로 후속 연락을 해야 합니다."
+      }
+    },
+    {
+      "id": "s140",
+      "en": "Can we get a quick status check on the open action items?",
+      "ko": "남아 있는 액션 아이템들 진행 상황을 잠깐 점검해 볼까요?",
+      "pattern": "Can we get a quick status check on ~?",
+      "notes": "<b>Can we</b>는 <b>큰위</b>로 약하게, <b>get a</b>는 플랩 t로 <b>게러</b>처럼 들립니다. <b>status</b>는 미국식으로 <b>스테이러스</b>에 가깝게 들립니다. <b>open action items</b>는 <b>오쁘낵션아이럼즈</b>로 이어집니다.",
+      "scenario": "internal-update",
+      "tags": [
+        "status",
+        "action-items"
+      ],
+      "added": "2026-11-09",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-11-09",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Can we get a</b>는 Can이 약형 <b>큰</b>으로 줄고 get a의 t가 flap 되어 <b>큰위게러</b>처럼 한 덩어리로 지나갑니다. 강세는 <b>QUICK</b>과 <b>STATUS</b>에 오는데, status는 미국식 <b>스테이러스</b>(flap t), 영국식 <b>스테이터스</b>로 악센트마다 다르게 들립니다. <b>check on the</b>는 연음되어 <b>체콘더</b>가 됩니다. <b>open action items</b>는 n과 a가 이어져 <b>오쁘내액션</b>, action의 끝과 items가 붙어 <b>액셔나이럼즈</b>처럼 들리며, items의 t도 flap 됩니다. 결국 <b>퀵 스테이러스 첵</b>과 <b>액션 아이럼즈</b>, 두 덩어리를 통째로 익혀두는 게 핵심입니다.",
+        "examples": [
+          {
+            "en": "Can we get a quick status check on the stability study before we move on?",
+            "ko": "다음으로 넘어가기 전에 안정성 시험 진행 상황을 잠깐 점검할 수 있을까요?"
+          },
+          {
+            "en": "Can we get a quick status check on the tech transfer to the new site?",
+            "ko": "새 사이트로의 기술이전 진행 상황을 간단히 확인해 볼까요?"
+          },
+          {
+            "en": "Can we get a quick status check on last week's action items first?",
+            "ko": "먼저 지난주 액션 아이템 진행 상황부터 빠르게 짚어볼까요?"
+          }
+        ],
+        "vocab": [
+          {
+            "term": "status check",
+            "ko": "진행 상황 점검. 'status update'보다 짧게 상태만 확인하는 느낌"
+          },
+          {
+            "term": "action items",
+            "ko": "회의에서 정해진 후속 조치(담당자·기한 포함). 회의록·팔로업 메일의 필수 용어"
+          },
+          {
+            "term": "open (item/issue)",
+            "ko": "아직 해결·종결되지 않은. 반대는 'closed'"
+          }
+        ],
+        "tip": "사내 정기 미팅에서 진행자가 아젠다를 시작할 때 쓰기 좋은 표현입니다. 'quick'이 들어가 있어 압박하는 느낌 없이 가볍게 점검을 요청할 수 있습니다."
+      }
+    },
+    {
+      "id": "s141",
+      "en": "Going forward, it'd be helpful to get the data a bit earlier.",
+      "ko": "앞으로는 데이터를 조금 더 일찍 받으면 도움이 될 것 같아요.",
+      "pattern": "Going forward, it'd be helpful to ~.",
+      "notes": "<b>Going forward</b>는 <b>고잉포워드</b>보다 <b>고인포워ㄷ</b>로 g가 약해집니다. <b>it'd be</b>는 <b>잇비</b>처럼 d가 거의 안 들려 놓치기 쉽습니다. <b>get the data a bit</b>는 <b>겟더데이러어빗</b> → <b>데이러러빗</b>처럼 뭉쳐 들립니다.",
+      "scenario": "cro-results-review",
+      "tags": [
+        "request",
+        "feedback"
+      ],
+      "added": "2026-11-09",
+      "srs": {
+        "box": 1,
+        "next_review": "2026-11-09",
+        "last_result": null
+      },
+      "listening": {
+        "attempts": 0,
+        "correct": 0,
+        "missed_words": [],
+        "weak_accents": []
+      },
+      "study": {
+        "sound": "<b>Going forward,</b>는 going의 g가 약해져 <b>고잉포워드</b>, 빠르면 <b>고인풔월</b>처럼 들리고, 강세는 <b>FOR</b>에 오며 콤마에서 짧게 쉽니다. <b>it'd be</b>는 it would의 축약으로 t와 d가 거의 사라져 <b>잇비</b>, 심하면 <b>이르비</b>처럼만 들려 놓치기 쉬운 구간입니다. <b>helpful to</b>는 l이 어두워 <b>헬프풀투</b>, to는 약형 <b>트</b>로 묻힙니다. <b>get the data</b>는 get의 t가 막히고 data는 미국식 <b>데이러</b>/영국식 <b>다타</b>로 갈립니다. 끝의 <b>a bit earlier</b>는 t가 flap 되며 이어져 <b>어비러얼리어</b>로 흐르고 강세는 <b>EAR</b>에 떨어집니다. 핵심 의미는 <b>FORWARD – HELPFUL – EARLIER</b> 세 단어에 있습니다.",
+        "examples": [
+          {
+            "en": "Going forward, it'd be helpful to get the raw data along with the summary tables.",
+            "ko": "앞으로는 요약표와 함께 원자료도 받으면 도움이 될 것 같습니다."
+          },
+          {
+            "en": "Going forward, it'd be helpful to flag any deviations within 24 hours.",
+            "ko": "앞으로는 일탈 사항이 생기면 24시간 안에 알려주시면 좋겠습니다."
+          },
+          {
+            "en": "Going forward, it'd be helpful to align on the agenda a day before the meeting.",
+            "ko": "앞으로는 회의 하루 전에 아젠다를 미리 맞추면 좋겠습니다."
+          }
+        ],
+        "vocab": [
+          {
+            "term": "going forward",
+            "ko": "앞으로는·향후에는. 과거 문제를 탓하지 않고 개선 요청을 미래 지향적으로 전하는 표현"
+          },
+          {
+            "term": "it'd be helpful to ~",
+            "ko": "~해 주시면 도움이 되겠다. 직접 지시 대신 쓰는 완곡한 요청"
+          },
+          {
+            "term": "a bit earlier",
+            "ko": "조금 더 일찍. 'a bit'으로 요구의 강도를 낮춰 협력 관계를 유지"
+          }
+        ],
+        "tip": "CRO·협력사에 불만을 돌려 말하는 정중한 피드백 표현입니다. 반복된 지연이라면 'by Monday'처럼 구체적인 기한까지 붙여야 실제로 바뀝니다."
       }
     }
   ]

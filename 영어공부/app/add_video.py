@@ -20,19 +20,24 @@ MAX_CHARS = 120  # 이보다 긴 문장은 다음 자막 조각 경계에서 끊
 
 
 def split_lines(snippets):
-    """자막 조각 → [{t, en, turn}] 문장 목록."""
-    lines, buf, t0, turn = [], [], None, False
+    """자막 조각 → [{t, e, en, turn}] 문장 목록.
+    e = 문장 마지막 단어가 든 자막 조각의 끝(다음 조각 시작과 겹치면 거기까지) — ⭐ 반복 재생 끝 시각."""
+    lines, buf, t0, turn, e = [], [], None, False, 0
 
     def flush():
         nonlocal buf, t0, turn
         en = " ".join(buf).strip()
         if en:
-            lines.append({"t": round(t0, 2), "en": en, "turn": turn})
+            lines.append({"t": round(t0, 2), "e": round(e, 2), "en": en, "turn": turn})
         buf, t0, turn = [], None, False
 
-    for s in snippets:
+    for k, s in enumerate(snippets):
+        end = s.start + s.duration
+        if k + 1 < len(snippets):
+            end = min(end, max(snippets[k + 1].start, s.start))  # 자동 자막은 조각 표시시간이 서로 겹침
         text = re.sub(r"\[[^\]]*\]", " ", s.text.replace("\n", " "))  # [music] [laughter] 등
-        for tok in text.split():
+        toks = text.split()
+        for ti, tok in enumerate(toks):
             if tok == ">>":
                 flush()
                 turn = True
@@ -40,6 +45,8 @@ def split_lines(snippets):
             if t0 is None:
                 t0 = s.start
             buf.append(tok)
+            # ponytail: 조각 안 단어 위치로 선형 추정(+0.3s) — 단어별 타임스탬프가 아니라 말 속도 따라 ±1초 오차
+            e = min(end, s.start + (end - s.start) * (ti + 1) / len(toks) + 0.3)
             if re.search(r"[.?!][\"')\]]*$", tok):
                 flush()
         if len(" ".join(buf)) > MAX_CHARS:  # 문장부호 없는 자막: 자막 조각 끝에서 끊음
