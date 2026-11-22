@@ -851,6 +851,112 @@
         }
       ],
       "auto": true
+    },
+    {
+      "id": "sc09",
+      "title": "원료 공급업체 납기 지연 대응 콜",
+      "scenario": "cro-negotiation",
+      "brief": "임상시료 생산에 필요한 핵심 원료의 선적이 세관에서 또 묶였다는 연락을 공급업체 담당자에게서 받았습니다. 당신은 PM으로서 지연 원인과 실제 입고 시점을 확인하고, 일정을 앞당길 방안과 추가 비용 분담을 협상해야 합니다.",
+      "goal": "지연 원인과 기간을 정확히 확인하고, 일부 물량 조기 입고와 비용 분담을 합의해 서면으로 남긴다.",
+      "partner": {
+        "name": "Rachel Hughes",
+        "role": "원료 공급업체 어카운트 매니저",
+        "voice": "gb-f"
+      },
+      "turns": [
+        {
+          "role": "partner",
+          "en": "Thanks for joining. I'm afraid our raw material shipment has been held at customs again.",
+          "ko": "참석해 주셔서 감사합니다. 죄송하지만 저희 원료 선적이 또 세관에 묶였습니다.",
+          "aid": "p01"
+        },
+        {
+          "role": "user",
+          "ref": "s136",
+          "en": "What's driving the delay on your end, if you don't mind me asking?",
+          "ko": "실례가 안 된다면, 그쪽에서 지연되는 원인이 뭔가요?",
+          "hint": "실례가 안 된다면, 그쪽에서 지연되는 원인이 뭔지 정중하게 물어보세요."
+        },
+        {
+          "role": "partner",
+          "en": "Customs flagged a documentation issue, so we expect it to be released soon.",
+          "ko": "세관에서 서류 문제를 지적해서, 곧 통관될 것으로 예상하고 있습니다.",
+          "aid": "p02"
+        },
+        {
+          "role": "user",
+          "ref": "s053",
+          "en": "When you say 'soon', what timeframe are we talking about?",
+          "ko": "'곧'이라고 하시면, 어느 정도 기간을 말씀하시는 거죠?",
+          "hint": "'곧'이 구체적으로 어느 정도 기간인지 확인하세요."
+        },
+        {
+          "role": "partner",
+          "en": "Realistically, another ten to fourteen days before the material actually reaches your site.",
+          "ko": "현실적으로는 원료가 실제로 귀사에 도착하기까지 10~14일 정도 더 걸립니다.",
+          "aid": "p03"
+        },
+        {
+          "role": "user",
+          "ref": "s058",
+          "en": "Would it be possible to move the deadline up a week?",
+          "ko": "마감을 일주일 당기는 게 가능할까요?",
+          "hint": "입고 시점을 일주일 앞당길 수 있는지 물어보세요."
+        },
+        {
+          "role": "partner",
+          "en": "We could air-freight a partial lot within a week, but it adds about fifteen percent.",
+          "ko": "일부 물량은 일주일 안에 항공으로 보낼 수 있지만, 비용이 15% 정도 늘어납니다.",
+          "aid": "p04"
+        },
+        {
+          "role": "user",
+          "ref": "s113",
+          "en": "Sorry, hang on — was that fifteen or fifty?",
+          "ko": "죄송한데, 잠깐만요 — 그거 15였어요 50이었어요?",
+          "hint": "숫자를 잘못 들었을 수 있으니 15인지 50인지 다시 확인하세요."
+        },
+        {
+          "role": "partner",
+          "en": "Fifteen, one-five. Normally that surcharge would be passed on to you, though.",
+          "ko": "15요, 일-오. 다만 보통은 그 추가 비용을 귀사에서 부담하시게 됩니다.",
+          "aid": "p05"
+        },
+        {
+          "role": "user",
+          "ref": "s059",
+          "en": "Let's find a middle ground that works for both sides.",
+          "ko": "양쪽 모두에게 맞는 절충점을 찾아보죠.",
+          "hint": "양쪽 모두 받아들일 수 있는 절충안을 찾자고 제안하세요."
+        },
+        {
+          "role": "partner",
+          "en": "Fair enough. Since the delay is on us, we could split it fifty-fifty.",
+          "ko": "좋습니다. 지연은 저희 책임이니 반반씩 나눠 부담하는 건 어떨까요.",
+          "aid": "p06"
+        },
+        {
+          "role": "user",
+          "ref": "s064",
+          "en": "That works on our end.",
+          "ko": "저희 쪽은 그걸로 괜찮습니다.",
+          "hint": "저희 쪽은 괜찮다고 동의하세요."
+        },
+        {
+          "role": "partner",
+          "en": "Great. I'll confirm the partial shipment date and volume by tomorrow.",
+          "ko": "좋습니다. 일부 선적 날짜와 물량은 내일까지 확정해서 알려드리겠습니다.",
+          "aid": "p07"
+        },
+        {
+          "role": "user",
+          "ref": "s065",
+          "en": "Let's put that in writing to avoid any confusion.",
+          "ko": "혼선 방지를 위해 그건 문서로 남기죠.",
+          "hint": "오해가 없도록 합의 내용을 서면으로 남기자고 마무리하세요."
+        }
+      ],
+      "auto": true
     }
   ]
 }
